@@ -1,5 +1,24 @@
 <script>
     import "../app.css";
+    let themeIcons = ["moon-outline", "moon"];
+    let themeIconId = 0;
+    let darkIcon;
+
+    function switchTheme(event) {
+        themeIconId = (themeIconId + 1) % 2;
+        if (themeIconId === 0) {
+            document.documentElement.setAttribute('data-theme', 'light');
+        }
+        else {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        }
+    }
+
+    /* SWITCH ICON ON HOVER a.k.a. someday
+    
+    function hoverSwitch(event) {
+        themeIconId = (themeIconId + 1) % 2;
+    }*/
 </script>
 
 <svelte:head>
@@ -14,7 +33,7 @@
             <a href="/blog">blog</a>
         </nav>
         <div class="dark-switch">
-            <ion-icon name="moon-outline"></ion-icon>
+            <ion-icon bind:this={darkIcon} name={themeIcons[themeIconId]} on:click={switchTheme}></ion-icon>
         </div>
     </div>
 </div>
@@ -24,6 +43,7 @@
 <style>
     .header-container {
         position: fixed;
+        width: 100%;
     }
     .header {
         display: grid;
@@ -34,6 +54,7 @@
         color: var(--secondary-color);
         font-size: 2rem;
         padding: 1rem;
+        padding-right: 2rem;
     }
     nav {
         padding: 1rem;
@@ -44,5 +65,6 @@
         color: var(--secondary-color);
         margin: 1rem;
         font-size: 1.2rem;
+        line-height: normal;
     }
 </style>
