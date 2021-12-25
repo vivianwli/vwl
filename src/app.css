@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@1,700&display=swap');
+:root {
+	font-family: 'Epilogue', Helvetica, sans-serif;
+	color: var(--text-color);
+	background-color: var(--bg-color);
+
+	/* just in case */
+	--lightest: #f2f2f7;
+	--lighter: #dadae5;
+	--light: #b4b4bf;
+	--mid: #9595a6;
+	--dark: #737380;
+	--darker: #45454d;
+	--darkest: #16161a;
+
+	/* light mode colors */
+	--primary-color: #c4a9a1;
+	--secondary-color: var(--light);
+	--text-color: var(--darker);
+	--bg-color: var(--lightest);
+	--highlight-color: #dccac4;
+	--gradient-color: linear-gradient(20deg, var(--darkest), var(--light));
+
+	--header-font: 'Noto Serif Display';
+}
+
+[data-theme='dark'] {
+	/* dark mode colors */
+	--primary-color: #91aaf2;
+	--secondary-color: var(--dark);
+	--text-color: var(--lighter);
+	--bg-color: var(--darkest);
+	--highlight-color: #b2c3f6;
+	--gradient-color: linear-gradient(20deg, var(--dark), var(--lighter));
+}
+
+h1 {
+	/* fallback for the gradient */
+	background-color: var(--dark);
+
+	/* the gradient */
+	background-image: var(--gradient-color);
+
+	/* set the background size and repeat properties. */
+	width: fit-content;
+	background-size: 100%;
+	background-repeat: repeat;
+
+	/* use the text as a clipping mask */
+	background-clip: text;
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-moz-text-fill-color: transparent;
+
+	font-family: var(--header-font);
+}
