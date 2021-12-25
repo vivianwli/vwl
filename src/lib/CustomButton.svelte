@@ -1,5 +1,5 @@
 <script>
-    import "../app.css";
+    import "../css/app.css";
 </script>
 
 <button>
@@ -19,5 +19,6 @@
     }
     button:hover {
         background-color: var(--highlight-color);
+        box-shadow: 0 0 0.2rem var(--primary-light-color);
     }
 </style>

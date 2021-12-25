@@ -52,7 +52,10 @@
         width: 100%;
         margin: auto;
         margin-top: 15vh;
-        margin-bottom: 15vh;
+        margin-bottom: 10vh;
+    }
+    ion-icon:hover {
+        color: var(--primary-light-color);
     }
     /*
     .section {
