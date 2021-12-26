@@ -18,7 +18,6 @@
     });
 
     function switchTheme(event) {
-        alert("hi");
         darkTheme = (darkTheme + 1) % 2;
         if (darkTheme === 0) {
             document.documentElement.setAttribute('data-theme', 'light');
@@ -27,24 +26,6 @@
             document.documentElement.setAttribute('data-theme', 'dark');
         }
     }
-    
-    /* onMount (() => {
-        let darkTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : 'light';
-        document.documentElement.setAttribute('data-theme', darkTheme);
-        console.log(darkTheme);
-   
-        function switchTheme(event) {
-            console.log("hi");
-            if (darkTheme === 'light') {
-                document.documentElement.setAttribute('data-theme', 'dark');
-                localStorage.setItem('theme', 'dark');
-            }
-            else {
-                document.documentElement.setAttribute('data-theme', 'light');
-                localStorage.setItem('theme', 'light');
-            }
-        }
-    }) */
 </script>
 
 <svelte:head>
@@ -61,14 +42,9 @@
                     <a href="/blog">blog</a>
                 </nav>
                 <div class="dark-switch">
-                    <!-- {#if darkTheme === 'light'}
-                        <h1>bruh</h1>
-                        <Icon src={FiMoon} className="custom-icon moon" on:click{switchTheme}/>
-                    {:else}
-                        <h1>{darkTheme}</h1>  
-                        <Icon src={FiMoon} className="custom-icon filled-moon"on:click{switchTheme}/>
-                    {/if} --> 
-                    <Icon on:click={() => {console.log("helo");}} bind:this={darkIcon} src={FiMoon} className={"custom-icon " + themes[darkTheme]}/>
+                    <div on:click={switchTheme}>
+                        <Icon bind:this={darkIcon} src={FiMoon} className={"custom-icon " + themes[darkTheme]}/>
+                    </div>
                 </div>
             </div>
         </div>
