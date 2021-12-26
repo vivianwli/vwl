@@ -1,20 +1,50 @@
 <script>
-    import "../css/app.css";
+    import "../app.css";
+    import { onMount } from 'svelte';
 
-    let themeIcons = ["moon-outline", "moon"];
-    let themeIconId = 0;
+    import Icon from 'svelte-icons-pack/Icon.svelte';
+    import FiMoon from "svelte-icons-pack/fi/FiMoon";
+    let themes = ["moon", "filled-moon"];
+    let darkTheme = 1;
     let darkIcon;
 
+    onMount (() => {
+        if (darkTheme === 0) {
+            document.documentElement.setAttribute('data-theme', 'light');
+        }
+        else {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        }
+    });
+
     function switchTheme(event) {
-        themeIconId = (themeIconId + 1) % 2;
-        if (themeIconId === 0) {
+        alert("hi");
+        darkTheme = (darkTheme + 1) % 2;
+        if (darkTheme === 0) {
             document.documentElement.setAttribute('data-theme', 'light');
         }
         else {
             document.documentElement.setAttribute('data-theme', 'dark');
         }
     }
-
+    
+    /* onMount (() => {
+        let darkTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : 'light';
+        document.documentElement.setAttribute('data-theme', darkTheme);
+        console.log(darkTheme);
+   
+        function switchTheme(event) {
+            console.log("hi");
+            if (darkTheme === 'light') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+            }
+            else {
+                document.documentElement.setAttribute('data-theme', 'light');
+                localStorage.setItem('theme', 'light');
+            }
+        }
+    }) */
 </script>
 
 <svelte:head>
@@ -31,7 +61,14 @@
                     <a href="/blog">blog</a>
                 </nav>
                 <div class="dark-switch">
-                    <ion-icon bind:this={darkIcon} name={themeIcons[themeIconId]} on:click={switchTheme}></ion-icon>
+                    <!-- {#if darkTheme === 'light'}
+                        <h1>bruh</h1>
+                        <Icon src={FiMoon} className="custom-icon moon" on:click{switchTheme}/>
+                    {:else}
+                        <h1>{darkTheme}</h1>  
+                        <Icon src={FiMoon} className="custom-icon filled-moon"on:click{switchTheme}/>
+                    {/if} --> 
+                    <Icon on:click={() => {console.log("helo");}} bind:this={darkIcon} src={FiMoon} className={"custom-icon " + themes[darkTheme]}/>
                 </div>
             </div>
         </div>
@@ -50,15 +87,24 @@
         display: grid;
         grid-template-columns: min-content 1fr min-content;
     }
-    .header .dark-switch {
+    .dark-switch {
         grid-column-start: 3;
-        color: var(--secondary-color);
-        font-size: 2rem;
         padding: 1rem;
         padding-right: 2rem;
     }
-    .header .dark-switch ion-icon:hover {
-        color: var(--primary-light-color);
+    :global(.custom-icon) {
+        color: var(--secondary-color);
+        font-size: 2rem;
+        opacity: 75%;
+    }
+    :global(.filled-moon) {
+        fill: var(--secondary-color);
+    }
+    :global(.filled-moon):hover {
+        fill: var(--secondary-selected-color);
+    }
+    :global(.custom-icon):hover {
+        color: var(--secondary-selected-color);
     }
     nav {
         padding: 1rem;

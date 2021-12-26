@@ -1,5 +1,7 @@
 <script>
-    import CustomButton from "$lib/CustomButton.svelte";
+    import CustomButton from "../components/CustomButton.svelte";
+    import Icon from 'svelte-icons-pack/Icon.svelte';
+    import FiArrowDownCircle from "svelte-icons-pack/fi/FiArrowDownCircle";
 </script>
 
 <div class="content">
@@ -7,7 +9,8 @@
         <div class="logo">
             <img src="src/images/vwl.svg" alt="logo" />
         </div>
-        <ion-icon name="arrow-down-circle-outline"></ion-icon>
+        <!-- <ArrowDownCircle size="large" /> --> 
+        <Icon src={FiArrowDownCircle} className="custom-icon arrow"/>
     </div>
     <div class="section">
         <div class="mini-section">
@@ -20,13 +23,10 @@
                 <CustomButton>resume</CustomButton>
             </div>
         </div>
-        <ion-icon name="arrow-down-circle-outline"></ion-icon>
+        <!-- <ArrowDownCircle size="large" /> --> 
+        <Icon src={FiArrowDownCircle} className="custom-icon arrow"/>
     </div>
 </div>
-
-<!-- 
-
-<p>byeeeeeeeeeeee</p> -->
 
 <style>
     /*
@@ -40,28 +40,25 @@
         width: 40vw;
         margin: auto;
         padding-top: 25vh;
+        margin-bottom: 10vh;
     }
     .logo img {
         width: 100%;
         margin: auto;
     }
-    ion-icon {
-        color: var(--secondary-color);
-        font-size: 2.5rem;
+    :global(.arrow) {
         opacity: 50%;
         width: 100%;
         margin: auto;
         margin-top: 15vh;
         margin-bottom: 10vh;
     }
-    ion-icon:hover {
-        color: var(--primary-light-color);
-    }
     /*
     .section {
         scroll-snap-align: start; 
     }
     */
+
     .mini-section {
         display: grid;
         grid-template-columns: 1fr 1fr;

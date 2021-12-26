@@ -1,5 +1,5 @@
 <script>
-    import "../css/app.css";
+    import "../app.css";
 </script>
 
 <button>
