@@ -16,6 +16,8 @@
         font-family: 'Epilogue';
         font-weight: 600;
         padding: 0.4rem 0.7rem;
+        cursor: pointer;
+        white-space: nowrap;
     }
     button:hover {
         background-color: var(--highlight-color);

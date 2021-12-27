@@ -72,6 +72,7 @@
         color: var(--secondary-color);
         font-size: 2rem;
         opacity: 75%;
+        cursor: pointer;
     }
     :global(.filled-moon) {
         fill: var(--secondary-color);
