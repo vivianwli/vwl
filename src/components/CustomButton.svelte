@@ -1,10 +1,13 @@
 <script>
     import "../app.css";
+    export let link = "/";
 </script>
 
-<button>
-    <slot />
-</button>
+<a href={link}>
+    <button>
+        <slot />
+    </button>
+</a>
 
 <style>
     button {
