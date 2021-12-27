@@ -5,7 +5,7 @@
     import Icon from 'svelte-icons-pack/Icon.svelte';
     import FiMoon from "svelte-icons-pack/fi/FiMoon";
     let themes = ["moon", "filled-moon"];
-    let darkTheme = 1;
+    let darkTheme = 0;
     let darkIcon;
 
     onMount (() => {
