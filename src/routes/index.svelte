@@ -1,7 +1,16 @@
 <script>
     import CustomButton from "../components/CustomButton.svelte";
+    import EmailInput from "../components/EmailInput.svelte";
     import Icon from 'svelte-icons-pack/Icon.svelte';
+
+    // icon imports 
     import FiArrowDownCircle from "svelte-icons-pack/fi/FiArrowDownCircle";
+    import FiMail from "svelte-icons-pack/fi/FiMail";
+    import FiGithub from "svelte-icons-pack/fi/FiGithub";
+    import FiLinkedin from "svelte-icons-pack/fi/FiLinkedin";
+    import FiInstagram from "svelte-icons-pack/fi/FiInstagram";
+    import FiYoutube from "svelte-icons-pack/fi/FiYoutube";
+    import FiTwitter from "svelte-icons-pack/fi/FiTwitter";
 </script>
 
 <div class="content">
@@ -93,7 +102,37 @@
         </div>
         <Icon src={FiArrowDownCircle} className="custom-icon arrow"/>
     </div>
-    <!-- to come: outro! -->
+    <!-- outro! -->
+    <div class="section outro">
+        <h1>i create.</h1>
+        <div class="outro-content">
+            <div class="about">
+                <h2>want to know more?</h2>
+                <div class="buttons">
+                    <CustomButton>what I do at USC</CustomButton>
+                    <CustomButton>things I care about</CustomButton>
+                    <CustomButton>fun facts</CustomButton>
+                </div>
+                <p>
+                    Maecenas rhoncus elit sit amet sapien sodales, scelerisque ornare ligula tincidunt. Proin id eros in nibh tristique dictum. Donec eget velit arcu. Integer purus sapien, lobortis ac orci sit amet, pellentesque ultricies turpis. Sed eu sem nibh. Donec molestie, lectus in porta condimentum, magna lacus ultricies turpis, et efficitur libero tortor sed nulla. Vivamus viverra augue ac neque feugiat, et finibus nulla venenatis. Nullam non ex eu tellus ullamcorper lacinia.
+                </p>
+            </div>
+            <span></span>
+            <div class="contact">
+                <h2>want to chat?</h2>
+                <div class="media-icon-container">
+                    <Icon src={FiMail} className="custom-icon media-icon"/>
+                    <Icon src={FiGithub} className="custom-icon media-icon"/>
+                    <Icon src={FiLinkedin} className="custom-icon media-icon"/>
+                    <Icon src={FiInstagram} className="custom-icon media-icon"/>
+                    <Icon src={FiYoutube} className="custom-icon media-icon"/>
+                    <Icon src={FiTwitter} className="custom-icon media-icon"/>
+                </div>
+                <p>Subscribe to the substack:</p>
+                <EmailInput/>
+            </div>
+        </div>
+    </div>
 </div>
 
 <style>
@@ -107,6 +146,9 @@
         scroll-snap-align: start; 
     }
     */
+    .content {
+        margin: 0 15vw 20vh 15vw;
+    }
 
     /* title page style */
     .logo {
@@ -140,8 +182,7 @@
     .mini-section {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        margin: 10vh 10vw 0 10vw;
-        padding: 0 5vw;
+        margin-top: 10vh;
     }
 
     /* glow + resizing for every image in these mini sections */
@@ -152,7 +193,12 @@
 
     /* more space in between each thing in the things section (thing: design, code, write) */
     .things .mini-section{
-        margin: 20vh 10vw 10vh 10vw;
+        margin: 20vh 0vw 10vh 0vw;
+    }
+
+    /* less space between the end of "things" and the arrow */
+    .things :global(.arrow) {
+        margin-top: 5vh;
     }
 
     /* unique style for my profile picture */
@@ -249,5 +295,54 @@
         grid-row: 1;
         padding-top: 7.5%;
         transform: rotate(8deg);
+    }
+
+    /* outro style */
+    .outro {
+        margin: 25vh 0;
+    }
+    .outro-content {
+        display: grid;
+        grid-template-columns: repeat(16, 1fr);
+    }
+    .outro h1 {
+        width: fit-content;
+        margin: auto;
+    }
+    .outro h2 {
+        background-color: var(--primary-color);
+        background-image: none;
+    }
+    .about {
+        text-align: right;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        grid-column: 1 / span 8;
+    }
+    .outro span {
+        height: 80%;
+        width: 4px;
+        background-color: var(--secondary-color);
+        border-radius: 99px;
+        opacity: 50%;
+        margin: auto;
+        grid-column: 9 / span 2;
+    }
+    .contact {
+        grid-column: 11 / -1;
+    }
+    .media-icon-container {
+        display: grid;
+        grid-template-columns: repeat(3, min-content) 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 0.5rem;
+    }
+    :global(.media-icon) {
+        font-size: 3rem;
+    }
+    .contact p {
+        margin-top: 1.5rem;
+        margin-bottom: 0.5rem;
     }
 </style>

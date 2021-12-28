@@ -66,6 +66,30 @@ h1 {
 	line-height: 0.8;
 }
 
+h2 {
+	/* fallback for the gradient */
+	background-color: var(--dark);
+
+	/* the gradient */
+	background-image: var(--gradient-color);
+
+	/* set the background size and repeat properties. */
+	width: fit-content;
+	background-size: 100%;
+	background-repeat: repeat;
+
+	/* use the text as a clipping mask */
+	background-clip: text;
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-moz-text-fill-color: transparent;
+
+	font-weight: 600;
+	font-size: 1.75rem;
+	margin-bottom: 1rem;
+}
+
 body::-webkit-scrollbar {
 	width: 11px;
 }
