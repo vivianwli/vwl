@@ -17,6 +17,7 @@
 
 	/* light mode colors */
 	--primary-color: #c4a9a1;
+	--primary-selected-color: #99786e;
 	--secondary-color: var(--light);
 	--secondary-selected-color: var(--mid);
 	--text-color: var(--darker);
@@ -31,6 +32,7 @@
 [data-theme='dark'] {
 	/* dark mode colors */
 	--primary-color: #91aaf2;
+	--primary-selected-color: #6884d9;
 	--secondary-color: var(--darker);
 	--secondary-selected-color: var(--dark);
 	--text-color: var(--lighter);

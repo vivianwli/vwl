@@ -15,9 +15,9 @@
         opacity: 75%;
         background-color: transparent;
         border-radius: 30px;
-        color: var(--primary-light-color);
+        color: var(--text-color);
         font-family: 'Epilogue';
-        font-weight: 600;
+        font-weight: 300;
         padding: 0.4rem 0.7rem;
         width: 70%;
     }
@@ -27,6 +27,7 @@
     }
     ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
         color: var(--secondary-color);
+        font-weight: 600;
         opacity: 65%; /* Firefox */
     }
     button { 
