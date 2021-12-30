@@ -1,5 +1,5 @@
 <script>
-    import "../app.css";
+    import "../app.scss";
     export let link = "/";
     export let className;
 </script>
@@ -14,7 +14,7 @@
     button {
         width: fit-content;
         border: 2.5px solid var(--primary-color);
-        background-color: var(--bg-color);
+        background-color: var(--transparent);
         border-radius: 30px;
         color: var(--primary-color);
         font-family: 'Epilogue';

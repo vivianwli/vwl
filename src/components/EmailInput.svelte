@@ -1,5 +1,5 @@
 <script>
-    import "../app.css";
+    import "../app.scss";
     import Icon from 'svelte-icons-pack/Icon.svelte';
     import FiArrowRightCircle from "svelte-icons-pack/fi/FiArrowRightCircle";
 </script>
