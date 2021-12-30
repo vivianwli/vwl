@@ -116,8 +116,8 @@
             color: nth($colors, random(length($colors)));
             top: random(100) * 1%;
             left: random(100) * 1%;
-            animation-duration: (random($animationDuration * 10) / 10) * 1s + 10s;
-            animation-delay: random(($animationDuration + 10s) * 10) / 10 * -1s;
+            animation-duration: calc(random($animationDuration * 10) / 10) * 1s + 10s;
+            animation-delay: calc(random(($animationDuration + 10s) * 10) / 10) * -1s;
             transform-origin: (random(50) - 25) * 1vw (random(50) - 25) * 1vh;
             $particleSize: nth($sizes, random(length($sizes)));
             width: $particleSize;
