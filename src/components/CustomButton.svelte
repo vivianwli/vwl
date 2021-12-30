@@ -27,4 +27,12 @@
         background-color: var(--highlight-color);
         box-shadow: 0 0 0.2rem var(--primary-light-color);
     }
+    .tag {
+        border: 2.5px solid var(--secondary-color);
+        color: var(--secondary-color);
+    }
+    .tag:hover {
+        background-color: var(--secondary-highlight-color);
+        box-shadow: 0 0 0.2rem var(--secondary-color);
+    }
 </style>

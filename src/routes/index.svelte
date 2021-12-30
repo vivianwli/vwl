@@ -392,5 +392,7 @@
     .selectedTag :global(.tag) {
         background-color: var(--highlight-color);
         box-shadow: 0 0 0.2rem var(--primary-light-color);
+        color: var(--primary-color);
+        border: 2.5px solid var(--primary-color);
     }
 </style>
