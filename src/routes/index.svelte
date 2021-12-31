@@ -28,7 +28,7 @@
     <div class="section">
         <div class="mini-section intro">
             <img class="avatar" src="images/vivian.png" alt="viv" />
-            <div class="text">
+            <div class="text-right">
                 <h1>hello! i'm vivian li.</h1>
                 <p>
                     I’m a very small girl studying in the <b>Iovine and Young Academy</b>, based in Los Angeles at the University of Southern California. I live to <b>tell stories in beautiful ways</b>, especially around climate solutions and sustainability. I also love many other things and I'm generally doing all sorts of stuff. <b>Welcome to my playground</b>!
@@ -165,18 +165,15 @@
     </div>
 </div>
 
-<style>
+<style lang="scss">
     .section {
         scroll-snap-align: start; 
-    }
-    .content {
-        margin: 0 15vw 20vh 15vw;
     }
     /* title page style */
     .logo {
         width: 40vw;
         margin: auto;
-        padding-top: 25vh;
+        padding-top: 10vh;
         margin-bottom: 10vh;
     }
     .logo img {
@@ -248,7 +245,11 @@
 
     /* giving enough standalone slide space (so it looks good with scroll-snapping!) */
     .intro {
-        margin-top: 25vh;
+        margin-top: 20vh;
+
+        .text-right {
+            margin-left: 0;
+        }
     }
     
     /*image stack style */
@@ -321,7 +322,7 @@
 
     /* outro style */
     .outro {
-        margin: 30vh 0;
+        margin: 15vh 0;
     }
     .outro-content {
         display: grid;
