@@ -33,7 +33,7 @@
                 <p>
                     I’m a very small girl studying in the <b>Iovine and Young Academy</b>, based in Los Angeles at the University of Southern California. I live to <b>tell stories in beautiful ways</b>, especially around climate solutions and sustainability. I also love many other things and I'm generally doing all sorts of stuff. <b>Welcome to my playground</b>!
                 </p>
-                <CustomButton link="/resume">resume</CustomButton>
+                <CustomButton link="https://drive.google.com/file/d/1mkq5Q-g9xGp5N2UZcgNrXokr2vZ4QfOS/view?usp=sharing">resume</CustomButton>
             </div>
         </div>
         <Icon src={FiArrowDownCircle} className="custom-icon arrow"/>
@@ -166,20 +166,12 @@
 </div>
 
 <style>
-    /* TO BE IMPLEMENTED: scroll snap!
-    .content {
-        scroll-snap-type: y proximity;
-        scroll-padding-top: 10vh;
-        overflow-y: scroll;
-    }
     .section {
         scroll-snap-align: start; 
     }
-    */
     .content {
         margin: 0 15vw 20vh 15vw;
     }
-
     /* title page style */
     .logo {
         width: 40vw;
