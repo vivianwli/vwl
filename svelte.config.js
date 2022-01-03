@@ -1,8 +1,11 @@
+import { mdsvex } from 'mdsvex';
 import preprocess from 'svelte-preprocess';
 import adapter from '@sveltejs/adapter-auto';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
+	extensions: ['.svelte', '.svx', '.md'],
+
 	kit: {
 		adapter: adapter(),
 
@@ -25,7 +28,8 @@ const config = {
 			scss: {
 				prependData: '@import "src/variables.scss";'
 			}
-		})
+		}),
+		mdsvex({ extensions: ['.md', '.svx'] })
 	]
 };
 

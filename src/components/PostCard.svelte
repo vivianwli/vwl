@@ -1,4 +1,4 @@
 <script>
     import "../app.scss";
-    export let postMd;
+    export let post;
 </script>

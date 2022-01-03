@@ -1,5 +1,6 @@
 <script>
-    import CustomButton from "../components/CustomButton.svelte";
+    import Link from "../components/Link.svelte";
+    import Tag from "../components/Tag.svelte";
     import EmailInput from "../components/EmailInput.svelte";
     import Icon from 'svelte-icons-pack/Icon.svelte';
 
@@ -33,7 +34,7 @@
                 <p>
                     I’m a very small girl studying in the <b>Iovine and Young Academy</b>, based in Los Angeles at the University of Southern California. I live to <b>tell stories in beautiful ways</b>, especially around climate solutions and sustainability. I also love many other things and I'm generally doing all sorts of stuff. <b>Welcome to my playground</b>!
                 </p>
-                <CustomButton link="https://drive.google.com/file/d/1mkq5Q-g9xGp5N2UZcgNrXokr2vZ4QfOS/view?usp=sharing">resume</CustomButton>
+                <Link link="https://drive.google.com/file/d/1mkq5Q-g9xGp5N2UZcgNrXokr2vZ4QfOS/view?usp=sharing">resume</Link>
             </div>
         </div>
         <Icon src={FiArrowDownCircle} className="custom-icon arrow"/>
@@ -46,7 +47,7 @@
                 <p>
                     I make pretty things, from brand identities to hand-doodled holiday cards to tiny 3D worlds. Part of that process lies in constantly looking out for minutiae behind the beauty of daily life. Check it out!
                 </p>
-                <CustomButton link="/portfolio">my design portfolio</CustomButton>
+                <Link link="/portfolio">my design portfolio</Link>
             </div>
             <div class="image-stack image-right">
                 <div class="image-stack-item design-top">
@@ -75,8 +76,8 @@
                     Okay, this one is relatively a work in progress. I've coded random projects in the past (thanks, high school!), and I'm now on a mission to better understand interactive media and data journalism. Feel free to follow along :)
                 </p>
                 <div class="buttons">
-                    <CustomButton link="https://github.com/teacupkittie">my github</CustomButton>
-                    <CustomButton link="/blog">my blog</CustomButton>
+                    <Link link="https://github.com/teacupkittie">my github</Link>
+                    <Link link="/blog">my blog</Link>
                 </div>  
             </div>
         </div>
@@ -87,8 +88,8 @@
                     Ah, the power of words. More than anything, I love to talk. Distilling ideas to their core components, figuring out what they mean, and sharing them with others. Thankfully, I get to do a lot of that here.
                 </p>
                 <div class="buttons">
-                    <CustomButton link="/portfolio">my writing portfolio</CustomButton>
-                    <CustomButton link="/blog">my blog</CustomButton>
+                    <Link link="/portfolio">my writing portfolio</Link>
+                    <Link link="/blog">my blog</Link>
                 </div> 
             </div>
             <div class="image-stack image-right">
@@ -128,13 +129,14 @@
             <div class="about">
                 <h2>want to know more?</h2>
                 <div class="buttons">
-                    <div class:selectedTag="{aboutSection === 'at-usc'}" on:click="{() => aboutSection = 'at-usc'}"><CustomButton className="tag">what I do at USC</CustomButton></div>
-                    <div class:selectedTag="{aboutSection === 'care-about'}" on:click="{() => aboutSection = 'care-about'}"><CustomButton className="tag">things I care about</CustomButton></div>
-                    <div class:selectedTag="{aboutSection === 'fun-facts'}" on:click="{() => aboutSection = 'fun-facts'}"><CustomButton className="tag">fun facts</CustomButton></div>
+                    <div class:selectedTag="{aboutSection === 'at-usc'}" on:click="{() => aboutSection = 'at-usc'}"><Tag className="filter">what I do at USC</Tag></div>
+                    <div class:selectedTag="{aboutSection === 'care-about'}" on:click="{() => aboutSection = 'care-about'}"><Tag className="filter">things I care about</Tag></div>
+                    <div class:selectedTag="{aboutSection === 'fun-facts'}" on:click="{() => aboutSection = 'fun-facts'}"><Tag className="filter">fun facts</Tag></div>
                 </div>
                 {#if aboutSection === "at-usc"}
                     <div>
                         <ul>
+                            <li>i'm in a <a href="https://iovine-young.usc.edu/">crazy-cool major</a> with some crazy-cool people</li>
                             <li>i’m a soprano in <a href="https://uscsirensacappella.weebly.com/">Sirens A Cappella</a> 🤍</li>
                             <li>i'm developing USC's <a href="https://green.usc.edu/students/presidents-sustainability-internship-program/">sustainability design guidelines</a>, organizing the Student Sustainability Committee's media presence, and planning the Presidential Symposium</li>
                             <li>i write for <a href="https://hauteusc.com/">Haute Mag</a> and design for <a href="https://hacksc.com/">HackSC</a></li>
@@ -188,13 +190,6 @@
         margin: auto;
         margin-top: 15vh;
         margin-bottom: 10vh;
-    }
-
-    /* when there's more than one button in a row */ 
-    .buttons {
-        display: grid;
-        grid-template-columns: min-content min-content 1fr;
-        grid-gap: 0.5rem;
     }
 
     /* style for each little image + text section! */
@@ -382,7 +377,7 @@
     a:hover {
         color: var(--primary-selected-color);
     }
-    .selectedTag :global(.tag) {
+    .selectedTag :global(.filter) {
         background-color: var(--highlight-color);
         box-shadow: 0 0 0.2rem var(--primary-light-color);
         color: var(--primary-color);

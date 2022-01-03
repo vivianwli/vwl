@@ -1,17 +1,14 @@
 <script>
     import "../app.scss";
     export let link = "/";
-    export let className;
 </script>
 
 <a href={link}>
-    <button class={className}>
-        <slot />
-    </button>
+    <slot />
 </a>
 
 <style>
-    button {
+    a {
         width: fit-content;
         border: 2.5px solid var(--primary-color);
         background-color: var(--transparent);
@@ -19,20 +16,14 @@
         color: var(--primary-color);
         font-family: 'Epilogue';
         font-weight: 600;
+        font-size: 0.8rem;
+        text-decoration: none;
         padding: 0.4rem 0.7rem;
         cursor: pointer;
         white-space: nowrap;
     }
-    button:hover {
+    a:hover {
         background-color: var(--highlight-color);
         box-shadow: 0 0 0.2rem var(--primary-light-color);
-    }
-    .tag {
-        border: 2.5px solid var(--secondary-color);
-        color: var(--secondary-color);
-    }
-    .tag:hover {
-        background-color: var(--secondary-highlight-color);
-        box-shadow: 0 0 0.2rem var(--secondary-color);
     }
 </style>

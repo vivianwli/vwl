@@ -30,6 +30,7 @@
 
 <svelte:head>
     <meta name="robots" content="noindex" />
+    <title>vivian li's website</title>
 </svelte:head>
 
 <div class="scroll-bar-wrap">

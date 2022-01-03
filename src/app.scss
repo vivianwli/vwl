@@ -40,8 +40,8 @@
 	/* dark mode colors */
 	--primary-color: #91aaf2;
 	--primary-selected-color: #6884d9;
-	--secondary-color: var(--darker);
-	--secondary-selected-color: var(--dark);
+	--secondary-color: var(--dark);
+	--secondary-selected-color: var(--mid);
 	--text-color: var(--lighter);
 	--bg-color: var(--darkest);
 	--primary-light-color: #b2c3f6;
@@ -103,6 +103,13 @@ h2 {
 	font-weight: 600;
 	font-size: 1.75rem;
 	margin-bottom: 1rem;
+}
+
+/* when there's more than one button in a row */
+.buttons {
+	display: grid;
+	grid-template-columns: min-content min-content 1fr;
+	grid-gap: 0.5rem;
 }
 
 body::-webkit-scrollbar {
