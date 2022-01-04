@@ -16,7 +16,7 @@
         color: var(--primary-color);
         font-family: 'Epilogue';
         font-weight: 600;
-        font-size: 0.8rem;
+        font-size: 0.9rem;
         text-decoration: none;
         padding: 0.4rem 0.7rem;
         cursor: pointer;

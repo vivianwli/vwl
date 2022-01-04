@@ -20,6 +20,7 @@
 <script>
     import PostCard from '../../components/PostCard.svelte';
     import Tag from '../../components/Tag.svelte';
+    import EmailInput from '../../components/EmailInput.svelte';
     export let posts;
     let allTags = ['tag-1', 'tag-2']
 </script>
@@ -39,7 +40,21 @@
             clear all
         </Tag>
     </div>
+    <div class="post-container">
+        {#each posts as post}
+            <PostCard {post} />
+        {/each}
+    </div>
+    <p>Want reminders when I post? Feel free to subscribe:</p>
+    <EmailInput/>
 </div>
 
 <style>
+    .post-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 2.5rem;
+        padding: 3rem 0;
+    }
+    
 </style>

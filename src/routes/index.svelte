@@ -123,7 +123,7 @@
                     <a href="https://twitter.com/teacupkittie"><Icon src={FiTwitter} className="custom-icon media-icon"/></a>
                 </div>
                 <p>Subscribe to the substack:</p>
-                <EmailInput/>
+                <EmailInput className="right-justified"/>
             </div>
             <span></span>
             <div class="about">

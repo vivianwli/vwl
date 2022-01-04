@@ -2,7 +2,7 @@
 title: 'Fruit & vegetable blob emojis for Discord'
 slug: 'fruit-blobs'
 publishDate: 'JUL 22, 2020'
-tags: { name: 'art' }
+tags: [{ name: 'art' }]
 thumbnail: 'images/fruit-blobs.png'
 summary: 'A dear friend of mine graced me with a Discord Nitro gift for my birthday month (July!), which ultimately catalyzed the creation of these fruit and vegetable blob emojis.'
 ---

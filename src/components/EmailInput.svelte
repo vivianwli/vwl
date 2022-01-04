@@ -2,9 +2,10 @@
     import "../app.scss";
     import Icon from 'svelte-icons-pack/Icon.svelte';
     import FiArrowRightCircle from "svelte-icons-pack/fi/FiArrowRightCircle";
+    export let className;
 </script>
 
-<div class="email-input">
+<div class="email-input {className}">
     <input type="email" placeholder="email" />
     <button type="submit"><Icon src={FiArrowRightCircle} className="custom-icon arrow"/></button>
 </div>
@@ -44,7 +45,7 @@
         margin: 0;
         color: var(--primary-light-color);
         opacity: 100%;
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
     button :global(.arrow):hover {
         margin: 0;
@@ -52,5 +53,9 @@
     }
     .email-input {
         display: flex;
+        max-width: 30rem;
+    }
+    .right-justified {
+        justify-content: flex-end;
     }
 </style>

@@ -16,7 +16,7 @@
         color: var(--secondary-color);
         font-family: 'Epilogue';
         font-weight: 600;
-        font-size: 0.8rem;
+        font-size: 0.9rem;
         padding: 0.4rem 0.7rem;
         cursor: pointer;
         white-space: nowrap;
@@ -29,6 +29,14 @@
         border: none;
     }
     .clear:hover { 
+        box-shadow: none;
+    }
+    .inactive {
+        color: var(--primary-color);
+        border: 2.5px solid var(--primary-color);
+    }
+    .inactive:hover {
+        background-color: var(--transparent);
         box-shadow: none;
     }
 </style>
