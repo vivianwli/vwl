@@ -240,7 +240,7 @@
 
     /* giving enough standalone slide space (so it looks good with scroll-snapping!) */
     .intro {
-        margin-top: 20vh;
+        padding-top: 5vh;
 
         .text-right {
             margin-left: 0;

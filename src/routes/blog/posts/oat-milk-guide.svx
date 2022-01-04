@@ -1,7 +1,7 @@
 ---
 title: 'An ultimate guide to oat milk'
 slug: 'oat-milk-guide'
-publishDate: 'AUG 1, 2020'
+publishDate: 'AUG 1 2020'
 tags: [{ name: 'food' }]
 thumbnail: 'images/oat-milk.png'
 summary: 'There’s always more to learn about homemade oat milk. I detail the lessons I’ve learned, ways to expand upon a foolproof recipe, new delicious flavors, and advice on handling leftover oat pulp.'

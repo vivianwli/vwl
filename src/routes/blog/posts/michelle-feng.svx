@@ -1,7 +1,7 @@
 ---
 title: 'How Michelle Feng defies math academia norms'
 slug: 'michelle-feng'
-publishDate: 'FEB 1, 2020'
+publishDate: 'FEB 1 2020'
 tags: [{ name: 'interview' }]
 thumbnail: 'images/mathy-protest.png'
 summary: 'Michelle Feng explains how she discovered and became passionate about applied topology in the context of politics and social justice.'

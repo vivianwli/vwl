@@ -25,6 +25,7 @@
     input:focus {
         outline: none;
         box-shadow: 0 0 2px var(--secondary-color);
+        background-color: var(--secondary-highlight-color);
     }
     ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
         color: var(--secondary-color);
@@ -45,7 +46,6 @@
         margin: 0;
         color: var(--primary-light-color);
         opacity: 100%;
-        font-size: 2.2rem;
     }
     button :global(.arrow):hover {
         margin: 0;
@@ -54,8 +54,5 @@
     .email-input {
         display: flex;
         max-width: 30rem;
-    }
-    .right-justified {
-        justify-content: flex-end;
     }
 </style>

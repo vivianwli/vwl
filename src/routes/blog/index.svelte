@@ -1,14 +1,13 @@
 <script context="module">
-    const posts = import.meta.glob('./posts/*.svx')
-    let body = []
+    const posts = import.meta.glob('./posts/*.svx');
+    let body = [];
     for (const path in posts) {
-        body.push(posts[path]().then(({metadata}) => metadata))
+        body.push(posts[path]().then(({metadata}) => metadata));
     }
-    /**
-       * @type {import('@sveltejs/kit').Load}
-       */
+    /** @type {import('@sveltejs/kit').Load} */
     export async function load({ page, fetch }) {
-        const posts = await Promise.all(body)
+        const posts = await Promise.all(body);
+        console.log(posts);        
         return {
             props: {
                 posts
@@ -22,7 +21,23 @@
     import Tag from '../../components/Tag.svelte';
     import EmailInput from '../../components/EmailInput.svelte';
     export let posts;
-    let allTags = ['tag-1', 'tag-2']
+
+    let allTags = [];
+
+    for (const post of posts) {
+        if (post.editDate !== undefined) {
+                post.dateObj = new Date(post.editDate);
+        }
+        else {
+            post.dateObj = new Date(post.publishDate);
+        }
+        for (const postTag of post.tags) {
+            if (!allTags.includes(postTag.name)) {
+                allTags.push(postTag.name);
+            }
+        }
+    }
+    posts.sort((a, b) => b.dateObj - a.dateObj);
 </script>
 
 <svelte:head>
@@ -53,7 +68,7 @@
     .post-container {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-gap: 2.5rem;
+        grid-gap: 2rem;
         padding: 3rem 0;
     }
     
