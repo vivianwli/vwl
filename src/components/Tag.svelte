@@ -27,6 +27,7 @@
     }
     .clear {
         border: none;
+        height: 100%;
     }
     .clear:hover { 
         box-shadow: none;
