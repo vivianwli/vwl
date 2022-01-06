@@ -37,9 +37,9 @@
     <div class="scroll-box">
         <div class="header">
             <nav>
-                <a href=".">home</a>
-                <a href="/portfolio">portfolio</a>
-                <a href="/blog">blog</a>
+                <a rel="prefetch" href="/">home</a>
+                <a rel="prefetch" href="/portfolio">portfolio</a>
+                <a rel="prefetch" href="/blog">blog</a>
             </nav>
         </div>
         <div class="dark-switch">

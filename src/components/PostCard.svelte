@@ -5,7 +5,7 @@
 </script>
 
 <div class="card-container">
-    <a href="/blog/{post.slug}">
+    <a rel="prefetch" href="blog/{post.slug}">
         <img src={post.thumbnail} alt={post.title} />
         <div class="post-description">
             <h2>{post.title}</h2>
@@ -32,10 +32,6 @@
             width: 100%;
         }
         .date {
-            line-height: 0.25;
-            color: var(--secondary-color);
-            font-weight: 600;
-            font-style: italic; 
             font-size: 0.8rem;
         }
         .post-description {

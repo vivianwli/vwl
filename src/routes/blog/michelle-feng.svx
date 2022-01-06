@@ -8,7 +8,8 @@ summary: 'Michelle Feng explains how she discovered and became passionate about 
 ---
 
 <script>
-  import PostHeader from '../../../components/PostHeader.svelte'
+  import PostHeader from '../../components/PostHeader.svelte';
+  import BlogImage from '../../components/BlogImage.svelte';
 </script>
 
 <PostHeader {title} {publishDate} {tags} />
@@ -31,8 +32,7 @@ While working, Feng was also looking for ways to volunteer with the Black Lives 
 
 Feng became a graduate student at UCLA, where she transitioned to an applied math major. She now works in applied topology, where she analyzes the shapes of mathematical spaces, specifically with applications to big data that might come in the form of political maps, voting maps, electoral maps, and segregation distribution.
 
-<img class="blogimage" src="/assets/black-lives-mather.png">
-<div class="caption">Illustration of BLM protesters on a mathy surface. (Source: me!)</div>
+<BlogImage src="mathy-protest.png" caption="Illustration of BLM protesters on a mathy surface. (Source: me!)" />
 
 For Feng, the power of mathematical tools lies in their ability to interpret and understand human patterns, making them extraordinarily useful in the context of social activism. In her career, she hopes to elucidate the automated procedures for processing big data, especially in terms of developing methods for understanding discrimination and being able to explain analytical methods with transparency. Feng proposed the key question she aims to address: "If we think we're seeing a pattern, can we confirm that quantitatively, and not just glance at it with our eyeballs—or even worse, have a computer glance at it?"
 

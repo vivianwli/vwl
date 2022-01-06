@@ -13,12 +13,15 @@
 <!--Title-->
 <div>
     <h1>{title}</h1>
-    <p>
-        Published {publishDate} • Last edited {editDate}
+    <p class="date">
+        PUBLISHED {publishDate} 
+        {#if editDate}
+            • LAST EDITED {editDate}
+        {/if}
     </p>
     <div class="buttons">
         {#each tags as tag}
-            <Tag>{tag}</Tag>
+            <Tag className="inactive">{tag.name}</Tag>
         {/each}
     </div>
 </div>

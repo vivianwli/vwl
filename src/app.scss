@@ -81,8 +81,6 @@ h1 {
 	font-family: var(--header-font);
 	font-size: 3rem;
 	margin-bottom: 0;
-	padding-bottom: 1rem;
-	line-height: 0.8;
 }
 
 h2 {
@@ -146,4 +144,31 @@ html {
 
 .right-justified {
 	justify-content: flex-end;
+}
+
+ul {
+	padding-left: 1rem;
+}
+ol {
+	padding-left: 1rem;
+}
+li {
+	margin-bottom: 0.5rem;
+}
+:global(.hidden) {
+	visibility: hidden;
+}
+a {
+	color: var(--primary-color);
+	&:hover {
+		color: var(--primary-selected-color);
+	}
+}
+
+.date {
+	line-height: 0.25;
+	color: var(--secondary-color);
+	font-weight: 600;
+	font-style: italic;
+	font-size: 0.9rem;
 }

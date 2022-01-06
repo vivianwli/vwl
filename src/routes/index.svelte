@@ -362,21 +362,6 @@
     .contact p {
         margin: 10% 0 5% 0;
     }
-    ul {
-        padding-left: 1rem;
-    }
-    li {
-        margin-bottom: 0.5rem;
-    }
-    :global(.hidden) {
-        visibility: hidden;
-    }
-    a {
-        color: var(--primary-color);
-    }
-    a:hover {
-        color: var(--primary-selected-color);
-    }
     .selectedTag :global(.filter) {
         background-color: var(--highlight-color);
         box-shadow: 0 0 0.2rem var(--primary-light-color);
