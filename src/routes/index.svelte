@@ -17,6 +17,10 @@
 
 </script>
 
+<svelte:head>
+  <title>home</title>
+</svelte:head>
+
 <div class="content">
     <!-- cover page! -->
     <div class="section">

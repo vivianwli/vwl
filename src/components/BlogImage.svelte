@@ -34,4 +34,12 @@
             width: 90%;
         }
     }
+    .half-img {
+        img {
+            width: 20rem;
+        }
+        .caption {
+            width: 20rem;
+        }
+    }
 </style>

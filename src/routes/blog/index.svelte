@@ -66,9 +66,19 @@
         </div>
     </div>
     <div class="post-container">
-        {#each posts as post}
-            <PostCard {post} />
-        {/each}
+        {#if Object.keys(selectedTags).filter(k => selectedTags[k]).length === 0}
+            {#each posts as post}
+                <PostCard {post} />
+            {/each}
+        {:else}
+            {#each posts as post}
+                {#each post.tags as tag}
+                    {#if selectedTags[tag.name]}
+                        <PostCard {post} />
+                    {/if}
+                {/each}
+            {/each}
+        {/if}
     </div>
     <p>Want reminders when I post? Feel free to subscribe:</p>
     <EmailInput/>
