@@ -161,9 +161,6 @@ ol {
 li {
 	margin-bottom: 0.5rem;
 }
-:global(.hidden) {
-	visibility: hidden;
-}
 a {
 	color: var(--primary-color);
 	&:hover {

@@ -141,7 +141,7 @@
                     <a sveltekit:prefetch href="https://www.youtube.com/c/vivianli0"><Icon src={FiYoutube} className="custom-icon media-icon"/></a>
                     <a sveltekit:prefetch href="https://twitter.com/teacupkittie"><Icon src={FiTwitter} className="custom-icon media-icon"/></a>
                 </div>
-                <p>Subscribe to my newsletter:</p>
+                <p>Subscribe to my newsletter:<br> (this will take you to my blog!) </p>
                 <EmailInput className="right-justified"/>
             </div>
             <span></span>
@@ -390,5 +390,9 @@
         box-shadow: 0 0 0.2rem var(--primary-light-color);
         color: var(--primary-color);
         border: 2.5px solid var(--primary-color);
+    }
+    
+    :global(.hidden) {
+        visibility: hidden;
     }
 </style>
