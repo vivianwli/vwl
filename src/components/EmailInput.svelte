@@ -5,10 +5,14 @@
     export let className;
 </script>
 
-<div class="email-input {className}">
-    <input type="email" placeholder="email" />
+<form
+  action="https://buttondown.email/api/emails/embed-subscribe/vivian"
+  method="post"
+  class="email-input {className}"
+>
+    <input type="email" placeholder="email" name="email"/>
     <button type="submit"><Icon src={FiArrowRightCircle} className="custom-icon arrow"/></button>
-</div>
+</form>
 
 <style>
     input {

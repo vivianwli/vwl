@@ -36,6 +36,11 @@
 	--blob-2: rgba(196, 169, 161, 0.35);
 
 	--header-font: 'Noto Serif Display';
+	--toastBackground: var(--primary-light-color);
+	--toastColor: var(--text-color);
+	--toastBarBackground: var(--primary-selected-color);
+	--toastMsgPadding: 0.75rem;
+	--toastBorderRadius: 0;
 }
 
 [data-theme='dark'] {

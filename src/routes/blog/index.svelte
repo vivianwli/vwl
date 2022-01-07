@@ -19,7 +19,13 @@
     import PostCard from '../../components/PostCard.svelte';
     import Tag from '../../components/Tag.svelte';
     import EmailInput from '../../components/EmailInput.svelte';
+    import { page } from '$app/stores';
+    import { toast, SvelteToast } from '@zerodevx/svelte-toast';
     export let posts;
+
+    const options = {
+        duration: 10,
+    }
 
     let selectedTags = {};
     
@@ -41,6 +47,15 @@
         }
     }
     posts.sort((a, b) => b.dateObj - a.dateObj);
+
+    const emailSubmitted = $page.query.get('emailSubmitted');
+    if (emailSubmitted) {
+        toast.push('email submitted!');
+        toast.pop((i) => i.target !== 'new');
+        if (typeof window !== 'undefined') {
+            history.pushState(null, null, '/blog');
+        }
+    }
 </script>
 
 <svelte:head>
@@ -48,6 +63,11 @@
 </svelte:head>
 
 <div class="content">
+    {#if emailSubmitted}
+        <div class="wrap">
+            <SvelteToast />
+        </div>
+    {/if}
     <h1>musings</h1>
     <p>A humble abode for my ideas, experiments, and reflections. Welcome!</p>
     <div class="buttons">
