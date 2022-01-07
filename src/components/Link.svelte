@@ -3,7 +3,7 @@
     export let link = "/";
 </script>
 
-<a href={link}>
+<a sveltekit:prefetch href={link}>
     <slot />
 </a>
 

@@ -117,14 +117,14 @@
             <div class="contact">
                 <h2>want to chat?</h2>
                 <div class="media-icon-container">
-                    <a href="mailto: vwli@usc.edu"><Icon src={FiMail} className="custom-icon media-icon"/></a>
-                    <a href="https://github.com/teacupkittie"><Icon src={FiGithub} className="custom-icon media-icon"/></a>
-                    <a href="https://www.linkedin.com/in/vivian-li-25b424183/"><Icon src={FiLinkedin} className="custom-icon media-icon"/></a>
-                    <a href="https://instagram.com/mclovivian"><Icon src={FiInstagram} className="custom-icon media-icon"/></a>
+                    <a sveltekit:prefetch href="mailto: vwli@usc.edu"><Icon src={FiMail} className="custom-icon media-icon"/></a>
+                    <a sveltekit:prefetch href="https://github.com/teacupkittie"><Icon src={FiGithub} className="custom-icon media-icon"/></a>
+                    <a sveltekit:prefetch href="https://www.linkedin.com/in/vivian-li-25b424183/"><Icon src={FiLinkedin} className="custom-icon media-icon"/></a>
+                    <a sveltekit:prefetch href="https://instagram.com/mclovivian"><Icon src={FiInstagram} className="custom-icon media-icon"/></a>
                     <Icon src={FiYoutube} className="custom-icon media-icon hidden"/>
                     <Icon src={FiYoutube} className="custom-icon media-icon hidden"/>
-                    <a href="https://www.youtube.com/c/vivianli0"><Icon src={FiYoutube} className="custom-icon media-icon"/></a>
-                    <a href="https://twitter.com/teacupkittie"><Icon src={FiTwitter} className="custom-icon media-icon"/></a>
+                    <a sveltekit:prefetch href="https://www.youtube.com/c/vivianli0"><Icon src={FiYoutube} className="custom-icon media-icon"/></a>
+                    <a sveltekit:prefetch href="https://twitter.com/teacupkittie"><Icon src={FiTwitter} className="custom-icon media-icon"/></a>
                 </div>
                 <p>Subscribe to the substack:</p>
                 <EmailInput className="right-justified"/>
@@ -140,10 +140,10 @@
                 {#if aboutSection === "at-usc"}
                     <div>
                         <ul>
-                            <li>i'm in a <a href="https://iovine-young.usc.edu/">crazy-cool major</a> with some crazy-cool people</li>
-                            <li>i’m a soprano in <a href="https://uscsirensacappella.weebly.com/">Sirens A Cappella</a> 🤍</li>
-                            <li>i'm developing USC's <a href="https://green.usc.edu/students/presidents-sustainability-internship-program/">sustainability design guidelines</a>, organizing the Student Sustainability Committee's media presence, and planning the Presidential Symposium</li>
-                            <li>i write for <a href="https://hauteusc.com/">Haute Mag</a> and design for <a href="https://hacksc.com/">HackSC</a></li>
+                            <li>i'm in a <a sveltekit:prefetch href="https://iovine-young.usc.edu/">crazy-cool major</a> with some crazy-cool people</li>
+                            <li>i’m a soprano in <a sveltekit:prefetch href="https://uscsirensacappella.weebly.com/">Sirens A Cappella</a> 🤍</li>
+                            <li>i'm developing USC's <a sveltekit:prefetch href="https://green.usc.edu/students/presidents-sustainability-internship-program/">sustainability design guidelines</a>, organizing the Student Sustainability Committee's media presence, and planning the Presidential Symposium</li>
+                            <li>i write for <a sveltekit:prefetch href="https://hauteusc.com/">Haute Mag</a> and design for <a sveltekit:prefetch href="https://hacksc.com/">HackSC</a></li>
                             <li>i skate, bake, run, and enjoy our beautiful campus</li>
                         </ul>
                     </div> 

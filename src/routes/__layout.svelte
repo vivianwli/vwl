@@ -5,26 +5,18 @@
     import Icon from 'svelte-icons-pack/Icon.svelte';
     import FiMoon from "svelte-icons-pack/fi/FiMoon";
     let themes = ["moon", "filled-moon"];
-    let darkTheme = 0;
-    let darkIcon;
+    let darkTheme;
 
     onMount (() => {
-        if (darkTheme === 0) {
-            document.documentElement.setAttribute('data-theme', 'light');
-        }
-        else {
-            document.documentElement.setAttribute('data-theme', 'dark');
-        }
+        const savedTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+        darkTheme = savedTheme ?? 'dark'
+        darkTheme === 'light' ? document.documentElement.setAttribute('data-theme', 'light') : document.documentElement.setAttribute('data-theme', 'dark');
     });
 
     function switchTheme(event) {
-        darkTheme = (darkTheme + 1) % 2;
-        if (darkTheme === 0) {
-            document.documentElement.setAttribute('data-theme', 'light');
-        }
-        else {
-            document.documentElement.setAttribute('data-theme', 'dark');
-        }
+        darkTheme === 'light' ? darkTheme = 'dark' : darkTheme = 'light';
+        document.documentElement.setAttribute('data-theme', darkTheme);
+        localStorage.setItem('theme', darkTheme);
     }
 </script>
 
@@ -32,14 +24,14 @@
     <div class="scroll-box">
         <div class="header">
             <nav>
-                <a rel="prefetch" href="/">home</a>
-                <a rel="prefetch" href="/portfolio">portfolio</a>
-                <a rel="prefetch" href="/blog">blog</a>
+                <a sveltekit:prefetch href="/">home</a>
+                <a sveltekit:prefetch href="/portfolio">portfolio</a>
+                <a sveltekit:prefetch href="/blog">blog</a>
             </nav>
         </div>
         <div class="dark-switch">
             <div on:click={switchTheme}>
-                <Icon bind:this={darkIcon} src={FiMoon} className={"custom-icon " + themes[darkTheme]}/>
+                <Icon src={FiMoon} className={"custom-icon " + themes[darkTheme]}/>
             </div>
         </div>
         <div class="page-content">

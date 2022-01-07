@@ -20,6 +20,7 @@
     import Tag from '../../components/Tag.svelte';
     import EmailInput from '../../components/EmailInput.svelte';
     import { page } from '$app/stores';
+    import { goto } from '$app/navigation'
     import { toast, SvelteToast } from '@zerodevx/svelte-toast';
     export let posts;
 
@@ -52,9 +53,7 @@
     if (emailSubmitted) {
         toast.push('email submitted!');
         toast.pop((i) => i.target !== 'new');
-        if (typeof window !== 'undefined') {
-            history.pushState(null, null, '/blog');
-        }
+        goto('/', { replaceState: true });
     }
 </script>
 

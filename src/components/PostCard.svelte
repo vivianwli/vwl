@@ -5,7 +5,7 @@
 </script>
 
 <div class="card-container">
-    <a rel="prefetch" href="blog/{post.slug}">
+    <a sveltekit:prefetch href="blog/{post.slug}">
         <img src={post.thumbnail} alt={post.title} />
         <div class="post-description">
             <h2>{post.title}</h2>
