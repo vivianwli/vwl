@@ -6,7 +6,7 @@
 </script>
 
 <div class={className}>
-    <img src={"/images/" + src} alt={caption}>
+    <img {src} alt={caption}>
     <div class="caption">{@html caption}</div>
 </div>
 

@@ -4,7 +4,7 @@ slug: 'fruit-blobs'
 publishDate: 'JUL 22 2020'
 editDate: 'JAN 4 2021'
 tags: [{ name: 'art' }]
-thumbnail: 'images/fruit-blobs.png'
+thumbnail: 'fruit-blobs.png'
 summary: 'I received a Discord Nitro gift for my birthday month (July!), which ultimately catalyzed the creation of these fruit and vegetable blob emojis.'
 ---
 
@@ -12,6 +12,10 @@ summary: 'I received a Discord Nitro gift for my birthday month (July!), which u
   import PostHeader from '$lib/components/PostHeader.svelte';
   import BlogImage from '$lib/components/BlogImage.svelte';
   import BlogGallery from '$lib/components/BlogGallery.svelte';
+  import blobs1 from '$lib/assets/blobberries.png';
+  import blobs2 from '$lib/assets/blobcitrus.png';
+  import blobs3 from '$lib/assets/blobsuggestive.png';
+  import blobs4 from '$lib/assets/basicbasket.png';
 </script>
 
 <PostHeader {title} {publishDate} {editDate} {tags} />
@@ -21,8 +25,8 @@ I received a Discord Nitro gift for my birthday month (July!), which ultimately 
 Join my [Discord server](https://discord.gg/AA2pvSU) and use these blob emojis for your self (global use only available for Nitro users)! Additionally, my blobs are copyrighted by Blob Hub Studios. Join the [larger network](https://discord.gg/yATKMY8), too, which is home to over 12,000 unique blobs. Since submitting this pack, I've been named a Blob Designer as part of the Blob Hub Staff. Below are some of my favorite emojis I've created!
 
 <BlogGallery columns=2>
-  <BlogImage className="gallery-img" src="blobberries.png" caption="<b>:blobraspberry:</b> feeling loved and <b>:bloblackberry:</b> rolling its eyes. Twins with very different personalities!" />
-  <BlogImage className="gallery-img" src="blobcitrus.png" caption="An embarrassed <b>:blobgrapefruit:</b>, cool <b>:bloblemon:</b>, and zesty <b>:bloborange:</b>" />
-  <BlogImage className="gallery-img" src="blobsuggestive.png" caption="Suggestive <b>:blobergine:</b> and <b>:blobpeach:</b>" />
-  <BlogImage className="gallery-img" src="basicbasket.png" caption="Basic emotions for basic fruits, including <b>:blobapple:</b>, <b>:blobpear</b>, <b>:blobanana:</b>, <b>:blobstrawberry:</b>, and <b>:bloberry:</b>" />
+  <BlogImage className="gallery-img" src={blobs1} caption="<b>:blobraspberry:</b> feeling loved and <b>:bloblackberry:</b> rolling its eyes. Twins with very different personalities!" />
+  <BlogImage className="gallery-img" src={blobs2} caption="An embarrassed <b>:blobgrapefruit:</b>, cool <b>:bloblemon:</b>, and zesty <b>:bloborange:</b>" />
+  <BlogImage className="gallery-img" src={blobs3} caption="Suggestive <b>:blobergine:</b> and <b>:blobpeach:</b>" />
+  <BlogImage className="gallery-img" src={blobs4} caption="Basic emotions for basic fruits, including <b>:blobapple:</b>, <b>:blobpear</b>, <b>:blobanana:</b>, <b>:blobstrawberry:</b>, and <b>:bloberry:</b>" />
 </BlogGallery>

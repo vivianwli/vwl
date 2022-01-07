@@ -3,7 +3,7 @@ title: 'An ultimate guide to oat milk'
 slug: 'oat-milk-guide'
 publishDate: 'AUG 1 2020'
 tags: [{ name: 'food' }]
-thumbnail: 'images/oat-milk.png'
+thumbnail: 'oat-milk.png'
 summary: 'There’s always more to learn about homemade oat milk. I detail the lessons I’ve learned, ways to expand upon a foolproof recipe, new delicious flavors, and advice on handling leftover oat pulp.'
 ---
 
@@ -11,6 +11,7 @@ summary: 'There’s always more to learn about homemade oat milk. I detail the l
   import PostHeader from '$lib/components/PostHeader.svelte'
   import BlogImage from '$lib/components/BlogImage.svelte';
   import BlogHalfImage from '$lib/components/BlogHalfImage.svelte';
+  import oatMilk from '$lib/assets/oat-milk.png';
 </script>
 
 <PostHeader {title} {publishDate} {tags} />
@@ -45,7 +46,7 @@ After understanding the thickening properties of oats, mastering the basics for 
 - red bean milk (use store-bought paste, or make your own—I used an Instant Pot!)
 - cinnamon spice milk (1 tsp cinnamon, 1 tsp pumpkin spice)
 
-<BlogImage src="oat-milk.png" caption="Matcha oat milk and cherry blossoms." />
+<BlogImage src={oatMilk} caption="Matcha oat milk and cherry blossoms." />
 
 Flavors I haven't tried (but you definitely should) include black sesame milk and golden milk. Reap the extensive health benefits of turmeric! The doors are wide open, and I trust that you'll discover even more ingenious flavors.
 

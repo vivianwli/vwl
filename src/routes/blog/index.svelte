@@ -54,7 +54,7 @@
     if (emailSubmitted) {
         toast.push('email submitted!');
         toast.pop((i) => i.target !== 'new');
-        browser && goto('/', { replaceState: true });
+        browser && goto($page.path, { replaceState: true });
     }
 </script>
 

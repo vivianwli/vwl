@@ -25,14 +25,14 @@
     <!-- cover page! -->
     <div class="section">
         <div class="logo">
-            <img src="images/vwl.svg" alt="logo" />
+            <img src="src/lib/assets/vwl.svg" alt="logo" />
         </div>
         <Icon src={FiArrowDownCircle} className="custom-icon arrow"/>
     </div>
     <!-- introduction! -->
     <div class="section">
         <div class="mini-section intro">
-            <img class="avatar" src="images/vivian.png" alt="viv" />
+            <img class="avatar" src="src/lib/assets/vivian.png" alt="viv" />
             <div class="text-right">
                 <h1>hello! i'm vivian li.</h1>
                 <p>
@@ -55,23 +55,23 @@
             </div>
             <div class="image-stack image-right">
                 <div class="image-stack-item design-top">
-                    <img src="images/market-fermentation-2.png" alt="market fermentation poster design" />
+                    <img src="src/lib/assets/market-fermentation-2.png" alt="market fermentation poster design" />
                 </div>
                 <div class="image-stack-item design-bottom">
-                    <img src="images/trader-joes-big.png" alt="low poly trader joes" />
+                    <img src="src/lib/assets/trader-joes-big.png" alt="low poly trader joes" />
                 </div>
             </div>
         </div>
         <div class="mini-section">
             <div class="image-stack image-left">
                 <div class="image-stack-item code-top">
-                    <img src="images/research-2.png" alt="my senior research project" />
+                    <img src="src/lib/assets/research-2.png" alt="my senior research project" />
                 </div>
                 <div class="image-stack-item code-middle">
-                    <img src="images/intro-code.svg" alt="code-ception of this homepage" />
+                    <img src="src/lib/assets/intro-code.svg" alt="code-ception of this homepage" />
                 </div>
                 <div class="image-stack-item code-bottom">
-                    <img src="images/research-1.png" alt="my senior research project" />
+                    <img src="src/lib/assets/research-1.png" alt="my senior research project" />
                 </div>
             </div>
             <div class="text-right">
@@ -98,13 +98,13 @@
             </div>
             <div class="image-stack image-right">
                 <div class="image-stack-item write-top">
-                    <img src="images/greenwashing-1.png" alt="an article i wrote on greenwashing" />
+                    <img src="src/lib/assets/greenwashing-1.png" alt="an article i wrote on greenwashing" />
                 </div>
                 <div class="image-stack-item write-middle">
-                    <img src="images/viv-nytimes.png" alt="an article i wrote on marine plastic pollution" />
+                    <img src="src/lib/assets/viv-nytimes.png" alt="an article i wrote on marine plastic pollution" />
                 </div>
                 <div class="image-stack-item write-bottom">
-                    <img src="images/greenwashing-2.png" alt="an article i wrote on greenwashing" />
+                    <img src="src/lib/assets/greenwashing-2.png" alt="an article i wrote on greenwashing" />
                 </div>
             </div>
         </div>
