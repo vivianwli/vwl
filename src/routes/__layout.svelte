@@ -2,6 +2,11 @@
     import "../app.scss";
     import { onMount } from 'svelte';
 
+    import { page } from '$app/stores';
+    import { goto } from '$app/navigation';
+    import { browser } from '$app/env';
+    import { toast } from '@zerodevx/svelte-toast';
+
     import Icon from 'svelte-icons-pack/Icon.svelte';
     import FiMoon from "svelte-icons-pack/fi/FiMoon";
     let themes = ["moon", "filled-moon"];
@@ -17,6 +22,14 @@
         darkTheme === 'light' ? darkTheme = 'dark' : darkTheme = 'light';
         document.documentElement.setAttribute('data-theme', darkTheme);
         localStorage.setItem('theme', darkTheme);
+    }
+
+    let emailSubmitted = $page.query.get('emailSubmitted');
+    if (emailSubmitted) {
+        toast.push('email submitted!');
+        toast.pop((i) => i.target !== 'new');
+        browser && goto($page.path, { replaceState: true });
+        emailSubmitted = false;
     }
 </script>
 

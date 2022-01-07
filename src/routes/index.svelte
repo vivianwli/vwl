@@ -13,6 +13,20 @@
     import FiYoutube from "svelte-icons-pack/fi/FiYoutube";
     import FiTwitter from "svelte-icons-pack/fi/FiTwitter";
 
+    //image imports
+    import vwl from "$lib/assets/vwl.svg";
+    import vivian from "$lib/assets/vivian.png";
+    import design1 from "$lib/assets/market-fermentation-2.png";
+    import design2 from "$lib/assets/trader-joes-big.png";
+    import code1 from "$lib/assets/research-2.png";
+    import code2 from "$lib/assets/intro-code.svg";
+    import code3 from "$lib/assets/research-1.png";
+    import write1 from "$lib/assets/greenwashing-1.png";
+    import write2 from "$lib/assets/viv-nytimes.png";
+    import write3 from "$lib/assets/greenwashing-2.png";
+
+    import { SvelteToast } from '@zerodevx/svelte-toast';
+
     let aboutSection = "at-usc";
 
 </script>
@@ -22,17 +36,18 @@
 </svelte:head>
 
 <div class="content">
+    <SvelteToast />
     <!-- cover page! -->
     <div class="section">
         <div class="logo">
-            <img src="src/lib/assets/vwl.svg" alt="logo" />
+            <img src={vwl} alt="logo" />
         </div>
         <Icon src={FiArrowDownCircle} className="custom-icon arrow"/>
     </div>
     <!-- introduction! -->
     <div class="section">
         <div class="mini-section intro">
-            <img class="avatar" src="src/lib/assets/vivian.png" alt="viv" />
+            <img class="avatar" src={vivian} alt="viv" />
             <div class="text-right">
                 <h1>hello! i'm vivian li.</h1>
                 <p>
@@ -55,23 +70,23 @@
             </div>
             <div class="image-stack image-right">
                 <div class="image-stack-item design-top">
-                    <img src="src/lib/assets/market-fermentation-2.png" alt="market fermentation poster design" />
+                    <img src={design1} alt="market fermentation poster design" />
                 </div>
                 <div class="image-stack-item design-bottom">
-                    <img src="src/lib/assets/trader-joes-big.png" alt="low poly trader joes" />
+                    <img src={design2} alt="low poly trader joes" />
                 </div>
             </div>
         </div>
         <div class="mini-section">
             <div class="image-stack image-left">
                 <div class="image-stack-item code-top">
-                    <img src="src/lib/assets/research-2.png" alt="my senior research project" />
+                    <img src={code1} alt="my senior research project" />
                 </div>
                 <div class="image-stack-item code-middle">
-                    <img src="src/lib/assets/intro-code.svg" alt="code-ception of this homepage" />
+                    <img src={code2} alt="code-ception of this homepage" />
                 </div>
                 <div class="image-stack-item code-bottom">
-                    <img src="src/lib/assets/research-1.png" alt="my senior research project" />
+                    <img src={code3} alt="my senior research project" />
                 </div>
             </div>
             <div class="text-right">
@@ -98,13 +113,13 @@
             </div>
             <div class="image-stack image-right">
                 <div class="image-stack-item write-top">
-                    <img src="src/lib/assets/greenwashing-1.png" alt="an article i wrote on greenwashing" />
+                    <img src={write1} alt="an article i wrote on greenwashing" />
                 </div>
                 <div class="image-stack-item write-middle">
-                    <img src="src/lib/assets/viv-nytimes.png" alt="an article i wrote on marine plastic pollution" />
+                    <img src={write2} alt="an article i wrote on marine plastic pollution" />
                 </div>
                 <div class="image-stack-item write-bottom">
-                    <img src="src/lib/assets/greenwashing-2.png" alt="an article i wrote on greenwashing" />
+                    <img src={write3} alt="an article i wrote on greenwashing" />
                 </div>
             </div>
         </div>
@@ -126,7 +141,7 @@
                     <a sveltekit:prefetch href="https://www.youtube.com/c/vivianli0"><Icon src={FiYoutube} className="custom-icon media-icon"/></a>
                     <a sveltekit:prefetch href="https://twitter.com/teacupkittie"><Icon src={FiTwitter} className="custom-icon media-icon"/></a>
                 </div>
-                <p>Subscribe to the substack:</p>
+                <p>Subscribe to my newsletter:</p>
                 <EmailInput className="right-justified"/>
             </div>
             <span></span>
@@ -248,6 +263,10 @@
 
         .text-right {
             margin-left: 0;
+        }
+
+        h1 {
+            margin-top: 0;
         }
     }
     
