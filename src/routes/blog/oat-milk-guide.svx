@@ -12,6 +12,7 @@ summary: 'There’s always more to learn about homemade oat milk. I detail the l
   import BlogImage from '$lib/components/BlogImage.svelte';
   import BlogHalfImage from '$lib/components/BlogHalfImage.svelte';
   import oatMilk from '$lib/assets/oat-milk.png';
+  import brownies from '$lib/assets/brownies.jpg';
 </script>
 
 <PostHeader {title} {publishDate} {tags} />
@@ -55,7 +56,7 @@ Flavors I haven't tried (but you definitely should) include black sesame milk an
 Perhaps you now have show-stopping lavender oat milk, but you're still staring at the leftover pile of oat pulp beside it. Fear not! This slightly slimy glob is actually highly nutritious and easily incorporated into a variety of recipes. I've seen people utilize this pulp in dishes from cookies (only for those who eat gluten or have access to a gluten-free baking flour mix, usually) to guacamole, but I usually prefer to throw it in pancake and brownie recipes.
 Here's my brownie recipe. It's food processor-friendly!
 
-<BlogHalfImage image="brownies.jpg" caption="The finished product (brownies!!)">
+<BlogHalfImage image={brownies} caption="The finished product (brownies!!)">
     <h3>Ingredients:</h3>
     <ul>
         <li>oat pulp!</li>
