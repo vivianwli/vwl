@@ -1,7 +1,7 @@
 <script>
-    import Link from "../components/Link.svelte";
-    import Tag from "../components/Tag.svelte";
-    import EmailInput from "../components/EmailInput.svelte";
+    import Link from "$lib/components/Link.svelte";
+    import Tag from "$lib/components/Tag.svelte";
+    import EmailInput from "$lib/components/EmailInput.svelte";
     import Icon from 'svelte-icons-pack/Icon.svelte';
 
     // icon imports 

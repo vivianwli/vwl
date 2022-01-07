@@ -8,9 +8,9 @@ summary: 'There’s always more to learn about homemade oat milk. I detail the l
 ---
 
 <script>
-  import PostHeader from '../../components/PostHeader.svelte'
-  import BlogImage from '../../components/BlogImage.svelte';
-  import BlogHalfImage from '../../components/BlogHalfImage.svelte';
+  import PostHeader from '$lib/components/PostHeader.svelte'
+  import BlogImage from '$lib/components/BlogImage.svelte';
+  import BlogHalfImage from '$lib/components/BlogHalfImage.svelte';
 </script>
 
 <PostHeader {title} {publishDate} {tags} />

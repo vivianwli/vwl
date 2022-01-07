@@ -1,5 +1,5 @@
 <script>
-    import "../app.scss";
+    import "../../app.scss";
     export let src;
     export let caption;
     export let className;

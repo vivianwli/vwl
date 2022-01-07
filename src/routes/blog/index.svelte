@@ -16,11 +16,12 @@
 </script>
 
 <script>
-    import PostCard from '../../components/PostCard.svelte';
-    import Tag from '../../components/Tag.svelte';
-    import EmailInput from '../../components/EmailInput.svelte';
+    import PostCard from '$lib/components/PostCard.svelte';
+    import Tag from '$lib/components/Tag.svelte';
+    import EmailInput from '$lib/components/EmailInput.svelte';
     import { page } from '$app/stores';
-    import { goto } from '$app/navigation'
+    import { goto } from '$app/navigation';
+    import { browser } from '$app/env';
     import { toast, SvelteToast } from '@zerodevx/svelte-toast';
     export let posts;
 
@@ -53,7 +54,7 @@
     if (emailSubmitted) {
         toast.push('email submitted!');
         toast.pop((i) => i.target !== 'new');
-        goto('/', { replaceState: true });
+        browser && goto('/', { replaceState: true });
     }
 </script>
 

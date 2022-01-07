@@ -1,5 +1,5 @@
 <script>
-    import "../app.scss";
+    import "../../app.scss";
     import BlogImage from './BlogImage.svelte';
     export let image;
     export let caption;

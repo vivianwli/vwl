@@ -1,5 +1,5 @@
 <script>
-    import "../app.scss";
+    import "../../app.scss";
     export let post;
     import Tag from "./Tag.svelte";
 </script>
