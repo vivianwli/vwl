@@ -24,6 +24,7 @@
 	--secondary-subtle-color: rgba(180, 180, 191, 0.5);
 	--text-color: var(--darker);
 	--bg-color: var(--lightest);
+	--bg-shadow-color: #ebebf2;
 	--primary-light-color: #dccac4;
 	--highlight-color: rgba(196, 169, 161, 0.2); // var(--mid), 20% opacity
 	--secondary-highlight-color: rgba(180, 180, 191, 0.15); // var(--light), 15% opacity
@@ -53,6 +54,7 @@
 	--secondary-selected-color: var(--mid);
 	--text-color: var(--lighter);
 	--bg-color: var(--darkest);
+	--bg-shadow-color: #2a2a2f;
 	--primary-light-color: #b2c3f6;
 	--highlight-color: rgba(145, 170, 242, 0.2);
 	--secondary-highlight-color: rgba(69, 69, 77, 0.3); // var(--darker), 15% opacity

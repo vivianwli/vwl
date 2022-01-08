@@ -157,9 +157,9 @@
         color: var(--secondary-color);
         font-size: 2rem;
         opacity: 75%;
-        cursor: pointer;
         &:hover {
             color: var(--secondary-selected-color);
+            cursor: pointer;
         }
     }
     :global(.filled-moon) {

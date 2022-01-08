@@ -209,6 +209,10 @@
         margin: auto;
         margin-top: 15vh;
         margin-bottom: 10vh;
+        &:hover {
+            color: var(--secondary-color);
+            cursor: default;
+        }
     }
 
     /* style for each little image + text section! */
@@ -380,10 +384,10 @@
         grid-gap: 0.75rem;
     }
     :global(.media-icon) {
-        font-size: 3rem;
+        font-size: 3rem !important;
     }
     .contact p {
-        margin: 10% 0 5% 0;
+        margin: 5% 0;
     }
     .selectedTag :global(.filter) {
         background-color: var(--highlight-color);

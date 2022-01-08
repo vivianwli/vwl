@@ -54,6 +54,7 @@
     button :global(.arrow):hover {
         margin: 0;
         color: var(--primary-color);
+        cursor: pointer;
     }
     .email-input {
         display: flex;
