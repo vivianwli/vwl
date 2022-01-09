@@ -1,3 +1,8 @@
+<script>
+    let designPos = 'top';
+    let journalismPos = 'bottom';
+</script>
+
 <svelte:head>
     <title>portfolio</title>
 </svelte:head>
@@ -5,14 +10,18 @@
 <div class="content">
     <h1>portfolio</h1>
     <div class="tabs">
-        <div class="design-tab tab top">
+        <div class="tab-selector">
+            <div class="design-selector" on:click={() => {journalismPos = 'bottom'; designPos = 'top'; console.log('design');}}></div>
+            <div class="journalism-selector" on:click={() => {journalismPos = 'top'; designPos = 'bottom'; console.log('journo');}}></div>
+        </div>
+        <div class="design-tab tab {designPos}">
             <h2 class="tab-label">design</h2>
             <svg viewBox="0 0 263 108" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M34.3647 18.5394L26.4733 35.1565C20.9981 46.6858 11.3657 53.6959 0.998535 53.6959V107.392H262.5V53.6959C252.318 53.6959 242.831 46.9326 237.304 35.7337L228.534 17.9622C223.007 6.76327 213.52 0 203.338 0H59.8395C49.4724 0 39.84 7.01005 34.3647 18.5394Z"/>
             </svg> 
             <div class="tab-page"></div>
         </div>
-        <div class="journalism-tab tab bottom">
+        <div class="journalism-tab tab {journalismPos}">
             <h2 class="tab-label">journalism</h2>
             <svg viewBox="0 0 263 108" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M34.3647 18.5394L26.4733 35.1565C20.9981 46.6858 11.3657 53.6959 0.998535 53.6959V107.392H262.5V53.6959C252.318 53.6959 242.831 46.9326 237.304 35.7337L228.534 17.9622C223.007 6.76327 213.52 0 203.338 0H59.8395C49.4724 0 39.84 7.01005 34.3647 18.5394Z"/>
@@ -27,7 +36,7 @@
         margin-bottom: 2rem;
     }
     svg {
-        filter: drop-shadow(0 0 0.5rem var(--secondary-subtle-color));
+        filter: drop-shadow(0 0 1rem var(--secondary-subtle-color));
         grid-row: 1 / span 2;
         height: 100%;
         grid-column: 2;
@@ -46,7 +55,7 @@
     }
     .bottom {
         .tab-page {
-            box-shadow: 0 0 0.5rem var(--secondary-subtle-color);
+            box-shadow: 0 0 1rem var(--secondary-subtle-color);
         }
         svg {
             fill: var(--bg-shadow-color);
@@ -54,6 +63,21 @@
     }
     .tabs {
         display: grid;
+        .tab-selector {
+            grid-column: 1;
+            grid-row: 1;
+            z-index: 3;
+            width: 100%;
+            height: 2.5rem;
+            display: grid;
+            grid-template-columns: 2.5rem 11rem 11rem auto;
+            .design-selector {
+                grid-column: 2;
+            }
+            .journalism-selector {
+                grid-column: 3;
+            }
+        }
         .tab {
             grid-column: 1;
             grid-row: 1;
