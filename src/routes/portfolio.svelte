@@ -3,10 +3,19 @@
     import Icon from 'svelte-icons-pack/Icon.svelte';
     import FiMail from "svelte-icons-pack/fi/FiMail";
     import FiLinkedin from "svelte-icons-pack/fi/FiLinkedin";
+    import traderJoes from '$lib/assets/trader-joes-big.png';
+    import oatte from '$lib/assets/oatte.png';
+    import hacksc1 from '$lib/assets/hacksc.png';
+    import hacksc2 from '$lib/assets/sam-yam-1.png';
+    import climatedu1 from '$lib/assets/climatedu-redlining.png';
+    import climatedu2 from '$lib/assets/climatedu-jellies.png';
 
     function clear() {
         for (const key in journalismTags) {
             journalismTags[key] = false;
+        }
+        for (const key in designTags) {
+            designTags[key] = false;
         }
     }
     function noneSelected() {
@@ -54,10 +63,18 @@
                     </div>
                     <div class="content-container">
                         {#if noneSelected() || designTags['3D']}
-                            <div class="3D content-row"></div>
+                            <div class="threed content-row">
+                                <div class="img-container"><img src={traderJoes} alt="low poly Trader Joe's" /></div>
+                                <div class="img-container"><img src={oatte} alt="oat milk latte product mock-up" /></div>
+                            </div>
                         {/if}
                         {#if noneSelected() || designTags['social-media']}
-                            <div class="social-media content-row"></div>
+                            <div class="social-media content-row">
+                                <div class="img-container"><img src={hacksc1} alt="HackSC's apps closing Instagram post" /></div>
+                                <div class="img-container"><img src={hacksc2} alt="HackSC's keynote speaker Instagram post" /></div>
+                                <div class="img-container"><img src={climatedu1} alt="climatedu's redlining climate impact Instagram post" /></div>
+                                <div class="img-container"><img src={climatedu2} alt="climatedu's jellyfish carbon sink Instagram post" /></div>
+                            </div>
                         {/if}
                         {#if noneSelected() || designTags['illustration']}
                             <div class="illustration content-row"></div>
@@ -154,6 +171,8 @@
     }
     .tabs {
         display: grid;
+        max-width: 100%;
+        width: 100%;
         .tab-selector {
             grid-column: 1;
             grid-row: 1;
@@ -174,6 +193,7 @@
             grid-row: 1;
             display: grid;
             grid-template-rows: 2.5rem 2.5rem 40rem;
+            
             .tab-label {
                 font-size: 1rem;
                 margin: 0;
@@ -201,10 +221,18 @@
         border: 2.5px solid var(--primary-color);
     }
     .content-row {
-        margin: 2rem 0;
+        margin: 1.5rem 0;
         display: flex;
-        justify-content: space-between;
-        gap: 1rem; // will only need this OR space-between i think
+        gap: 1.5rem; 
+        .img-container {
+            flex-shrink: 1;
+        }
+        img {
+            box-shadow: 0 0 1rem var(--secondary-subtle-color);
+            max-width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
     }
     .outro {
         display:flex;
