@@ -9,6 +9,11 @@
     import hacksc2 from '$lib/assets/sam-yam-1.png';
     import climatedu1 from '$lib/assets/climatedu-redlining.png';
     import climatedu2 from '$lib/assets/climatedu-jellies.png';
+    import marketFermentation from '$lib/assets/market-fermentation-2.png';
+    import blobs from '$lib/assets/blobs-portfolio.png';
+    import iy8 from '$lib/assets/iy8.png';
+    import oracle from '$lib/assets/blair-oracle.png';
+    import climatedu3 from '$lib/assets/climatedu-website.png';
 
     function clear() {
         for (const key in journalismTags) {
@@ -64,7 +69,7 @@
                     <div class="content-container">
                         {#if noneSelected() || designTags['3D']}
                             <div class="threed content-row">
-                                <div class="img-container"><img src={traderJoes} alt="low poly Trader Joe's" /></div>
+                                <div id="tj" class="img-container"><img src={traderJoes} alt="low poly Trader Joe's" /></div>
                                 <div class="img-container"><img src={oatte} alt="oat milk latte product mock-up" /></div>
                             </div>
                         {/if}
@@ -77,10 +82,17 @@
                             </div>
                         {/if}
                         {#if noneSelected() || designTags['illustration']}
-                            <div class="illustration content-row"></div>
+                            <div class="illustration content-row">
+                                <div class="img-container"><img src={marketFermentation} alt="market fermentation mock movie poster" /></div>
+                                <div class="img-container"><img src={blobs} alt="Fruit blobs for Discord" /></div>
+                                <div class="img-container"><img src={iy8} alt="Iovine and Young Academy Cohort 8 sample logo art" /></div>
+                            </div>
                         {/if}
-                        {#if noneSelected() || designTags['ui-ix']}
-                            <div class="ui-ux content-row"></div>
+                        {#if noneSelected() || designTags['ui-ux']}
+                            <div class="ui-ux content-row">
+                                <div class="img-container"><img src={oracle} alt="Logo header for the ORACLE of Blair" /></div>
+                                <div class="img-container"><img src={climatedu3} alt="Website home page for climatedu.org" /></div>
+                            </div>
                         {/if}
                     </div>
                 </div>
@@ -151,6 +163,7 @@
         grid-row: 2 / -1;
         grid-column: 1 / -1;
         z-index: 1;
+        height: 100%;
     }
     .top {
         z-index: 2;
@@ -192,7 +205,7 @@
             grid-column: 1;
             grid-row: 1;
             display: grid;
-            grid-template-rows: 2.5rem 2.5rem 40rem;
+            grid-template-rows: 2.5rem 2.5rem auto;
             
             .tab-label {
                 font-size: 1rem;
