@@ -5,15 +5,13 @@
     import FiLinkedin from "svelte-icons-pack/fi/FiLinkedin";
     import traderJoes from '$lib/assets/trader-joes-big.png';
     import oatte from '$lib/assets/oatte.png';
-    import hacksc1 from '$lib/assets/hacksc.png';
-    import hacksc2 from '$lib/assets/sam-yam-1.png';
-    import climatedu1 from '$lib/assets/climatedu-redlining.png';
-    import climatedu2 from '$lib/assets/climatedu-jellies.png';
+    import hackscIG from '$lib/assets/hacksc-ig.png';
+    import climateduIG from '$lib/assets/climatedu-ig.png';
     import marketFermentation from '$lib/assets/market-fermentation-2.png';
     import blobs from '$lib/assets/blobs-portfolio.png';
     import iy8 from '$lib/assets/iy8.png';
     import oracle from '$lib/assets/blair-oracle.png';
-    import climatedu3 from '$lib/assets/climatedu-website.png';
+    import climateduSite from '$lib/assets/climatedu-website.png';
 
     function clear() {
         for (const key in journalismTags) {
@@ -69,29 +67,81 @@
                     <div class="content-container">
                         {#if noneSelected() || designTags['3D']}
                             <div class="threed content-row">
-                                <div id="tj" class="img-container"><img src={traderJoes} alt="low poly Trader Joe's" /></div>
-                                <div class="img-container"><img src={oatte} alt="oat milk latte product mock-up" /></div>
+                                <div id="tj" class="img-container">
+                                    <div class="description">
+                                        <h2>low poly Trader Joe's</h2>
+                                        <p>This low-poly scene was my very first project in Blender. I love grocery stores and the holidays (especially Christmas), so it's a perfect combination!</p>
+                                    </div>
+                                    <img src={traderJoes} alt="low poly Trader Joe's" />
+                                </div>
+                                <div class="img-container">
+                                    <div class="description">
+                                        <h2>oatte oat milk lattes</h2>
+                                        <p>I used Adobe Illustrator and Dimension to create this imaginary product. Featuring almond black tea, red bean, matcha, and cinnamon cold brew flavors.</p>
+                                    </div>
+                                    <img src={oatte} alt="oat milk latte product mock-up" />
+                                </div>
                             </div>
                         {/if}
                         {#if noneSelected() || designTags['social-media']}
                             <div class="social-media content-row">
-                                <div class="img-container"><img src={hacksc1} alt="HackSC's apps closing Instagram post" /></div>
-                                <div class="img-container"><img src={hacksc2} alt="HackSC's keynote speaker Instagram post" /></div>
-                                <div class="img-container"><img src={climatedu1} alt="climatedu's redlining climate impact Instagram post" /></div>
-                                <div class="img-container"><img src={climatedu2} alt="climatedu's jellyfish carbon sink Instagram post" /></div>
+                                <div class="img-container">
+                                    <div class="description">
+                                        <h2>HackSC instagram</h2>
+                                        <p>Brand identity and Instagram assets for HackSC 2022. Neon gradients, glow effects, and blobs. More <a href="https://instagram.com/hackscofficial">here</a>. Made in Figma!</p>
+                                    </div>
+                                    <img src={hackscIG} alt="HackSC Instagram posts" />
+                                </div>
+                                <div class="img-container">
+                                    <div class="description">
+                                        <h2>climatedu instagram</h2>
+                                        <p>Themed doodles for climatedu's weekly Infographic posts. Illustrations in Adobe Fresco on iPad, assembled in Figma. More <a href="https://instagram.com/climateduteam">here</a>.</p>
+                                    </div>
+                                    <img src={climateduIG} alt="climatedu Instagram posts" />
+                                </div>
                             </div>
                         {/if}
                         {#if noneSelected() || designTags['illustration']}
                             <div class="illustration content-row">
-                                <div class="img-container"><img src={marketFermentation} alt="market fermentation mock movie poster" /></div>
-                                <div class="img-container"><img src={blobs} alt="Fruit blobs for Discord" /></div>
-                                <div class="img-container"><img src={iy8} alt="Iovine and Young Academy Cohort 8 sample logo art" /></div>
+                                <div class="img-container">
+                                    <div class="description">
+                                        <h2>market ferment-<br>ation</h2>
+                                        <p>Movie poster! Adobe Illustrator and InDesign.</p>
+                                    </div>
+                                    <img src={marketFermentation} alt="market fermentation mock movie poster" />
+                                </div>
+                                <div class="img-container">
+                                    <div class="description">
+                                        <h2>fruit blob emojis</h2>
+                                        <p>Custom emojis made for Discord, illustrated in Adobe Fresco! See more of them <a href="blog/fruit-blobs">here</a>.</p>
+                                    </div>
+                                    <img src={blobs} alt="Fruit blobs for Discord" />
+                                </div>
+                                <div class="img-container">
+                                    <div class="description">
+                                        <h2>iy8 logo</h2>
+                                        <p>Sample logo (very not official) for Cohort 8 of IYA (note the 8!). Illustrated in Adobe Fresco.</p>
+                                    </div>
+                                    <img src={iy8} alt="Iovine and Young Academy Cohort 8 sample logo art" />
+                                </div>
                             </div>
                         {/if}
                         {#if noneSelected() || designTags['ui-ux']}
                             <div class="ui-ux content-row">
-                                <div class="img-container"><img src={oracle} alt="Logo header for the ORACLE of Blair" /></div>
-                                <div class="img-container"><img src={climatedu3} alt="Website home page for climatedu.org" /></div>
+                                <div class="img-container">
+                                    <div class="description">
+                                        <h2>ORACLE of Blair</h2>
+                                        <p>Web and graphic design for our senior class model of the 2020 Presidential election. Designed in Figma. More <a href="https://polistat.mbhs.edu">here</a>.</p>
+                                    </div>
+                                    <img src={oracle} alt="Logo header for the ORACLE of Blair" />
+                                </div>
+                                <div class="img-container">
+                                    <div class="description">
+                                        <h2>climatedu</h2>
+                                        <p>Website platform design for climatedu.org, an online climate course for middle and high school students. Designed in Figma. More <a href="https://climatedu.org">here</a>.</p>
+                                    </div>
+                                    <img src={climateduSite} alt="Website home page for climatedu.org" />
+                                </div>
                             </div>
                         {/if}
                     </div>
@@ -239,12 +289,38 @@
         gap: 1.5rem; 
         .img-container {
             flex-shrink: 1;
+            display: grid;
+            .description {
+                display: none;
+                h2 {
+                    background-image: none;
+                    background-color: var(--lighter);
+                    font-size: 1.25rem;
+                    margin-bottom: 0.5rem;
+                }
+                p {
+                    margin: 0;
+                }
+                background-color: rgba(22, 22, 26, 0.7);
+                color: var(--lighter);
+                font-size: 0.85rem;
+                grid-column: 1;
+                grid-row: 1;
+                z-index: 3;
+                padding: 1.5rem;
+                align-content: end;
+            }
+            &:hover .description {
+                display: grid;
+            }
         }
         img {
             box-shadow: 0 0 1rem var(--secondary-subtle-color);
             max-width: 100%;
             height: 100%;
             object-fit: cover;
+            grid-column: 1;
+            grid-row: 1;
         }
     }
     .outro {
