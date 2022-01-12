@@ -27,7 +27,7 @@
         display: flex;
         margin: 1.5rem 0;
         img {
-            width: 30%;
+            width: 40%;
             object-fit: cover;
         }
         .date {
