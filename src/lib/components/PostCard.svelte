@@ -16,9 +16,11 @@
                     {post.publishDate}
                 {/if}
             </p>
-            {#each post.tags as tag}
-                <Tag className="inactive">{tag.name}</Tag>
-            {/each}
+            <div class="buttons">
+                {#each post.tags as tag}
+                    <Tag className="inactive">{tag.name}</Tag>
+                {/each}
+            </div>
             <p>{post.summary}</p>
         </div>
     </a>

@@ -11,7 +11,7 @@
 </svelte:head>
 
 <!--Title-->
-<div>
+<div class="container">
     <h1>{title}</h1>
     <p class="date">
         PUBLISHED {publishDate} 
@@ -25,3 +25,9 @@
         {/each}
     </div>
 </div>
+
+<style>
+    .container {
+        margin-bottom: 3rem;
+    }
+</style>

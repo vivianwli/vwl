@@ -1,5 +1,6 @@
 <script>
     import Tag from '$lib/components/Tag.svelte';
+    import ArticleCard from '$lib/components/ArticleCard.svelte';
     import Icon from 'svelte-icons-pack/Icon.svelte';
     import FiMail from "svelte-icons-pack/fi/FiMail";
     import FiLinkedin from "svelte-icons-pack/fi/FiLinkedin";
@@ -13,6 +14,8 @@
     import oracle from '$lib/assets/blair-oracle.png';
     import climateduSite from '$lib/assets/climatedu-website.png';
 
+    import { page } from '$app/stores';
+
     function clear() {
         for (const key in journalismTags) {
             journalismTags[key] = false;
@@ -25,10 +28,74 @@
         return Object.keys(designTags).filter(k => designTags[k]).length === 0;
     }
 
-    let designPos = 'top';
-    let journalismPos = 'bottom';
+    let designPos;
+    let journalismPos;
+
+    let tab = $page.query.get('tab');
+    if (tab === 'journalism') {
+        designPos = 'bottom';
+        journalismPos = 'top';
+    }
+    else {
+        designPos = 'top';
+        journalismPos = 'bottom';
+    }
+    
     let designTags = {'3D': false, 'social-media': false, 'illustration': false, 'ui-ux': false};
     let journalismTags = {'print': false, 'video': false};
+
+    let journalismItems = [
+        {
+            link: 'blog/sustainable-textiles',
+            title: 'An antidote to greenwashing',
+            thumbnail: 'haute-greenwashing.png',
+            info: 'DEC 3 2021 • HAUTE MAGAZINE',
+            summary: "An in-depth feature on textiles and their impact in the context of sustainable fashion. Written for Haute Magazine's Fall 2021 issue, On the Edge.",
+            tags: ['print']
+
+        },
+        {
+            link: 'https://www.nytimes.com/2020/05/07/learning/an-unexpected-dinner-guest-marine-plastic-pollution-hides-a-neurological-toxin-in-our-food.html',
+            title: 'An unexpected dinner guest: marine plastic pollution hides a neurological toxin in our food',
+            thumbnail: 'nyt-stem-writing.jpg',
+            info: 'MAY 7 2020 • THE NEW YORK TIMES',
+            summary: 'One of eight winning essays (among 1,618 entries) from the New York Times Learning Network\'s STEM Writing Contest. Also published on <a href="https://phys.org/news/2019-09-marine-plastic-pollution-neurological-toxin.html">Phys.org</a>.',
+            tags: ['print']
+        },
+        {
+            link: 'https://msmagazine.com/2019/12/16/inside-the-feminist-tech-jamboree-helping-girls-break-barriers-in-stem/',
+            title: 'Inside the feminist tech jamboree helping girls break barriers in STEM',
+            thumbnail: 'technica.jpg',
+            info: 'DEC 16 2019 • MS. MAGAZINE',
+            summary: 'Behind-the-scenes of Technica, an all-women and non-binary hackathon hosted annually at the University of Maryland, College Park. Published as a part of "The Future is Ms."',
+            tags: ['print']
+        },
+        {
+            link: 'http://climatetracker.org/youths-reporting-on-youths/',
+            title: 'Tracking the UN\'s youth climate delegates',
+            thumbnail: 'climate-tracker.jpg',
+            info: 'OCT 2 2019 • CLIMATE TRACKER',
+            summary: "Profiles of international leaders at the UN Youth Action Summit alongside the global climate strikes on September 20, 2019. Written with Yamila Frej and Amogh Dimri during a three-day mentorship with Climate Tracker.",
+            tags: ['print']
+        },
+        {
+            link: 'https://silverchips.mbhs.edu/content/raising-the-standard-for-mcps-in-ongoing-contract-negotiations-32318/',
+            title: 'Raising the standard for MCPS in ongoing contract negotiations',
+            thumbnail: 'teachers.jfif',
+            info: 'NOV 13 2019 • SILVER CHIPS ONLINE',
+            summary: "Coverage of teachers' responses to the teacher strikes in Chicago, especially in light of recent contract re-negotiations for Mongomery County Public Schools.",
+            tags: ['print']
+        },
+        {
+            link: 'https://youtu.be/UmOasRlMuXs',
+            title: 'The hidden link between bats, COVID-19, and climate change',
+            thumbnail: 'breakthrough.png',
+            info: 'JUN 25 2020 • BREAKTHROUGH JUNIOR CHALLENGE',
+            summary: 'A synthesized explanation of yet another reason climate change should matter to us—the potential normalcy of pandemics via zoonotic diseases.',
+            tags: ['video']
+        }
+        
+    ];
 </script>
 
 <svelte:head>
@@ -170,22 +237,22 @@
                             <Tag className="clear">clear all</Tag>
                         </div>
                     </div>
-                </div>
-                <!-- <div class="post-container">
-                    {#if Object.keys(journalismTags).filter(k => journalismTags[k]).length === 0}
-                        {#each posts as post}
-                            <PostCard {post} />
-                        {/each}
-                    {:else}
-                        {#each posts as post}
-                            {#each post.tags as tag}
-                                {#if journalismTags[tag.name]}
-                                    <PostCard {post} />
-                                {/if}
+                    <div class="content-container">
+                        {#if Object.keys(journalismTags).filter(k => journalismTags[k]).length === 0}
+                            {#each journalismItems as article}
+                                <ArticleCard {article} />
                             {/each}
-                        {/each}
-                    {/if}
-                </div> -->
+                        {:else}
+                            {#each journalismItems as article}
+                                {#each article.tags as tag}
+                                    {#if journalismTags[tag]}
+                                        <ArticleCard {article} />
+                                    {/if}
+                                {/each}
+                            {/each}
+                        {/if}
+                    </div>
+                </div>
             </div>
         </div>
     </div>
