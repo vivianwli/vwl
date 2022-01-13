@@ -1,17 +1,17 @@
 <script>
-    import "../../app.scss";
-    export let src;
-    export let caption;
-    export let className;
+	import '../../app.scss';
+	export let src;
+	export let caption;
+	export let className;
 </script>
 
 <div class={className}>
-    <img {src} alt={caption}>
-    <div class="caption">{@html caption}</div>
+	<img {src} alt={caption} />
+	<div class="caption">{@html caption}</div>
 </div>
 
 <style lang="scss">
-    img {
+	img {
 		width: 50%;
 		display: block;
 		margin: 2rem auto 1rem auto;
@@ -26,20 +26,20 @@
 		color: var(--secondary-selected-color);
 		font-style: italic;
 	}
-    .gallery-img {
-        img {
-            width: 90%;
-        }
-        .caption {
-            width: 90%;
-        }
-    }
-    .half-img {
-        img {
-            width: 20rem;
-        }
-        .caption {
-            width: 20rem;
-        }
-    }
+	.gallery-img {
+		img {
+			width: 90%;
+		}
+		.caption {
+			width: 90%;
+		}
+	}
+	.half-img {
+		img {
+			width: 20rem;
+		}
+		.caption {
+			width: 20rem;
+		}
+	}
 </style>
