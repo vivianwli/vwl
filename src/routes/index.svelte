@@ -144,26 +144,26 @@
 			<div class="contact">
 				<h2>want to chat?</h2>
 				<div class="media-icon-container">
-					<a sveltekit:prefetch href="mailto: vwli@usc.edu"
-						><Icon src={FiMail} className="custom-icon media-icon" /></a
-					>
-					<a sveltekit:prefetch href="https://github.com/teacupkittie"
-						><Icon src={FiGithub} className="custom-icon media-icon" /></a
-					>
-					<a sveltekit:prefetch href="https://www.linkedin.com/in/vivian-li-25b424183/"
-						><Icon src={FiLinkedin} className="custom-icon media-icon" /></a
-					>
-					<a sveltekit:prefetch href="https://instagram.com/mclovivian"
-						><Icon src={FiInstagram} className="custom-icon media-icon" /></a
-					>
+					<a sveltekit:prefetch href="mailto: vwli@usc.edu">
+						<Icon src={FiMail} className="custom-icon media-icon" />
+					</a>
+					<a sveltekit:prefetch href="https://github.com/teacupkittie">
+						<Icon src={FiGithub} className="custom-icon media-icon" />
+					</a>
+					<a sveltekit:prefetch href="https://www.linkedin.com/in/vivian-li-25b424183/">
+						<Icon src={FiLinkedin} className="custom-icon media-icon" />
+					</a>
+					<a sveltekit:prefetch href="https://instagram.com/mclovivian">
+						<Icon src={FiInstagram} className="custom-icon media-icon" />
+					</a>
 					<Icon src={FiYoutube} className="custom-icon media-icon hidden" />
 					<Icon src={FiYoutube} className="custom-icon media-icon hidden" />
-					<a sveltekit:prefetch href="https://www.youtube.com/c/vivianli0"
-						><Icon src={FiYoutube} className="custom-icon media-icon" /></a
-					>
-					<a sveltekit:prefetch href="https://twitter.com/teacupkittie"
-						><Icon src={FiTwitter} className="custom-icon media-icon" /></a
-					>
+					<a sveltekit:prefetch href="https://www.youtube.com/c/vivianli0">
+						<Icon src={FiYoutube} className="custom-icon media-icon" />
+					</a>
+					<a sveltekit:prefetch href="https://twitter.com/teacupkittie">
+						<Icon src={FiTwitter} className="custom-icon media-icon" />
+					</a>
 				</div>
 				<p>Subscribe to my newsletter:<br /> (this will take you to my blog!)</p>
 				<EmailInput className="right-justified" />
@@ -195,17 +195,19 @@
 					<div>
 						<ul>
 							<li>
-								i'm in a <a sveltekit:prefetch href="https://iovine-young.usc.edu/"
-									>crazy-cool major</a
-								> with some crazy-cool people
+								i'm in a
+								<a sveltekit:prefetch href="https://iovine-young.usc.edu/">crazy-cool major</a>
+								with some crazy-cool people
 							</li>
 							<li>
-								i’m a soprano in <a sveltekit:prefetch href="https://uscsirensacappella.weebly.com/"
-									>Sirens A Cappella</a
-								> 🤍
+								i’m a soprano in
+								<a sveltekit:prefetch href="https://uscsirensacappella.weebly.com/">
+									Sirens A Cappella
+								</a> 🤍
 							</li>
 							<li>
-								i'm developing USC's <a
+								i'm developing USC's
+								<a
 									sveltekit:prefetch
 									href="https://green.usc.edu/students/presidents-sustainability-internship-program/"
 									>sustainability design guidelines</a
@@ -259,6 +261,9 @@
 		margin: auto;
 		padding-top: 10vh;
 		margin-bottom: 10vh;
+		@media screen and (max-width: 50rem) {
+			width: 50vw;
+		}
 	}
 	.logo img {
 		width: 100%;
@@ -283,6 +288,11 @@
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		margin-top: 10vh;
+
+		@media screen and (max-width: 50rem) {
+			grid-template-columns: 1fr;
+			grid-template-rows: 1fr 1fr;
+		}
 	}
 
 	/* glow + resizing for every image in these mini sections */
@@ -304,8 +314,12 @@
 	/* unique style for my profile picture */
 	.mini-section .avatar {
 		width: 75%;
+		max-width: 20rem;
 		margin: auto;
 		border-radius: 100%;
+		@media screen and (max-width: 50rem) {
+			width: 100%;
+		}
 	}
 
 	/* padding + centering for my text blocks */
@@ -314,6 +328,9 @@
 		justify-content: center;
 		flex-direction: column;
 		margin-left: 10%;
+		@media screen and (max-width: 50rem) {
+			margin: auto;
+		}
 	}
 	.text-left {
 		display: flex;
@@ -322,6 +339,9 @@
 		align-items: flex-end;
 		text-align: right;
 		margin-right: 10%;
+		@media screen and (max-width: 50rem) {
+			margin: auto;
+		}
 	}
 
 	/* giving enough standalone slide space (so it looks good with scroll-snapping!) */
@@ -334,6 +354,7 @@
 
 		h1 {
 			margin-top: 0;
+			line-height: 3rem;
 		}
 	}
 
@@ -344,12 +365,21 @@
 		align-content: center;
 		position: relative;
 		padding-top: 2em;
+		max-width: 25rem;
 	}
 	.image-right {
 		margin-left: 10%;
+
+		@media screen and (max-width: 50rem) {
+			order: -1;
+			margin: auto;
+		}
 	}
 	.image-left {
 		margin-right: 10%;
+		@media screen and (max-width: 50rem) {
+			margin: auto;
+		}
 	}
 
 	/* positioning for each individual picture */
@@ -411,7 +441,12 @@
 	}
 	.outro-content {
 		display: grid;
-		grid-template-columns: repeat(16, 1fr);
+		grid-template-columns: 1fr 7rem 1.3fr;
+
+		@media screen and (max-width: 50rem) {
+			display: flex;
+			flex-direction: column;
+		}
 	}
 	.outro h1 {
 		width: fit-content;
@@ -422,7 +457,9 @@
 		background-image: none;
 	}
 	.about {
-		grid-column: 9 / -1;
+		@media screen and (max-width: 50rem) {
+			order: -1;
+		}
 	}
 	.outro span {
 		height: 80%;
@@ -431,14 +468,12 @@
 		border-radius: 99px;
 		opacity: 50%;
 		margin: auto;
-		grid-column: 7 / span 2;
 	}
 	.contact {
 		text-align: right;
 		display: flex;
 		flex-direction: column;
 		align-items: flex-end;
-		grid-column: 1 / span 6;
 	}
 	.media-icon-container {
 		display: grid;
