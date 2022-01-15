@@ -16,6 +16,9 @@
 		display: block;
 		margin: 2rem auto 1rem auto;
 		box-shadow: 0 0 1.2rem 0.1rem var(--secondary-color);
+		@media screen and (max-width: 50rem) {
+			width: 90%;
+		}
 	}
 	.caption {
 		text-align: center;
@@ -37,9 +40,11 @@
 	.half-img {
 		img {
 			width: 20rem;
+			max-width: 90%;
 		}
 		.caption {
 			width: 20rem;
+			max-width: 90%;
 		}
 	}
 </style>

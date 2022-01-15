@@ -396,10 +396,10 @@
 			display: grid;
 			grid-template-columns: 2.5rem 11rem 11rem auto;
 			@media screen and (max-width: 50rem) {
-				grid-template-columns: 11rem 11rem auto;
+				grid-template-columns: 0rem 11rem 11rem auto;
 			}
 			@media screen and (max-width: 32rem) {
-				grid-template-columns: 9rem 9rem auto;
+				grid-template-columns: 0rem 9rem 9rem auto;
 			}
 			.design-selector {
 				grid-column: 2;
@@ -488,8 +488,7 @@
 		img {
 			box-shadow: 0 0 1rem var(--secondary-subtle-color);
 			max-width: 100%;
-			height: 100%;
-			object-fit: cover;
+			object-fit: scale-down;
 			grid-column: 1;
 			grid-row: 1;
 		}

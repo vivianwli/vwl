@@ -24,7 +24,7 @@
 		font-family: 'Epilogue';
 		font-weight: 300;
 		padding: 0.4rem 0.7rem;
-		width: 70%;
+		width: 100%;
 	}
 	input:focus {
 		outline: none;
@@ -45,12 +45,12 @@
 		display: flex;
 		justify-content: center;
 		flex-direction: column;
-		margin-left: 4px;
 	}
 	button :global(.arrow) {
 		margin: 0;
 		color: var(--primary-light-color);
 		opacity: 100%;
+		width: fit-content;
 	}
 	button :global(.arrow):hover {
 		margin: 0;
@@ -58,7 +58,9 @@
 		cursor: pointer;
 	}
 	.email-input {
-		display: flex;
+		display: grid;
+		gap: 2rem;
+		grid-template-columns: auto min-content;
 		max-width: 30rem;
 	}
 </style>
