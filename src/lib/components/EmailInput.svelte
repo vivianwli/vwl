@@ -45,12 +45,13 @@
 		display: flex;
 		justify-content: center;
 		flex-direction: column;
+		width: fit-content;
 	}
 	button :global(.arrow) {
 		margin: 0;
 		color: var(--primary-light-color);
 		opacity: 100%;
-		width: fit-content;
+		width: 2rem;
 	}
 	button :global(.arrow):hover {
 		margin: 0;
