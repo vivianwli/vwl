@@ -1,7 +1,10 @@
 <script>
 	import { fly } from 'svelte/transition';
+	import { navigating } from '$app/stores';
 
 	export let open;
+
+	$: if ($navigating) open = false;
 </script>
 
 {#if open}

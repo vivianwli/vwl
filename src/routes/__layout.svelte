@@ -4,6 +4,7 @@
 
 	import { page } from '$app/stores';
 	import { goto } from '$app/navigation';
+	import { navigating } from '$app/stores';
 	import { browser } from '$app/env';
 	import { toast } from '@zerodevx/svelte-toast';
 	import { fly } from 'svelte/transition';
@@ -17,6 +18,7 @@
 	let themes = ['moon', 'filled-moon'];
 	let darkTheme;
 	let opened = 'closed';
+	$: if ($navigating) opened = 'closed';
 
 	onMount(() => {
 		const savedTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;

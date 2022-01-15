@@ -35,12 +35,14 @@
 		}
 		.date {
 			font-size: 0.8rem;
+			margin-top: 0.5rem;
 		}
 		.post-description {
 			padding: 0 1rem 0.5rem 1rem;
 		}
 		h2 {
 			font-size: 1.2rem;
+			margin-bottom: 0.5rem;
 		}
 		a {
 			text-decoration: none;
