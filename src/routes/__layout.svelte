@@ -6,11 +6,17 @@
 	import { goto } from '$app/navigation';
 	import { browser } from '$app/env';
 	import { toast } from '@zerodevx/svelte-toast';
+	import { fly } from 'svelte/transition';
+
+	import Hamburger from 'svelte-hamburgers';
+	import Menu from '$lib/components/Menu.svelte';
+	let open;
 
 	import Icon from 'svelte-icons-pack/Icon.svelte';
 	import FiMoon from 'svelte-icons-pack/fi/FiMoon';
 	let themes = ['moon', 'filled-moon'];
 	let darkTheme;
+	let opened = 'closed';
 
 	onMount(() => {
 		const savedTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
@@ -25,6 +31,10 @@
 		document.documentElement.setAttribute('data-theme', darkTheme);
 		localStorage.setItem('theme', darkTheme);
 	}
+	function openClose() {
+		opened === 'closed' ? (opened = 'open') : (opened = 'closed');
+		console.log(opened);
+	}
 
 	let emailSubmitted = $page.query.get('emailSubmitted');
 	if (emailSubmitted) {
@@ -34,12 +44,24 @@
 		emailSubmitted = false;
 	}
 	let portfolio = $page.path === '/portfolio' ? 'portfolio' : '';
-	console.log(portfolio);
 </script>
 
 <div class="scroll-bar-wrap">
 	<div class="scroll-box">
 		<div class="header">
+			<div class="mobile-nav">
+				<Hamburger
+					bind:open
+					on:click={openClose}
+					type="squeeze"
+					--color="var(--secondary-color)"
+					--padding="2rem"
+				/>
+				<Menu bind:open />
+				{#if opened === 'open'}
+					<div transition:fly={{ x: -200, duration: 500 }} class="open" />
+				{/if}
+			</div>
 			<nav>
 				<a sveltekit:prefetch href="/">home</a>
 				<a sveltekit:prefetch href="/portfolio">portfolio</a>
@@ -90,6 +112,7 @@
 			position: relative;
 
 			.page-content {
+				z-index: 1;
 				padding: 15vh 15vw;
 			}
 			.portfolio {
@@ -146,6 +169,7 @@
 	.header {
 		position: fixed;
 		width: fit-content;
+		z-index: 4;
 	}
 
 	.dark-switch {
@@ -170,9 +194,26 @@
 		}
 	}
 
+	.mobile-nav {
+		display: none;
+		@media screen and (max-width: 50rem) {
+			display: block;
+		}
+	}
+	.open {
+		position: absolute;
+		top: 0;
+		background-color: var(--bg-color);
+		box-shadow: 0 0 12rem var(--secondary-color);
+		height: 100vh;
+		width: 15rem;
+		z-index: -1;
+	}
 	nav {
 		padding: 1rem;
-
+		@media screen and (max-width: 50rem) {
+			display: none;
+		}
 		a {
 			display: block;
 			text-decoration: none;

@@ -20,6 +20,7 @@
 	import Tag from '$lib/components/Tag.svelte';
 	import EmailInput from '$lib/components/EmailInput.svelte';
 	import { SvelteToast } from '@zerodevx/svelte-toast';
+	import { flip } from 'svelte/animate';
 	export let posts;
 
 	const options = {

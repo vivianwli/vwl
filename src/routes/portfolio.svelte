@@ -346,6 +346,9 @@
 <style lang="scss">
 	h1 {
 		margin-bottom: 2rem;
+		@media screen and (max-width: 32rem) {
+			padding: 0 5vw;
+		}
 	}
 	svg {
 		filter: drop-shadow(0 0 1rem var(--secondary-subtle-color));

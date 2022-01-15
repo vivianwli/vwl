@@ -1,5 +1,7 @@
 /* Write your global styles here, in SCSS syntax. Variables and mixins from the src/variables.scss file are available here without importing */
 @import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@300;600&family=Noto+Serif+Display:ital,wght@1,700&display=swap');
+@import 'svelte-hamburgers/scss/base';
+@import 'svelte-hamburgers/scss/types/squeeze';
 :root {
 	font-family: 'Epilogue', Helvetica, sans-serif;
 	color: var(--text-color);
