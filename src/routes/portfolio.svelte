@@ -352,6 +352,9 @@
 		grid-row: 1 / span 2;
 		height: 100%;
 		grid-column: 2;
+		@media screen and (max-width: 32rem) {
+			height: 90%;
+		}
 	}
 	.tab-page {
 		background-color: var(--bg-color);
@@ -389,6 +392,12 @@
 			height: 2.5rem;
 			display: grid;
 			grid-template-columns: 2.5rem 11rem 11rem auto;
+			@media screen and (max-width: 50rem) {
+				grid-template-columns: 11rem 11rem auto;
+			}
+			@media screen and (max-width: 32rem) {
+				grid-template-columns: 9rem 9rem auto;
+			}
 			.design-selector {
 				grid-column: 2;
 			}
@@ -401,7 +410,9 @@
 			grid-row: 1;
 			display: grid;
 			grid-template-rows: 2.5rem 2.5rem auto;
-
+			@media screen and (max-width: 32rem) {
+				grid-template-rows: 2rem 2.5rem auto;
+			}
 			.tab-label {
 				font-size: 1rem;
 				margin: 0;
@@ -414,9 +425,21 @@
 		}
 		.design-tab {
 			grid-template-columns: 2.5rem 12rem auto;
+			@media screen and (max-width: 50rem) {
+				grid-template-columns: 0 12rem auto;
+			}
+			@media screen and (max-width: 32rem) {
+				grid-template-columns: 0 10rem auto;
+			}
 		}
 		.journalism-tab {
 			grid-template-columns: 12.5rem 12rem auto;
+			@media screen and (max-width: 50rem) {
+				grid-template-columns: 10rem 12rem auto;
+			}
+			@media screen and (max-width: 32rem) {
+				grid-template-columns: 8rem 10rem auto;
+			}
 		}
 	}
 	.tab-page-content {
@@ -466,6 +489,9 @@
 			object-fit: cover;
 			grid-column: 1;
 			grid-row: 1;
+		}
+		@media screen and (max-width: 50rem) {
+			flex-direction: column;
 		}
 	}
 	.outro {

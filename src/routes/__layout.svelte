@@ -33,6 +33,8 @@
 		browser && goto($page.path, { replaceState: true });
 		emailSubmitted = false;
 	}
+	let portfolio = $page.path === '/portfolio' ? 'portfolio' : '';
+	console.log(portfolio);
 </script>
 
 <div class="scroll-bar-wrap">
@@ -49,7 +51,7 @@
 				<Icon src={FiMoon} className={'custom-icon ' + themes[darkTheme]} />
 			</div>
 		</div>
-		<div class="page-content">
+		<div class="page-content {portfolio}">
 			<slot />
 		</div>
 	</div>
@@ -89,6 +91,11 @@
 
 			.page-content {
 				padding: 15vh 15vw;
+			}
+			.portfolio {
+				@media screen and (max-width: 32rem) {
+					padding: 15vh 10vw;
+				}
 			}
 		}
 	}
