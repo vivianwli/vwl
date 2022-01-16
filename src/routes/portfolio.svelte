@@ -31,7 +31,7 @@
 	let designPos;
 	let journalismPos;
 
-	let tab = $page.query.get('tab');
+	let tab = $page.url.searchParams.get('tab');
 	if (tab === 'journalism') {
 		designPos = 'bottom';
 		journalismPos = 'top';
