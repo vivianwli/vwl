@@ -15,17 +15,18 @@
 
 	//image imports
 	import vwl from '$lib/assets/vwl.svg';
-	import vivian from '$lib/assets/vivian.png';
-	import design1 from '$lib/assets/market-fermentation-2.png';
-	import design2 from '$lib/assets/trader-joes-big.png';
-	import code1 from '$lib/assets/research-2.png';
-	import code2 from '$lib/assets/intro-code.svg';
-	import code3 from '$lib/assets/research-1.png';
-	import write1 from '$lib/assets/greenwashing-1.png';
-	import write2 from '$lib/assets/viv-nytimes.png';
-	import write3 from '$lib/assets/greenwashing-2.png';
+	import vivian from '$lib/assets/vivian.png?w=350&webp';
+	import design1 from '$lib/assets/market-fermentation-2.png?w=200&webp';
+	import design2 from '$lib/assets/trader-joes-big.png?w=300&webp';
+	import code1 from '$lib/assets/research-2.png?w=300&webp';
+	import code2 from '$lib/assets/intro-code.svg?w=300&webp';
+	import code3 from '$lib/assets/research-1.png?w=300&webp';
+	import write1 from '$lib/assets/greenwashing-1.png?w=350&webp';
+	import write2 from '$lib/assets/viv-nytimes.png?w=300&webp';
+	import write3 from '$lib/assets/greenwashing-2.png?w=350&webp';
 
 	import { SvelteToast } from '@zerodevx/svelte-toast';
+	import { blur } from 'svelte/transition';
 
 	let aboutSection = 'at-usc';
 </script>
@@ -34,7 +35,7 @@
 	<title>home</title>
 </svelte:head>
 
-<div class="content">
+<div in:blur={{ duration: 800, delay: 800 }} out:blur={{ duration: 800 }} class="content">
 	<SvelteToast />
 	<!-- cover page! -->
 	<div class="section">

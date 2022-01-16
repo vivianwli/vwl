@@ -1,18 +1,21 @@
 <script>
 	import Tag from '$lib/components/Tag.svelte';
 	import ArticleCard from '$lib/components/ArticleCard.svelte';
+
 	import Icon from 'svelte-icons-pack/Icon.svelte';
 	import FiMail from 'svelte-icons-pack/fi/FiMail';
 	import FiLinkedin from 'svelte-icons-pack/fi/FiLinkedin';
-	import traderJoes from '$lib/assets/trader-joes-big.png';
-	import oatte from '$lib/assets/oatte.png';
-	import hackscIG from '$lib/assets/hacksc-ig.png';
-	import climateduIG from '$lib/assets/climatedu-ig.png';
-	import marketFermentation from '$lib/assets/market-fermentation-2.png';
-	import blobs from '$lib/assets/blobs-portfolio.png';
-	import iy8 from '$lib/assets/iy8.png';
-	import oracle from '$lib/assets/blair-oracle.png';
-	import climateduSite from '$lib/assets/climatedu-website.png';
+
+	import traderJoes from '$lib/assets/trader-joes-big.png?webp';
+	import oatte from '$lib/assets/oatte.png?webp';
+	import hackscIG from '$lib/assets/hacksc-ig.png?h=600&webp';
+	import climateduIG from '$lib/assets/climatedu-ig.png?h=600&webp';
+	import marketFermentation from '$lib/assets/market-fermentation-2.png?webp';
+	import blobs from '$lib/assets/blobs-portfolio.png?webp';
+	import iy8 from '$lib/assets/iy8.png?webp';
+	import oracle from '$lib/assets/blair-oracle.png?h=600&webp';
+	import climateduSite from '$lib/assets/climatedu-website.png?h=600&webp';
+	import { blur } from 'svelte/transition';
 
 	import { page } from '$app/stores';
 
@@ -106,7 +109,7 @@
 	<title>portfolio</title>
 </svelte:head>
 
-<div class="content">
+<div in:blur={{ duration: 800, delay: 800 }} out:blur={{ duration: 800 }} class="content">
 	<h1>portfolio</h1>
 	<div class="tabs">
 		<div class="tab-selector">
@@ -164,7 +167,7 @@
 					<div class="content-container">
 						{#if noneSelected() || designTags['3D']}
 							<div class="threed content-row">
-								<div id="tj" class="img-container">
+								<div class="img-container">
 									<div class="description">
 										<h2>low poly Trader Joe's</h2>
 										<p>
@@ -459,7 +462,6 @@
 		display: flex;
 		gap: 1.5rem;
 		.img-container {
-			flex-shrink: 1;
 			display: grid;
 			.description {
 				display: none;

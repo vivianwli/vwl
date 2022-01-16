@@ -6,7 +6,7 @@
 
 <a sveltekit:prefetch href={article.link}>
 	<div class="card-container">
-		<img src={'/thumbnails/' + article.thumbnail} alt={article.title} />
+		<img src={'/thumbnails/' + article.thumbnail + '?w=400&webp'} alt={article.title} />
 		<div class="post-description">
 			<h2>{article.title}</h2>
 			<p class="date">{article.info}</p>

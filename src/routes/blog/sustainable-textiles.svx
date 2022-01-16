@@ -11,9 +11,9 @@ summary: "Any brand can say they're sustainable. By delving into the various tex
   import PostHeader from '$lib/components/PostHeader.svelte';
   import BlogImage from '$lib/components/BlogImage.svelte';
   import BlogGallery from '$lib/components/BlogGallery.svelte';
-  import textiles1 from '$lib/assets/textiles-1.png';
-  import textiles2 from '$lib/assets/textiles-2.png';
-  import textiles3 from '$lib/assets/textiles-3.png';
+  import textiles1 from '$lib/assets/textiles-1.png?w=1000&webp';
+  import textiles2 from '$lib/assets/textiles-2.png?w=600&webp';
+  import textiles3 from '$lib/assets/textiles-3.png?w=600&webp';
 </script>
 
 <PostHeader {title} {publishDate} {tags} />

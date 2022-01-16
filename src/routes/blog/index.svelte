@@ -20,6 +20,7 @@
 	import Tag from '$lib/components/Tag.svelte';
 	import EmailInput from '$lib/components/EmailInput.svelte';
 	import { SvelteToast } from '@zerodevx/svelte-toast';
+	import { blur } from 'svelte/transition';
 	import { flip } from 'svelte/animate';
 	export let posts;
 
@@ -52,7 +53,7 @@
 	<title>blog</title>
 </svelte:head>
 
-<div class="content">
+<div in:blur={{ duration: 800, delay: 800 }} out:blur={{ duration: 800 }} class="content">
 	<SvelteToast />
 	<h1>musings</h1>
 	<p>A humble abode for my ideas, experiments, and reflections. Welcome!</p>

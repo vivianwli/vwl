@@ -1,6 +1,7 @@
 import { mdsvex } from 'mdsvex';
 import preprocess from 'svelte-preprocess';
 import vercel from '@sveltejs/adapter-vercel';
+import { imagetools } from 'vite-imagetools';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -13,6 +14,7 @@ const config = {
 		target: '#svelte',
 
 		vite: {
+			plugins: [imagetools({ force: true })],
 			css: {
 				preprocessorOptions: {
 					scss: {

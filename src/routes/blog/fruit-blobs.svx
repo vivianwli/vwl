@@ -12,10 +12,10 @@ summary: 'I received a Discord Nitro gift for my birthday month (July!), which u
   import PostHeader from '$lib/components/PostHeader.svelte';
   import BlogImage from '$lib/components/BlogImage.svelte';
   import BlogGallery from '$lib/components/BlogGallery.svelte';
-  import blobs1 from '$lib/assets/blobberries.png';
-  import blobs2 from '$lib/assets/blobcitrus.png';
-  import blobs3 from '$lib/assets/blobsuggestive.png';
-  import blobs4 from '$lib/assets/basicbasket.png';
+  import blobs1 from '$lib/assets/blobberries.png?w=600&webp';
+  import blobs2 from '$lib/assets/blobcitrus.png?w=600&webp';
+  import blobs3 from '$lib/assets/blobsuggestive.png?w=600&webp';
+  import blobs4 from '$lib/assets/basicbasket.png?w=600&webp';
 </script>
 
 <PostHeader {title} {publishDate} {editDate} {tags} />

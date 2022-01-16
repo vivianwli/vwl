@@ -26,7 +26,7 @@
 		"svelte-hamburgers": "^3.0.1",
 		"svelte-preprocess": "^4.10.1",
 		"vanilla-lazyload": "^17.5.0",
-		"vite-imagetools": "^4.0.3"
+		"vite-imagetools": "^3.9.0"
 	},
 	"type": "module",
 	"dependencies": {
