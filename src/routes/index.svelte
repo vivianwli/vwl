@@ -26,6 +26,8 @@
 	import write3 from '$lib/assets/greenwashing-2.png';
 
 	import { SvelteToast } from '@zerodevx/svelte-toast';
+	import BlurhashImage from '$lib/components/blurhash/BlurhashImage.svelte';
+	import hashes from '$lib/utils/hashes.json';
 
 	let aboutSection = 'at-usc';
 </script>
@@ -46,7 +48,9 @@
 	<!-- introduction! -->
 	<div class="section">
 		<div class="mini-section intro">
-			<img class="avatar" src={vivian} alt="viv" />
+			<div class="avatar image">
+				<BlurhashImage src={vivian} hash={hashes[vivian]} width={300} height={300} />
+			</div>
 			<div class="text-right">
 				<h1>hello! i'm vivian li.</h1>
 				<p>
@@ -78,10 +82,26 @@
 			</div>
 			<div class="image-stack image-right">
 				<div class="image-stack-item design-top">
-					<img src={design1} alt="market fermentation poster design" />
+					<div class="image">
+						<BlurhashImage
+							src={design1}
+							hash={hashes[design1]}
+							width={200}
+							height={300}
+							alt="market fermentation poster design"
+						/>
+					</div>
 				</div>
 				<div class="image-stack-item design-bottom">
-					<img src={design2} alt="low poly trader joes" />
+					<div class="image">
+						<BlurhashImage
+							src={design2}
+							hash={hashes[design2]}
+							width={300}
+							height={200}
+							alt="low poly trader joes"
+						/>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -301,6 +321,14 @@
 		max-width: 100%;
 	}
 
+	.mini-section .image {
+		box-shadow: 0 0 1.2rem 0.1rem var(--secondary-color);
+		width: auto;
+		height: auto;
+		max-width: 100%;
+		max-height: auto;
+	}
+
 	/* more space in between each thing in the things section (thing: design, code, write) */
 	.things .mini-section {
 		margin: 20vh 0vw 10vh 0vw;
@@ -313,13 +341,13 @@
 
 	/* unique style for my profile picture */
 	.mini-section .avatar {
-		width: 75%;
 		max-width: 20rem;
 		margin: auto;
 		border-radius: 100%;
 		@media screen and (max-width: 50rem) {
 			width: 100%;
 		}
+		overflow: hidden;
 	}
 
 	/* padding + centering for my text blocks */

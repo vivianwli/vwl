@@ -22,7 +22,7 @@
 
 	onMount(() => {
 		const savedTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
-		darkTheme = savedTheme ?? 'dark';
+		darkTheme = savedTheme ?? 'light';
 		darkTheme === 'light'
 			? document.documentElement.setAttribute('data-theme', 'light')
 			: document.documentElement.setAttribute('data-theme', 'dark');
@@ -38,14 +38,14 @@
 		console.log(opened);
 	}
 
-	let emailSubmitted = $page.query.get('emailSubmitted');
+	let emailSubmitted = $page.url.searchParams.get('emailSubmitted');
 	if (emailSubmitted) {
 		toast.push('email submitted!');
 		toast.pop((i) => i.target !== 'new');
-		browser && goto($page.path, { replaceState: true });
+		browser && goto($page.url.pathname, { replaceState: true });
 		emailSubmitted = false;
 	}
-	let portfolio = $page.path === '/portfolio' ? 'portfolio' : '';
+	let portfolio = $page.url.pathname === '/portfolio' ? 'portfolio' : '';
 </script>
 
 <div class="scroll-bar-wrap">
