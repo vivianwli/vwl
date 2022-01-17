@@ -1,0 +1,250 @@
+{
+  ".svelte-kit/runtime/client/start.js": {
+    "file": "start-b8841189.js",
+    "src": ".svelte-kit/runtime/client/start.js",
+    "isEntry": true,
+    "imports": [
+      "_vendor-5c9fc647.js",
+      "_preload-helper-ec9aa979.js",
+      "_singletons-4a680913.js"
+    ],
+    "dynamicImports": [
+      "src/routes/__layout.svelte",
+      ".svelte-kit/runtime/components/error.svelte",
+      "src/routes/index.svelte",
+      "src/routes/portfolio.svelte",
+      "src/routes/resume.svelte",
+      "src/routes/blog/index.svelte",
+      "src/routes/blog/sustainable-textiles.svx",
+      "src/routes/blog/oat-milk-guide.svx",
+      "src/routes/blog/michelle-feng.svx",
+      "src/routes/blog/fruit-blobs.svx",
+      "src/routes/home.svelte"
+    ]
+  },
+  "src/routes/__layout.svelte": {
+    "file": "pages/__layout.svelte-dc428713.js",
+    "src": "src/routes/__layout.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-5c9fc647.js",
+      "_stores-4a6615d7.js",
+      "_navigation-b10cf5bf.js",
+      "_singletons-4a680913.js"
+    ],
+    "css": [
+      "assets/pages/__layout.svelte-0e3c4157.css",
+      "assets/app-7a314321.css"
+    ]
+  },
+  ".svelte-kit/runtime/components/error.svelte": {
+    "file": "error.svelte-01161cc0.js",
+    "src": ".svelte-kit/runtime/components/error.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-5c9fc647.js"
+    ]
+  },
+  "src/routes/index.svelte": {
+    "file": "pages/index.svelte-a2f1c973.js",
+    "src": "src/routes/index.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-5c9fc647.js",
+      "_Tag-3273d686.js",
+      "_EmailInput-d38366b6.js"
+    ],
+    "css": [
+      "assets/pages/index.svelte-86409e33.css",
+      "assets/app-7a314321.css"
+    ],
+    "assets": [
+      "assets/vwl-96b80c25.svg",
+      "assets/intro-code-95867d96.svg"
+    ]
+  },
+  "src/routes/portfolio.svelte": {
+    "file": "pages/portfolio.svelte-f206216c.js",
+    "src": "src/routes/portfolio.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-5c9fc647.js",
+      "_Tag-3273d686.js",
+      "_stores-4a6615d7.js"
+    ],
+    "css": [
+      "assets/pages/portfolio.svelte-e6f7fe62.css",
+      "assets/app-7a314321.css"
+    ]
+  },
+  "src/routes/resume.svelte": {
+    "file": "pages/resume.svelte-eb4c99c3.js",
+    "src": "src/routes/resume.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-5c9fc647.js"
+    ]
+  },
+  "src/routes/blog/index.svelte": {
+    "file": "pages/blog/index.svelte-34c51f77.js",
+    "src": "src/routes/blog/index.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_preload-helper-ec9aa979.js",
+      "_vendor-5c9fc647.js",
+      "_Tag-3273d686.js",
+      "_EmailInput-d38366b6.js"
+    ],
+    "dynamicImports": [
+      "src/routes/blog/fruit-blobs.svx",
+      "src/routes/blog/michelle-feng.svx",
+      "src/routes/blog/oat-milk-guide.svx",
+      "src/routes/blog/sustainable-textiles.svx"
+    ],
+    "css": [
+      "assets/pages/blog/index.svelte-c0441924.css",
+      "assets/app-7a314321.css"
+    ]
+  },
+  "src/routes/blog/sustainable-textiles.svx": {
+    "file": "pages/blog/sustainable-textiles.svx-8f28155c.js",
+    "src": "src/routes/blog/sustainable-textiles.svx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-5c9fc647.js",
+      "_BlogImage-02f557bf.js",
+      "_BlogGallery-6923edad.js",
+      "_Tag-3273d686.js"
+    ],
+    "css": [
+      "assets/app-7a314321.css"
+    ]
+  },
+  "src/routes/blog/oat-milk-guide.svx": {
+    "file": "pages/blog/oat-milk-guide.svx-90d5008f.js",
+    "src": "src/routes/blog/oat-milk-guide.svx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-5c9fc647.js",
+      "_BlogImage-02f557bf.js",
+      "_Tag-3273d686.js"
+    ],
+    "css": [
+      "assets/pages/blog/oat-milk-guide.svx-c588e15f.css",
+      "assets/app-7a314321.css"
+    ]
+  },
+  "src/routes/blog/michelle-feng.svx": {
+    "file": "pages/blog/michelle-feng.svx-9658016a.js",
+    "src": "src/routes/blog/michelle-feng.svx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-5c9fc647.js",
+      "_BlogImage-02f557bf.js",
+      "_Tag-3273d686.js"
+    ],
+    "css": [
+      "assets/app-7a314321.css"
+    ]
+  },
+  "src/routes/blog/fruit-blobs.svx": {
+    "file": "pages/blog/fruit-blobs.svx-e6f6d90e.js",
+    "src": "src/routes/blog/fruit-blobs.svx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-5c9fc647.js",
+      "_BlogImage-02f557bf.js",
+      "_BlogGallery-6923edad.js",
+      "_Tag-3273d686.js"
+    ],
+    "css": [
+      "assets/app-7a314321.css"
+    ]
+  },
+  "src/routes/home.svelte": {
+    "file": "pages/home.svelte-9eaa7d75.js",
+    "src": "src/routes/home.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-5c9fc647.js",
+      "_navigation-b10cf5bf.js",
+      "_singletons-4a680913.js"
+    ]
+  },
+  "_vendor-5c9fc647.js": {
+    "file": "chunks/vendor-5c9fc647.js",
+    "css": [
+      "assets/vendor-42482fb6.css"
+    ]
+  },
+  "_singletons-4a680913.js": {
+    "file": "chunks/singletons-4a680913.js"
+  },
+  "_preload-helper-ec9aa979.js": {
+    "file": "chunks/preload-helper-ec9aa979.js"
+  },
+  "_stores-4a6615d7.js": {
+    "file": "chunks/stores-4a6615d7.js",
+    "imports": [
+      "_vendor-5c9fc647.js"
+    ]
+  },
+  "_navigation-b10cf5bf.js": {
+    "file": "chunks/navigation-b10cf5bf.js",
+    "imports": [
+      "_singletons-4a680913.js"
+    ]
+  },
+  "_Tag-3273d686.js": {
+    "file": "chunks/Tag-3273d686.js",
+    "imports": [
+      "_vendor-5c9fc647.js"
+    ],
+    "css": [
+      "assets/Tag-5030ad19.css",
+      "assets/app-7a314321.css"
+    ]
+  },
+  "_EmailInput-d38366b6.js": {
+    "file": "chunks/EmailInput-d38366b6.js",
+    "imports": [
+      "_vendor-5c9fc647.js"
+    ],
+    "css": [
+      "assets/EmailInput-f58afbb8.css",
+      "assets/app-7a314321.css"
+    ]
+  },
+  "_BlogImage-02f557bf.js": {
+    "file": "chunks/BlogImage-02f557bf.js",
+    "imports": [
+      "_vendor-5c9fc647.js",
+      "_Tag-3273d686.js"
+    ],
+    "css": [
+      "assets/BlogImage-a68039e0.css",
+      "assets/app-7a314321.css"
+    ]
+  },
+  "_BlogGallery-6923edad.js": {
+    "file": "chunks/BlogGallery-6923edad.js",
+    "imports": [
+      "_vendor-5c9fc647.js"
+    ],
+    "css": [
+      "assets/BlogGallery-494fa2f2.css",
+      "assets/app-7a314321.css"
+    ]
+  }
+}

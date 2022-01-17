@@ -173,13 +173,6 @@
 		width: fit-content;
 		z-index: 4;
 	}
-
-	.dark-switch {
-		position: fixed;
-		right: 0;
-		top: 0;
-		padding: 2rem;
-	}
 	:global(.custom-icon) {
 		color: var(--secondary-color);
 		font-size: 2rem;
@@ -195,13 +188,6 @@
 			fill: var(--secondary-selected-color);
 		}
 	}
-
-	.mobile-nav {
-		display: none;
-		@media screen and (max-width: 50rem) {
-			display: block;
-		}
-	}
 	.open {
 		position: absolute;
 		top: 0;
@@ -210,23 +196,5 @@
 		height: 100vh;
 		width: 15rem;
 		z-index: -1;
-	}
-	nav {
-		padding: 1rem;
-		@media screen and (max-width: 50rem) {
-			display: none;
-		}
-		a {
-			display: block;
-			text-decoration: none;
-			color: var(--secondary-color);
-			margin: 1rem;
-			font-size: 1.2rem;
-			line-height: normal;
-			&:hover {
-				color: var(--primary-color);
-				text-shadow: 0 0 0.2rem var(--primary-light-color);
-			}
-		}
 	}
 </style>

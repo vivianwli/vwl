@@ -181,3 +181,34 @@ a {
 	font-style: italic;
 	font-size: 0.9rem;
 }
+
+.dark-switch {
+	position: fixed;
+	right: 0;
+	top: 0;
+	padding: 2rem;
+}
+nav {
+	padding: 1rem;
+	@media screen and (max-width: 50rem) {
+		display: none;
+	}
+	a {
+		display: block;
+		text-decoration: none;
+		color: var(--secondary-color);
+		margin: 1rem;
+		font-size: 1.2rem;
+		line-height: normal;
+		&:hover {
+			color: var(--primary-color);
+			text-shadow: 0 0 0.2rem var(--primary-light-color);
+		}
+	}
+}
+.mobile-nav {
+	display: none;
+	@media screen and (max-width: 50rem) {
+		display: block;
+	}
+}
