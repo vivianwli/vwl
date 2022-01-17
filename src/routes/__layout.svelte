@@ -107,24 +107,6 @@
 	$animationDuration: 60s;
 	$amount: 20;
 
-	.scroll-bar-wrap {
-		position: relative;
-		width: 100%;
-		.scroll-box {
-			position: relative;
-
-			.page-content {
-				z-index: 1;
-				padding: 15vh 15vw;
-			}
-			.portfolio {
-				@media screen and (max-width: 32rem) {
-					padding: 15vh 10vw;
-				}
-			}
-		}
-	}
-
 	.background {
 		position: fixed;
 		top: 0;
