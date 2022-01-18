@@ -20,6 +20,8 @@ summary: "Any brand can say they're sustainable. By delving into the various tex
 
 _This feature article was first published in Haute Magazine's "On the Edge" issue. I have posted it to my website to maximize web readability, but please feel free to explore the original [here](https://www.hauteusc.com/ontheedge), complete with the visual design and photography. Haute is USC's fashion, arts, and culture magazine._
 
+&nbsp
+
 ## Understanding fabrics can help us fight greenwashing
 
 Any brand can say they're sustainable. It’s easy to bluff. In recent years, greenwashing — providing misleading claims about environmental impact — has grown prolifically to match skyrocketing consumer demand for sustainable products. It’s illegal, unethical, and it breaches the trust between consumers and brands. Greenwashing isn’t going anywhere anytime soon, but we as consumers can regain control of how dodgy, sketchy marketing scams affect us. Specifically, by delving into the various textiles behind sustainable clothing, we strip the power from companies to decide whether a product is environmentally friendly on our behalf.
@@ -32,6 +34,8 @@ With regard to educating Gen Z about tackling fast fashion as an individual cons
     <BlogImage className="gallery-img" src={textiles2} caption="Various garment production tools. Cover photo for the article in Haute's Fall 2021 issue. <i>(Photo credit: Quan Pham)</i>" />
     <BlogImage className="gallery-img" src={textiles3} caption="Pin-holder, fabric squares, thread, safety pins, and measuring tape. <i>(Photo credit: Quan Pham)</i>" />
 </BlogGallery>
+
+&nbsp
 
 ## Textiles: good and bad
 
@@ -61,6 +65,8 @@ Moving forward, Redd says being carbon neutral by 2050 is one of Lenzing’s top
 
 When assessing the materials on the clothing tag, McSherry provides a general rule of thumb. “Cotton, linen, TENCEL, bamboo lyocell — all of those are natural materials, and a lot of them grow fairly quickly or are less resource-intensive,” she says. “The best fabrics are really just well thought out.”
 
+&nbsp
+
 ## The power of transparency
 
 So, what is the antidote to greenwashing? How do we catch companies in the act and make informed decisions? Beyond checking the clothing label for specific materials, McSherry urges people to assess brands as a whole by looking into the sustainable claims they find. “Don't just assume that what brands are saying is true,” she says.
@@ -78,6 +84,8 @@ Tentree prioritizes sustaining their planting projects long-term. Their non-prof
 Since joining the Climate Neutral Certification Program last year, tentree has developed a life cycle assessment of the company’s total emissions. Duran clarifies that tentree accounts for their carbon footprint by using gold standard carbon offset. Their tree-planting initiative is an additional step that tentree takes to support their values. “It's not just about limiting our impact or being aware of our impact,” Duran says. “We really want to bring a positive impact.”
 
 <BlogImage className="gallery-img" src={textiles1} caption="Measuring textile squares in a sewing workspace. <i>(Photo credit: Quan Pham)</i>" />
+
+&nbsp
 
 ## Nuances in the broader picture of sustainable fashion
 

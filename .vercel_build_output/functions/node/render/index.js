@@ -25,6 +25,9 @@ var __markAsModule = (target) => __defProp(target, "__esModule", { value: true }
 var __esm = (fn, res) => function __init() {
   return fn && (res = (0, fn[Object.keys(fn)[0]])(fn = 0)), res;
 };
+var __commonJS = (cb, mod) => function __require() {
+  return mod || (0, cb[Object.keys(cb)[0]])((mod = { exports: {} }).exports, mod), mod.exports;
+};
 var __export = (target, all) => {
   __markAsModule(target);
   for (var name in all)
@@ -1638,10 +1641,10 @@ var init_install_fetch = __esm({
           [PullSteps](readRequest) {
             const stream = this._controlledReadableByteStream;
             if (this._queueTotalSize > 0) {
-              const entry12 = this._queue.shift();
-              this._queueTotalSize -= entry12.byteLength;
+              const entry13 = this._queue.shift();
+              this._queueTotalSize -= entry13.byteLength;
               ReadableByteStreamControllerHandleQueueDrain(this);
-              const view = new Uint8Array(entry12.buffer, entry12.byteOffset, entry12.byteLength);
+              const view = new Uint8Array(entry13.buffer, entry13.byteOffset, entry13.byteLength);
               readRequest._chunkSteps(view);
               return;
             }
@@ -5419,7 +5422,7 @@ var init_install_fetch = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/index-8783c5b0.js
+// .svelte-kit/output/server/chunks/index-88921582.js
 function noop2() {
 }
 function assign(tar, src) {
@@ -5445,6 +5448,14 @@ function subscribe(store, ...callbacks) {
   }
   const unsub = store.subscribe(...callbacks);
   return unsub.unsubscribe ? () => unsub.unsubscribe() : unsub;
+}
+function compute_rest_props(props, keys) {
+  const rest = {};
+  keys = new Set(keys);
+  for (const k in props)
+    if (!keys.has(k) && k[0] !== "$")
+      rest[k] = props[k];
+  return rest;
 }
 function null_to_empty(value) {
   return value == null ? "" : value;
@@ -5472,6 +5483,11 @@ function loop(callback) {
     }
   };
 }
+function custom_event(type, detail, bubbles = false) {
+  const e2 = document.createEvent("CustomEvent");
+  e2.initCustomEvent(type, bubbles, false, detail);
+  return e2;
+}
 function set_current_component(component) {
   current_component = component;
 }
@@ -5482,6 +5498,18 @@ function get_current_component() {
 }
 function onDestroy(fn) {
   get_current_component().$$.on_destroy.push(fn);
+}
+function createEventDispatcher() {
+  const component = get_current_component();
+  return (type, detail) => {
+    const callbacks = component.$$.callbacks[type];
+    if (callbacks) {
+      const event = custom_event(type, detail);
+      callbacks.slice().forEach((fn) => {
+        fn.call(component, event);
+      });
+    }
+  };
 }
 function setContext(key, context) {
   get_current_component().$$.context.set(key, context);
@@ -5598,7 +5626,7 @@ function create_ssr_component(fn) {
       return {
         html,
         css: {
-          code: Array.from(result.css).map((css21) => css21.code).join("\n"),
+          code: Array.from(result.css).map((css23) => css23.code).join("\n"),
           map: null
         },
         head: result.title + result.head
@@ -5616,8 +5644,8 @@ function style_object_to_string(style_object) {
   return Object.keys(style_object).filter((key) => style_object[key]).map((key) => `${key}: ${style_object[key]};`).join(" ");
 }
 var identity, is_client, now, raf, tasks, current_component, boolean_attributes, invalid_attribute_name_character, escaped, missing_component, on_destroy;
-var init_index_8783c5b0 = __esm({
-  ".svelte-kit/output/server/chunks/index-8783c5b0.js"() {
+var init_index_88921582 = __esm({
+  ".svelte-kit/output/server/chunks/index-88921582.js"() {
     identity = (x2) => x2;
     is_client = typeof window !== "undefined";
     now = is_client ? () => window.performance.now() : () => Date.now();
@@ -5664,11 +5692,11 @@ var init_index_8783c5b0 = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/stores-ab95845f.js
+// .svelte-kit/output/server/chunks/stores-8afac308.js
 var getStores, page, navigating;
-var init_stores_ab95845f = __esm({
-  ".svelte-kit/output/server/chunks/stores-ab95845f.js"() {
-    init_index_8783c5b0();
+var init_stores_8afac308 = __esm({
+  ".svelte-kit/output/server/chunks/stores-8afac308.js"() {
+    init_index_88921582();
     getStores = () => {
       const stores = getContext("__svelte__");
       return {
@@ -5702,7 +5730,7 @@ var init_stores_ab95845f = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/SvelteToast.svelte_svelte_type_style_lang-487258db.js
+// .svelte-kit/output/server/chunks/SvelteToast.svelte_svelte_type_style_lang-382c1799.js
 function writable2(value, start = noop2) {
   let stop;
   const subscribers = new Set();
@@ -5745,9 +5773,9 @@ function writable2(value, start = noop2) {
   return { set, update, subscribe: subscribe2 };
 }
 var subscriber_queue2, defaults, createToast, toast;
-var init_SvelteToast_svelte_svelte_type_style_lang_487258db = __esm({
-  ".svelte-kit/output/server/chunks/SvelteToast.svelte_svelte_type_style_lang-487258db.js"() {
-    init_index_8783c5b0();
+var init_SvelteToast_svelte_svelte_type_style_lang_382c1799 = __esm({
+  ".svelte-kit/output/server/chunks/SvelteToast.svelte_svelte_type_style_lang-382c1799.js"() {
+    init_index_88921582();
     subscriber_queue2 = [];
     defaults = {
       duration: 4e3,
@@ -5767,11 +5795,11 @@ var init_SvelteToast_svelte_svelte_type_style_lang_487258db = __esm({
       const push = (msg, opts = {}) => {
         const param = __spreadValues({ target: "default" }, _obj(msg) ? msg : __spreadProps(__spreadValues({}, opts), { msg }));
         const conf = options[param.target] || {};
-        const entry12 = __spreadProps(__spreadValues(__spreadValues(__spreadValues({}, defaults), conf), param), {
+        const entry13 = __spreadProps(__spreadValues(__spreadValues(__spreadValues({}, defaults), conf), param), {
           theme: __spreadValues(__spreadValues({}, conf.theme), param.theme),
           id: ++count
         });
-        update((n) => entry12.reversed ? [...n, entry12] : [entry12, ...n]);
+        update((n) => entry13.reversed ? [...n, entry13] : [entry13, ...n]);
         return count;
       };
       const pop = (id) => {
@@ -5804,16 +5832,16 @@ var init_SvelteToast_svelte_svelte_type_style_lang_487258db = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/Icon-b6ff11df.js
+// .svelte-kit/output/server/chunks/Icon-4e55a523.js
 var Icon;
-var init_Icon_b6ff11df = __esm({
-  ".svelte-kit/output/server/chunks/Icon-b6ff11df.js"() {
-    init_index_8783c5b0();
+var init_Icon_4e55a523 = __esm({
+  ".svelte-kit/output/server/chunks/Icon-4e55a523.js"() {
+    init_index_88921582();
     Icon = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       let { src } = $$props;
       let { size = "1em" } = $$props;
       let { color = void 0 } = $$props;
-      let { title: title5 = void 0 } = $$props;
+      let { title: title6 = void 0 } = $$props;
       let { className = "" } = $$props;
       let innerHtml;
       let attr;
@@ -5823,8 +5851,8 @@ var init_Icon_b6ff11df = __esm({
         $$bindings.size(size);
       if ($$props.color === void 0 && $$bindings.color && color !== void 0)
         $$bindings.color(color);
-      if ($$props.title === void 0 && $$bindings.title && title5 !== void 0)
-        $$bindings.title(title5);
+      if ($$props.title === void 0 && $$bindings.title && title6 !== void 0)
+        $$bindings.title(title6);
       if ($$props.className === void 0 && $$bindings.className && className !== void 0)
         $$bindings.className(className);
       {
@@ -5842,7 +5870,7 @@ var init_Icon_b6ff11df = __esm({
       }
       {
         {
-          innerHtml = (title5 ? `<title>${title5}</title>` : "") + src.c;
+          innerHtml = (title6 ? `<title>${title6}</title>` : "") + src.c;
         }
       }
       return `<svg${spread([
@@ -5861,15 +5889,22 @@ var init_Icon_b6ff11df = __esm({
 // .svelte-kit/output/server/entries/pages/__layout.svelte.js
 var layout_svelte_exports = {};
 __export(layout_svelte_exports, {
-  default: () => _layout
+  default: () => _layout,
+  load: () => load
 });
-var Hamburger, css$1, Menu, FiMoon, css, _layout;
+var PageTransition, Hamburger, css$1, Menu, FiMoon, css, load, _layout;
 var init_layout_svelte = __esm({
   ".svelte-kit/output/server/entries/pages/__layout.svelte.js"() {
-    init_index_8783c5b0();
-    init_stores_ab95845f();
-    init_SvelteToast_svelte_svelte_type_style_lang_487258db();
-    init_Icon_b6ff11df();
+    init_index_88921582();
+    init_stores_8afac308();
+    init_SvelteToast_svelte_svelte_type_style_lang_382c1799();
+    init_Icon_4e55a523();
+    PageTransition = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      let { refresh = "" } = $$props;
+      if ($$props.refresh === void 0 && $$bindings.refresh && refresh !== void 0)
+        $$bindings.refresh(refresh);
+      return `<div>${slots.default ? slots.default({}) : ``}</div>`;
+    });
     Hamburger = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       let { open } = $$props;
       let { type = "spin" } = $$props;
@@ -5915,14 +5950,16 @@ var init_layout_svelte = __esm({
       c: '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>'
     };
     css = {
-      code: ".background.svelte-14vym3v.svelte-14vym3v{position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:-1}.background.svelte-14vym3v span.svelte-14vym3v{backface-visibility:hidden;position:absolute;animation-name:svelte-14vym3v-move;animation-duration:60s;animation-timing-function:linear;animation-iteration-count:infinite}.background.svelte-14vym3v span.svelte-14vym3v:nth-child(1){color:var(--blob-2);top:58%;left:64%;animation-duration:39s;animation-delay:-39s;transform-origin:-10vw -20vh;width:13rem;height:13rem;border-radius:13rem;box-shadow:-26rem 0 3.3931775329rem currentColor}.background.svelte-14vym3v span.svelte-14vym3v:nth-child(2){color:var(--blob-2);top:93%;left:71%;animation-duration:16.2s;animation-delay:-26s;transform-origin:24vw -23vh;width:16rem;height:16rem;border-radius:16rem;box-shadow:-32rem 0 11.6940411323rem currentColor}.background.svelte-14vym3v span.svelte-14vym3v:nth-child(3){color:var(--blob-1);top:75%;left:28%;animation-duration:53.2s;animation-delay:-24.1s;transform-origin:-17vw -2vh;width:16rem;height:16rem;border-radius:16rem;box-shadow:-32rem 0 10.5060246874rem currentColor}.background.svelte-14vym3v span.svelte-14vym3v:nth-child(4){color:var(--blob-2);top:100%;left:80%;animation-duration:40.3s;animation-delay:-38.7s;transform-origin:-4vw -12vh;width:13rem;height:13rem;border-radius:13rem;box-shadow:-26rem 0 4.4965173471rem currentColor}.background.svelte-14vym3v span.svelte-14vym3v:nth-child(5){color:var(--blob-2);top:62%;left:66%;animation-duration:69.7s;animation-delay:-51s;transform-origin:-20vw 17vh;width:10rem;height:10rem;border-radius:10rem;box-shadow:20rem 0 3.0790175148rem currentColor}.background.svelte-14vym3v span.svelte-14vym3v:nth-child(6){color:var(--blob-1);top:3%;left:32%;animation-duration:23.6s;animation-delay:-9s;transform-origin:23vw 2vh;width:16rem;height:16rem;border-radius:16rem;box-shadow:32rem 0 7.112750393rem currentColor}.background.svelte-14vym3v span.svelte-14vym3v:nth-child(7){color:var(--blob-2);top:33%;left:20%;animation-duration:55.9s;animation-delay:-10.1s;transform-origin:8vw -9vh;width:13rem;height:13rem;border-radius:13rem;box-shadow:26rem 0 8.0635936289rem currentColor}.background.svelte-14vym3v span.svelte-14vym3v:nth-child(8){color:var(--blob-1);top:19%;left:92%;animation-duration:52.7s;animation-delay:-38.5s;transform-origin:-6vw 5vh;width:16rem;height:16rem;border-radius:16rem;box-shadow:32rem 0 5.4389346712rem currentColor}.background.svelte-14vym3v span.svelte-14vym3v:nth-child(9){color:var(--blob-1);top:96%;left:54%;animation-duration:12s;animation-delay:-24.7s;transform-origin:7vw -6vh;width:10rem;height:10rem;border-radius:10rem;box-shadow:-20rem 0 5.7987736366rem currentColor}.background.svelte-14vym3v span.svelte-14vym3v:nth-child(10){color:var(--blob-1);top:74%;left:55%;animation-duration:56s;animation-delay:-18.8s;transform-origin:1vw 17vh;width:16rem;height:16rem;border-radius:16rem;box-shadow:-32rem 0 5.8933517176rem currentColor}.background.svelte-14vym3v span.svelte-14vym3v:nth-child(11){color:var(--blob-1);top:49%;left:29%;animation-duration:23.6s;animation-delay:-8.2s;transform-origin:17vw -24vh;width:16rem;height:16rem;border-radius:16rem;box-shadow:32rem 0 4.6680590408rem currentColor}.background.svelte-14vym3v span.svelte-14vym3v:nth-child(12){color:var(--blob-2);top:90%;left:25%;animation-duration:20.8s;animation-delay:-51.9s;transform-origin:-12vw -11vh;width:13rem;height:13rem;border-radius:13rem;box-shadow:26rem 0 6.0573243476rem currentColor}.background.svelte-14vym3v span.svelte-14vym3v:nth-child(13){color:var(--blob-1);top:14%;left:77%;animation-duration:63.9s;animation-delay:-29.9s;transform-origin:3vw 15vh;width:10rem;height:10rem;border-radius:10rem;box-shadow:-20rem 0 5.3286214304rem currentColor}.background.svelte-14vym3v span.svelte-14vym3v:nth-child(14){color:var(--blob-1);top:63%;left:91%;animation-duration:48.5s;animation-delay:-36s;transform-origin:15vw 6vh;width:10rem;height:10rem;border-radius:10rem;box-shadow:-20rem 0 7.1660460393rem currentColor}.background.svelte-14vym3v span.svelte-14vym3v:nth-child(15){color:var(--blob-1);top:90%;left:28%;animation-duration:44s;animation-delay:-17.8s;transform-origin:-23vw 24vh;width:13rem;height:13rem;border-radius:13rem;box-shadow:-26rem 0 8.493667235rem currentColor}.background.svelte-14vym3v span.svelte-14vym3v:nth-child(16){color:var(--blob-2);top:63%;left:85%;animation-duration:38.6s;animation-delay:-51.2s;transform-origin:18vw -7vh;width:16rem;height:16rem;border-radius:16rem;box-shadow:32rem 0 5.2009235918rem currentColor}.background.svelte-14vym3v span.svelte-14vym3v:nth-child(17){color:var(--blob-1);top:5%;left:70%;animation-duration:57.5s;animation-delay:-66.2s;transform-origin:-8vw 11vh;width:16rem;height:16rem;border-radius:16rem;box-shadow:32rem 0 11.8389548666rem currentColor}.background.svelte-14vym3v span.svelte-14vym3v:nth-child(18){color:var(--blob-2);top:84%;left:56%;animation-duration:50.6s;animation-delay:-37s;transform-origin:-1vw 8vh;width:13rem;height:13rem;border-radius:13rem;box-shadow:-26rem 0 9.3642506519rem currentColor}.background.svelte-14vym3v span.svelte-14vym3v:nth-child(19){color:var(--blob-2);top:85%;left:9%;animation-duration:39.3s;animation-delay:-68.4s;transform-origin:16vw -15vh;width:13rem;height:13rem;border-radius:13rem;box-shadow:26rem 0 9.2780498659rem currentColor}.background.svelte-14vym3v span.svelte-14vym3v:nth-child(20){color:var(--blob-2);top:53%;left:14%;animation-duration:28s;animation-delay:-61.8s;transform-origin:18vw -20vh;width:10rem;height:10rem;border-radius:10rem;box-shadow:20rem 0 3.0015869647rem currentColor}@keyframes svelte-14vym3v-move{100%{transform:translate3d(0, 0, 1px) rotate(360deg)}}.header.svelte-14vym3v.svelte-14vym3v{position:fixed;width:fit-content;z-index:4}.custom-icon{color:var(--secondary-color);font-size:2rem;opacity:75%}.custom-icon:hover{color:var(--secondary-selected-color);cursor:pointer}.filled-moon{fill:var(--secondary-color)}.filled-moon:hover{fill:var(--secondary-selected-color)}.open.svelte-14vym3v.svelte-14vym3v{position:absolute;top:0;background-color:var(--bg-color);box-shadow:0 0 12rem var(--secondary-color);height:100vh;width:15rem;z-index:-1}",
+      code: ".background.svelte-opdz7w.svelte-opdz7w{position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:-1}.background.svelte-opdz7w span.svelte-opdz7w{backface-visibility:hidden;position:absolute;animation-name:svelte-opdz7w-move;animation-duration:60s;animation-timing-function:linear;animation-iteration-count:infinite}.background.svelte-opdz7w span.svelte-opdz7w:nth-child(1){color:var(--blob-1);top:39%;left:70%;animation-duration:14.9s;animation-delay:-53.2s;transform-origin:-21vw -9vh;width:16rem;height:16rem;border-radius:16rem;box-shadow:-32rem 0 8.435026098rem currentColor}.background.svelte-opdz7w span.svelte-opdz7w:nth-child(2){color:var(--blob-2);top:71%;left:8%;animation-duration:68.2s;animation-delay:-9.4s;transform-origin:-16vw -9vh;width:13rem;height:13rem;border-radius:13rem;box-shadow:-26rem 0 8.5540036859rem currentColor}.background.svelte-opdz7w span.svelte-opdz7w:nth-child(3){color:var(--blob-1);top:23%;left:67%;animation-duration:44.6s;animation-delay:-28.6s;transform-origin:-7vw -16vh;width:13rem;height:13rem;border-radius:13rem;box-shadow:-26rem 0 6.0773624272rem currentColor}.background.svelte-opdz7w span.svelte-opdz7w:nth-child(4){color:var(--blob-2);top:27%;left:53%;animation-duration:43.3s;animation-delay:-22.7s;transform-origin:18vw -20vh;width:16rem;height:16rem;border-radius:16rem;box-shadow:32rem 0 11.7879650326rem currentColor}.background.svelte-opdz7w span.svelte-opdz7w:nth-child(5){color:var(--blob-2);top:67%;left:21%;animation-duration:25.1s;animation-delay:-3.9s;transform-origin:23vw 1vh;width:13rem;height:13rem;border-radius:13rem;box-shadow:-26rem 0 6.4892280063rem currentColor}.background.svelte-opdz7w span.svelte-opdz7w:nth-child(6){color:var(--blob-2);top:74%;left:88%;animation-duration:64.5s;animation-delay:-38.9s;transform-origin:-18vw 18vh;width:10rem;height:10rem;border-radius:10rem;box-shadow:-20rem 0 5.382088078rem currentColor}.background.svelte-opdz7w span.svelte-opdz7w:nth-child(7){color:var(--blob-2);top:49%;left:75%;animation-duration:29.5s;animation-delay:-5.1s;transform-origin:-14vw 12vh;width:16rem;height:16rem;border-radius:16rem;box-shadow:32rem 0 6.5970363756rem currentColor}.background.svelte-opdz7w span.svelte-opdz7w:nth-child(8){color:var(--blob-1);top:86%;left:61%;animation-duration:25.6s;animation-delay:-50s;transform-origin:-21vw 4vh;width:10rem;height:10rem;border-radius:10rem;box-shadow:20rem 0 2.894587824rem currentColor}.background.svelte-opdz7w span.svelte-opdz7w:nth-child(9){color:var(--blob-1);top:8%;left:37%;animation-duration:48.6s;animation-delay:-55.8s;transform-origin:-21vw -12vh;width:10rem;height:10rem;border-radius:10rem;box-shadow:-20rem 0 4.6704312184rem currentColor}.background.svelte-opdz7w span.svelte-opdz7w:nth-child(10){color:var(--blob-1);top:77%;left:68%;animation-duration:45.3s;animation-delay:-13.9s;transform-origin:-19vw 8vh;width:16rem;height:16rem;border-radius:16rem;box-shadow:-32rem 0 5.2473949557rem currentColor}.background.svelte-opdz7w span.svelte-opdz7w:nth-child(11){color:var(--blob-1);top:66%;left:76%;animation-duration:66.8s;animation-delay:-58.8s;transform-origin:-11vw 14vh;width:16rem;height:16rem;border-radius:16rem;box-shadow:32rem 0 7.0864480998rem currentColor}.background.svelte-opdz7w span.svelte-opdz7w:nth-child(12){color:var(--blob-1);top:24%;left:38%;animation-duration:50.4s;animation-delay:-32.1s;transform-origin:-7vw 5vh;width:13rem;height:13rem;border-radius:13rem;box-shadow:26rem 0 6.9500965292rem currentColor}.background.svelte-opdz7w span.svelte-opdz7w:nth-child(13){color:var(--blob-2);top:49%;left:41%;animation-duration:61.8s;animation-delay:-34s;transform-origin:-15vw 0vh;width:13rem;height:13rem;border-radius:13rem;box-shadow:26rem 0 5.9333341341rem currentColor}.background.svelte-opdz7w span.svelte-opdz7w:nth-child(14){color:var(--blob-1);top:84%;left:21%;animation-duration:29.1s;animation-delay:-5.7s;transform-origin:22vw 8vh;width:10rem;height:10rem;border-radius:10rem;box-shadow:20rem 0 3.100076673rem currentColor}.background.svelte-opdz7w span.svelte-opdz7w:nth-child(15){color:var(--blob-2);top:54%;left:43%;animation-duration:40.7s;animation-delay:-47.8s;transform-origin:-17vw 7vh;width:10rem;height:10rem;border-radius:10rem;box-shadow:-20rem 0 5.8216090035rem currentColor}.background.svelte-opdz7w span.svelte-opdz7w:nth-child(16){color:var(--blob-1);top:19%;left:75%;animation-duration:41.5s;animation-delay:-69.8s;transform-origin:22vw -3vh;width:16rem;height:16rem;border-radius:16rem;box-shadow:32rem 0 8.0913915716rem currentColor}.background.svelte-opdz7w span.svelte-opdz7w:nth-child(17){color:var(--blob-2);top:26%;left:1%;animation-duration:64.8s;animation-delay:-41.4s;transform-origin:-8vw -24vh;width:16rem;height:16rem;border-radius:16rem;box-shadow:-32rem 0 6.7349405014rem currentColor}.background.svelte-opdz7w span.svelte-opdz7w:nth-child(18){color:var(--blob-2);top:24%;left:52%;animation-duration:39.2s;animation-delay:-12.7s;transform-origin:-11vw -24vh;width:10rem;height:10rem;border-radius:10rem;box-shadow:20rem 0 6.823052662rem currentColor}.background.svelte-opdz7w span.svelte-opdz7w:nth-child(19){color:var(--blob-2);top:17%;left:52%;animation-duration:47.5s;animation-delay:-42.7s;transform-origin:6vw -3vh;width:13rem;height:13rem;border-radius:13rem;box-shadow:-26rem 0 4.8207898892rem currentColor}.background.svelte-opdz7w span.svelte-opdz7w:nth-child(20){color:var(--blob-1);top:59%;left:42%;animation-duration:44.2s;animation-delay:-34s;transform-origin:-9vw -8vh;width:13rem;height:13rem;border-radius:13rem;box-shadow:-26rem 0 8.5948482554rem currentColor}@keyframes svelte-opdz7w-move{100%{transform:translate3d(0, 0, 1px) rotate(360deg)}}.header.svelte-opdz7w.svelte-opdz7w{position:fixed;width:fit-content;z-index:4}.custom-icon{color:var(--secondary-color);font-size:2rem;opacity:75%}.custom-icon:hover{color:var(--secondary-selected-color);cursor:pointer}.filled-moon{fill:var(--secondary-color)}.filled-moon:hover{fill:var(--secondary-selected-color)}.open.svelte-opdz7w.svelte-opdz7w{position:absolute;top:0;background-color:var(--bg-color);box-shadow:0 0 12rem var(--secondary-color);height:100vh;width:15rem;z-index:-1}",
       map: null
     };
+    load = async ({ url }) => ({ props: { key: url.pathname } });
     _layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       let $page, $$unsubscribe_page;
       let $navigating, $$unsubscribe_navigating;
       $$unsubscribe_page = subscribe(page, (value) => $page = value);
       $$unsubscribe_navigating = subscribe(navigating, (value) => $navigating = value);
+      let { key } = $$props;
       let open;
       let themes = ["moon", "filled-moon"];
       let darkTheme;
@@ -5934,6 +5971,8 @@ var init_layout_svelte = __esm({
         emailSubmitted = false;
       }
       let portfolio = $page.url.pathName === "/portfolio" ? "portfolio" : "";
+      if ($$props.key === void 0 && $$bindings.key && key !== void 0)
+        $$bindings.key(key);
       $$result.css.add(css);
       let $$settled;
       let $$rendered;
@@ -5943,7 +5982,14 @@ var init_layout_svelte = __esm({
           if ($navigating)
             opened = "closed";
         }
-        $$rendered = `<div class="${"scroll-bar-wrap"}"><div class="${"scroll-box"}"><div class="${"header svelte-14vym3v"}"><div class="${"mobile-nav"}"><div style="display: contents; --color:${"var(--secondary-color)"}; --padding:${"2rem"};">${validate_component(Hamburger, "Hamburger").$$render($$result, { type: "squeeze", open }, {
+        $$rendered = `${$$result.head += `<script data-svelte="svelte-1iuvi1l">let savedTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+		darkTheme = savedTheme ?? 'light';
+		darkTheme === 'light'
+			? document.documentElement.setAttribute('data-theme', 'light')
+			: document.documentElement.setAttribute('data-theme', 'dark');
+	<\/script>`, ""}
+
+<div class="${"scroll-bar-wrap"}"><div class="${"scroll-box"}"><div class="${"header svelte-opdz7w"}"><div class="${"mobile-nav"}"><div style="display: contents; --color:${"var(--secondary-color)"}; --padding:${"2rem"};">${validate_component(Hamburger, "Hamburger").$$render($$result, { type: "squeeze", open }, {
           open: ($$value) => {
             open = $$value;
             $$settled = false;
@@ -5955,35 +6001,39 @@ var init_layout_svelte = __esm({
             $$settled = false;
           }
         }, {})}
-				${opened === "open" ? `<div class="${"open svelte-14vym3v"}"></div>` : ``}</div>
-			<nav><a sveltekit:prefetch href="${"/"}">home</a>
-				<a sveltekit:prefetch href="${"/portfolio"}">portfolio</a>
-				<a sveltekit:prefetch href="${"/blog"}">blog</a></nav></div>
+				${opened === "open" ? `<div class="${"open svelte-opdz7w"}"></div>` : ``}</div>
+			<nav><a sveltekit:prefetch sveltekit:noscroll href="${"/"}">home</a>
+				<a sveltekit:prefetch sveltekit:noscroll href="${"/portfolio"}">portfolio</a>
+				<a sveltekit:prefetch sveltekit:noscroll href="${"/blog"}">blog</a></nav></div>
 		<div class="${"dark-switch"}"><div>${validate_component(Icon, "Icon").$$render($$result, {
           src: FiMoon,
           className: "custom-icon " + themes[darkTheme]
         }, {}, {})}</div></div>
-		<div class="${"page-content " + escape(portfolio) + " svelte-14vym3v"}">${slots.default ? slots.default({}) : ``}</div></div>
-	<div class="${"background svelte-14vym3v"}"><span class="${"svelte-14vym3v"}"></span>
-		<span class="${"svelte-14vym3v"}"></span>
-		<span class="${"svelte-14vym3v"}"></span>
-		<span class="${"svelte-14vym3v"}"></span>
-		<span class="${"svelte-14vym3v"}"></span>
-		<span class="${"svelte-14vym3v"}"></span>
-		<span class="${"svelte-14vym3v"}"></span>
-		<span class="${"svelte-14vym3v"}"></span>
-		<span class="${"svelte-14vym3v"}"></span>
-		<span class="${"svelte-14vym3v"}"></span>
-		<span class="${"svelte-14vym3v"}"></span>
-		<span class="${"svelte-14vym3v"}"></span>
-		<span class="${"svelte-14vym3v"}"></span>
-		<span class="${"svelte-14vym3v"}"></span>
-		<span class="${"svelte-14vym3v"}"></span>
-		<span class="${"svelte-14vym3v"}"></span>
-		<span class="${"svelte-14vym3v"}"></span>
-		<span class="${"svelte-14vym3v"}"></span>
-		<span class="${"svelte-14vym3v"}"></span>
-		<span class="${"svelte-14vym3v"}"></span></div>
+		<div class="${"page-content " + escape(portfolio) + " svelte-opdz7w"}">${validate_component(PageTransition, "PageTransition").$$render($$result, { refresh: key }, {}, {
+          default: () => {
+            return `${slots.default ? slots.default({}) : ``}`;
+          }
+        })}</div></div>
+	<div class="${"background svelte-opdz7w"}"><span class="${"svelte-opdz7w"}"></span>
+		<span class="${"svelte-opdz7w"}"></span>
+		<span class="${"svelte-opdz7w"}"></span>
+		<span class="${"svelte-opdz7w"}"></span>
+		<span class="${"svelte-opdz7w"}"></span>
+		<span class="${"svelte-opdz7w"}"></span>
+		<span class="${"svelte-opdz7w"}"></span>
+		<span class="${"svelte-opdz7w"}"></span>
+		<span class="${"svelte-opdz7w"}"></span>
+		<span class="${"svelte-opdz7w"}"></span>
+		<span class="${"svelte-opdz7w"}"></span>
+		<span class="${"svelte-opdz7w"}"></span>
+		<span class="${"svelte-opdz7w"}"></span>
+		<span class="${"svelte-opdz7w"}"></span>
+		<span class="${"svelte-opdz7w"}"></span>
+		<span class="${"svelte-opdz7w"}"></span>
+		<span class="${"svelte-opdz7w"}"></span>
+		<span class="${"svelte-opdz7w"}"></span>
+		<span class="${"svelte-opdz7w"}"></span>
+		<span class="${"svelte-opdz7w"}"></span></div>
 </div>`;
       } while (!$$settled);
       $$unsubscribe_page();
@@ -6005,9 +6055,9 @@ var entry, js, css2;
 var init__ = __esm({
   ".svelte-kit/output/server/nodes/0.js"() {
     init_layout_svelte();
-    entry = "pages/__layout.svelte-8c98ccd4.js";
-    js = ["pages/__layout.svelte-8c98ccd4.js", "chunks/vendor-5c9fc647.js", "chunks/stores-4a6615d7.js", "chunks/navigation-b10cf5bf.js", "chunks/singletons-4a680913.js"];
-    css2 = ["assets/pages/__layout.svelte-ae8a0a80.css", "assets/app-a7b924a0.css", "assets/vendor-42482fb6.css"];
+    entry = "pages/__layout.svelte-703c8a38.js";
+    js = ["pages/__layout.svelte-703c8a38.js", "chunks/vendor-62d2730a.js", "chunks/stores-d7124508.js", "chunks/navigation-b10cf5bf.js", "chunks/singletons-4a680913.js"];
+    css2 = ["assets/pages/__layout.svelte-96b5c87f.css", "assets/app-12d2dd8f.css", "assets/vendor-5469db33.css"];
   }
 });
 
@@ -6015,15 +6065,15 @@ var init__ = __esm({
 var error_svelte_exports = {};
 __export(error_svelte_exports, {
   default: () => Error2,
-  load: () => load
+  load: () => load2
 });
-function load({ error: error2, status }) {
+function load2({ error: error2, status }) {
   return { props: { error: error2, status } };
 }
 var Error2;
 var init_error_svelte = __esm({
   ".svelte-kit/output/server/entries/pages/error.svelte.js"() {
-    init_index_8783c5b0();
+    init_index_88921582();
     Error2 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       let { status } = $$props;
       let { error: error2 } = $$props;
@@ -6055,17 +6105,17 @@ var entry2, js2, css3;
 var init__2 = __esm({
   ".svelte-kit/output/server/nodes/1.js"() {
     init_error_svelte();
-    entry2 = "error.svelte-01161cc0.js";
-    js2 = ["error.svelte-01161cc0.js", "chunks/vendor-5c9fc647.js"];
-    css3 = ["assets/vendor-42482fb6.css"];
+    entry2 = "error.svelte-284a74ff.js";
+    js2 = ["error.svelte-284a74ff.js", "chunks/vendor-62d2730a.js"];
+    css3 = ["assets/vendor-5469db33.css"];
   }
 });
 
-// .svelte-kit/output/server/chunks/Tag-2f28d930.js
+// .svelte-kit/output/server/chunks/Tag-1ce0eb4c.js
 var css4, Tag;
-var init_Tag_2f28d930 = __esm({
-  ".svelte-kit/output/server/chunks/Tag-2f28d930.js"() {
-    init_index_8783c5b0();
+var init_Tag_1ce0eb4c = __esm({
+  ".svelte-kit/output/server/chunks/Tag-1ce0eb4c.js"() {
+    init_index_88921582();
     css4 = {
       code: "button.svelte-1uu38c9{width:fit-content;border:2.5px solid var(--secondary-color);background-color:var(--transparent);border-radius:30px;color:var(--secondary-color);font-family:'Epilogue';font-weight:600;font-size:0.8rem;padding:0.4rem 0.7rem;cursor:pointer;white-space:nowrap}button.svelte-1uu38c9:hover{background-color:var(--secondary-highlight-color);box-shadow:0 0 0.2rem var(--secondary-color)}.clear.svelte-1uu38c9{border:none;height:100%}.clear.svelte-1uu38c9:hover{box-shadow:none}.inactive.svelte-1uu38c9{color:var(--primary-color);border:2.5px solid var(--primary-color)}.inactive.svelte-1uu38c9:hover{background-color:var(--transparent);box-shadow:none}",
       map: null
@@ -6081,7 +6131,7 @@ var init_Tag_2f28d930 = __esm({
   }
 });
 
-// .svelte-kit/output/server/chunks/EmailInput-f963cc2b.js
+// .svelte-kit/output/server/chunks/EmailInput-991948a7.js
 function is_date(obj) {
   return Object.prototype.toString.call(obj) === "[object Date]";
 }
@@ -6179,11 +6229,11 @@ function tweened(value, defaults2 = {}) {
   };
 }
 var css$2, ToastItem, css$12, SvelteToast, FiArrowRightCircle, css5, EmailInput;
-var init_EmailInput_f963cc2b = __esm({
-  ".svelte-kit/output/server/chunks/EmailInput-f963cc2b.js"() {
-    init_index_8783c5b0();
-    init_SvelteToast_svelte_svelte_type_style_lang_487258db();
-    init_Icon_b6ff11df();
+var init_EmailInput_991948a7 = __esm({
+  ".svelte-kit/output/server/chunks/EmailInput-991948a7.js"() {
+    init_index_88921582();
+    init_SvelteToast_svelte_svelte_type_style_lang_382c1799();
+    init_Icon_4e55a523();
     css$2 = {
       code: "._toastItem.svelte-j9nwjb{width:var(--toastWidth, 16rem);height:var(--toastHeight, auto);min-height:var(--toastMinHeight, 3.5rem);margin:var(--toastMargin, 0 0 0.5rem 0);padding:var(--toastPadding, 0);background:var(--toastBackground, rgba(66, 66, 66, 0.9));color:var(--toastColor, #fff);box-shadow:var(--toastBoxShadow, 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06));border:var(--toastBorder, none);border-radius:var(--toastBorderRadius, 0.125rem);position:relative;display:flex;flex-direction:row;align-items:center;overflow:hidden;will-change:transform, opacity;-webkit-tap-highlight-color:transparent}._toastMsg.svelte-j9nwjb{padding:var(--toastMsgPadding, 0.75rem 0.5rem);flex:1 1 0%}.pe.svelte-j9nwjb,._toastMsg.svelte-j9nwjb a{pointer-events:auto}._toastBtn.svelte-j9nwjb{width:2rem;height:100%;font:1rem sans-serif;display:flex;align-items:center;justify-content:center;cursor:pointer;outline:none}._toastBar.svelte-j9nwjb{top:var(--toastBarTop, auto);right:var(--toastBarRight, auto);bottom:var(--toastBarBottom, 0);left:var(--toastBarLeft, 0);height:var(--toastBarHeight, 6px);width:var(--toastBarWidth, 100%);position:absolute;display:block;-webkit-appearance:none;-moz-appearance:none;appearance:none;border:none;background:transparent;pointer-events:none}._toastBar.svelte-j9nwjb::-webkit-progress-bar{background:transparent}._toastBar.svelte-j9nwjb::-webkit-progress-value{background:var(--toastProgressBackground, var(--toastBarBackground, rgba(33, 150, 243, 0.75)))}._toastBar.svelte-j9nwjb::-moz-progress-bar{background:var(--toastProgressBackground, var(--toastBarBackground, rgba(33, 150, 243, 0.75)))}",
       map: null
@@ -6324,12 +6374,12 @@ __export(index_svelte_exports, {
 var css$13, Link, FiArrowDownCircle, FiGithub, FiInstagram, FiYoutube, FiTwitter, vwl, vivian, design1, design2, code1, code2, code3, write1, write2, write3, css6, Routes;
 var init_index_svelte = __esm({
   ".svelte-kit/output/server/entries/pages/index.svelte.js"() {
-    init_index_8783c5b0();
-    init_Tag_2f28d930();
-    init_EmailInput_f963cc2b();
-    init_Icon_b6ff11df();
+    init_index_88921582();
+    init_Tag_1ce0eb4c();
+    init_EmailInput_991948a7();
+    init_Icon_4e55a523();
     init_FiLinkedin_fef49d66();
-    init_SvelteToast_svelte_svelte_type_style_lang_487258db();
+    init_SvelteToast_svelte_svelte_type_style_lang_382c1799();
     css$13 = {
       code: "a.svelte-jrov8f{width:fit-content;border:2.5px solid var(--primary-color);background-color:var(--transparent);border-radius:30px;color:var(--primary-color);font-family:'Epilogue';font-weight:600;font-size:0.8rem;text-decoration:none;padding:0.4rem 0.7rem;cursor:pointer;white-space:nowrap}a.svelte-jrov8f:hover{background-color:var(--highlight-color);box-shadow:0 0 0.2rem var(--primary-light-color)}",
       map: null
@@ -6408,7 +6458,7 @@ var init_index_svelte = __esm({
     write2 = "/_app/assets/viv-nytimes-7b55cee0.webp";
     write3 = "/_app/assets/greenwashing-2-ff857b82.webp";
     css6 = {
-      code: ".section.svelte-p7k53i.svelte-p7k53i{scroll-snap-align:start}.logo.svelte-p7k53i.svelte-p7k53i{width:40vw;margin:auto;padding-top:10vh;margin-bottom:10vh}@media screen and (max-width: 50rem){.logo.svelte-p7k53i.svelte-p7k53i{width:50vw}}.logo.svelte-p7k53i img.svelte-p7k53i{width:100%;margin:auto}.arrow{opacity:50%;width:100%;margin:auto;margin-top:15vh;margin-bottom:10vh}.arrow:hover{color:var(--secondary-color);cursor:default}.mini-section.svelte-p7k53i.svelte-p7k53i{display:grid;grid-template-columns:1fr 1fr;margin-top:10vh}@media screen and (max-width: 50rem){.mini-section.svelte-p7k53i.svelte-p7k53i{grid-template-columns:1fr;grid-template-rows:1fr 1fr}}.mini-section.svelte-p7k53i img.svelte-p7k53i{box-shadow:0 0 1.2rem 0.1rem var(--secondary-color);max-width:100%}.things.svelte-p7k53i .mini-section.svelte-p7k53i{margin:20vh 0vw 10vh 0vw}.things.svelte-p7k53i .arrow{margin-top:5vh}.mini-section.svelte-p7k53i .avatar.svelte-p7k53i{width:75%;max-width:20rem;margin:auto;border-radius:100%}@media screen and (max-width: 50rem){.mini-section.svelte-p7k53i .avatar.svelte-p7k53i{width:100%}}.text-right.svelte-p7k53i.svelte-p7k53i{display:flex;justify-content:center;flex-direction:column;margin-left:10%}@media screen and (max-width: 50rem){.text-right.svelte-p7k53i.svelte-p7k53i{margin:auto}}.text-left.svelte-p7k53i.svelte-p7k53i{display:flex;flex-direction:column;justify-content:center;align-items:flex-end;text-align:right;margin-right:10%}@media screen and (max-width: 50rem){.text-left.svelte-p7k53i.svelte-p7k53i{margin:auto}}.intro.svelte-p7k53i.svelte-p7k53i{padding-top:5vh}.intro.svelte-p7k53i .text-right.svelte-p7k53i{margin-left:0}.intro.svelte-p7k53i h1.svelte-p7k53i{margin-top:0;line-height:3rem}.image-stack.svelte-p7k53i.svelte-p7k53i{display:grid;grid-template-columns:repeat(12, 1fr);align-content:center;position:relative;padding-top:2em;max-width:25rem}.image-right.svelte-p7k53i.svelte-p7k53i{margin-left:10%}@media screen and (max-width: 50rem){.image-right.svelte-p7k53i.svelte-p7k53i{order:-1;margin:auto}}.image-left.svelte-p7k53i.svelte-p7k53i{margin-right:10%}@media screen and (max-width: 50rem){.image-left.svelte-p7k53i.svelte-p7k53i{margin:auto}}.design-top.svelte-p7k53i.svelte-p7k53i{grid-column:8/-1;grid-row:1;z-index:1;transform:rotate(12deg)}.design-bottom.svelte-p7k53i.svelte-p7k53i{grid-column:1/span 8;grid-row:1;padding-top:20%;transform:rotate(-10deg)}.code-top.svelte-p7k53i.svelte-p7k53i{grid-column:7/-1;grid-row:1;z-index:2;padding-top:20%;transform:rotate(10deg)}.code-middle.svelte-p7k53i.svelte-p7k53i{grid-column:1/span 7;grid-row:1;z-index:1;padding-top:75%}.code-bottom.svelte-p7k53i.svelte-p7k53i{grid-column:3/span 6;grid-row:1;transform:rotate(-5deg)}.write-top.svelte-p7k53i.svelte-p7k53i{grid-column:4/-1;grid-row:1;z-index:2;padding-top:40%;transform:rotate(-15deg)}.write-middle.svelte-p7k53i.svelte-p7k53i{grid-column:1/span 6;grid-row:1;z-index:1;transform:rotate(-5deg)}.write-bottom.svelte-p7k53i.svelte-p7k53i{grid-column:4/-1;grid-row:1;padding-top:7.5%;transform:rotate(8deg)}.outro.svelte-p7k53i.svelte-p7k53i{margin:15vh 0}.outro-content.svelte-p7k53i.svelte-p7k53i{display:grid;grid-template-columns:1fr 7rem 1.3fr}@media screen and (max-width: 50rem){.outro-content.svelte-p7k53i.svelte-p7k53i{display:flex;flex-direction:column}}.outro.svelte-p7k53i h1.svelte-p7k53i{width:fit-content;margin:auto}.outro.svelte-p7k53i h2.svelte-p7k53i{background-color:var(--primary-color);background-image:none}@media screen and (max-width: 50rem){.about.svelte-p7k53i.svelte-p7k53i{order:-1}}.outro.svelte-p7k53i span.svelte-p7k53i{height:80%;width:4px;background-color:var(--secondary-color);border-radius:99px;opacity:50%;margin:auto}.contact.svelte-p7k53i.svelte-p7k53i{text-align:right;display:flex;flex-direction:column;align-items:flex-end}.media-icon-container.svelte-p7k53i.svelte-p7k53i{display:grid;grid-template-columns:repeat(3, min-content) 1fr;grid-template-rows:1fr 1fr;grid-gap:0.75rem}.media-icon{font-size:3rem !important}.contact.svelte-p7k53i p.svelte-p7k53i{margin:5% 0}.selectedTag.svelte-p7k53i .filter{background-color:var(--highlight-color);box-shadow:0 0 0.2rem var(--primary-light-color);color:var(--primary-color);border:2.5px solid var(--primary-color)}.hidden{visibility:hidden}",
+      code: ".section.svelte-vu37sm.svelte-vu37sm{scroll-snap-align:start}.logo.svelte-vu37sm.svelte-vu37sm{width:40vw;margin:auto;padding-top:10vh;margin-bottom:10vh}@media screen and (max-width: 50rem){.logo.svelte-vu37sm.svelte-vu37sm{width:50vw}}.logo.svelte-vu37sm img.svelte-vu37sm{width:100%;margin:auto}.arrow{opacity:50%;width:100%;margin:auto;margin-top:15vh;margin-bottom:10vh}.arrow:hover{color:var(--secondary-color);cursor:default}.mini-section.svelte-vu37sm.svelte-vu37sm{display:grid;grid-template-columns:1fr 1fr;margin-top:10vh}@media screen and (max-width: 50rem){.mini-section.svelte-vu37sm.svelte-vu37sm{grid-template-columns:1fr;grid-template-rows:1fr 1fr}}.mini-section.svelte-vu37sm img.svelte-vu37sm{box-shadow:0 0 1.2rem 0.1rem var(--secondary-color);max-width:100%}.things.svelte-vu37sm .mini-section.svelte-vu37sm{margin:20vh 0vw 10vh 0vw}.things.svelte-vu37sm .arrow{margin-top:5vh}.mini-section.svelte-vu37sm .avatar.svelte-vu37sm{width:75%;max-width:20rem;margin:auto;border-radius:100%}@media screen and (max-width: 50rem){.mini-section.svelte-vu37sm .avatar.svelte-vu37sm{width:100%}}.text-right.svelte-vu37sm.svelte-vu37sm{display:flex;justify-content:center;flex-direction:column;margin-left:10%}@media screen and (max-width: 50rem){.text-right.svelte-vu37sm.svelte-vu37sm{margin:auto}}.text-left.svelte-vu37sm.svelte-vu37sm{display:flex;flex-direction:column;justify-content:center;align-items:flex-end;text-align:right;margin-right:10%}@media screen and (max-width: 50rem){.text-left.svelte-vu37sm.svelte-vu37sm{margin:auto}}.intro.svelte-vu37sm.svelte-vu37sm{padding-top:5vh}.intro.svelte-vu37sm .text-right.svelte-vu37sm{margin-left:0}.intro.svelte-vu37sm h1.svelte-vu37sm{margin-top:0;line-height:3rem}.image-stack.svelte-vu37sm.svelte-vu37sm{display:grid;grid-template-columns:repeat(12, 1fr);align-content:center;position:relative;padding-top:2em;max-width:25rem}.image-right.svelte-vu37sm.svelte-vu37sm{margin-left:10%}@media screen and (max-width: 50rem){.image-right.svelte-vu37sm.svelte-vu37sm{order:-1;margin:auto}}.image-left.svelte-vu37sm.svelte-vu37sm{margin-right:10%}@media screen and (max-width: 50rem){.image-left.svelte-vu37sm.svelte-vu37sm{margin:auto}}.design-top.svelte-vu37sm.svelte-vu37sm{grid-column:8/-1;grid-row:1;z-index:1;transform:rotate(12deg)}.design-bottom.svelte-vu37sm.svelte-vu37sm{grid-column:1/span 8;grid-row:1;padding-top:20%;transform:rotate(-10deg)}.code-top.svelte-vu37sm.svelte-vu37sm{grid-column:7/-1;grid-row:1;z-index:2;padding-top:20%;transform:rotate(10deg)}.code-middle.svelte-vu37sm.svelte-vu37sm{grid-column:1/span 7;grid-row:1;z-index:1;padding-top:75%}.code-bottom.svelte-vu37sm.svelte-vu37sm{grid-column:3/span 6;grid-row:1;transform:rotate(-5deg)}.write-top.svelte-vu37sm.svelte-vu37sm{grid-column:4/-1;grid-row:1;z-index:2;padding-top:40%;transform:rotate(-15deg)}.write-middle.svelte-vu37sm.svelte-vu37sm{grid-column:1/span 6;grid-row:1;z-index:1;transform:rotate(-5deg)}.write-bottom.svelte-vu37sm.svelte-vu37sm{grid-column:4/-1;grid-row:1;padding-top:7.5%;transform:rotate(8deg)}.outro.svelte-vu37sm.svelte-vu37sm{margin:15vh 0}.outro-content.svelte-vu37sm.svelte-vu37sm{display:grid;grid-template-columns:1fr 7rem 1.3fr}@media screen and (max-width: 50rem){.outro-content.svelte-vu37sm.svelte-vu37sm{display:flex;flex-direction:column}}.outro.svelte-vu37sm h1.svelte-vu37sm{width:fit-content;margin:auto}.outro.svelte-vu37sm h2.svelte-vu37sm{background-color:var(--primary-color);background-image:none;font-size:1.5rem}@media screen and (max-width: 50rem){.about.svelte-vu37sm.svelte-vu37sm{order:-1}}.outro.svelte-vu37sm span.svelte-vu37sm{height:80%;width:4px;background-color:var(--secondary-color);border-radius:99px;opacity:50%;margin:auto}.contact.svelte-vu37sm.svelte-vu37sm{text-align:right;display:flex;flex-direction:column;align-items:flex-end}.media-icon-container.svelte-vu37sm.svelte-vu37sm{display:grid;grid-template-columns:repeat(3, min-content) 1fr;grid-template-rows:1fr 1fr;grid-gap:0.75rem}.media-icon{font-size:3rem !important}.contact.svelte-vu37sm p.svelte-vu37sm{margin:5% 0}.selectedTag.svelte-vu37sm .filter{background-color:var(--highlight-color);box-shadow:0 0 0.2rem var(--primary-light-color);color:var(--primary-color);border:2.5px solid var(--primary-color)}.hidden{visibility:hidden}",
       map: null
     };
     Routes = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -6417,14 +6467,14 @@ var init_index_svelte = __esm({
 
 <div class="${"content"}">${validate_component(SvelteToast, "SvelteToast").$$render($$result, {}, {}, {})}
 	
-	<div class="${"section svelte-p7k53i"}"><div class="${"logo svelte-p7k53i"}"><img${add_attribute("src", vwl, 0)} alt="${"logo"}" class="${"svelte-p7k53i"}"></div>
+	<div class="${"section svelte-vu37sm"}"><div class="${"logo svelte-vu37sm"}"><img${add_attribute("src", vwl, 0)} alt="${"logo"}" class="${"svelte-vu37sm"}"></div>
 		${validate_component(Icon, "Icon").$$render($$result, {
         src: FiArrowDownCircle,
         className: "custom-icon arrow"
       }, {}, {})}</div>
 	
-	<div class="${"section svelte-p7k53i"}"><div class="${"mini-section intro svelte-p7k53i"}"><img class="${"avatar svelte-p7k53i"}"${add_attribute("src", vivian, 0)} alt="${"viv"}">
-			<div class="${"text-right svelte-p7k53i"}"><h1 class="${"svelte-p7k53i"}">hello! i&#39;m vivian li.</h1>
+	<div class="${"section svelte-vu37sm"}"><div class="${"mini-section intro svelte-vu37sm"}"><img class="${"avatar svelte-vu37sm"}"${add_attribute("src", vivian, 0)} alt="${"viv"}">
+			<div class="${"text-right svelte-vu37sm"}"><h1 class="${"svelte-vu37sm"}">hello! i&#39;m vivian li.</h1>
 				<p>I\u2019m a very small girl studying in the <b>Iovine and Young Academy</b>, based in Los
 					Angeles at the University of Southern California. I live to
 					<b>tell stories in beautiful ways</b>, especially around climate solutions and
@@ -6443,7 +6493,7 @@ var init_index_svelte = __esm({
         className: "custom-icon arrow"
       }, {}, {})}</div>
 	
-	<div class="${"section things svelte-p7k53i"}"><div class="${"mini-section svelte-p7k53i"}"><div class="${"text-left svelte-p7k53i"}"><h1>i design...</h1>
+	<div class="${"section things svelte-vu37sm"}"><div class="${"mini-section svelte-vu37sm"}"><div class="${"text-left svelte-vu37sm"}"><h1>i design...</h1>
 				<p>I make pretty things, from brand identities to hand-doodled holiday cards to tiny 3D
 					worlds. Part of that process lies in constantly looking out for minutiae behind the beauty
 					of daily life. Check it out!
@@ -6453,12 +6503,12 @@ var init_index_svelte = __esm({
           return `my design portfolio`;
         }
       })}</div>
-			<div class="${"image-stack image-right svelte-p7k53i"}"><div class="${"image-stack-item design-top svelte-p7k53i"}"><img${add_attribute("src", design1, 0)} alt="${"market fermentation poster design"}" class="${"svelte-p7k53i"}"></div>
-				<div class="${"image-stack-item design-bottom svelte-p7k53i"}"><img${add_attribute("src", design2, 0)} alt="${"low poly trader joes"}" class="${"svelte-p7k53i"}"></div></div></div>
-		<div class="${"mini-section svelte-p7k53i"}"><div class="${"image-stack image-left svelte-p7k53i"}"><div class="${"image-stack-item code-top svelte-p7k53i"}"><img${add_attribute("src", code1, 0)} alt="${"my senior research project"}" class="${"svelte-p7k53i"}"></div>
-				<div class="${"image-stack-item code-middle svelte-p7k53i"}"><img${add_attribute("src", code2, 0)} alt="${"code-ception of this homepage"}" class="${"svelte-p7k53i"}"></div>
-				<div class="${"image-stack-item code-bottom svelte-p7k53i"}"><img${add_attribute("src", code3, 0)} alt="${"my senior research project"}" class="${"svelte-p7k53i"}"></div></div>
-			<div class="${"text-right svelte-p7k53i"}"><h1>i code...</h1>
+			<div class="${"image-stack image-right svelte-vu37sm"}"><div class="${"image-stack-item design-top svelte-vu37sm"}"><img${add_attribute("src", design1, 0)} alt="${"market fermentation poster design"}" class="${"svelte-vu37sm"}"></div>
+				<div class="${"image-stack-item design-bottom svelte-vu37sm"}"><img${add_attribute("src", design2, 0)} alt="${"low poly trader joes"}" class="${"svelte-vu37sm"}"></div></div></div>
+		<div class="${"mini-section svelte-vu37sm"}"><div class="${"image-stack image-left svelte-vu37sm"}"><div class="${"image-stack-item code-top svelte-vu37sm"}"><img${add_attribute("src", code1, 0)} alt="${"my senior research project"}" class="${"svelte-vu37sm"}"></div>
+				<div class="${"image-stack-item code-middle svelte-vu37sm"}"><img${add_attribute("src", code2, 0)} alt="${"code-ception of this homepage"}" class="${"svelte-vu37sm"}"></div>
+				<div class="${"image-stack-item code-bottom svelte-vu37sm"}"><img${add_attribute("src", code3, 0)} alt="${"my senior research project"}" class="${"svelte-vu37sm"}"></div></div>
+			<div class="${"text-right svelte-vu37sm"}"><h1>i code...</h1>
 				<p>Okay, this one is relatively a work in progress. I&#39;ve coded random projects in the past
 					(thanks, high school!), and I&#39;m now on a mission to better understand interactive media
 					and data journalism. Feel free to follow along :)
@@ -6473,7 +6523,7 @@ var init_index_svelte = __esm({
           return `my blog`;
         }
       })}</div></div></div>
-		<div class="${"mini-section svelte-p7k53i"}"><div class="${"text-left svelte-p7k53i"}"><h1>i write...</h1>
+		<div class="${"mini-section svelte-vu37sm"}"><div class="${"text-left svelte-vu37sm"}"><h1>i write...</h1>
 				<p>Ah, the power of words. More than anything, I love to talk. Distilling ideas to their core
 					components, figuring out what they mean, and sharing them with others. Thankfully, I get
 					to do a lot of that here.
@@ -6488,17 +6538,17 @@ var init_index_svelte = __esm({
           return `my blog`;
         }
       })}</div></div>
-			<div class="${"image-stack image-right svelte-p7k53i"}"><div class="${"image-stack-item write-top svelte-p7k53i"}"><img${add_attribute("src", write1, 0)} alt="${"an article i wrote on greenwashing"}" class="${"svelte-p7k53i"}"></div>
-				<div class="${"image-stack-item write-middle svelte-p7k53i"}"><img${add_attribute("src", write2, 0)} alt="${"an article i wrote on marine plastic pollution"}" class="${"svelte-p7k53i"}"></div>
-				<div class="${"image-stack-item write-bottom svelte-p7k53i"}"><img${add_attribute("src", write3, 0)} alt="${"an article i wrote on greenwashing"}" class="${"svelte-p7k53i"}"></div></div></div>
+			<div class="${"image-stack image-right svelte-vu37sm"}"><div class="${"image-stack-item write-top svelte-vu37sm"}"><img${add_attribute("src", write1, 0)} alt="${"an article i wrote on greenwashing"}" class="${"svelte-vu37sm"}"></div>
+				<div class="${"image-stack-item write-middle svelte-vu37sm"}"><img${add_attribute("src", write2, 0)} alt="${"an article i wrote on marine plastic pollution"}" class="${"svelte-vu37sm"}"></div>
+				<div class="${"image-stack-item write-bottom svelte-vu37sm"}"><img${add_attribute("src", write3, 0)} alt="${"an article i wrote on greenwashing"}" class="${"svelte-vu37sm"}"></div></div></div>
 		${validate_component(Icon, "Icon").$$render($$result, {
         src: FiArrowDownCircle,
         className: "custom-icon arrow"
       }, {}, {})}</div>
 	
-	<div class="${"section outro svelte-p7k53i"}"><h1 class="${"svelte-p7k53i"}">i create.</h1>
-		<div class="${"outro-content svelte-p7k53i"}"><div class="${"contact svelte-p7k53i"}"><h2 class="${"svelte-p7k53i"}">want to chat?</h2>
-				<div class="${"media-icon-container svelte-p7k53i"}"><a sveltekit:prefetch href="${"mailto: vwli@usc.edu"}">${validate_component(Icon, "Icon").$$render($$result, {
+	<div class="${"section outro svelte-vu37sm"}"><h1 class="${"svelte-vu37sm"}">i create.</h1>
+		<div class="${"outro-content svelte-vu37sm"}"><div class="${"contact svelte-vu37sm"}"><h2 class="${"svelte-vu37sm"}">want to chat?</h2>
+				<div class="${"media-icon-container svelte-vu37sm"}"><a sveltekit:prefetch href="${"mailto: vwli@usc.edu"}">${validate_component(Icon, "Icon").$$render($$result, {
         src: FiMail,
         className: "custom-icon media-icon"
       }, {}, {})}</a>
@@ -6530,21 +6580,21 @@ var init_index_svelte = __esm({
         src: FiTwitter,
         className: "custom-icon media-icon"
       }, {}, {})}</a></div>
-				<p class="${"svelte-p7k53i"}">Subscribe to my newsletter:<br> (this will take you to my blog!)</p>
+				<p class="${"svelte-vu37sm"}">Subscribe to my newsletter:<br> (this will take you to my blog!)</p>
 				${validate_component(EmailInput, "EmailInput").$$render($$result, { className: "right-justified" }, {}, {})}</div>
-			<span class="${"svelte-p7k53i"}"></span>
-			<div class="${"about svelte-p7k53i"}"><h2 class="${"svelte-p7k53i"}">want to know more?</h2>
-				<div class="${"buttons"}"><div class="${["svelte-p7k53i", "selectedTag"].join(" ").trim()}">${validate_component(Tag, "Tag").$$render($$result, { className: "filter" }, {}, {
+			<span class="${"svelte-vu37sm"}"></span>
+			<div class="${"about svelte-vu37sm"}"><h2 class="${"svelte-vu37sm"}">want to know more?</h2>
+				<div class="${"buttons"}"><div class="${["svelte-vu37sm", "selectedTag"].join(" ").trim()}">${validate_component(Tag, "Tag").$$render($$result, { className: "filter" }, {}, {
         default: () => {
           return `what I do at USC`;
         }
       })}</div>
-					<div class="${["svelte-p7k53i", ""].join(" ").trim()}">${validate_component(Tag, "Tag").$$render($$result, { className: "filter" }, {}, {
+					<div class="${["svelte-vu37sm", ""].join(" ").trim()}">${validate_component(Tag, "Tag").$$render($$result, { className: "filter" }, {}, {
         default: () => {
           return `things I care about`;
         }
       })}</div>
-					<div class="${["svelte-p7k53i", ""].join(" ").trim()}">${validate_component(Tag, "Tag").$$render($$result, { className: "filter" }, {}, {
+					<div class="${["svelte-vu37sm", ""].join(" ").trim()}">${validate_component(Tag, "Tag").$$render($$result, { className: "filter" }, {}, {
         default: () => {
           return `fun facts`;
         }
@@ -6581,9 +6631,9 @@ var entry3, js3, css7;
 var init__3 = __esm({
   ".svelte-kit/output/server/nodes/2.js"() {
     init_index_svelte();
-    entry3 = "pages/index.svelte-a2f1c973.js";
-    js3 = ["pages/index.svelte-a2f1c973.js", "chunks/vendor-5c9fc647.js", "chunks/Tag-3273d686.js", "chunks/EmailInput-d38366b6.js"];
-    css7 = ["assets/pages/index.svelte-86409e33.css", "assets/app-a7b924a0.css", "assets/vendor-42482fb6.css", "assets/Tag-5030ad19.css", "assets/EmailInput-f58afbb8.css"];
+    entry3 = "pages/index.svelte-843ee1ea.js";
+    js3 = ["pages/index.svelte-843ee1ea.js", "chunks/vendor-62d2730a.js", "chunks/Tag-ae4dc1d4.js", "chunks/EmailInput-d1a9343b.js"];
+    css7 = ["assets/pages/index.svelte-8045ed9d.css", "assets/app-12d2dd8f.css", "assets/vendor-5469db33.css", "assets/Tag-5030ad19.css", "assets/EmailInput-f58afbb8.css"];
   }
 });
 
@@ -6595,11 +6645,11 @@ __export(portfolio_svelte_exports, {
 var css$14, ArticleCard, traderJoes, oatte, hackscIG, climateduIG, marketFermentation, blobs, iy8, oracle, climateduSite, css8, Portfolio;
 var init_portfolio_svelte = __esm({
   ".svelte-kit/output/server/entries/pages/portfolio.svelte.js"() {
-    init_index_8783c5b0();
-    init_Tag_2f28d930();
-    init_Icon_b6ff11df();
+    init_index_88921582();
+    init_Tag_1ce0eb4c();
+    init_Icon_4e55a523();
     init_FiLinkedin_fef49d66();
-    init_stores_ab95845f();
+    init_stores_8afac308();
     css$14 = {
       code: ".card-container.svelte-dt7gsf.svelte-dt7gsf{background-color:var(--postcard-color);box-shadow:0 0 1rem var(--secondary-subtle-color);display:flex;margin:1.5rem 0}@media screen and (max-width: 50rem){.card-container.svelte-dt7gsf.svelte-dt7gsf{display:block}}.card-container.svelte-dt7gsf img.svelte-dt7gsf{width:40%;object-fit:cover}@media screen and (max-width: 50rem){.card-container.svelte-dt7gsf img.svelte-dt7gsf{width:100%}}.card-container.svelte-dt7gsf .date.svelte-dt7gsf{font-size:0.8rem}.card-container.svelte-dt7gsf .post-description.svelte-dt7gsf{padding:1.5rem;align-self:center}@media screen and (max-width: 50rem){.card-container.svelte-dt7gsf .post-description.svelte-dt7gsf{padding:0 1rem 0.5rem 1rem}}.card-container.svelte-dt7gsf h2.svelte-dt7gsf{font-size:1.2rem;margin-top:0;margin-bottom:0}@media screen and (max-width: 50rem){.card-container.svelte-dt7gsf h2.svelte-dt7gsf{margin-top:1rem}}.card-container.svelte-dt7gsf p.svelte-dt7gsf{font-size:0.9rem;margin-bottom:0}a.svelte-dt7gsf.svelte-dt7gsf{text-decoration:none;color:var(--text-color)}.buttons.svelte-dt7gsf.svelte-dt7gsf{padding-top:1rem}",
       map: null
@@ -6632,7 +6682,7 @@ var init_portfolio_svelte = __esm({
     oracle = "/_app/assets/blair-oracle-57f29db4.webp";
     climateduSite = "/_app/assets/climatedu-website-cba91f67.webp";
     css8 = {
-      code: "h1.svelte-6rp9vp.svelte-6rp9vp{margin-bottom:2rem}@media screen and (max-width: 32rem){h1.svelte-6rp9vp.svelte-6rp9vp{padding:0 5vw}}svg.svelte-6rp9vp.svelte-6rp9vp{filter:drop-shadow(0 0 1rem var(--secondary-subtle-color));grid-row:1/span 2;height:100%;grid-column:2}@media screen and (max-width: 32rem){svg.svelte-6rp9vp.svelte-6rp9vp{height:90%}}.tab-page.svelte-6rp9vp.svelte-6rp9vp{background-color:var(--bg-color);grid-row:2/-1;grid-column:1/-1;z-index:1;height:100%}.top.svelte-6rp9vp.svelte-6rp9vp{z-index:2}.top.svelte-6rp9vp svg.svelte-6rp9vp{fill:var(--bg-color)}.bottom.svelte-6rp9vp .tab-page.svelte-6rp9vp{box-shadow:0 0 1rem var(--secondary-subtle-color)}.bottom.svelte-6rp9vp svg.svelte-6rp9vp{fill:var(--bg-shadow-color)}.bottom.svelte-6rp9vp .tab-page-content.svelte-6rp9vp{display:none}.tabs.svelte-6rp9vp.svelte-6rp9vp{display:grid;max-width:100%;width:100%}.tabs.svelte-6rp9vp .tab-selector.svelte-6rp9vp{grid-column:1;grid-row:1;z-index:3;width:100%;height:2.5rem;display:grid;grid-template-columns:2.5rem 11rem 11rem auto}@media screen and (max-width: 50rem){.tabs.svelte-6rp9vp .tab-selector.svelte-6rp9vp{grid-template-columns:0rem 11rem 11rem auto}}@media screen and (max-width: 32rem){.tabs.svelte-6rp9vp .tab-selector.svelte-6rp9vp{grid-template-columns:0rem 9rem 9rem auto}}.tabs.svelte-6rp9vp .tab-selector .design-selector.svelte-6rp9vp{grid-column:2}.tabs.svelte-6rp9vp .tab-selector .journalism-selector.svelte-6rp9vp{grid-column:3}.tabs.svelte-6rp9vp .tab.svelte-6rp9vp{grid-column:1;grid-row:1;display:grid;grid-template-rows:2.5rem 2.5rem auto}@media screen and (max-width: 32rem){.tabs.svelte-6rp9vp .tab.svelte-6rp9vp{grid-template-rows:2rem 2.5rem auto}}.tabs.svelte-6rp9vp .tab .tab-label.svelte-6rp9vp{font-size:1rem;margin:0;grid-row:1;grid-column:2;z-index:2;justify-self:center;align-self:center}.tabs.svelte-6rp9vp .design-tab.svelte-6rp9vp{grid-template-columns:2.5rem 12rem auto}@media screen and (max-width: 50rem){.tabs.svelte-6rp9vp .design-tab.svelte-6rp9vp{grid-template-columns:0 12rem auto}}@media screen and (max-width: 32rem){.tabs.svelte-6rp9vp .design-tab.svelte-6rp9vp{grid-template-columns:0 10rem auto}}.tabs.svelte-6rp9vp .journalism-tab.svelte-6rp9vp{grid-template-columns:12.5rem 12rem auto}@media screen and (max-width: 50rem){.tabs.svelte-6rp9vp .journalism-tab.svelte-6rp9vp{grid-template-columns:10rem 12rem auto}}@media screen and (max-width: 32rem){.tabs.svelte-6rp9vp .journalism-tab.svelte-6rp9vp{grid-template-columns:8rem 10rem auto}}.tab-page-content.svelte-6rp9vp.svelte-6rp9vp{margin:2rem}.selectedTag.svelte-6rp9vp .filter{background-color:var(--highlight-color);box-shadow:0 0 0.2rem var(--primary-light-color);color:var(--primary-color);border:2.5px solid var(--primary-color)}.content-row.svelte-6rp9vp.svelte-6rp9vp{margin:1.5rem 0;display:flex;gap:1.5rem}.content-row.svelte-6rp9vp .img-container.svelte-6rp9vp{display:grid}.content-row.svelte-6rp9vp .img-container .description.svelte-6rp9vp{display:none;background-color:rgba(22, 22, 26, 0.7);color:var(--lighter);font-size:0.85rem;grid-column:1;grid-row:1;z-index:3;padding:1.5rem;align-content:end}.content-row.svelte-6rp9vp .img-container .description h2.svelte-6rp9vp{background-image:none;background-color:var(--lighter);font-size:1.25rem;margin-bottom:0.5rem}.content-row.svelte-6rp9vp .img-container .description p.svelte-6rp9vp{margin:0}.content-row.svelte-6rp9vp .img-container:hover .description.svelte-6rp9vp{display:grid}.content-row.svelte-6rp9vp img.svelte-6rp9vp{box-shadow:0 0 1rem var(--secondary-subtle-color);max-width:100%;object-fit:scale-down;grid-column:1;grid-row:1}@media screen and (max-width: 50rem){.content-row.svelte-6rp9vp.svelte-6rp9vp{flex-direction:column}}.outro.svelte-6rp9vp.svelte-6rp9vp{display:flex;flex-direction:column;align-items:center}.outro.svelte-6rp9vp h2.svelte-6rp9vp{background-color:var(--primary-color);background-image:none;font-size:1.75rem;margin:3rem 0 0 0}.outro.svelte-6rp9vp .icons.svelte-6rp9vp{display:flex;gap:0.5rem}.outro.svelte-6rp9vp .media-icon{font-size:2.5rem !important;color:var(--primary-color)}.outro.svelte-6rp9vp .media-icon:hover{color:var(--primary-selected-color);cursor:pointer}",
+      code: "h1.svelte-lokfdm.svelte-lokfdm{margin-bottom:2rem}@media screen and (max-width: 32rem){h1.svelte-lokfdm.svelte-lokfdm{padding:0 5vw}}svg.svelte-lokfdm.svelte-lokfdm{filter:drop-shadow(0 0 1rem var(--secondary-subtle-color));grid-row:1/span 2;height:100%;grid-column:2}@media screen and (max-width: 32rem){svg.svelte-lokfdm.svelte-lokfdm{height:90%}}.tab-page.svelte-lokfdm.svelte-lokfdm{background-color:var(--bg-color);grid-row:2/-1;grid-column:1/-1;z-index:1;height:100%}.top.svelte-lokfdm.svelte-lokfdm{z-index:2}.top.svelte-lokfdm svg.svelte-lokfdm{fill:var(--bg-color)}.bottom.svelte-lokfdm .tab-page.svelte-lokfdm{box-shadow:0 0 1rem var(--secondary-subtle-color)}.bottom.svelte-lokfdm svg.svelte-lokfdm{fill:var(--bg-shadow-color)}.bottom.svelte-lokfdm .tab-page-content.svelte-lokfdm{display:none}.tabs.svelte-lokfdm.svelte-lokfdm{display:grid;max-width:100%;width:100%}.tabs.svelte-lokfdm .tab-selector.svelte-lokfdm{grid-column:1;grid-row:1;z-index:3;width:100%;height:2.5rem;display:grid;grid-template-columns:2.5rem 11rem 11rem auto}@media screen and (max-width: 50rem){.tabs.svelte-lokfdm .tab-selector.svelte-lokfdm{grid-template-columns:0rem 11rem 11rem auto}}@media screen and (max-width: 32rem){.tabs.svelte-lokfdm .tab-selector.svelte-lokfdm{grid-template-columns:0rem 9rem 9rem auto}}.tabs.svelte-lokfdm .tab-selector .design-selector.svelte-lokfdm{grid-column:2}.tabs.svelte-lokfdm .tab-selector .journalism-selector.svelte-lokfdm{grid-column:3}.tabs.svelte-lokfdm .tab.svelte-lokfdm{grid-column:1;grid-row:1;display:grid;grid-template-rows:2.5rem 2.5rem auto}@media screen and (max-width: 32rem){.tabs.svelte-lokfdm .tab.svelte-lokfdm{grid-template-rows:2rem 2.5rem auto}}.tabs.svelte-lokfdm .tab .tab-label.svelte-lokfdm{font-size:1rem;margin:0;grid-row:1;grid-column:2;z-index:2;justify-self:center;align-self:center}.tabs.svelte-lokfdm .design-tab.svelte-lokfdm{grid-template-columns:2.5rem 12rem auto}@media screen and (max-width: 50rem){.tabs.svelte-lokfdm .design-tab.svelte-lokfdm{grid-template-columns:0 12rem auto}}@media screen and (max-width: 32rem){.tabs.svelte-lokfdm .design-tab.svelte-lokfdm{grid-template-columns:0 10rem auto}}.tabs.svelte-lokfdm .journalism-tab.svelte-lokfdm{grid-template-columns:12.5rem 12rem auto}@media screen and (max-width: 50rem){.tabs.svelte-lokfdm .journalism-tab.svelte-lokfdm{grid-template-columns:10rem 12rem auto}}@media screen and (max-width: 32rem){.tabs.svelte-lokfdm .journalism-tab.svelte-lokfdm{grid-template-columns:8rem 10rem auto}}.tab-page-content.svelte-lokfdm.svelte-lokfdm{margin:2rem}.selectedTag.svelte-lokfdm .filter{background-color:var(--highlight-color);box-shadow:0 0 0.2rem var(--primary-light-color);color:var(--primary-color);border:2.5px solid var(--primary-color)}.content-row.svelte-lokfdm.svelte-lokfdm{margin:1.5rem 0;display:flex;gap:1.5rem}.content-row.svelte-lokfdm .img-container.svelte-lokfdm{display:grid}.content-row.svelte-lokfdm .img-container .description.svelte-lokfdm{display:none;background-color:rgba(22, 22, 26, 0.7);color:var(--lighter);font-size:0.85rem;grid-column:1;grid-row:1;z-index:3;padding:1.5rem;align-content:end}.content-row.svelte-lokfdm .img-container .description h2.svelte-lokfdm{background-image:none;background-color:var(--lighter);font-size:1.2rem;margin-bottom:0.5rem}.content-row.svelte-lokfdm .img-container .description p.svelte-lokfdm{margin:0}.content-row.svelte-lokfdm .img-container:hover .description.svelte-lokfdm{display:grid}.content-row.svelte-lokfdm img.svelte-lokfdm{box-shadow:0 0 1rem var(--secondary-subtle-color);max-width:100%;object-fit:scale-down;grid-column:1;grid-row:1}@media screen and (max-width: 50rem){.content-row.svelte-lokfdm.svelte-lokfdm{flex-direction:column}}.outro.svelte-lokfdm.svelte-lokfdm{display:flex;flex-direction:column;align-items:center}.outro.svelte-lokfdm h2.svelte-lokfdm{background-color:var(--primary-color);background-image:none;font-size:1.75rem;margin:3rem 0 0 0}.outro.svelte-lokfdm .icons.svelte-lokfdm{display:flex;gap:0.5rem}.outro.svelte-lokfdm .media-icon{font-size:2.5rem !important;color:var(--primary-color)}.outro.svelte-lokfdm .media-icon:hover{color:var(--primary-selected-color);cursor:pointer}",
       map: null
     };
     Portfolio = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -6712,13 +6762,13 @@ var init_portfolio_svelte = __esm({
       $$unsubscribe_page();
       return `${$$result.head += `${$$result.title = `<title>portfolio</title>`, ""}`, ""}
 
-<div class="${"content"}"><h1 class="${"svelte-6rp9vp"}">portfolio</h1>
-	<div class="${"tabs svelte-6rp9vp"}"><div class="${"tab-selector svelte-6rp9vp"}"><div class="${"design-selector svelte-6rp9vp"}"></div>
-			<div class="${"journalism-selector svelte-6rp9vp"}"></div></div>
-		<div class="${"design-tab tab " + escape(designPos) + " svelte-6rp9vp"}"><h2 class="${"tab-label svelte-6rp9vp"}">design</h2>
-			<svg viewBox="${"0 0 263 108"}" fill="${"none"}" xmlns="${"http://www.w3.org/2000/svg"}" class="${"svelte-6rp9vp"}"><path d="${"M34.3647 18.5394L26.4733 35.1565C20.9981 46.6858 11.3657 53.6959 0.998535 53.6959V107.392H262.5V53.6959C252.318 53.6959 242.831 46.9326 237.304 35.7337L228.534 17.9622C223.007 6.76327 213.52 0 203.338 0H59.8395C49.4724 0 39.84 7.01005 34.3647 18.5394Z"}"></path></svg>
-			<div class="${"tab-page svelte-6rp9vp"}"><div class="${"tab-page-content svelte-6rp9vp"}"><div class="${"buttons"}">${each(Object.keys(designTags).filter((k) => designTags[k]), (tag) => {
-        return `<div class="${["svelte-6rp9vp", designTags[tag] ? "selectedTag" : ""].join(" ").trim()}">${validate_component(Tag, "Tag").$$render($$result, { className: "filter" }, {}, {
+<div class="${"content"}"><h1 class="${"svelte-lokfdm"}">portfolio</h1>
+	<div class="${"tabs svelte-lokfdm"}"><div class="${"tab-selector svelte-lokfdm"}"><div class="${"design-selector svelte-lokfdm"}"></div>
+			<div class="${"journalism-selector svelte-lokfdm"}"></div></div>
+		<div class="${"design-tab tab " + escape(designPos) + " svelte-lokfdm"}"><h2 class="${"tab-label svelte-lokfdm"}">design</h2>
+			<svg viewBox="${"0 0 263 108"}" fill="${"none"}" xmlns="${"http://www.w3.org/2000/svg"}" class="${"svelte-lokfdm"}"><path d="${"M34.3647 18.5394L26.4733 35.1565C20.9981 46.6858 11.3657 53.6959 0.998535 53.6959V107.392H262.5V53.6959C252.318 53.6959 242.831 46.9326 237.304 35.7337L228.534 17.9622C223.007 6.76327 213.52 0 203.338 0H59.8395C49.4724 0 39.84 7.01005 34.3647 18.5394Z"}"></path></svg>
+			<div class="${"tab-page svelte-lokfdm"}"><div class="${"tab-page-content svelte-lokfdm"}"><div class="${"buttons"}">${each(Object.keys(designTags).filter((k) => designTags[k]), (tag) => {
+        return `<div class="${["svelte-lokfdm", designTags[tag] ? "selectedTag" : ""].join(" ").trim()}">${validate_component(Tag, "Tag").$$render($$result, { className: "filter" }, {}, {
           default: () => {
             return `${escape(tag)}`;
           }
@@ -6726,7 +6776,7 @@ var init_portfolio_svelte = __esm({
 							</div>`;
       })}
 						${each(Object.keys(designTags).filter((k) => !designTags[k]), (tag) => {
-        return `<div class="${["svelte-6rp9vp", designTags[tag] ? "selectedTag" : ""].join(" ").trim()}">${validate_component(Tag, "Tag").$$render($$result, { className: "filter" }, {}, {
+        return `<div class="${["svelte-lokfdm", designTags[tag] ? "selectedTag" : ""].join(" ").trim()}">${validate_component(Tag, "Tag").$$render($$result, { className: "filter" }, {}, {
           default: () => {
             return `${escape(tag)}`;
           }
@@ -6738,52 +6788,52 @@ var init_portfolio_svelte = __esm({
           return `clear all`;
         }
       })}</div></div>
-					<div class="${"content-container"}">${noneSelected() || designTags["3D"] ? `<div class="${"threed content-row svelte-6rp9vp"}"><div class="${"img-container svelte-6rp9vp"}"><div class="${"description svelte-6rp9vp"}"><h2 class="${"svelte-6rp9vp"}">low poly Trader Joe&#39;s</h2>
-										<p class="${"svelte-6rp9vp"}">This low-poly scene was my very first project in Blender. I love grocery
+					<div class="${"content-container"}">${noneSelected() || designTags["3D"] ? `<div class="${"threed content-row svelte-lokfdm"}"><div class="${"img-container svelte-lokfdm"}"><div class="${"description svelte-lokfdm"}"><h2 class="${"svelte-lokfdm"}">low poly Trader Joe&#39;s</h2>
+										<p class="${"svelte-lokfdm"}">This low-poly scene was my very first project in Blender. I love grocery
 											stores and the holidays (especially Christmas), so it&#39;s a perfect combination!
 										</p></div>
-									<img${add_attribute("src", traderJoes, 0)} alt="${"low poly Trader Joe's"}" class="${"svelte-6rp9vp"}"></div>
-								<div class="${"img-container svelte-6rp9vp"}"><div class="${"description svelte-6rp9vp"}"><h2 class="${"svelte-6rp9vp"}">oatte oat milk lattes</h2>
-										<p class="${"svelte-6rp9vp"}">I used Adobe Illustrator and Dimension to create this imaginary product.
+									<img${add_attribute("src", traderJoes, 0)} alt="${"low poly Trader Joe's"}" class="${"svelte-lokfdm"}"></div>
+								<div class="${"img-container svelte-lokfdm"}"><div class="${"description svelte-lokfdm"}"><h2 class="${"svelte-lokfdm"}">oatte oat milk lattes</h2>
+										<p class="${"svelte-lokfdm"}">I used Adobe Illustrator and Dimension to create this imaginary product.
 											Featuring almond black tea, red bean, matcha, and cinnamon cold brew flavors.
 										</p></div>
-									<img${add_attribute("src", oatte, 0)} alt="${"oat milk latte product mock-up"}" class="${"svelte-6rp9vp"}"></div></div>` : ``}
-						${noneSelected() || designTags["social-media"] ? `<div class="${"social-media content-row svelte-6rp9vp"}"><div class="${"img-container svelte-6rp9vp"}"><div class="${"description svelte-6rp9vp"}"><h2 class="${"svelte-6rp9vp"}">HackSC instagram</h2>
-										<p class="${"svelte-6rp9vp"}">Brand identity and Instagram assets for HackSC 2022. Neon gradients, glow
+									<img${add_attribute("src", oatte, 0)} alt="${"oat milk latte product mock-up"}" class="${"svelte-lokfdm"}"></div></div>` : ``}
+						${noneSelected() || designTags["social-media"] ? `<div class="${"social-media content-row svelte-lokfdm"}"><div class="${"img-container svelte-lokfdm"}"><div class="${"description svelte-lokfdm"}"><h2 class="${"svelte-lokfdm"}">HackSC instagram</h2>
+										<p class="${"svelte-lokfdm"}">Brand identity and Instagram assets for HackSC 2022. Neon gradients, glow
 											effects, and blobs. More <a href="${"https://instagram.com/hackscofficial"}">here</a>. Made in Figma!
 										</p></div>
-									<img${add_attribute("src", hackscIG, 0)} alt="${"HackSC Instagram posts"}" class="${"svelte-6rp9vp"}"></div>
-								<div class="${"img-container svelte-6rp9vp"}"><div class="${"description svelte-6rp9vp"}"><h2 class="${"svelte-6rp9vp"}">climatedu instagram</h2>
-										<p class="${"svelte-6rp9vp"}">Themed doodles for climatedu&#39;s weekly Infographic posts. Illustrations in
+									<img${add_attribute("src", hackscIG, 0)} alt="${"HackSC Instagram posts"}" class="${"svelte-lokfdm"}"></div>
+								<div class="${"img-container svelte-lokfdm"}"><div class="${"description svelte-lokfdm"}"><h2 class="${"svelte-lokfdm"}">climatedu instagram</h2>
+										<p class="${"svelte-lokfdm"}">Themed doodles for climatedu&#39;s weekly Infographic posts. Illustrations in
 											Adobe Fresco on iPad, assembled in Figma. More <a href="${"https://instagram.com/climateduteam"}">here</a>.
 										</p></div>
-									<img${add_attribute("src", climateduIG, 0)} alt="${"climatedu Instagram posts"}" class="${"svelte-6rp9vp"}"></div></div>` : ``}
-						${noneSelected() || designTags["illustration"] ? `<div class="${"illustration content-row svelte-6rp9vp"}"><div class="${"img-container svelte-6rp9vp"}"><div class="${"description svelte-6rp9vp"}"><h2 class="${"svelte-6rp9vp"}">market ferment-<br>ation</h2>
-										<p class="${"svelte-6rp9vp"}">Movie poster! Adobe Illustrator and InDesign.</p></div>
-									<img${add_attribute("src", marketFermentation, 0)} alt="${"market fermentation mock movie poster"}" class="${"svelte-6rp9vp"}"></div>
-								<div class="${"img-container svelte-6rp9vp"}"><div class="${"description svelte-6rp9vp"}"><h2 class="${"svelte-6rp9vp"}">fruit blob emojis</h2>
-										<p class="${"svelte-6rp9vp"}">Custom emojis made for Discord, illustrated in Adobe Fresco! See more of them <a href="${"blog/fruit-blobs"}">here</a>.
+									<img${add_attribute("src", climateduIG, 0)} alt="${"climatedu Instagram posts"}" class="${"svelte-lokfdm"}"></div></div>` : ``}
+						${noneSelected() || designTags["illustration"] ? `<div class="${"illustration content-row svelte-lokfdm"}"><div class="${"img-container svelte-lokfdm"}"><div class="${"description svelte-lokfdm"}"><h2 class="${"svelte-lokfdm"}">market ferment-<br>ation</h2>
+										<p class="${"svelte-lokfdm"}">Movie poster! Adobe Illustrator and InDesign.</p></div>
+									<img${add_attribute("src", marketFermentation, 0)} alt="${"market fermentation mock movie poster"}" class="${"svelte-lokfdm"}"></div>
+								<div class="${"img-container svelte-lokfdm"}"><div class="${"description svelte-lokfdm"}"><h2 class="${"svelte-lokfdm"}">fruit blob emojis</h2>
+										<p class="${"svelte-lokfdm"}">Custom emojis made for Discord, illustrated in Adobe Fresco! See more of them <a href="${"blog/fruit-blobs"}">here</a>.
 										</p></div>
-									<img${add_attribute("src", blobs, 0)} alt="${"Fruit blobs for Discord"}" class="${"svelte-6rp9vp"}"></div>
-								<div class="${"img-container svelte-6rp9vp"}"><div class="${"description svelte-6rp9vp"}"><h2 class="${"svelte-6rp9vp"}">iy8 logo</h2>
-										<p class="${"svelte-6rp9vp"}">Sample logo (very not official) for Cohort 8 of IYA (note the 8!). Illustrated
+									<img${add_attribute("src", blobs, 0)} alt="${"Fruit blobs for Discord"}" class="${"svelte-lokfdm"}"></div>
+								<div class="${"img-container svelte-lokfdm"}"><div class="${"description svelte-lokfdm"}"><h2 class="${"svelte-lokfdm"}">iy8 logo</h2>
+										<p class="${"svelte-lokfdm"}">Sample logo (very not official) for Cohort 8 of IYA (note the 8!). Illustrated
 											in Adobe Fresco.
 										</p></div>
-									<img${add_attribute("src", iy8, 0)} alt="${"Iovine and Young Academy Cohort 8 sample logo art"}" class="${"svelte-6rp9vp"}"></div></div>` : ``}
-						${noneSelected() || designTags["ui-ux"] ? `<div class="${"ui-ux content-row svelte-6rp9vp"}"><div class="${"img-container svelte-6rp9vp"}"><div class="${"description svelte-6rp9vp"}"><h2 class="${"svelte-6rp9vp"}">ORACLE of Blair</h2>
-										<p class="${"svelte-6rp9vp"}">Web and graphic design for our senior class model of the 2020 Presidential
+									<img${add_attribute("src", iy8, 0)} alt="${"Iovine and Young Academy Cohort 8 sample logo art"}" class="${"svelte-lokfdm"}"></div></div>` : ``}
+						${noneSelected() || designTags["ui-ux"] ? `<div class="${"ui-ux content-row svelte-lokfdm"}"><div class="${"img-container svelte-lokfdm"}"><div class="${"description svelte-lokfdm"}"><h2 class="${"svelte-lokfdm"}">ORACLE of Blair</h2>
+										<p class="${"svelte-lokfdm"}">Web and graphic design for our senior class model of the 2020 Presidential
 											election. Designed in Figma. More <a href="${"https://polistat.mbhs.edu"}">here</a>.
 										</p></div>
-									<img${add_attribute("src", oracle, 0)} alt="${"Logo header for the ORACLE of Blair"}" class="${"svelte-6rp9vp"}"></div>
-								<div class="${"img-container svelte-6rp9vp"}"><div class="${"description svelte-6rp9vp"}"><h2 class="${"svelte-6rp9vp"}">climatedu</h2>
-										<p class="${"svelte-6rp9vp"}">Website platform design for climatedu.org, an online climate course for middle
+									<img${add_attribute("src", oracle, 0)} alt="${"Logo header for the ORACLE of Blair"}" class="${"svelte-lokfdm"}"></div>
+								<div class="${"img-container svelte-lokfdm"}"><div class="${"description svelte-lokfdm"}"><h2 class="${"svelte-lokfdm"}">climatedu</h2>
+										<p class="${"svelte-lokfdm"}">Website platform design for climatedu.org, an online climate course for middle
 											and high school students. Designed in Figma. More <a href="${"https://climatedu.org"}">here</a>.
 										</p></div>
-									<img${add_attribute("src", climateduSite, 0)} alt="${"Website home page for climatedu.org"}" class="${"svelte-6rp9vp"}"></div></div>` : ``}</div></div></div></div>
-		<div class="${"journalism-tab tab " + escape(journalismPos) + " svelte-6rp9vp"}"><h2 class="${"tab-label svelte-6rp9vp"}">journalism</h2>
-			<svg viewBox="${"0 0 263 108"}" fill="${"none"}" xmlns="${"http://www.w3.org/2000/svg"}" class="${"svelte-6rp9vp"}"><path d="${"M34.3647 18.5394L26.4733 35.1565C20.9981 46.6858 11.3657 53.6959 0.998535 53.6959V107.392H262.5V53.6959C252.318 53.6959 242.831 46.9326 237.304 35.7337L228.534 17.9622C223.007 6.76327 213.52 0 203.338 0H59.8395C49.4724 0 39.84 7.01005 34.3647 18.5394Z"}"></path></svg>
-			<div class="${"tab-page svelte-6rp9vp"}"><div class="${"tab-page-content svelte-6rp9vp"}"><div class="${"buttons"}">${each(Object.keys(journalismTags).filter((k) => journalismTags[k]), (tag) => {
-        return `<div class="${["svelte-6rp9vp", journalismTags[tag] ? "selectedTag" : ""].join(" ").trim()}">${validate_component(Tag, "Tag").$$render($$result, { className: "filter" }, {}, {
+									<img${add_attribute("src", climateduSite, 0)} alt="${"Website home page for climatedu.org"}" class="${"svelte-lokfdm"}"></div></div>` : ``}</div></div></div></div>
+		<div class="${"journalism-tab tab " + escape(journalismPos) + " svelte-lokfdm"}"><h2 class="${"tab-label svelte-lokfdm"}">journalism</h2>
+			<svg viewBox="${"0 0 263 108"}" fill="${"none"}" xmlns="${"http://www.w3.org/2000/svg"}" class="${"svelte-lokfdm"}"><path d="${"M34.3647 18.5394L26.4733 35.1565C20.9981 46.6858 11.3657 53.6959 0.998535 53.6959V107.392H262.5V53.6959C252.318 53.6959 242.831 46.9326 237.304 35.7337L228.534 17.9622C223.007 6.76327 213.52 0 203.338 0H59.8395C49.4724 0 39.84 7.01005 34.3647 18.5394Z"}"></path></svg>
+			<div class="${"tab-page svelte-lokfdm"}"><div class="${"tab-page-content svelte-lokfdm"}"><div class="${"buttons"}">${each(Object.keys(journalismTags).filter((k) => journalismTags[k]), (tag) => {
+        return `<div class="${["svelte-lokfdm", journalismTags[tag] ? "selectedTag" : ""].join(" ").trim()}">${validate_component(Tag, "Tag").$$render($$result, { className: "filter" }, {}, {
           default: () => {
             return `${escape(tag)}`;
           }
@@ -6791,7 +6841,7 @@ var init_portfolio_svelte = __esm({
 							</div>`;
       })}
 						${each(Object.keys(journalismTags).filter((k) => !journalismTags[k]), (tag) => {
-        return `<div class="${["svelte-6rp9vp", journalismTags[tag] ? "selectedTag" : ""].join(" ").trim()}">${validate_component(Tag, "Tag").$$render($$result, { className: "filter" }, {}, {
+        return `<div class="${["svelte-lokfdm", journalismTags[tag] ? "selectedTag" : ""].join(" ").trim()}">${validate_component(Tag, "Tag").$$render($$result, { className: "filter" }, {}, {
           default: () => {
             return `${escape(tag)}`;
           }
@@ -6810,8 +6860,8 @@ var init_portfolio_svelte = __esm({
           return `${journalismTags[tag] ? `${validate_component(ArticleCard, "ArticleCard").$$render($$result, { article }, {}, {})}` : ``}`;
         })}`;
       })}`}</div></div></div></div></div>
-	<div class="${"outro svelte-6rp9vp"}"><h2 class="${"svelte-6rp9vp"}">don&#39;t be shy...</h2>
-		<div class="${"icons svelte-6rp9vp"}"><a sveltekit:prefetch href="${"https://www.linkedin.com/in/vivian-li-25b424183/"}">${validate_component(Icon, "Icon").$$render($$result, {
+	<div class="${"outro svelte-lokfdm"}"><h2 class="${"svelte-lokfdm"}">don&#39;t be shy...</h2>
+		<div class="${"icons svelte-lokfdm"}"><a sveltekit:prefetch href="${"https://www.linkedin.com/in/vivian-li-25b424183/"}">${validate_component(Icon, "Icon").$$render($$result, {
         src: FiLinkedin,
         className: "custom-icon media-icon"
       }, {}, {})}</a>
@@ -6836,9 +6886,9 @@ var entry4, js4, css9;
 var init__4 = __esm({
   ".svelte-kit/output/server/nodes/3.js"() {
     init_portfolio_svelte();
-    entry4 = "pages/portfolio.svelte-f206216c.js";
-    js4 = ["pages/portfolio.svelte-f206216c.js", "chunks/vendor-5c9fc647.js", "chunks/Tag-3273d686.js", "chunks/stores-4a6615d7.js"];
-    css9 = ["assets/pages/portfolio.svelte-e6f7fe62.css", "assets/app-a7b924a0.css", "assets/vendor-42482fb6.css", "assets/Tag-5030ad19.css"];
+    entry4 = "pages/portfolio.svelte-6f0bd2da.js";
+    js4 = ["pages/portfolio.svelte-6f0bd2da.js", "chunks/vendor-62d2730a.js", "chunks/Tag-ae4dc1d4.js", "chunks/stores-d7124508.js"];
+    css9 = ["assets/pages/portfolio.svelte-622bf7cd.css", "assets/app-12d2dd8f.css", "assets/vendor-5469db33.css", "assets/Tag-5030ad19.css"];
   }
 });
 
@@ -6850,7 +6900,7 @@ __export(resume_svelte_exports, {
 var Resume;
 var init_resume_svelte = __esm({
   ".svelte-kit/output/server/entries/pages/resume.svelte.js"() {
-    init_index_8783c5b0();
+    init_index_88921582();
     Resume = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       location = "https://drive.google.com/file/d/1mkq5Q-g9xGp5N2UZcgNrXokr2vZ4QfOS/view?usp=sharing";
       return ``;
@@ -6870,43 +6920,43 @@ var entry5, js5, css10;
 var init__5 = __esm({
   ".svelte-kit/output/server/nodes/4.js"() {
     init_resume_svelte();
-    entry5 = "pages/resume.svelte-eb4c99c3.js";
-    js5 = ["pages/resume.svelte-eb4c99c3.js", "chunks/vendor-5c9fc647.js"];
-    css10 = ["assets/vendor-42482fb6.css"];
+    entry5 = "pages/resume.svelte-661b803f.js";
+    js5 = ["pages/resume.svelte-661b803f.js", "chunks/vendor-62d2730a.js"];
+    css10 = ["assets/vendor-5469db33.css"];
   }
 });
 
-// .svelte-kit/output/server/chunks/BlogImage-70911919.js
+// .svelte-kit/output/server/chunks/BlogImage-583d34a0.js
 var css$15, PostHeader, css11, BlogImage;
-var init_BlogImage_70911919 = __esm({
-  ".svelte-kit/output/server/chunks/BlogImage-70911919.js"() {
-    init_index_8783c5b0();
-    init_Tag_2f28d930();
+var init_BlogImage_583d34a0 = __esm({
+  ".svelte-kit/output/server/chunks/BlogImage-583d34a0.js"() {
+    init_index_88921582();
+    init_Tag_1ce0eb4c();
     css$15 = {
       code: ".container.svelte-g5xv50{margin-bottom:3rem}h1.svelte-g5xv50{line-height:3rem}@media screen and (max-width: 32rem){h1.svelte-g5xv50{font-size:2.5rem}}",
       map: null
     };
     PostHeader = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-      let { title: title5 } = $$props;
-      let { publishDate: publishDate5 } = $$props;
+      let { title: title6 } = $$props;
+      let { publishDate: publishDate6 } = $$props;
       let { editDate: editDate2 } = $$props;
-      let { tags: tags5 } = $$props;
-      if ($$props.title === void 0 && $$bindings.title && title5 !== void 0)
-        $$bindings.title(title5);
-      if ($$props.publishDate === void 0 && $$bindings.publishDate && publishDate5 !== void 0)
-        $$bindings.publishDate(publishDate5);
+      let { tags: tags6 } = $$props;
+      if ($$props.title === void 0 && $$bindings.title && title6 !== void 0)
+        $$bindings.title(title6);
+      if ($$props.publishDate === void 0 && $$bindings.publishDate && publishDate6 !== void 0)
+        $$bindings.publishDate(publishDate6);
       if ($$props.editDate === void 0 && $$bindings.editDate && editDate2 !== void 0)
         $$bindings.editDate(editDate2);
-      if ($$props.tags === void 0 && $$bindings.tags && tags5 !== void 0)
-        $$bindings.tags(tags5);
+      if ($$props.tags === void 0 && $$bindings.tags && tags6 !== void 0)
+        $$bindings.tags(tags6);
       $$result.css.add(css$15);
-      return `${$$result.head += `${$$result.title = `<title>${escape(title5)}</title>`, ""}`, ""}
+      return `${$$result.head += `${$$result.title = `<title>${escape(title6)}</title>`, ""}`, ""}
 
 
-<div class="${"container svelte-g5xv50"}"><h1 class="${"svelte-g5xv50"}">${escape(title5)}</h1>
-	<p class="${"date"}">PUBLISHED ${escape(publishDate5)}
+<div class="${"container svelte-g5xv50"}"><h1 class="${"svelte-g5xv50"}">${escape(title6)}</h1>
+	<p class="${"date"}">PUBLISHED ${escape(publishDate6)}
 		${editDate2 ? `\u2022 LAST EDITED ${escape(editDate2)}` : ``}</p>
-	<div class="${"buttons"}">${each(tags5, (tag) => {
+	<div class="${"buttons"}">${each(tags6, (tag) => {
         return `${validate_component(Tag, "Tag").$$render($$result, { className: "inactive" }, {}, {
           default: () => {
             return `${escape(tag.name)}`;
@@ -6916,7 +6966,7 @@ var init_BlogImage_70911919 = __esm({
 </div>`;
     });
     css11 = {
-      code: "img.svelte-1d09o80.svelte-1d09o80{width:50%;display:block;margin:2rem auto 1rem auto;box-shadow:0 0 1.2rem 0.1rem var(--secondary-color)}@media screen and (max-width: 50rem){img.svelte-1d09o80.svelte-1d09o80{width:90%}}.caption.svelte-1d09o80.svelte-1d09o80{text-align:center;display:block;width:50%;font-size:0.9rem;margin:1rem auto 2rem auto;color:var(--secondary-selected-color);font-style:italic}.gallery-img.svelte-1d09o80 img.svelte-1d09o80{width:90%}.gallery-img.svelte-1d09o80 .caption.svelte-1d09o80{width:90%}.half-img.svelte-1d09o80 img.svelte-1d09o80{width:20rem;max-width:90%}.half-img.svelte-1d09o80 .caption.svelte-1d09o80{width:20rem;max-width:90%}",
+      code: "img.svelte-4ge5mg.svelte-4ge5mg{width:50%;display:block;margin:2rem auto 1rem auto;box-shadow:0 0 1.2rem 0.1rem var(--secondary-subtle-color)}@media screen and (max-width: 50rem){img.svelte-4ge5mg.svelte-4ge5mg{width:90%}}.caption.svelte-4ge5mg.svelte-4ge5mg{text-align:center;display:block;width:50%;font-size:0.9rem;margin:1rem auto 2rem auto;color:var(--secondary-selected-color);font-style:italic}.gallery-img.svelte-4ge5mg img.svelte-4ge5mg{width:90%}.gallery-img.svelte-4ge5mg .caption.svelte-4ge5mg{width:90%}.half-img.svelte-4ge5mg img.svelte-4ge5mg{width:20rem;max-width:90%}.half-img.svelte-4ge5mg .caption.svelte-4ge5mg{width:20rem;max-width:90%}",
       map: null
     };
     BlogImage = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -6930,28 +6980,31 @@ var init_BlogImage_70911919 = __esm({
       if ($$props.className === void 0 && $$bindings.className && className !== void 0)
         $$bindings.className(className);
       $$result.css.add(css11);
-      return `<div class="${escape(null_to_empty(className)) + " svelte-1d09o80"}"><img${add_attribute("src", src, 0)}${add_attribute("alt", caption, 0)} class="${"svelte-1d09o80"}">
-	<div class="${"caption svelte-1d09o80"}"><!-- HTML_TAG_START -->${caption}<!-- HTML_TAG_END --></div>
+      return `<div class="${escape(null_to_empty(className)) + " svelte-4ge5mg"}"><img${add_attribute("src", src, 0)}${add_attribute("alt", caption, 0)} class="${"svelte-4ge5mg"}">
+	<div class="${"caption svelte-4ge5mg"}"><!-- HTML_TAG_START -->${caption}<!-- HTML_TAG_END --></div>
 </div>`;
     });
   }
 });
 
-// .svelte-kit/output/server/chunks/BlogGallery-93d317ee.js
+// .svelte-kit/output/server/chunks/BlogGallery-55092816.js
 var css12, BlogGallery;
-var init_BlogGallery_93d317ee = __esm({
-  ".svelte-kit/output/server/chunks/BlogGallery-93d317ee.js"() {
-    init_index_8783c5b0();
+var init_BlogGallery_55092816 = __esm({
+  ".svelte-kit/output/server/chunks/BlogGallery-55092816.js"() {
+    init_index_88921582();
     css12 = {
-      code: ".gallery.svelte-1jc61l3{display:grid;grid-template-columns:repeat(var(--columns), 1fr)}@media screen and (max-width: 50rem){.gallery.svelte-1jc61l3{display:block}}",
+      code: ".gallery.svelte-rdygkv{display:grid;grid-template-columns:repeat(var(--columns), 1fr)}@media screen and (max-width: 50rem){.gallery.svelte-rdygkv{display:block}}.half-width.svelte-rdygkv{margin:auto;width:50%}@media screen and (max-width: 50rem){.half-width.svelte-rdygkv{width:90%}}",
       map: null
     };
     BlogGallery = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       let { columns } = $$props;
+      let { className } = $$props;
       if ($$props.columns === void 0 && $$bindings.columns && columns !== void 0)
         $$bindings.columns(columns);
+      if ($$props.className === void 0 && $$bindings.className && className !== void 0)
+        $$bindings.className(className);
       $$result.css.add(css12);
-      return `<div class="${"gallery svelte-1jc61l3"}" style="${"--columns: " + escape(columns)}">${slots.default ? slots.default({}) : ``}
+      return `<div class="${escape(null_to_empty("gallery " + className)) + " svelte-rdygkv"}" style="${"--columns: " + escape(columns)}">${slots.default ? slots.default({}) : ``}
 </div>`;
     });
   }
@@ -6966,10 +7019,10 @@ __export(fruit_blobs_svx_exports, {
 var blobs1, blobs2, blobs3, blobs4, metadata, title, slug, publishDate, editDate, tags, thumbnail, summary, Fruit_blobs;
 var init_fruit_blobs_svx = __esm({
   ".svelte-kit/output/server/entries/pages/blog/fruit-blobs.svx.js"() {
-    init_index_8783c5b0();
-    init_BlogImage_70911919();
-    init_BlogGallery_93d317ee();
-    init_Tag_2f28d930();
+    init_index_88921582();
+    init_BlogImage_583d34a0();
+    init_BlogGallery_55092816();
+    init_Tag_1ce0eb4c();
     blobs1 = "/_app/assets/blobberries-6ef93a8b.webp";
     blobs2 = "/_app/assets/blobcitrus-2845ae02.webp";
     blobs3 = "/_app/assets/blobsuggestive-25f1b9b0.webp";
@@ -7016,20 +7069,3029 @@ ${validate_component(BlogGallery, "BlogGallery").$$render($$result, { columns: "
   }
 });
 
+// node_modules/highlight.js/lib/core.js
+var require_core = __commonJS({
+  "node_modules/highlight.js/lib/core.js"(exports, module2) {
+    var deepFreezeEs6 = { exports: {} };
+    function deepFreeze(obj) {
+      if (obj instanceof Map) {
+        obj.clear = obj.delete = obj.set = function() {
+          throw new Error("map is read-only");
+        };
+      } else if (obj instanceof Set) {
+        obj.add = obj.clear = obj.delete = function() {
+          throw new Error("set is read-only");
+        };
+      }
+      Object.freeze(obj);
+      Object.getOwnPropertyNames(obj).forEach(function(name) {
+        var prop = obj[name];
+        if (typeof prop == "object" && !Object.isFrozen(prop)) {
+          deepFreeze(prop);
+        }
+      });
+      return obj;
+    }
+    deepFreezeEs6.exports = deepFreeze;
+    deepFreezeEs6.exports.default = deepFreeze;
+    var deepFreeze$1 = deepFreezeEs6.exports;
+    var Response3 = class {
+      constructor(mode) {
+        if (mode.data === void 0)
+          mode.data = {};
+        this.data = mode.data;
+        this.isMatchIgnored = false;
+      }
+      ignoreMatch() {
+        this.isMatchIgnored = true;
+      }
+    };
+    function escapeHTML(value) {
+      return value.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#x27;");
+    }
+    function inherit$1(original, ...objects) {
+      const result = Object.create(null);
+      for (const key in original) {
+        result[key] = original[key];
+      }
+      objects.forEach(function(obj) {
+        for (const key in obj) {
+          result[key] = obj[key];
+        }
+      });
+      return result;
+    }
+    var SPAN_CLOSE = "</span>";
+    var emitsWrappingTags = (node) => {
+      return !!node.kind;
+    };
+    var expandScopeName = (name, { prefix }) => {
+      if (name.includes(".")) {
+        const pieces = name.split(".");
+        return [
+          `${prefix}${pieces.shift()}`,
+          ...pieces.map((x2, i2) => `${x2}${"_".repeat(i2 + 1)}`)
+        ].join(" ");
+      }
+      return `${prefix}${name}`;
+    };
+    var HTMLRenderer = class {
+      constructor(parseTree, options) {
+        this.buffer = "";
+        this.classPrefix = options.classPrefix;
+        parseTree.walk(this);
+      }
+      addText(text) {
+        this.buffer += escapeHTML(text);
+      }
+      openNode(node) {
+        if (!emitsWrappingTags(node))
+          return;
+        let scope = node.kind;
+        if (node.sublanguage) {
+          scope = `language-${scope}`;
+        } else {
+          scope = expandScopeName(scope, { prefix: this.classPrefix });
+        }
+        this.span(scope);
+      }
+      closeNode(node) {
+        if (!emitsWrappingTags(node))
+          return;
+        this.buffer += SPAN_CLOSE;
+      }
+      value() {
+        return this.buffer;
+      }
+      span(className) {
+        this.buffer += `<span class="${className}">`;
+      }
+    };
+    var TokenTree = class {
+      constructor() {
+        this.rootNode = { children: [] };
+        this.stack = [this.rootNode];
+      }
+      get top() {
+        return this.stack[this.stack.length - 1];
+      }
+      get root() {
+        return this.rootNode;
+      }
+      add(node) {
+        this.top.children.push(node);
+      }
+      openNode(kind) {
+        const node = { kind, children: [] };
+        this.add(node);
+        this.stack.push(node);
+      }
+      closeNode() {
+        if (this.stack.length > 1) {
+          return this.stack.pop();
+        }
+        return void 0;
+      }
+      closeAllNodes() {
+        while (this.closeNode())
+          ;
+      }
+      toJSON() {
+        return JSON.stringify(this.rootNode, null, 4);
+      }
+      walk(builder) {
+        return this.constructor._walk(builder, this.rootNode);
+      }
+      static _walk(builder, node) {
+        if (typeof node === "string") {
+          builder.addText(node);
+        } else if (node.children) {
+          builder.openNode(node);
+          node.children.forEach((child) => this._walk(builder, child));
+          builder.closeNode(node);
+        }
+        return builder;
+      }
+      static _collapse(node) {
+        if (typeof node === "string")
+          return;
+        if (!node.children)
+          return;
+        if (node.children.every((el) => typeof el === "string")) {
+          node.children = [node.children.join("")];
+        } else {
+          node.children.forEach((child) => {
+            TokenTree._collapse(child);
+          });
+        }
+      }
+    };
+    var TokenTreeEmitter = class extends TokenTree {
+      constructor(options) {
+        super();
+        this.options = options;
+      }
+      addKeyword(text, kind) {
+        if (text === "") {
+          return;
+        }
+        this.openNode(kind);
+        this.addText(text);
+        this.closeNode();
+      }
+      addText(text) {
+        if (text === "") {
+          return;
+        }
+        this.add(text);
+      }
+      addSublanguage(emitter, name) {
+        const node = emitter.root;
+        node.kind = name;
+        node.sublanguage = true;
+        this.add(node);
+      }
+      toHTML() {
+        const renderer = new HTMLRenderer(this, this.options);
+        return renderer.value();
+      }
+      finalize() {
+        return true;
+      }
+    };
+    function source(re) {
+      if (!re)
+        return null;
+      if (typeof re === "string")
+        return re;
+      return re.source;
+    }
+    function lookahead(re) {
+      return concat("(?=", re, ")");
+    }
+    function anyNumberOfTimes(re) {
+      return concat("(?:", re, ")*");
+    }
+    function optional(re) {
+      return concat("(?:", re, ")?");
+    }
+    function concat(...args) {
+      const joined = args.map((x2) => source(x2)).join("");
+      return joined;
+    }
+    function stripOptionsFromArgs(args) {
+      const opts = args[args.length - 1];
+      if (typeof opts === "object" && opts.constructor === Object) {
+        args.splice(args.length - 1, 1);
+        return opts;
+      } else {
+        return {};
+      }
+    }
+    function either(...args) {
+      const opts = stripOptionsFromArgs(args);
+      const joined = "(" + (opts.capture ? "" : "?:") + args.map((x2) => source(x2)).join("|") + ")";
+      return joined;
+    }
+    function countMatchGroups(re) {
+      return new RegExp(re.toString() + "|").exec("").length - 1;
+    }
+    function startsWith(re, lexeme) {
+      const match = re && re.exec(lexeme);
+      return match && match.index === 0;
+    }
+    var BACKREF_RE = /\[(?:[^\\\]]|\\.)*\]|\(\??|\\([1-9][0-9]*)|\\./;
+    function _rewriteBackreferences(regexps, { joinWith }) {
+      let numCaptures = 0;
+      return regexps.map((regex) => {
+        numCaptures += 1;
+        const offset = numCaptures;
+        let re = source(regex);
+        let out = "";
+        while (re.length > 0) {
+          const match = BACKREF_RE.exec(re);
+          if (!match) {
+            out += re;
+            break;
+          }
+          out += re.substring(0, match.index);
+          re = re.substring(match.index + match[0].length);
+          if (match[0][0] === "\\" && match[1]) {
+            out += "\\" + String(Number(match[1]) + offset);
+          } else {
+            out += match[0];
+            if (match[0] === "(") {
+              numCaptures++;
+            }
+          }
+        }
+        return out;
+      }).map((re) => `(${re})`).join(joinWith);
+    }
+    var MATCH_NOTHING_RE = /\b\B/;
+    var IDENT_RE2 = "[a-zA-Z]\\w*";
+    var UNDERSCORE_IDENT_RE = "[a-zA-Z_]\\w*";
+    var NUMBER_RE = "\\b\\d+(\\.\\d+)?";
+    var C_NUMBER_RE = "(-?)(\\b0[xX][a-fA-F0-9]+|(\\b\\d+(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?)";
+    var BINARY_NUMBER_RE = "\\b(0b[01]+)";
+    var RE_STARTERS_RE = "!|!=|!==|%|%=|&|&&|&=|\\*|\\*=|\\+|\\+=|,|-|-=|/=|/|:|;|<<|<<=|<=|<|===|==|=|>>>=|>>=|>=|>>>|>>|>|\\?|\\[|\\{|\\(|\\^|\\^=|\\||\\|=|\\|\\||~";
+    var SHEBANG = (opts = {}) => {
+      const beginShebang = /^#![ ]*\//;
+      if (opts.binary) {
+        opts.begin = concat(beginShebang, /.*\b/, opts.binary, /\b.*/);
+      }
+      return inherit$1({
+        scope: "meta",
+        begin: beginShebang,
+        end: /$/,
+        relevance: 0,
+        "on:begin": (m2, resp) => {
+          if (m2.index !== 0)
+            resp.ignoreMatch();
+        }
+      }, opts);
+    };
+    var BACKSLASH_ESCAPE = {
+      begin: "\\\\[\\s\\S]",
+      relevance: 0
+    };
+    var APOS_STRING_MODE = {
+      scope: "string",
+      begin: "'",
+      end: "'",
+      illegal: "\\n",
+      contains: [BACKSLASH_ESCAPE]
+    };
+    var QUOTE_STRING_MODE = {
+      scope: "string",
+      begin: '"',
+      end: '"',
+      illegal: "\\n",
+      contains: [BACKSLASH_ESCAPE]
+    };
+    var PHRASAL_WORDS_MODE = {
+      begin: /\b(a|an|the|are|I'm|isn't|don't|doesn't|won't|but|just|should|pretty|simply|enough|gonna|going|wtf|so|such|will|you|your|they|like|more)\b/
+    };
+    var COMMENT = function(begin, end, modeOptions = {}) {
+      const mode = inherit$1({
+        scope: "comment",
+        begin,
+        end,
+        contains: []
+      }, modeOptions);
+      mode.contains.push({
+        scope: "doctag",
+        begin: "[ ]*(?=(TODO|FIXME|NOTE|BUG|OPTIMIZE|HACK|XXX):)",
+        end: /(TODO|FIXME|NOTE|BUG|OPTIMIZE|HACK|XXX):/,
+        excludeBegin: true,
+        relevance: 0
+      });
+      const ENGLISH_WORD = either("I", "a", "is", "so", "us", "to", "at", "if", "in", "it", "on", /[A-Za-z]+['](d|ve|re|ll|t|s|n)/, /[A-Za-z]+[-][a-z]+/, /[A-Za-z][a-z]{2,}/);
+      mode.contains.push({
+        begin: concat(/[ ]+/, "(", ENGLISH_WORD, /[.]?[:]?([.][ ]|[ ])/, "){3}")
+      });
+      return mode;
+    };
+    var C_LINE_COMMENT_MODE = COMMENT("//", "$");
+    var C_BLOCK_COMMENT_MODE = COMMENT("/\\*", "\\*/");
+    var HASH_COMMENT_MODE = COMMENT("#", "$");
+    var NUMBER_MODE = {
+      scope: "number",
+      begin: NUMBER_RE,
+      relevance: 0
+    };
+    var C_NUMBER_MODE = {
+      scope: "number",
+      begin: C_NUMBER_RE,
+      relevance: 0
+    };
+    var BINARY_NUMBER_MODE = {
+      scope: "number",
+      begin: BINARY_NUMBER_RE,
+      relevance: 0
+    };
+    var REGEXP_MODE = {
+      begin: /(?=\/[^/\n]*\/)/,
+      contains: [{
+        scope: "regexp",
+        begin: /\//,
+        end: /\/[gimuy]*/,
+        illegal: /\n/,
+        contains: [
+          BACKSLASH_ESCAPE,
+          {
+            begin: /\[/,
+            end: /\]/,
+            relevance: 0,
+            contains: [BACKSLASH_ESCAPE]
+          }
+        ]
+      }]
+    };
+    var TITLE_MODE = {
+      scope: "title",
+      begin: IDENT_RE2,
+      relevance: 0
+    };
+    var UNDERSCORE_TITLE_MODE = {
+      scope: "title",
+      begin: UNDERSCORE_IDENT_RE,
+      relevance: 0
+    };
+    var METHOD_GUARD = {
+      begin: "\\.\\s*" + UNDERSCORE_IDENT_RE,
+      relevance: 0
+    };
+    var END_SAME_AS_BEGIN = function(mode) {
+      return Object.assign(mode, {
+        "on:begin": (m2, resp) => {
+          resp.data._beginMatch = m2[1];
+        },
+        "on:end": (m2, resp) => {
+          if (resp.data._beginMatch !== m2[1])
+            resp.ignoreMatch();
+        }
+      });
+    };
+    var MODES2 = /* @__PURE__ */ Object.freeze({
+      __proto__: null,
+      MATCH_NOTHING_RE,
+      IDENT_RE: IDENT_RE2,
+      UNDERSCORE_IDENT_RE,
+      NUMBER_RE,
+      C_NUMBER_RE,
+      BINARY_NUMBER_RE,
+      RE_STARTERS_RE,
+      SHEBANG,
+      BACKSLASH_ESCAPE,
+      APOS_STRING_MODE,
+      QUOTE_STRING_MODE,
+      PHRASAL_WORDS_MODE,
+      COMMENT,
+      C_LINE_COMMENT_MODE,
+      C_BLOCK_COMMENT_MODE,
+      HASH_COMMENT_MODE,
+      NUMBER_MODE,
+      C_NUMBER_MODE,
+      BINARY_NUMBER_MODE,
+      REGEXP_MODE,
+      TITLE_MODE,
+      UNDERSCORE_TITLE_MODE,
+      METHOD_GUARD,
+      END_SAME_AS_BEGIN
+    });
+    function skipIfHasPrecedingDot(match, response) {
+      const before = match.input[match.index - 1];
+      if (before === ".") {
+        response.ignoreMatch();
+      }
+    }
+    function scopeClassName(mode, _parent) {
+      if (mode.className !== void 0) {
+        mode.scope = mode.className;
+        delete mode.className;
+      }
+    }
+    function beginKeywords(mode, parent) {
+      if (!parent)
+        return;
+      if (!mode.beginKeywords)
+        return;
+      mode.begin = "\\b(" + mode.beginKeywords.split(" ").join("|") + ")(?!\\.)(?=\\b|\\s)";
+      mode.__beforeBegin = skipIfHasPrecedingDot;
+      mode.keywords = mode.keywords || mode.beginKeywords;
+      delete mode.beginKeywords;
+      if (mode.relevance === void 0)
+        mode.relevance = 0;
+    }
+    function compileIllegal(mode, _parent) {
+      if (!Array.isArray(mode.illegal))
+        return;
+      mode.illegal = either(...mode.illegal);
+    }
+    function compileMatch(mode, _parent) {
+      if (!mode.match)
+        return;
+      if (mode.begin || mode.end)
+        throw new Error("begin & end are not supported with match");
+      mode.begin = mode.match;
+      delete mode.match;
+    }
+    function compileRelevance(mode, _parent) {
+      if (mode.relevance === void 0)
+        mode.relevance = 1;
+    }
+    var beforeMatchExt = (mode, parent) => {
+      if (!mode.beforeMatch)
+        return;
+      if (mode.starts)
+        throw new Error("beforeMatch cannot be used with starts");
+      const originalMode = Object.assign({}, mode);
+      Object.keys(mode).forEach((key) => {
+        delete mode[key];
+      });
+      mode.keywords = originalMode.keywords;
+      mode.begin = concat(originalMode.beforeMatch, lookahead(originalMode.begin));
+      mode.starts = {
+        relevance: 0,
+        contains: [
+          Object.assign(originalMode, { endsParent: true })
+        ]
+      };
+      mode.relevance = 0;
+      delete originalMode.beforeMatch;
+    };
+    var COMMON_KEYWORDS = [
+      "of",
+      "and",
+      "for",
+      "in",
+      "not",
+      "or",
+      "if",
+      "then",
+      "parent",
+      "list",
+      "value"
+    ];
+    var DEFAULT_KEYWORD_SCOPE = "keyword";
+    function compileKeywords(rawKeywords, caseInsensitive, scopeName = DEFAULT_KEYWORD_SCOPE) {
+      const compiledKeywords = Object.create(null);
+      if (typeof rawKeywords === "string") {
+        compileList(scopeName, rawKeywords.split(" "));
+      } else if (Array.isArray(rawKeywords)) {
+        compileList(scopeName, rawKeywords);
+      } else {
+        Object.keys(rawKeywords).forEach(function(scopeName2) {
+          Object.assign(compiledKeywords, compileKeywords(rawKeywords[scopeName2], caseInsensitive, scopeName2));
+        });
+      }
+      return compiledKeywords;
+      function compileList(scopeName2, keywordList) {
+        if (caseInsensitive) {
+          keywordList = keywordList.map((x2) => x2.toLowerCase());
+        }
+        keywordList.forEach(function(keyword) {
+          const pair = keyword.split("|");
+          compiledKeywords[pair[0]] = [scopeName2, scoreForKeyword(pair[0], pair[1])];
+        });
+      }
+    }
+    function scoreForKeyword(keyword, providedScore) {
+      if (providedScore) {
+        return Number(providedScore);
+      }
+      return commonKeyword(keyword) ? 0 : 1;
+    }
+    function commonKeyword(keyword) {
+      return COMMON_KEYWORDS.includes(keyword.toLowerCase());
+    }
+    var seenDeprecations = {};
+    var error2 = (message) => {
+      console.error(message);
+    };
+    var warn = (message, ...args) => {
+      console.log(`WARN: ${message}`, ...args);
+    };
+    var deprecated = (version2, message) => {
+      if (seenDeprecations[`${version2}/${message}`])
+        return;
+      console.log(`Deprecated as of ${version2}. ${message}`);
+      seenDeprecations[`${version2}/${message}`] = true;
+    };
+    var MultiClassError = new Error();
+    function remapScopeNames(mode, regexes, { key }) {
+      let offset = 0;
+      const scopeNames = mode[key];
+      const emit = {};
+      const positions = {};
+      for (let i2 = 1; i2 <= regexes.length; i2++) {
+        positions[i2 + offset] = scopeNames[i2];
+        emit[i2 + offset] = true;
+        offset += countMatchGroups(regexes[i2 - 1]);
+      }
+      mode[key] = positions;
+      mode[key]._emit = emit;
+      mode[key]._multi = true;
+    }
+    function beginMultiClass(mode) {
+      if (!Array.isArray(mode.begin))
+        return;
+      if (mode.skip || mode.excludeBegin || mode.returnBegin) {
+        error2("skip, excludeBegin, returnBegin not compatible with beginScope: {}");
+        throw MultiClassError;
+      }
+      if (typeof mode.beginScope !== "object" || mode.beginScope === null) {
+        error2("beginScope must be object");
+        throw MultiClassError;
+      }
+      remapScopeNames(mode, mode.begin, { key: "beginScope" });
+      mode.begin = _rewriteBackreferences(mode.begin, { joinWith: "" });
+    }
+    function endMultiClass(mode) {
+      if (!Array.isArray(mode.end))
+        return;
+      if (mode.skip || mode.excludeEnd || mode.returnEnd) {
+        error2("skip, excludeEnd, returnEnd not compatible with endScope: {}");
+        throw MultiClassError;
+      }
+      if (typeof mode.endScope !== "object" || mode.endScope === null) {
+        error2("endScope must be object");
+        throw MultiClassError;
+      }
+      remapScopeNames(mode, mode.end, { key: "endScope" });
+      mode.end = _rewriteBackreferences(mode.end, { joinWith: "" });
+    }
+    function scopeSugar(mode) {
+      if (mode.scope && typeof mode.scope === "object" && mode.scope !== null) {
+        mode.beginScope = mode.scope;
+        delete mode.scope;
+      }
+    }
+    function MultiClass(mode) {
+      scopeSugar(mode);
+      if (typeof mode.beginScope === "string") {
+        mode.beginScope = { _wrap: mode.beginScope };
+      }
+      if (typeof mode.endScope === "string") {
+        mode.endScope = { _wrap: mode.endScope };
+      }
+      beginMultiClass(mode);
+      endMultiClass(mode);
+    }
+    function compileLanguage(language) {
+      function langRe(value, global2) {
+        return new RegExp(source(value), "m" + (language.case_insensitive ? "i" : "") + (language.unicodeRegex ? "u" : "") + (global2 ? "g" : ""));
+      }
+      class MultiRegex {
+        constructor() {
+          this.matchIndexes = {};
+          this.regexes = [];
+          this.matchAt = 1;
+          this.position = 0;
+        }
+        addRule(re, opts) {
+          opts.position = this.position++;
+          this.matchIndexes[this.matchAt] = opts;
+          this.regexes.push([opts, re]);
+          this.matchAt += countMatchGroups(re) + 1;
+        }
+        compile() {
+          if (this.regexes.length === 0) {
+            this.exec = () => null;
+          }
+          const terminators = this.regexes.map((el) => el[1]);
+          this.matcherRe = langRe(_rewriteBackreferences(terminators, { joinWith: "|" }), true);
+          this.lastIndex = 0;
+        }
+        exec(s3) {
+          this.matcherRe.lastIndex = this.lastIndex;
+          const match = this.matcherRe.exec(s3);
+          if (!match) {
+            return null;
+          }
+          const i2 = match.findIndex((el, i3) => i3 > 0 && el !== void 0);
+          const matchData = this.matchIndexes[i2];
+          match.splice(0, i2);
+          return Object.assign(match, matchData);
+        }
+      }
+      class ResumableMultiRegex {
+        constructor() {
+          this.rules = [];
+          this.multiRegexes = [];
+          this.count = 0;
+          this.lastIndex = 0;
+          this.regexIndex = 0;
+        }
+        getMatcher(index) {
+          if (this.multiRegexes[index])
+            return this.multiRegexes[index];
+          const matcher = new MultiRegex();
+          this.rules.slice(index).forEach(([re, opts]) => matcher.addRule(re, opts));
+          matcher.compile();
+          this.multiRegexes[index] = matcher;
+          return matcher;
+        }
+        resumingScanAtSamePosition() {
+          return this.regexIndex !== 0;
+        }
+        considerAll() {
+          this.regexIndex = 0;
+        }
+        addRule(re, opts) {
+          this.rules.push([re, opts]);
+          if (opts.type === "begin")
+            this.count++;
+        }
+        exec(s3) {
+          const m2 = this.getMatcher(this.regexIndex);
+          m2.lastIndex = this.lastIndex;
+          let result = m2.exec(s3);
+          if (this.resumingScanAtSamePosition()) {
+            if (result && result.index === this.lastIndex)
+              ;
+            else {
+              const m22 = this.getMatcher(0);
+              m22.lastIndex = this.lastIndex + 1;
+              result = m22.exec(s3);
+            }
+          }
+          if (result) {
+            this.regexIndex += result.position + 1;
+            if (this.regexIndex === this.count) {
+              this.considerAll();
+            }
+          }
+          return result;
+        }
+      }
+      function buildModeRegex(mode) {
+        const mm = new ResumableMultiRegex();
+        mode.contains.forEach((term) => mm.addRule(term.begin, { rule: term, type: "begin" }));
+        if (mode.terminatorEnd) {
+          mm.addRule(mode.terminatorEnd, { type: "end" });
+        }
+        if (mode.illegal) {
+          mm.addRule(mode.illegal, { type: "illegal" });
+        }
+        return mm;
+      }
+      function compileMode(mode, parent) {
+        const cmode = mode;
+        if (mode.isCompiled)
+          return cmode;
+        [
+          scopeClassName,
+          compileMatch,
+          MultiClass,
+          beforeMatchExt
+        ].forEach((ext) => ext(mode, parent));
+        language.compilerExtensions.forEach((ext) => ext(mode, parent));
+        mode.__beforeBegin = null;
+        [
+          beginKeywords,
+          compileIllegal,
+          compileRelevance
+        ].forEach((ext) => ext(mode, parent));
+        mode.isCompiled = true;
+        let keywordPattern = null;
+        if (typeof mode.keywords === "object" && mode.keywords.$pattern) {
+          mode.keywords = Object.assign({}, mode.keywords);
+          keywordPattern = mode.keywords.$pattern;
+          delete mode.keywords.$pattern;
+        }
+        keywordPattern = keywordPattern || /\w+/;
+        if (mode.keywords) {
+          mode.keywords = compileKeywords(mode.keywords, language.case_insensitive);
+        }
+        cmode.keywordPatternRe = langRe(keywordPattern, true);
+        if (parent) {
+          if (!mode.begin)
+            mode.begin = /\B|\b/;
+          cmode.beginRe = langRe(cmode.begin);
+          if (!mode.end && !mode.endsWithParent)
+            mode.end = /\B|\b/;
+          if (mode.end)
+            cmode.endRe = langRe(cmode.end);
+          cmode.terminatorEnd = source(cmode.end) || "";
+          if (mode.endsWithParent && parent.terminatorEnd) {
+            cmode.terminatorEnd += (mode.end ? "|" : "") + parent.terminatorEnd;
+          }
+        }
+        if (mode.illegal)
+          cmode.illegalRe = langRe(mode.illegal);
+        if (!mode.contains)
+          mode.contains = [];
+        mode.contains = [].concat(...mode.contains.map(function(c) {
+          return expandOrCloneMode(c === "self" ? mode : c);
+        }));
+        mode.contains.forEach(function(c) {
+          compileMode(c, cmode);
+        });
+        if (mode.starts) {
+          compileMode(mode.starts, parent);
+        }
+        cmode.matcher = buildModeRegex(cmode);
+        return cmode;
+      }
+      if (!language.compilerExtensions)
+        language.compilerExtensions = [];
+      if (language.contains && language.contains.includes("self")) {
+        throw new Error("ERR: contains `self` is not supported at the top-level of a language.  See documentation.");
+      }
+      language.classNameAliases = inherit$1(language.classNameAliases || {});
+      return compileMode(language);
+    }
+    function dependencyOnParent(mode) {
+      if (!mode)
+        return false;
+      return mode.endsWithParent || dependencyOnParent(mode.starts);
+    }
+    function expandOrCloneMode(mode) {
+      if (mode.variants && !mode.cachedVariants) {
+        mode.cachedVariants = mode.variants.map(function(variant) {
+          return inherit$1(mode, { variants: null }, variant);
+        });
+      }
+      if (mode.cachedVariants) {
+        return mode.cachedVariants;
+      }
+      if (dependencyOnParent(mode)) {
+        return inherit$1(mode, { starts: mode.starts ? inherit$1(mode.starts) : null });
+      }
+      if (Object.isFrozen(mode)) {
+        return inherit$1(mode);
+      }
+      return mode;
+    }
+    var version = "11.4.0";
+    var HTMLInjectionError = class extends Error {
+      constructor(reason, html) {
+        super(reason);
+        this.name = "HTMLInjectionError";
+        this.html = html;
+      }
+    };
+    var escape3 = escapeHTML;
+    var inherit = inherit$1;
+    var NO_MATCH = Symbol("nomatch");
+    var MAX_KEYWORD_HITS = 7;
+    var HLJS = function(hljs) {
+      const languages = Object.create(null);
+      const aliases = Object.create(null);
+      const plugins = [];
+      let SAFE_MODE = true;
+      const LANGUAGE_NOT_FOUND = "Could not find the language '{}', did you forget to load/include a language module?";
+      const PLAINTEXT_LANGUAGE = { disableAutodetect: true, name: "Plain text", contains: [] };
+      let options = {
+        ignoreUnescapedHTML: false,
+        throwUnescapedHTML: false,
+        noHighlightRe: /^(no-?highlight)$/i,
+        languageDetectRe: /\blang(?:uage)?-([\w-]+)\b/i,
+        classPrefix: "hljs-",
+        cssSelector: "pre code",
+        languages: null,
+        __emitter: TokenTreeEmitter
+      };
+      function shouldNotHighlight(languageName) {
+        return options.noHighlightRe.test(languageName);
+      }
+      function blockLanguage(block) {
+        let classes = block.className + " ";
+        classes += block.parentNode ? block.parentNode.className : "";
+        const match = options.languageDetectRe.exec(classes);
+        if (match) {
+          const language = getLanguage(match[1]);
+          if (!language) {
+            warn(LANGUAGE_NOT_FOUND.replace("{}", match[1]));
+            warn("Falling back to no-highlight mode for this block.", block);
+          }
+          return language ? match[1] : "no-highlight";
+        }
+        return classes.split(/\s+/).find((_class) => shouldNotHighlight(_class) || getLanguage(_class));
+      }
+      function highlight2(codeOrLanguageName, optionsOrCode, ignoreIllegals) {
+        let code = "";
+        let languageName = "";
+        if (typeof optionsOrCode === "object") {
+          code = codeOrLanguageName;
+          ignoreIllegals = optionsOrCode.ignoreIllegals;
+          languageName = optionsOrCode.language;
+        } else {
+          deprecated("10.7.0", "highlight(lang, code, ...args) has been deprecated.");
+          deprecated("10.7.0", "Please use highlight(code, options) instead.\nhttps://github.com/highlightjs/highlight.js/issues/2277");
+          languageName = codeOrLanguageName;
+          code = optionsOrCode;
+        }
+        if (ignoreIllegals === void 0) {
+          ignoreIllegals = true;
+        }
+        const context = {
+          code,
+          language: languageName
+        };
+        fire("before:highlight", context);
+        const result = context.result ? context.result : _highlight(context.language, context.code, ignoreIllegals);
+        result.code = context.code;
+        fire("after:highlight", result);
+        return result;
+      }
+      function _highlight(languageName, codeToHighlight, ignoreIllegals, continuation) {
+        const keywordHits = Object.create(null);
+        function keywordData(mode, matchText) {
+          return mode.keywords[matchText];
+        }
+        function processKeywords() {
+          if (!top.keywords) {
+            emitter.addText(modeBuffer);
+            return;
+          }
+          let lastIndex = 0;
+          top.keywordPatternRe.lastIndex = 0;
+          let match = top.keywordPatternRe.exec(modeBuffer);
+          let buf = "";
+          while (match) {
+            buf += modeBuffer.substring(lastIndex, match.index);
+            const word = language.case_insensitive ? match[0].toLowerCase() : match[0];
+            const data = keywordData(top, word);
+            if (data) {
+              const [kind, keywordRelevance] = data;
+              emitter.addText(buf);
+              buf = "";
+              keywordHits[word] = (keywordHits[word] || 0) + 1;
+              if (keywordHits[word] <= MAX_KEYWORD_HITS)
+                relevance += keywordRelevance;
+              if (kind.startsWith("_")) {
+                buf += match[0];
+              } else {
+                const cssClass = language.classNameAliases[kind] || kind;
+                emitter.addKeyword(match[0], cssClass);
+              }
+            } else {
+              buf += match[0];
+            }
+            lastIndex = top.keywordPatternRe.lastIndex;
+            match = top.keywordPatternRe.exec(modeBuffer);
+          }
+          buf += modeBuffer.substr(lastIndex);
+          emitter.addText(buf);
+        }
+        function processSubLanguage() {
+          if (modeBuffer === "")
+            return;
+          let result2 = null;
+          if (typeof top.subLanguage === "string") {
+            if (!languages[top.subLanguage]) {
+              emitter.addText(modeBuffer);
+              return;
+            }
+            result2 = _highlight(top.subLanguage, modeBuffer, true, continuations[top.subLanguage]);
+            continuations[top.subLanguage] = result2._top;
+          } else {
+            result2 = highlightAuto(modeBuffer, top.subLanguage.length ? top.subLanguage : null);
+          }
+          if (top.relevance > 0) {
+            relevance += result2.relevance;
+          }
+          emitter.addSublanguage(result2._emitter, result2.language);
+        }
+        function processBuffer() {
+          if (top.subLanguage != null) {
+            processSubLanguage();
+          } else {
+            processKeywords();
+          }
+          modeBuffer = "";
+        }
+        function emitMultiClass(scope, match) {
+          let i2 = 1;
+          while (match[i2] !== void 0) {
+            if (!scope._emit[i2]) {
+              i2++;
+              continue;
+            }
+            const klass = language.classNameAliases[scope[i2]] || scope[i2];
+            const text = match[i2];
+            if (klass) {
+              emitter.addKeyword(text, klass);
+            } else {
+              modeBuffer = text;
+              processKeywords();
+              modeBuffer = "";
+            }
+            i2++;
+          }
+        }
+        function startNewMode(mode, match) {
+          if (mode.scope && typeof mode.scope === "string") {
+            emitter.openNode(language.classNameAliases[mode.scope] || mode.scope);
+          }
+          if (mode.beginScope) {
+            if (mode.beginScope._wrap) {
+              emitter.addKeyword(modeBuffer, language.classNameAliases[mode.beginScope._wrap] || mode.beginScope._wrap);
+              modeBuffer = "";
+            } else if (mode.beginScope._multi) {
+              emitMultiClass(mode.beginScope, match);
+              modeBuffer = "";
+            }
+          }
+          top = Object.create(mode, { parent: { value: top } });
+          return top;
+        }
+        function endOfMode(mode, match, matchPlusRemainder) {
+          let matched = startsWith(mode.endRe, matchPlusRemainder);
+          if (matched) {
+            if (mode["on:end"]) {
+              const resp = new Response3(mode);
+              mode["on:end"](match, resp);
+              if (resp.isMatchIgnored)
+                matched = false;
+            }
+            if (matched) {
+              while (mode.endsParent && mode.parent) {
+                mode = mode.parent;
+              }
+              return mode;
+            }
+          }
+          if (mode.endsWithParent) {
+            return endOfMode(mode.parent, match, matchPlusRemainder);
+          }
+        }
+        function doIgnore(lexeme) {
+          if (top.matcher.regexIndex === 0) {
+            modeBuffer += lexeme[0];
+            return 1;
+          } else {
+            resumeScanAtSamePosition = true;
+            return 0;
+          }
+        }
+        function doBeginMatch(match) {
+          const lexeme = match[0];
+          const newMode = match.rule;
+          const resp = new Response3(newMode);
+          const beforeCallbacks = [newMode.__beforeBegin, newMode["on:begin"]];
+          for (const cb of beforeCallbacks) {
+            if (!cb)
+              continue;
+            cb(match, resp);
+            if (resp.isMatchIgnored)
+              return doIgnore(lexeme);
+          }
+          if (newMode.skip) {
+            modeBuffer += lexeme;
+          } else {
+            if (newMode.excludeBegin) {
+              modeBuffer += lexeme;
+            }
+            processBuffer();
+            if (!newMode.returnBegin && !newMode.excludeBegin) {
+              modeBuffer = lexeme;
+            }
+          }
+          startNewMode(newMode, match);
+          return newMode.returnBegin ? 0 : lexeme.length;
+        }
+        function doEndMatch(match) {
+          const lexeme = match[0];
+          const matchPlusRemainder = codeToHighlight.substr(match.index);
+          const endMode = endOfMode(top, match, matchPlusRemainder);
+          if (!endMode) {
+            return NO_MATCH;
+          }
+          const origin = top;
+          if (top.endScope && top.endScope._wrap) {
+            processBuffer();
+            emitter.addKeyword(lexeme, top.endScope._wrap);
+          } else if (top.endScope && top.endScope._multi) {
+            processBuffer();
+            emitMultiClass(top.endScope, match);
+          } else if (origin.skip) {
+            modeBuffer += lexeme;
+          } else {
+            if (!(origin.returnEnd || origin.excludeEnd)) {
+              modeBuffer += lexeme;
+            }
+            processBuffer();
+            if (origin.excludeEnd) {
+              modeBuffer = lexeme;
+            }
+          }
+          do {
+            if (top.scope) {
+              emitter.closeNode();
+            }
+            if (!top.skip && !top.subLanguage) {
+              relevance += top.relevance;
+            }
+            top = top.parent;
+          } while (top !== endMode.parent);
+          if (endMode.starts) {
+            startNewMode(endMode.starts, match);
+          }
+          return origin.returnEnd ? 0 : lexeme.length;
+        }
+        function processContinuations() {
+          const list = [];
+          for (let current = top; current !== language; current = current.parent) {
+            if (current.scope) {
+              list.unshift(current.scope);
+            }
+          }
+          list.forEach((item) => emitter.openNode(item));
+        }
+        let lastMatch = {};
+        function processLexeme(textBeforeMatch, match) {
+          const lexeme = match && match[0];
+          modeBuffer += textBeforeMatch;
+          if (lexeme == null) {
+            processBuffer();
+            return 0;
+          }
+          if (lastMatch.type === "begin" && match.type === "end" && lastMatch.index === match.index && lexeme === "") {
+            modeBuffer += codeToHighlight.slice(match.index, match.index + 1);
+            if (!SAFE_MODE) {
+              const err = new Error(`0 width match regex (${languageName})`);
+              err.languageName = languageName;
+              err.badRule = lastMatch.rule;
+              throw err;
+            }
+            return 1;
+          }
+          lastMatch = match;
+          if (match.type === "begin") {
+            return doBeginMatch(match);
+          } else if (match.type === "illegal" && !ignoreIllegals) {
+            const err = new Error('Illegal lexeme "' + lexeme + '" for mode "' + (top.scope || "<unnamed>") + '"');
+            err.mode = top;
+            throw err;
+          } else if (match.type === "end") {
+            const processed = doEndMatch(match);
+            if (processed !== NO_MATCH) {
+              return processed;
+            }
+          }
+          if (match.type === "illegal" && lexeme === "") {
+            return 1;
+          }
+          if (iterations > 1e5 && iterations > match.index * 3) {
+            const err = new Error("potential infinite loop, way more iterations than matches");
+            throw err;
+          }
+          modeBuffer += lexeme;
+          return lexeme.length;
+        }
+        const language = getLanguage(languageName);
+        if (!language) {
+          error2(LANGUAGE_NOT_FOUND.replace("{}", languageName));
+          throw new Error('Unknown language: "' + languageName + '"');
+        }
+        const md = compileLanguage(language);
+        let result = "";
+        let top = continuation || md;
+        const continuations = {};
+        const emitter = new options.__emitter(options);
+        processContinuations();
+        let modeBuffer = "";
+        let relevance = 0;
+        let index = 0;
+        let iterations = 0;
+        let resumeScanAtSamePosition = false;
+        try {
+          top.matcher.considerAll();
+          for (; ; ) {
+            iterations++;
+            if (resumeScanAtSamePosition) {
+              resumeScanAtSamePosition = false;
+            } else {
+              top.matcher.considerAll();
+            }
+            top.matcher.lastIndex = index;
+            const match = top.matcher.exec(codeToHighlight);
+            if (!match)
+              break;
+            const beforeMatch = codeToHighlight.substring(index, match.index);
+            const processedCount = processLexeme(beforeMatch, match);
+            index = match.index + processedCount;
+          }
+          processLexeme(codeToHighlight.substr(index));
+          emitter.closeAllNodes();
+          emitter.finalize();
+          result = emitter.toHTML();
+          return {
+            language: languageName,
+            value: result,
+            relevance,
+            illegal: false,
+            _emitter: emitter,
+            _top: top
+          };
+        } catch (err) {
+          if (err.message && err.message.includes("Illegal")) {
+            return {
+              language: languageName,
+              value: escape3(codeToHighlight),
+              illegal: true,
+              relevance: 0,
+              _illegalBy: {
+                message: err.message,
+                index,
+                context: codeToHighlight.slice(index - 100, index + 100),
+                mode: err.mode,
+                resultSoFar: result
+              },
+              _emitter: emitter
+            };
+          } else if (SAFE_MODE) {
+            return {
+              language: languageName,
+              value: escape3(codeToHighlight),
+              illegal: false,
+              relevance: 0,
+              errorRaised: err,
+              _emitter: emitter,
+              _top: top
+            };
+          } else {
+            throw err;
+          }
+        }
+      }
+      function justTextHighlightResult(code) {
+        const result = {
+          value: escape3(code),
+          illegal: false,
+          relevance: 0,
+          _top: PLAINTEXT_LANGUAGE,
+          _emitter: new options.__emitter(options)
+        };
+        result._emitter.addText(code);
+        return result;
+      }
+      function highlightAuto(code, languageSubset) {
+        languageSubset = languageSubset || options.languages || Object.keys(languages);
+        const plaintext = justTextHighlightResult(code);
+        const results = languageSubset.filter(getLanguage).filter(autoDetection).map((name) => _highlight(name, code, false));
+        results.unshift(plaintext);
+        const sorted = results.sort((a, b) => {
+          if (a.relevance !== b.relevance)
+            return b.relevance - a.relevance;
+          if (a.language && b.language) {
+            if (getLanguage(a.language).supersetOf === b.language) {
+              return 1;
+            } else if (getLanguage(b.language).supersetOf === a.language) {
+              return -1;
+            }
+          }
+          return 0;
+        });
+        const [best, secondBest] = sorted;
+        const result = best;
+        result.secondBest = secondBest;
+        return result;
+      }
+      function updateClassName(element, currentLang, resultLang) {
+        const language = currentLang && aliases[currentLang] || resultLang;
+        element.classList.add("hljs");
+        element.classList.add(`language-${language}`);
+      }
+      function highlightElement(element) {
+        let node = null;
+        const language = blockLanguage(element);
+        if (shouldNotHighlight(language))
+          return;
+        fire("before:highlightElement", { el: element, language });
+        if (element.children.length > 0) {
+          if (!options.ignoreUnescapedHTML) {
+            console.warn("One of your code blocks includes unescaped HTML. This is a potentially serious security risk.");
+            console.warn("https://github.com/highlightjs/highlight.js/wiki/security");
+            console.warn("The element with unescaped HTML:");
+            console.warn(element);
+          }
+          if (options.throwUnescapedHTML) {
+            const err = new HTMLInjectionError("One of your code blocks includes unescaped HTML.", element.innerHTML);
+            throw err;
+          }
+        }
+        node = element;
+        const text = node.textContent;
+        const result = language ? highlight2(text, { language, ignoreIllegals: true }) : highlightAuto(text);
+        element.innerHTML = result.value;
+        updateClassName(element, language, result.language);
+        element.result = {
+          language: result.language,
+          re: result.relevance,
+          relevance: result.relevance
+        };
+        if (result.secondBest) {
+          element.secondBest = {
+            language: result.secondBest.language,
+            relevance: result.secondBest.relevance
+          };
+        }
+        fire("after:highlightElement", { el: element, result, text });
+      }
+      function configure(userOptions) {
+        options = inherit(options, userOptions);
+      }
+      const initHighlighting = () => {
+        highlightAll();
+        deprecated("10.6.0", "initHighlighting() deprecated.  Use highlightAll() now.");
+      };
+      function initHighlightingOnLoad() {
+        highlightAll();
+        deprecated("10.6.0", "initHighlightingOnLoad() deprecated.  Use highlightAll() now.");
+      }
+      let wantsHighlight = false;
+      function highlightAll() {
+        if (document.readyState === "loading") {
+          wantsHighlight = true;
+          return;
+        }
+        const blocks = document.querySelectorAll(options.cssSelector);
+        blocks.forEach(highlightElement);
+      }
+      function boot() {
+        if (wantsHighlight)
+          highlightAll();
+      }
+      if (typeof window !== "undefined" && window.addEventListener) {
+        window.addEventListener("DOMContentLoaded", boot, false);
+      }
+      function registerLanguage(languageName, languageDefinition) {
+        let lang = null;
+        try {
+          lang = languageDefinition(hljs);
+        } catch (error$1) {
+          error2("Language definition for '{}' could not be registered.".replace("{}", languageName));
+          if (!SAFE_MODE) {
+            throw error$1;
+          } else {
+            error2(error$1);
+          }
+          lang = PLAINTEXT_LANGUAGE;
+        }
+        if (!lang.name)
+          lang.name = languageName;
+        languages[languageName] = lang;
+        lang.rawDefinition = languageDefinition.bind(null, hljs);
+        if (lang.aliases) {
+          registerAliases(lang.aliases, { languageName });
+        }
+      }
+      function unregisterLanguage(languageName) {
+        delete languages[languageName];
+        for (const alias of Object.keys(aliases)) {
+          if (aliases[alias] === languageName) {
+            delete aliases[alias];
+          }
+        }
+      }
+      function listLanguages() {
+        return Object.keys(languages);
+      }
+      function getLanguage(name) {
+        name = (name || "").toLowerCase();
+        return languages[name] || languages[aliases[name]];
+      }
+      function registerAliases(aliasList, { languageName }) {
+        if (typeof aliasList === "string") {
+          aliasList = [aliasList];
+        }
+        aliasList.forEach((alias) => {
+          aliases[alias.toLowerCase()] = languageName;
+        });
+      }
+      function autoDetection(name) {
+        const lang = getLanguage(name);
+        return lang && !lang.disableAutodetect;
+      }
+      function upgradePluginAPI(plugin) {
+        if (plugin["before:highlightBlock"] && !plugin["before:highlightElement"]) {
+          plugin["before:highlightElement"] = (data) => {
+            plugin["before:highlightBlock"](Object.assign({ block: data.el }, data));
+          };
+        }
+        if (plugin["after:highlightBlock"] && !plugin["after:highlightElement"]) {
+          plugin["after:highlightElement"] = (data) => {
+            plugin["after:highlightBlock"](Object.assign({ block: data.el }, data));
+          };
+        }
+      }
+      function addPlugin(plugin) {
+        upgradePluginAPI(plugin);
+        plugins.push(plugin);
+      }
+      function fire(event, args) {
+        const cb = event;
+        plugins.forEach(function(plugin) {
+          if (plugin[cb]) {
+            plugin[cb](args);
+          }
+        });
+      }
+      function deprecateHighlightBlock(el) {
+        deprecated("10.7.0", "highlightBlock will be removed entirely in v12.0");
+        deprecated("10.7.0", "Please use highlightElement now.");
+        return highlightElement(el);
+      }
+      Object.assign(hljs, {
+        highlight: highlight2,
+        highlightAuto,
+        highlightAll,
+        highlightElement,
+        highlightBlock: deprecateHighlightBlock,
+        configure,
+        initHighlighting,
+        initHighlightingOnLoad,
+        registerLanguage,
+        unregisterLanguage,
+        listLanguages,
+        getLanguage,
+        registerAliases,
+        autoDetection,
+        inherit,
+        addPlugin
+      });
+      hljs.debugMode = function() {
+        SAFE_MODE = false;
+      };
+      hljs.safeMode = function() {
+        SAFE_MODE = true;
+      };
+      hljs.versionString = version;
+      hljs.regex = {
+        concat,
+        lookahead,
+        either,
+        optional,
+        anyNumberOfTimes
+      };
+      for (const key in MODES2) {
+        if (typeof MODES2[key] === "object") {
+          deepFreeze$1(MODES2[key]);
+        }
+      }
+      Object.assign(hljs, MODES2);
+      return hljs;
+    };
+    var highlight = HLJS({});
+    module2.exports = highlight;
+    highlight.HighlightJS = highlight;
+    highlight.default = highlight;
+  }
+});
+
+// node_modules/highlight.js/es/core.js
+var import_core;
+var init_core = __esm({
+  "node_modules/highlight.js/es/core.js"() {
+    import_core = __toModule(require_core());
+  }
+});
+
+// node_modules/highlight.js/es/languages/xml.js
+function xml(hljs) {
+  const regex = hljs.regex;
+  const TAG_NAME_RE = regex.concat(/[A-Z_]/, regex.optional(/[A-Z0-9_.-]*:/), /[A-Z0-9_.-]*/);
+  const XML_IDENT_RE = /[A-Za-z0-9._:-]+/;
+  const XML_ENTITIES = {
+    className: "symbol",
+    begin: /&[a-z]+;|&#[0-9]+;|&#x[a-f0-9]+;/
+  };
+  const XML_META_KEYWORDS = {
+    begin: /\s/,
+    contains: [
+      {
+        className: "keyword",
+        begin: /#?[a-z_][a-z1-9_-]+/,
+        illegal: /\n/
+      }
+    ]
+  };
+  const XML_META_PAR_KEYWORDS = hljs.inherit(XML_META_KEYWORDS, {
+    begin: /\(/,
+    end: /\)/
+  });
+  const APOS_META_STRING_MODE = hljs.inherit(hljs.APOS_STRING_MODE, {
+    className: "string"
+  });
+  const QUOTE_META_STRING_MODE = hljs.inherit(hljs.QUOTE_STRING_MODE, {
+    className: "string"
+  });
+  const TAG_INTERNALS = {
+    endsWithParent: true,
+    illegal: /</,
+    relevance: 0,
+    contains: [
+      {
+        className: "attr",
+        begin: XML_IDENT_RE,
+        relevance: 0
+      },
+      {
+        begin: /=\s*/,
+        relevance: 0,
+        contains: [
+          {
+            className: "string",
+            endsParent: true,
+            variants: [
+              {
+                begin: /"/,
+                end: /"/,
+                contains: [XML_ENTITIES]
+              },
+              {
+                begin: /'/,
+                end: /'/,
+                contains: [XML_ENTITIES]
+              },
+              {
+                begin: /[^\s"'=<>`]+/
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  };
+  return {
+    name: "HTML, XML",
+    aliases: [
+      "html",
+      "xhtml",
+      "rss",
+      "atom",
+      "xjb",
+      "xsd",
+      "xsl",
+      "plist",
+      "wsf",
+      "svg"
+    ],
+    case_insensitive: true,
+    contains: [
+      {
+        className: "meta",
+        begin: /<![a-z]/,
+        end: />/,
+        relevance: 10,
+        contains: [
+          XML_META_KEYWORDS,
+          QUOTE_META_STRING_MODE,
+          APOS_META_STRING_MODE,
+          XML_META_PAR_KEYWORDS,
+          {
+            begin: /\[/,
+            end: /\]/,
+            contains: [
+              {
+                className: "meta",
+                begin: /<![a-z]/,
+                end: />/,
+                contains: [
+                  XML_META_KEYWORDS,
+                  XML_META_PAR_KEYWORDS,
+                  QUOTE_META_STRING_MODE,
+                  APOS_META_STRING_MODE
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      hljs.COMMENT(/<!--/, /-->/, {
+        relevance: 10
+      }),
+      {
+        begin: /<!\[CDATA\[/,
+        end: /\]\]>/,
+        relevance: 10
+      },
+      XML_ENTITIES,
+      {
+        className: "meta",
+        begin: /<\?xml/,
+        end: /\?>/,
+        relevance: 10
+      },
+      {
+        className: "tag",
+        begin: /<style(?=\s|>)/,
+        end: />/,
+        keywords: {
+          name: "style"
+        },
+        contains: [TAG_INTERNALS],
+        starts: {
+          end: /<\/style>/,
+          returnEnd: true,
+          subLanguage: [
+            "css",
+            "xml"
+          ]
+        }
+      },
+      {
+        className: "tag",
+        begin: /<script(?=\s|>)/,
+        end: />/,
+        keywords: {
+          name: "script"
+        },
+        contains: [TAG_INTERNALS],
+        starts: {
+          end: /<\/script>/,
+          returnEnd: true,
+          subLanguage: [
+            "javascript",
+            "handlebars",
+            "xml"
+          ]
+        }
+      },
+      {
+        className: "tag",
+        begin: /<>|<\/>/
+      },
+      {
+        className: "tag",
+        begin: regex.concat(/</, regex.lookahead(regex.concat(TAG_NAME_RE, regex.either(/\/>/, />/, /\s/)))),
+        end: /\/?>/,
+        contains: [
+          {
+            className: "name",
+            begin: TAG_NAME_RE,
+            relevance: 0,
+            starts: TAG_INTERNALS
+          }
+        ]
+      },
+      {
+        className: "tag",
+        begin: regex.concat(/<\//, regex.lookahead(regex.concat(TAG_NAME_RE, />/))),
+        contains: [
+          {
+            className: "name",
+            begin: TAG_NAME_RE,
+            relevance: 0
+          },
+          {
+            begin: />/,
+            relevance: 0,
+            endsParent: true
+          }
+        ]
+      }
+    ]
+  };
+}
+var init_xml = __esm({
+  "node_modules/highlight.js/es/languages/xml.js"() {
+  }
+});
+
+// node_modules/highlight.js/es/languages/javascript.js
+function javascript(hljs) {
+  const regex = hljs.regex;
+  const hasClosingTag = (match, { after }) => {
+    const tag = "</" + match[0].slice(1);
+    const pos = match.input.indexOf(tag, after);
+    return pos !== -1;
+  };
+  const IDENT_RE$1 = IDENT_RE;
+  const FRAGMENT = {
+    begin: "<>",
+    end: "</>"
+  };
+  const XML_SELF_CLOSING = /<[A-Za-z0-9\\._:-]+\s*\/>/;
+  const XML_TAG = {
+    begin: /<[A-Za-z0-9\\._:-]+/,
+    end: /\/[A-Za-z0-9\\._:-]+>|\/>/,
+    isTrulyOpeningTag: (match, response) => {
+      const afterMatchIndex = match[0].length + match.index;
+      const nextChar = match.input[afterMatchIndex];
+      if (nextChar === "<" || nextChar === ",") {
+        response.ignoreMatch();
+        return;
+      }
+      if (nextChar === ">") {
+        if (!hasClosingTag(match, { after: afterMatchIndex })) {
+          response.ignoreMatch();
+        }
+      }
+      let m2;
+      const afterMatch = match.input.substr(afterMatchIndex);
+      if (m2 = afterMatch.match(/^\s+extends\s+/)) {
+        if (m2.index === 0) {
+          response.ignoreMatch();
+          return;
+        }
+      }
+    }
+  };
+  const KEYWORDS$1 = {
+    $pattern: IDENT_RE,
+    keyword: KEYWORDS,
+    literal: LITERALS,
+    built_in: BUILT_INS,
+    "variable.language": BUILT_IN_VARIABLES
+  };
+  const decimalDigits = "[0-9](_?[0-9])*";
+  const frac = `\\.(${decimalDigits})`;
+  const decimalInteger = `0|[1-9](_?[0-9])*|0[0-7]*[89][0-9]*`;
+  const NUMBER = {
+    className: "number",
+    variants: [
+      { begin: `(\\b(${decimalInteger})((${frac})|\\.)?|(${frac}))[eE][+-]?(${decimalDigits})\\b` },
+      { begin: `\\b(${decimalInteger})\\b((${frac})\\b|\\.)?|(${frac})\\b` },
+      { begin: `\\b(0|[1-9](_?[0-9])*)n\\b` },
+      { begin: "\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*n?\\b" },
+      { begin: "\\b0[bB][0-1](_?[0-1])*n?\\b" },
+      { begin: "\\b0[oO][0-7](_?[0-7])*n?\\b" },
+      { begin: "\\b0[0-7]+n?\\b" }
+    ],
+    relevance: 0
+  };
+  const SUBST = {
+    className: "subst",
+    begin: "\\$\\{",
+    end: "\\}",
+    keywords: KEYWORDS$1,
+    contains: []
+  };
+  const HTML_TEMPLATE = {
+    begin: "html`",
+    end: "",
+    starts: {
+      end: "`",
+      returnEnd: false,
+      contains: [
+        hljs.BACKSLASH_ESCAPE,
+        SUBST
+      ],
+      subLanguage: "xml"
+    }
+  };
+  const CSS_TEMPLATE = {
+    begin: "css`",
+    end: "",
+    starts: {
+      end: "`",
+      returnEnd: false,
+      contains: [
+        hljs.BACKSLASH_ESCAPE,
+        SUBST
+      ],
+      subLanguage: "css"
+    }
+  };
+  const TEMPLATE_STRING = {
+    className: "string",
+    begin: "`",
+    end: "`",
+    contains: [
+      hljs.BACKSLASH_ESCAPE,
+      SUBST
+    ]
+  };
+  const JSDOC_COMMENT = hljs.COMMENT(/\/\*\*(?!\/)/, "\\*/", {
+    relevance: 0,
+    contains: [
+      {
+        begin: "(?=@[A-Za-z]+)",
+        relevance: 0,
+        contains: [
+          {
+            className: "doctag",
+            begin: "@[A-Za-z]+"
+          },
+          {
+            className: "type",
+            begin: "\\{",
+            end: "\\}",
+            excludeEnd: true,
+            excludeBegin: true,
+            relevance: 0
+          },
+          {
+            className: "variable",
+            begin: IDENT_RE$1 + "(?=\\s*(-)|$)",
+            endsParent: true,
+            relevance: 0
+          },
+          {
+            begin: /(?=[^\n])\s/,
+            relevance: 0
+          }
+        ]
+      }
+    ]
+  });
+  const COMMENT = {
+    className: "comment",
+    variants: [
+      JSDOC_COMMENT,
+      hljs.C_BLOCK_COMMENT_MODE,
+      hljs.C_LINE_COMMENT_MODE
+    ]
+  };
+  const SUBST_INTERNALS = [
+    hljs.APOS_STRING_MODE,
+    hljs.QUOTE_STRING_MODE,
+    HTML_TEMPLATE,
+    CSS_TEMPLATE,
+    TEMPLATE_STRING,
+    NUMBER
+  ];
+  SUBST.contains = SUBST_INTERNALS.concat({
+    begin: /\{/,
+    end: /\}/,
+    keywords: KEYWORDS$1,
+    contains: [
+      "self"
+    ].concat(SUBST_INTERNALS)
+  });
+  const SUBST_AND_COMMENTS = [].concat(COMMENT, SUBST.contains);
+  const PARAMS_CONTAINS = SUBST_AND_COMMENTS.concat([
+    {
+      begin: /\(/,
+      end: /\)/,
+      keywords: KEYWORDS$1,
+      contains: ["self"].concat(SUBST_AND_COMMENTS)
+    }
+  ]);
+  const PARAMS = {
+    className: "params",
+    begin: /\(/,
+    end: /\)/,
+    excludeBegin: true,
+    excludeEnd: true,
+    keywords: KEYWORDS$1,
+    contains: PARAMS_CONTAINS
+  };
+  const CLASS_OR_EXTENDS = {
+    variants: [
+      {
+        match: [
+          /class/,
+          /\s+/,
+          IDENT_RE$1,
+          /\s+/,
+          /extends/,
+          /\s+/,
+          regex.concat(IDENT_RE$1, "(", regex.concat(/\./, IDENT_RE$1), ")*")
+        ],
+        scope: {
+          1: "keyword",
+          3: "title.class",
+          5: "keyword",
+          7: "title.class.inherited"
+        }
+      },
+      {
+        match: [
+          /class/,
+          /\s+/,
+          IDENT_RE$1
+        ],
+        scope: {
+          1: "keyword",
+          3: "title.class"
+        }
+      }
+    ]
+  };
+  const CLASS_REFERENCE = {
+    relevance: 0,
+    match: regex.either(/\bJSON/, /\b[A-Z][a-z]+([A-Z][a-z]*|\d)*/, /\b[A-Z]{2,}([A-Z][a-z]+|\d)+([A-Z][a-z]*)*/, /\b[A-Z]{2,}[a-z]+([A-Z][a-z]+|\d)*([A-Z][a-z]*)*/),
+    className: "title.class",
+    keywords: {
+      _: [
+        ...TYPES,
+        ...ERROR_TYPES
+      ]
+    }
+  };
+  const USE_STRICT = {
+    label: "use_strict",
+    className: "meta",
+    relevance: 10,
+    begin: /^\s*['"]use (strict|asm)['"]/
+  };
+  const FUNCTION_DEFINITION = {
+    variants: [
+      {
+        match: [
+          /function/,
+          /\s+/,
+          IDENT_RE$1,
+          /(?=\s*\()/
+        ]
+      },
+      {
+        match: [
+          /function/,
+          /\s*(?=\()/
+        ]
+      }
+    ],
+    className: {
+      1: "keyword",
+      3: "title.function"
+    },
+    label: "func.def",
+    contains: [PARAMS],
+    illegal: /%/
+  };
+  const UPPER_CASE_CONSTANT = {
+    relevance: 0,
+    match: /\b[A-Z][A-Z_0-9]+\b/,
+    className: "variable.constant"
+  };
+  function noneOf(list) {
+    return regex.concat("(?!", list.join("|"), ")");
+  }
+  const FUNCTION_CALL = {
+    match: regex.concat(/\b/, noneOf([
+      ...BUILT_IN_GLOBALS,
+      "super"
+    ]), IDENT_RE$1, regex.lookahead(/\(/)),
+    className: "title.function",
+    relevance: 0
+  };
+  const PROPERTY_ACCESS = {
+    begin: regex.concat(/\./, regex.lookahead(regex.concat(IDENT_RE$1, /(?![0-9A-Za-z$_(])/))),
+    end: IDENT_RE$1,
+    excludeBegin: true,
+    keywords: "prototype",
+    className: "property",
+    relevance: 0
+  };
+  const GETTER_OR_SETTER = {
+    match: [
+      /get|set/,
+      /\s+/,
+      IDENT_RE$1,
+      /(?=\()/
+    ],
+    className: {
+      1: "keyword",
+      3: "title.function"
+    },
+    contains: [
+      {
+        begin: /\(\)/
+      },
+      PARAMS
+    ]
+  };
+  const FUNC_LEAD_IN_RE = "(\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)|" + hljs.UNDERSCORE_IDENT_RE + ")\\s*=>";
+  const FUNCTION_VARIABLE = {
+    match: [
+      /const|var|let/,
+      /\s+/,
+      IDENT_RE$1,
+      /\s*/,
+      /=\s*/,
+      /(async\s*)?/,
+      regex.lookahead(FUNC_LEAD_IN_RE)
+    ],
+    keywords: "async",
+    className: {
+      1: "keyword",
+      3: "title.function"
+    },
+    contains: [
+      PARAMS
+    ]
+  };
+  return {
+    name: "Javascript",
+    aliases: ["js", "jsx", "mjs", "cjs"],
+    keywords: KEYWORDS$1,
+    exports: { PARAMS_CONTAINS, CLASS_REFERENCE },
+    illegal: /#(?![$_A-z])/,
+    contains: [
+      hljs.SHEBANG({
+        label: "shebang",
+        binary: "node",
+        relevance: 5
+      }),
+      USE_STRICT,
+      hljs.APOS_STRING_MODE,
+      hljs.QUOTE_STRING_MODE,
+      HTML_TEMPLATE,
+      CSS_TEMPLATE,
+      TEMPLATE_STRING,
+      COMMENT,
+      NUMBER,
+      CLASS_REFERENCE,
+      {
+        className: "attr",
+        begin: IDENT_RE$1 + regex.lookahead(":"),
+        relevance: 0
+      },
+      FUNCTION_VARIABLE,
+      {
+        begin: "(" + hljs.RE_STARTERS_RE + "|\\b(case|return|throw)\\b)\\s*",
+        keywords: "return throw case",
+        relevance: 0,
+        contains: [
+          COMMENT,
+          hljs.REGEXP_MODE,
+          {
+            className: "function",
+            begin: FUNC_LEAD_IN_RE,
+            returnBegin: true,
+            end: "\\s*=>",
+            contains: [
+              {
+                className: "params",
+                variants: [
+                  {
+                    begin: hljs.UNDERSCORE_IDENT_RE,
+                    relevance: 0
+                  },
+                  {
+                    className: null,
+                    begin: /\(\s*\)/,
+                    skip: true
+                  },
+                  {
+                    begin: /\(/,
+                    end: /\)/,
+                    excludeBegin: true,
+                    excludeEnd: true,
+                    keywords: KEYWORDS$1,
+                    contains: PARAMS_CONTAINS
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            begin: /,/,
+            relevance: 0
+          },
+          {
+            match: /\s+/,
+            relevance: 0
+          },
+          {
+            variants: [
+              { begin: FRAGMENT.begin, end: FRAGMENT.end },
+              { match: XML_SELF_CLOSING },
+              {
+                begin: XML_TAG.begin,
+                "on:begin": XML_TAG.isTrulyOpeningTag,
+                end: XML_TAG.end
+              }
+            ],
+            subLanguage: "xml",
+            contains: [
+              {
+                begin: XML_TAG.begin,
+                end: XML_TAG.end,
+                skip: true,
+                contains: ["self"]
+              }
+            ]
+          }
+        ]
+      },
+      FUNCTION_DEFINITION,
+      {
+        beginKeywords: "while if switch catch for"
+      },
+      {
+        begin: "\\b(?!function)" + hljs.UNDERSCORE_IDENT_RE + "\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)\\s*\\{",
+        returnBegin: true,
+        label: "func.def",
+        contains: [
+          PARAMS,
+          hljs.inherit(hljs.TITLE_MODE, { begin: IDENT_RE$1, className: "title.function" })
+        ]
+      },
+      {
+        match: /\.\.\./,
+        relevance: 0
+      },
+      PROPERTY_ACCESS,
+      {
+        match: "\\$" + IDENT_RE$1,
+        relevance: 0
+      },
+      {
+        match: [/\bconstructor(?=\s*\()/],
+        className: { 1: "title.function" },
+        contains: [PARAMS]
+      },
+      FUNCTION_CALL,
+      UPPER_CASE_CONSTANT,
+      CLASS_OR_EXTENDS,
+      GETTER_OR_SETTER,
+      {
+        match: /\$[(.]/
+      }
+    ]
+  };
+}
+var IDENT_RE, KEYWORDS, LITERALS, TYPES, ERROR_TYPES, BUILT_IN_GLOBALS, BUILT_IN_VARIABLES, BUILT_INS;
+var init_javascript = __esm({
+  "node_modules/highlight.js/es/languages/javascript.js"() {
+    IDENT_RE = "[A-Za-z$_][0-9A-Za-z$_]*";
+    KEYWORDS = [
+      "as",
+      "in",
+      "of",
+      "if",
+      "for",
+      "while",
+      "finally",
+      "var",
+      "new",
+      "function",
+      "do",
+      "return",
+      "void",
+      "else",
+      "break",
+      "catch",
+      "instanceof",
+      "with",
+      "throw",
+      "case",
+      "default",
+      "try",
+      "switch",
+      "continue",
+      "typeof",
+      "delete",
+      "let",
+      "yield",
+      "const",
+      "class",
+      "debugger",
+      "async",
+      "await",
+      "static",
+      "import",
+      "from",
+      "export",
+      "extends"
+    ];
+    LITERALS = [
+      "true",
+      "false",
+      "null",
+      "undefined",
+      "NaN",
+      "Infinity"
+    ];
+    TYPES = [
+      "Object",
+      "Function",
+      "Boolean",
+      "Symbol",
+      "Math",
+      "Date",
+      "Number",
+      "BigInt",
+      "String",
+      "RegExp",
+      "Array",
+      "Float32Array",
+      "Float64Array",
+      "Int8Array",
+      "Uint8Array",
+      "Uint8ClampedArray",
+      "Int16Array",
+      "Int32Array",
+      "Uint16Array",
+      "Uint32Array",
+      "BigInt64Array",
+      "BigUint64Array",
+      "Set",
+      "Map",
+      "WeakSet",
+      "WeakMap",
+      "ArrayBuffer",
+      "SharedArrayBuffer",
+      "Atomics",
+      "DataView",
+      "JSON",
+      "Promise",
+      "Generator",
+      "GeneratorFunction",
+      "AsyncFunction",
+      "Reflect",
+      "Proxy",
+      "Intl",
+      "WebAssembly"
+    ];
+    ERROR_TYPES = [
+      "Error",
+      "EvalError",
+      "InternalError",
+      "RangeError",
+      "ReferenceError",
+      "SyntaxError",
+      "TypeError",
+      "URIError"
+    ];
+    BUILT_IN_GLOBALS = [
+      "setInterval",
+      "setTimeout",
+      "clearInterval",
+      "clearTimeout",
+      "require",
+      "exports",
+      "eval",
+      "isFinite",
+      "isNaN",
+      "parseFloat",
+      "parseInt",
+      "decodeURI",
+      "decodeURIComponent",
+      "encodeURI",
+      "encodeURIComponent",
+      "escape",
+      "unescape"
+    ];
+    BUILT_IN_VARIABLES = [
+      "arguments",
+      "this",
+      "super",
+      "console",
+      "window",
+      "document",
+      "localStorage",
+      "module",
+      "global"
+    ];
+    BUILT_INS = [].concat(BUILT_IN_GLOBALS, TYPES, ERROR_TYPES);
+  }
+});
+
+// node_modules/highlight.js/es/languages/css.js
+function css13(hljs) {
+  const regex = hljs.regex;
+  const modes = MODES(hljs);
+  const VENDOR_PREFIX = {
+    begin: /-(webkit|moz|ms|o)-(?=[a-z])/
+  };
+  const AT_MODIFIERS = "and or not only";
+  const AT_PROPERTY_RE = /@-?\w[\w]*(-\w+)*/;
+  const IDENT_RE2 = "[a-zA-Z-][a-zA-Z0-9_-]*";
+  const STRINGS = [
+    hljs.APOS_STRING_MODE,
+    hljs.QUOTE_STRING_MODE
+  ];
+  return {
+    name: "CSS",
+    case_insensitive: true,
+    illegal: /[=|'\$]/,
+    keywords: {
+      keyframePosition: "from to"
+    },
+    classNameAliases: {
+      keyframePosition: "selector-tag"
+    },
+    contains: [
+      modes.BLOCK_COMMENT,
+      VENDOR_PREFIX,
+      modes.CSS_NUMBER_MODE,
+      {
+        className: "selector-id",
+        begin: /#[A-Za-z0-9_-]+/,
+        relevance: 0
+      },
+      {
+        className: "selector-class",
+        begin: "\\." + IDENT_RE2,
+        relevance: 0
+      },
+      modes.ATTRIBUTE_SELECTOR_MODE,
+      {
+        className: "selector-pseudo",
+        variants: [
+          {
+            begin: ":(" + PSEUDO_CLASSES.join("|") + ")"
+          },
+          {
+            begin: ":(:)?(" + PSEUDO_ELEMENTS.join("|") + ")"
+          }
+        ]
+      },
+      modes.CSS_VARIABLE,
+      {
+        className: "attribute",
+        begin: "\\b(" + ATTRIBUTES.join("|") + ")\\b"
+      },
+      {
+        begin: /:/,
+        end: /[;}{]/,
+        contains: [
+          modes.BLOCK_COMMENT,
+          modes.HEXCOLOR,
+          modes.IMPORTANT,
+          modes.CSS_NUMBER_MODE,
+          ...STRINGS,
+          {
+            begin: /(url|data-uri)\(/,
+            end: /\)/,
+            relevance: 0,
+            keywords: {
+              built_in: "url data-uri"
+            },
+            contains: [
+              {
+                className: "string",
+                begin: /[^)]/,
+                endsWithParent: true,
+                excludeEnd: true
+              }
+            ]
+          },
+          modes.FUNCTION_DISPATCH
+        ]
+      },
+      {
+        begin: regex.lookahead(/@/),
+        end: "[{;]",
+        relevance: 0,
+        illegal: /:/,
+        contains: [
+          {
+            className: "keyword",
+            begin: AT_PROPERTY_RE
+          },
+          {
+            begin: /\s/,
+            endsWithParent: true,
+            excludeEnd: true,
+            relevance: 0,
+            keywords: {
+              $pattern: /[a-z-]+/,
+              keyword: AT_MODIFIERS,
+              attribute: MEDIA_FEATURES.join(" ")
+            },
+            contains: [
+              {
+                begin: /[a-z-]+(?=:)/,
+                className: "attribute"
+              },
+              ...STRINGS,
+              modes.CSS_NUMBER_MODE
+            ]
+          }
+        ]
+      },
+      {
+        className: "selector-tag",
+        begin: "\\b(" + TAGS.join("|") + ")\\b"
+      }
+    ]
+  };
+}
+var MODES, TAGS, MEDIA_FEATURES, PSEUDO_CLASSES, PSEUDO_ELEMENTS, ATTRIBUTES;
+var init_css = __esm({
+  "node_modules/highlight.js/es/languages/css.js"() {
+    MODES = (hljs) => {
+      return {
+        IMPORTANT: {
+          scope: "meta",
+          begin: "!important"
+        },
+        BLOCK_COMMENT: hljs.C_BLOCK_COMMENT_MODE,
+        HEXCOLOR: {
+          scope: "number",
+          begin: /#(([0-9a-fA-F]{3,4})|(([0-9a-fA-F]{2}){3,4}))\b/
+        },
+        FUNCTION_DISPATCH: {
+          className: "built_in",
+          begin: /[\w-]+(?=\()/
+        },
+        ATTRIBUTE_SELECTOR_MODE: {
+          scope: "selector-attr",
+          begin: /\[/,
+          end: /\]/,
+          illegal: "$",
+          contains: [
+            hljs.APOS_STRING_MODE,
+            hljs.QUOTE_STRING_MODE
+          ]
+        },
+        CSS_NUMBER_MODE: {
+          scope: "number",
+          begin: hljs.NUMBER_RE + "(%|em|ex|ch|rem|vw|vh|vmin|vmax|cm|mm|in|pt|pc|px|deg|grad|rad|turn|s|ms|Hz|kHz|dpi|dpcm|dppx)?",
+          relevance: 0
+        },
+        CSS_VARIABLE: {
+          className: "attr",
+          begin: /--[A-Za-z][A-Za-z0-9_-]*/
+        }
+      };
+    };
+    TAGS = [
+      "a",
+      "abbr",
+      "address",
+      "article",
+      "aside",
+      "audio",
+      "b",
+      "blockquote",
+      "body",
+      "button",
+      "canvas",
+      "caption",
+      "cite",
+      "code",
+      "dd",
+      "del",
+      "details",
+      "dfn",
+      "div",
+      "dl",
+      "dt",
+      "em",
+      "fieldset",
+      "figcaption",
+      "figure",
+      "footer",
+      "form",
+      "h1",
+      "h2",
+      "h3",
+      "h4",
+      "h5",
+      "h6",
+      "header",
+      "hgroup",
+      "html",
+      "i",
+      "iframe",
+      "img",
+      "input",
+      "ins",
+      "kbd",
+      "label",
+      "legend",
+      "li",
+      "main",
+      "mark",
+      "menu",
+      "nav",
+      "object",
+      "ol",
+      "p",
+      "q",
+      "quote",
+      "samp",
+      "section",
+      "span",
+      "strong",
+      "summary",
+      "sup",
+      "table",
+      "tbody",
+      "td",
+      "textarea",
+      "tfoot",
+      "th",
+      "thead",
+      "time",
+      "tr",
+      "ul",
+      "var",
+      "video"
+    ];
+    MEDIA_FEATURES = [
+      "any-hover",
+      "any-pointer",
+      "aspect-ratio",
+      "color",
+      "color-gamut",
+      "color-index",
+      "device-aspect-ratio",
+      "device-height",
+      "device-width",
+      "display-mode",
+      "forced-colors",
+      "grid",
+      "height",
+      "hover",
+      "inverted-colors",
+      "monochrome",
+      "orientation",
+      "overflow-block",
+      "overflow-inline",
+      "pointer",
+      "prefers-color-scheme",
+      "prefers-contrast",
+      "prefers-reduced-motion",
+      "prefers-reduced-transparency",
+      "resolution",
+      "scan",
+      "scripting",
+      "update",
+      "width",
+      "min-width",
+      "max-width",
+      "min-height",
+      "max-height"
+    ];
+    PSEUDO_CLASSES = [
+      "active",
+      "any-link",
+      "blank",
+      "checked",
+      "current",
+      "default",
+      "defined",
+      "dir",
+      "disabled",
+      "drop",
+      "empty",
+      "enabled",
+      "first",
+      "first-child",
+      "first-of-type",
+      "fullscreen",
+      "future",
+      "focus",
+      "focus-visible",
+      "focus-within",
+      "has",
+      "host",
+      "host-context",
+      "hover",
+      "indeterminate",
+      "in-range",
+      "invalid",
+      "is",
+      "lang",
+      "last-child",
+      "last-of-type",
+      "left",
+      "link",
+      "local-link",
+      "not",
+      "nth-child",
+      "nth-col",
+      "nth-last-child",
+      "nth-last-col",
+      "nth-last-of-type",
+      "nth-of-type",
+      "only-child",
+      "only-of-type",
+      "optional",
+      "out-of-range",
+      "past",
+      "placeholder-shown",
+      "read-only",
+      "read-write",
+      "required",
+      "right",
+      "root",
+      "scope",
+      "target",
+      "target-within",
+      "user-invalid",
+      "valid",
+      "visited",
+      "where"
+    ];
+    PSEUDO_ELEMENTS = [
+      "after",
+      "backdrop",
+      "before",
+      "cue",
+      "cue-region",
+      "first-letter",
+      "first-line",
+      "grammar-error",
+      "marker",
+      "part",
+      "placeholder",
+      "selection",
+      "slotted",
+      "spelling-error"
+    ];
+    ATTRIBUTES = [
+      "align-content",
+      "align-items",
+      "align-self",
+      "all",
+      "animation",
+      "animation-delay",
+      "animation-direction",
+      "animation-duration",
+      "animation-fill-mode",
+      "animation-iteration-count",
+      "animation-name",
+      "animation-play-state",
+      "animation-timing-function",
+      "backface-visibility",
+      "background",
+      "background-attachment",
+      "background-clip",
+      "background-color",
+      "background-image",
+      "background-origin",
+      "background-position",
+      "background-repeat",
+      "background-size",
+      "border",
+      "border-bottom",
+      "border-bottom-color",
+      "border-bottom-left-radius",
+      "border-bottom-right-radius",
+      "border-bottom-style",
+      "border-bottom-width",
+      "border-collapse",
+      "border-color",
+      "border-image",
+      "border-image-outset",
+      "border-image-repeat",
+      "border-image-slice",
+      "border-image-source",
+      "border-image-width",
+      "border-left",
+      "border-left-color",
+      "border-left-style",
+      "border-left-width",
+      "border-radius",
+      "border-right",
+      "border-right-color",
+      "border-right-style",
+      "border-right-width",
+      "border-spacing",
+      "border-style",
+      "border-top",
+      "border-top-color",
+      "border-top-left-radius",
+      "border-top-right-radius",
+      "border-top-style",
+      "border-top-width",
+      "border-width",
+      "bottom",
+      "box-decoration-break",
+      "box-shadow",
+      "box-sizing",
+      "break-after",
+      "break-before",
+      "break-inside",
+      "caption-side",
+      "caret-color",
+      "clear",
+      "clip",
+      "clip-path",
+      "clip-rule",
+      "color",
+      "column-count",
+      "column-fill",
+      "column-gap",
+      "column-rule",
+      "column-rule-color",
+      "column-rule-style",
+      "column-rule-width",
+      "column-span",
+      "column-width",
+      "columns",
+      "contain",
+      "content",
+      "content-visibility",
+      "counter-increment",
+      "counter-reset",
+      "cue",
+      "cue-after",
+      "cue-before",
+      "cursor",
+      "direction",
+      "display",
+      "empty-cells",
+      "filter",
+      "flex",
+      "flex-basis",
+      "flex-direction",
+      "flex-flow",
+      "flex-grow",
+      "flex-shrink",
+      "flex-wrap",
+      "float",
+      "flow",
+      "font",
+      "font-display",
+      "font-family",
+      "font-feature-settings",
+      "font-kerning",
+      "font-language-override",
+      "font-size",
+      "font-size-adjust",
+      "font-smoothing",
+      "font-stretch",
+      "font-style",
+      "font-synthesis",
+      "font-variant",
+      "font-variant-caps",
+      "font-variant-east-asian",
+      "font-variant-ligatures",
+      "font-variant-numeric",
+      "font-variant-position",
+      "font-variation-settings",
+      "font-weight",
+      "gap",
+      "glyph-orientation-vertical",
+      "grid",
+      "grid-area",
+      "grid-auto-columns",
+      "grid-auto-flow",
+      "grid-auto-rows",
+      "grid-column",
+      "grid-column-end",
+      "grid-column-start",
+      "grid-gap",
+      "grid-row",
+      "grid-row-end",
+      "grid-row-start",
+      "grid-template",
+      "grid-template-areas",
+      "grid-template-columns",
+      "grid-template-rows",
+      "hanging-punctuation",
+      "height",
+      "hyphens",
+      "icon",
+      "image-orientation",
+      "image-rendering",
+      "image-resolution",
+      "ime-mode",
+      "isolation",
+      "justify-content",
+      "left",
+      "letter-spacing",
+      "line-break",
+      "line-height",
+      "list-style",
+      "list-style-image",
+      "list-style-position",
+      "list-style-type",
+      "margin",
+      "margin-bottom",
+      "margin-left",
+      "margin-right",
+      "margin-top",
+      "marks",
+      "mask",
+      "mask-border",
+      "mask-border-mode",
+      "mask-border-outset",
+      "mask-border-repeat",
+      "mask-border-slice",
+      "mask-border-source",
+      "mask-border-width",
+      "mask-clip",
+      "mask-composite",
+      "mask-image",
+      "mask-mode",
+      "mask-origin",
+      "mask-position",
+      "mask-repeat",
+      "mask-size",
+      "mask-type",
+      "max-height",
+      "max-width",
+      "min-height",
+      "min-width",
+      "mix-blend-mode",
+      "nav-down",
+      "nav-index",
+      "nav-left",
+      "nav-right",
+      "nav-up",
+      "none",
+      "normal",
+      "object-fit",
+      "object-position",
+      "opacity",
+      "order",
+      "orphans",
+      "outline",
+      "outline-color",
+      "outline-offset",
+      "outline-style",
+      "outline-width",
+      "overflow",
+      "overflow-wrap",
+      "overflow-x",
+      "overflow-y",
+      "padding",
+      "padding-bottom",
+      "padding-left",
+      "padding-right",
+      "padding-top",
+      "page-break-after",
+      "page-break-before",
+      "page-break-inside",
+      "pause",
+      "pause-after",
+      "pause-before",
+      "perspective",
+      "perspective-origin",
+      "pointer-events",
+      "position",
+      "quotes",
+      "resize",
+      "rest",
+      "rest-after",
+      "rest-before",
+      "right",
+      "row-gap",
+      "scroll-margin",
+      "scroll-margin-block",
+      "scroll-margin-block-end",
+      "scroll-margin-block-start",
+      "scroll-margin-bottom",
+      "scroll-margin-inline",
+      "scroll-margin-inline-end",
+      "scroll-margin-inline-start",
+      "scroll-margin-left",
+      "scroll-margin-right",
+      "scroll-margin-top",
+      "scroll-padding",
+      "scroll-padding-block",
+      "scroll-padding-block-end",
+      "scroll-padding-block-start",
+      "scroll-padding-bottom",
+      "scroll-padding-inline",
+      "scroll-padding-inline-end",
+      "scroll-padding-inline-start",
+      "scroll-padding-left",
+      "scroll-padding-right",
+      "scroll-padding-top",
+      "scroll-snap-align",
+      "scroll-snap-stop",
+      "scroll-snap-type",
+      "shape-image-threshold",
+      "shape-margin",
+      "shape-outside",
+      "speak",
+      "speak-as",
+      "src",
+      "tab-size",
+      "table-layout",
+      "text-align",
+      "text-align-all",
+      "text-align-last",
+      "text-combine-upright",
+      "text-decoration",
+      "text-decoration-color",
+      "text-decoration-line",
+      "text-decoration-style",
+      "text-emphasis",
+      "text-emphasis-color",
+      "text-emphasis-position",
+      "text-emphasis-style",
+      "text-indent",
+      "text-justify",
+      "text-orientation",
+      "text-overflow",
+      "text-rendering",
+      "text-shadow",
+      "text-transform",
+      "text-underline-position",
+      "top",
+      "transform",
+      "transform-box",
+      "transform-origin",
+      "transform-style",
+      "transition",
+      "transition-delay",
+      "transition-duration",
+      "transition-property",
+      "transition-timing-function",
+      "unicode-bidi",
+      "vertical-align",
+      "visibility",
+      "voice-balance",
+      "voice-duration",
+      "voice-family",
+      "voice-pitch",
+      "voice-range",
+      "voice-rate",
+      "voice-stress",
+      "voice-volume",
+      "white-space",
+      "widows",
+      "width",
+      "will-change",
+      "word-break",
+      "word-spacing",
+      "word-wrap",
+      "writing-mode",
+      "z-index"
+    ].reverse();
+  }
+});
+
+// .svelte-kit/output/server/entries/pages/blog/made-with-svelte-kit.svx.js
+var made_with_svelte_kit_svx_exports = {};
+__export(made_with_svelte_kit_svx_exports, {
+  default: () => Made_with_svelte_kit,
+  metadata: () => metadata2
+});
+var css$16, HighlightSvelte, HighlightSvelte$1, advice, portfolioGrid, regret, email1, email2, metadata2, title2, slug2, publishDate2, tags2, thumbnail2, summary2, Made_with_svelte_kit;
+var init_made_with_svelte_kit_svx = __esm({
+  ".svelte-kit/output/server/entries/pages/blog/made-with-svelte-kit.svx.js"() {
+    init_index_88921582();
+    init_BlogImage_583d34a0();
+    init_BlogGallery_55092816();
+    init_core();
+    init_xml();
+    init_javascript();
+    init_css();
+    init_Tag_1ce0eb4c();
+    css$16 = {
+      code: "pre.langtag.svelte-nstrv8{position:relative}pre.langtag.svelte-nstrv8::after{content:attr(data-language);position:absolute;top:0;right:0;padding:1em;display:flex;align-items:center;justify-content:center;background:inherit;color:inherit;background:var(--hljs-background);color:var(--hljs-foreground);border-radius:var(--hljs-radius)}",
+      map: null
+    };
+    HighlightSvelte = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      let highlighted;
+      let $$restProps = compute_rest_props($$props, ["code", "langtag"]);
+      let { code = void 0 } = $$props;
+      let { langtag = false } = $$props;
+      createEventDispatcher();
+      import_core.default.registerLanguage("xml", xml);
+      import_core.default.registerLanguage("javascript", javascript);
+      import_core.default.registerLanguage("css", css13);
+      if ($$props.code === void 0 && $$bindings.code && code !== void 0)
+        $$bindings.code(code);
+      if ($$props.langtag === void 0 && $$bindings.langtag && langtag !== void 0)
+        $$bindings.langtag(langtag);
+      $$result.css.add(css$16);
+      highlighted = import_core.default.highlightAuto(code).value;
+      return `${slots.default ? slots.default({ highlighted }) : `
+  <pre${spread([{ "data-language": "svelte" }, escape_object($$restProps)], {
+        classes: (langtag ? "langtag" : "") + " svelte-nstrv8"
+      })}><code class="${"hljs"}"><!-- HTML_TAG_START -->${highlighted}<!-- HTML_TAG_END --></code></pre>
+`}`;
+    });
+    HighlightSvelte$1 = HighlightSvelte;
+    advice = "/_app/assets/ginkoids-advice-b1985380.webp";
+    portfolioGrid = "/_app/assets/portfolio-grid-ee45fbe9.webp";
+    regret = "/_app/assets/regret-bd8609a1.webp";
+    email1 = "/_app/assets/ios-email-input-4085fc8a.webp";
+    email2 = "/_app/assets/android-email-input-46726c1c.webp";
+    metadata2 = {
+      "title": "Made with Svelte(Kit)",
+      "slug": "made-with-svelte-kit",
+      "publishDate": "JAN 18 2022",
+      "tags": [{ "name": "code" }],
+      "thumbnail": "vwl-site.png",
+      "summary": "My 20-something-day journey to create this website from scratch. What came easily, what to avoid, etc. Essentially, a layman\u2019s guide to building a personal website. A very meta post."
+    };
+    ({ title: title2, slug: slug2, publishDate: publishDate2, tags: tags2, thumbnail: thumbnail2, summary: summary2 } = metadata2);
+    Made_with_svelte_kit = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      const code12 = `<script>
+    import vivian from '$lib/assets/vivian.png';
+<\/script>
+...
+<img src={vivian} alt="viv" />`;
+      const code22 = `import vivian from '$lib/assets/vivian.png?w=350&webp';`;
+      return `${validate_component(PostHeader, "PostHeader").$$render($$result, { title: title2, publishDate: publishDate2, tags: tags2 }, {}, {})}
+<p>So, Svelte is not for the faint-hearted. \u{1F62D}</p>
+<p>Not that I don\u2019t recommend it. Svelte and SvelteKit are intuitively wonderful in many ways\u2014enough so that someone without years of web dev experience (like me) could pick it up fairly easily. However, because it is such a new framework, I came prepared for the frustration that ensues when things <em>just don\u2019t work</em>.</p>
+<p>I\u2019ve also been entertaining the idea of creating a layman\u2019s guide to building a personal website for a while now. I was pretty set on giving my personal website a refresh this winter break (check out the old one, <a href="${"http://vivsdivs.com/"}" rel="${"nofollow"}">vivsdivs.com</a>). It seemed like the perfect opportunity to learn something new and share my experience. If you\u2019re interested in how I made this website\u2014what came easily, what to avoid, etc., read on. I hope you find something useful :)</p>
+<p><strong>Why Svelte?</strong> There are so many great options out there. The short answer is that I love <em>The Pudding</em>, and they use SvelteKit. Also, it seemed that a reasonable amount of people have moved their blogs from Gatsby to SvelteKit, in the same way that they moved from Jekyll to Gatsby a few years back. Might as well be ahead of the curve, right? \u{1F609}</p>
+<p>\xA0</p>
+<h2>Preparing for battle</h2>
+<p>I first spent three days in Figma designing the website, from color scheme to style guide to full layouts of the home, blog, and portfolio pages (in both desktop and mobile view). Honestly, it was a lot of work, but it set me up for success when actually coding the site, and I didn\u2019t have to question my design decisions down the line. I\u2019m also glad that I prioritized the mobile view early on, instead of freaking out about responsive design long after the rest of the website was implemented. I love Figma (so much), so no complaints here. Feel free to browse my <a href="${"https://www.figma.com/file/h7KckVZmrTNeVQd2afZwME/website?node-id=92%3A573"}" rel="${"nofollow"}">Figma document</a> if you\u2019re curious!</p>
+<p>Before I popped open the code editor, I also started by doing the <a href="${"https://svelte.dev/tutorial/basics"}" rel="${"nofollow"}">Svelte tutorial</a> in full. It was very interactive and helpful, and it also set me up to know which resources to reach for later on. I also took <a href="${"https://www.notion.so/svelte-notes-6cac9e1403e04b1c8647ec518ee0b11e"}" rel="${"nofollow"}">notes</a> on what I learned from the tutorial. They\u2019re not amazing, comprehensive notes or anything, but they show the amount of preparation that I did before taking the plunge.</p>
+<p>Now, we\u2019re ready. Onward!</p>
+<p>\xA0</p>
+<h2>\u{1F44D}\u{1F3FB} things</h2>
+<h3>Floating orb background</h3>
+<p>This is probably one of my favorite aspects of the website. I had it all planned out in Figma from the beginning. I originally found this complicated generative art solution with PixiJS by <a href="${"https://georgefrancis.dev/writing/create-a-generative-landing-page-and-webgl-powered-background/"}" rel="${"nofollow"}">George Francis</a>. It\u2019s really, <em>really</em> cool, and I had so much fun just playing with his CodePen. However, I ultimately decided to stick to the basics using <code>spans</code> animated with CSS. When in doubt, follow Ginkoid\u2019s advice:</p>
+${validate_component(BlogImage, "BlogImage").$$render($$result, {
+        src: advice,
+        caption: "Ginkoid's wise words, via Discord."
+      }, {}, {})}
+<p>Here\u2019s the <a href="${"https://codepen.io/Mamboleoo/pen/BxMQYQ"}" rel="${"nofollow"}">CodePen</a> that I referenced, which did the job wonderfully!</p>
+<h3>Svelte(Kit) stuff</h3>
+<ul><li><strong>The docs:</strong> I loved the docs, for both <a href="${"https://svelte.dev/docs"}" rel="${"nofollow"}">Svelte</a> and <a href="${"https://kit.svelte.dev/docs"}" rel="${"nofollow"}">SvelteKit</a>. So wonderful and helpful, 10/10. This is where you learn about all sorts of fun things, like SvelteKit\u2019s modules (<code>$app/env</code>, <code>$app/stores</code>, etc.), loading, and anchor options. Had my back when Stack Overflow didn\u2019t \u{1F972}</li>
+<li><strong>SvelteKit\u2019s file-based routing system:</strong> very intuitive! It works exactly how you think it does\u2014each page goes into <code>/routes</code> as a <code>.svelte</code> file.</li>
+<li><strong>Svelte transitions:</strong> super easy to use with really beautiful results. I used them for my page transitions (and I really <em>could</em> start throwing them everywhere). One of the quickest things that I did to elevate the feel of my website. The transition usually only runs when your component enters and leaves the DOM, but you can also trigger the animation on a value change with a <a href="${"https://stackoverflow.com/questions/62626343/svelte-transition-on-reactive-data-change"}" rel="${"nofollow"}">#key block</a>.</li></ul>
+<h3>Flexbox, Grid, and other common CSS utilities</h3>
+<p>Even in the presence of \u2728fun new technology\u2728, one must not forget about good old flex and grid. I read through the complete guides this time (<a href="${"https://css-tricks.com/snippets/css/a-guide-to-flexbox/"}" rel="${"nofollow"}">flex</a> and <a href="${"https://kit.svelte.dev/docs"}" rel="${"nofollow"}">grid</a>), thanks to CSS-Tricks. With these tools (and units like <code>fr</code> and <code>min-content</code>), creating responsive layouts was honestly pretty fun. One example: grid was key to creating the faux file folder on the portfolio page.</p>
+<p>Essentially, I have an SVG for each tab\u2014just the tab part, not the rectangular folder body. Why? I expect the file folder to resize frequently, whether due to different screen sizes, or whether certain rows are filtered. The rectangular folder body for each tab is just a <code>div</code>, designed to be easily resized by its grid container. I also had the tab label text (\u201Ddesign\u201D and \u201Cjournalism\u201D).</p>
+<p>Here\u2019s how I put everything together using grid. I\u2019ll refer to these elements by their class name; feel free to inspect the page or follow along using the <a href="${"https://github.com/teacupkittie/vwl"}" rel="${"nofollow"}">GitHub repo</a>.</p>
+<ul><li><code>.tabs</code> : a parent grid with only one cell, to ensure that the two tabs are stacked on top of each other using <code>z-index</code></li>
+<li><code>.design-tab</code> and <code>.journalism-tab</code>: grids with <code>grid-template-columns</code> determined by <code>rems</code> to ensure that each SVG tab is always in the right place. I used column 1 as an offset, column 2 as the tab itself, and column 3 as <code>auto</code>. Here\u2019s a picture:${validate_component(BlogImage, "BlogImage").$$render($$result, {
+        src: portfolioGrid,
+        caption: "Grid layout outlines from the Chrome DevTools view."
+      }, {}, {})}</li>
+<li><code>.tab-page-content</code>: a regular ol\u2019 container inside each tab</li>
+<li><code>.buttons</code>: a flex container holding the tags, <code>.content-container</code>: a regular container on each page</li>
+<li><code>.content-row</code>: a flex container holding the items on each row, with each row pertaining to one category. I could have totally done some horizontal masonry madness to autofill the page content, but I wanted to have better control over exactly how the page looked\u2014an example where hardcoding and softcoding meet.</li></ul>
+<p>Later on, I also added in <code>.tab-selector</code>, which sits on top of the tabs (<code>z-index</code>-wise). These are fitted to be directly on top of the two SVGs, because I realized that the journalism tab can\u2019t be clicked (the design tab is the exact same size, and directly on top). I also used grid for this!</p>
+<h3>Blogging with <code>mdsvex</code></h3>
+<p><a href="${"https://mdsvex.pngwn.io/"}" rel="${"nofollow"}">Svelte in Markdown</a> (aka <code>mdsvex</code>) is pretty great. Blogging would be much harder without it. There are some great tutorials\u2014I followed this one by <a href="${"https://megzari.com/blog/about_this_site/"}" rel="${"nofollow"}">Raphael Mezgari</a>. His repo is on GitHub, too, and poking around really helped me to get a sense of how things worked. I haven\u2019t ran into any problems yet, and maybe I\u2019ll start adding animated Svelte penguins in my blog posts someday.</p>
+<p>\xA0</p>
+<h2>\u{1F44E}\u{1F3FB} things</h2>
+<p>One of the main downsides of SvelteKit is that it\u2019s so new. Compared to React frameworks, it has a much smaller community and fewer resources. So everything is just a LITTLE harder. This screenshot sums up most of the breakdowns that I had while coding:</p>
+${validate_component(BlogImage, "BlogImage").$$render($$result, {
+        src: regret,
+        caption: "So many times when I faltered in my decision to use Svelte."
+      }, {}, {})}
+<h3>Icon packs</h3>
+<p>React has this amazing package called <code>react-icons</code>. Using icons becomes very easy. I first found a Svelte alternative, <code>svelte-icons-pack</code>, but for some reason many of the Ionicons icons were either filled incorrectly or did not display at all. I thought Ionicons looked pretty good (and I had designed with them), so I then proceeded to try every other way of using Ionicons. On Christmas Day. I read every tutorial, Stack Overflow post, and GitHub issue until someone mentioned that Ionicons just had some compatibility issues with Svelte \u{1F62D} Eventually, I migrated to Feather Icons (and tried every other way again). I came crawling back to <code>svelte-icons-pack</code>, which seemed to work perfectly fine with Feather Icons. Moral of the story: <code>svelte-icons-pack</code> is probably the easiest way to use icons in Svelte, and just don\u2019t use Ionicons. Thanks, @leshak on GitHub!</p>
+<h3>Responsive, lazy-loading images</h3>
+<p>Gatsby has this amazing thing called <code>gatsby-plugin-image</code>. Next.js has this amazing thing called <code>next/image</code>. SvelteKit has nothing (yet) \u{1F62D}</p>
+<p>There were actually a fair amount of Svelte plugins, but SvelteKit is also so different from Svelte that solutions that work for Svelte often don\u2019t work for SvelteKit. Trying to get any sort of image placeholder (solid color, low-resolution blur) was a total pain. Ultimately, I think there\u2019s just much more I have to learn about images in web development. Most of the solutions that I could find relied on specifying a width and height for the image, which makes sense because the placeholder needs a width and height in order to take up space and reduce cumulative layout shift. However, I wanted my images to resize dynamically to fit the size of its container. Maybe I just need to create a million sizes of the image with <code>srcset</code>? I\u2019m not sure how Gatsby and Next.js do it, but I would love to learn.</p>
+<p>Here were some of the resources that I looked at and tried to use: <a href="${"https://kentcdodds.com/blog/building-an-awesome-image-loading-experience"}" rel="${"nofollow"}">Kent C. Dodd\u2019s blog post</a>, <a href="${"https://rodneylab.com/sveltekit-image-plugin/"}" rel="${"nofollow"}">Rodney Lab\u2019s SvelteKit Image Plugin</a>, <a href="${"https://github.com/woltapp/blurhash"}" rel="${"nofollow"}">blurhash</a>. They\u2019re still great resources! In the meantime, I\u2019m just using <code>vite-imagetools</code> to resize my images and convert them to WebP. Maybe someday I\u2019ll attempt to save the masses by making a <code>sveltekit-image</code> if SvelteKit doesn\u2019t man up and do it soon.</p>
+<h3>Newsletters</h3>
+<p>I\u2019d narrowed it down to three main options: Substack, Revue, and Buttondown. Substack and Revue are both huge in the newsletter world, while Buttondown is a small (but really cool!) service. Any one of these services would have worked wonderfully, save for one aspect: the subscription email embed. With Substack, a styled embed isn\u2019t even in the picture because Substack has a closed API. Scott Spence outlines this solution for a styled email form with <a href="${"https://scottspence.com/posts/email-form-submission-with-sveltekit"}" rel="${"nofollow"}">Revue</a>, which has an open API, but it seemed to be a very significant amount of work. On the other hand, Buttondown provided the HTML for the email form so that I could style it to my heart\u2019s content.</p>
+<p>This <em>would</em> have been rather dandy, but I realized that whenever the form was submitted, the page would redirect to Buttondown\u2019s page. This was automatic\u2014the redirect was forced, and you could only change the redirect destination from the Buttondown dashboard. It would be extremely disorienting for the viewer to be thrown to another site, and then have to navigate back toward <a href="${"https://scottspence.com/posts/email-form-submission-with-sveltekit"}" rel="${"nofollow"}">vivianwli.com</a>.</p>
+<p><strong>The (somewhat) jank solution?</strong> I chose <a href="${"http://vivianwli.com/blog"}" rel="${"nofollow"}">vivianwli.com/blog</a> as my redirect link. Even then, the navigation would kick the user to the top of the page. To make this seem more natural, I used <code>svelte-toast</code> to create an \u201CEmail submitted!\u201D toast. I changed the Buttondown redirect link to <a href="${"http://vivianwli.com/blog?emailSubmitted=true"}" rel="${"nofollow"}">vivianwli.com/blog?emailSubmitted=true</a>, and then ran toast when the <code>emailSubmitted</code> parameter was true. Hey, it works!</p>
+<p>\xA0</p>
+<h2>\u{1F90C}\u{1F3FB} things</h2>
+<h3>Scroll-snapping</h3>
+<p>Scroll-snapping only has <code>mandatory</code> and <code>proximity</code> as its options. I wanted to use it for a pseudo-slideshow animation, but the <code>proximity</code> distance is determined by the browser. You can\u2019t choose how close the scroll must be before it snaps. I\u2019m still using it on the home page (for tiny re-orientations), but it really doesn\u2019t do much. In this case, it\u2019s a simple but very limited tool.</p>
+<h3>Where images go</h3>
+<p>I switched the location of my images folder several times while building the website. I was very confused about this, but I have an answer for you! In order for it to work in both dev mode and build mode, you have two options:</p>
+<ul><li><code>static</code>: Svelte can\u2019t do dynamic imports, (a la <code>src={picture1}</code> where <code>picture1</code> is your file name). If you\u2019re trying to display images where its path would be a variable (my <code>BlogCard.svelte</code> and <code>ArticleCard.svelte</code>), put it in static. You can\u2019t access <code>src</code> at build time!<ul><li><code>src</code> (I did <code>src/$lib/assets</code>): this is great for when you know exactly which images you need (the home page, the portfolio, my blog posts). You can import and use it like this:${validate_component(HighlightSvelte$1, "HighlightSvelte").$$render($$result, { code: code12 }, {}, {})}
+This way, you can do some responsive stuff, like loading smaller images via \`vite-imagetools\`.
+${validate_component(HighlightSvelte$1, "HighlightSvelte").$$render($$result, { code: code22 }, {}, {})}</li></ul></li></ul>
+<h3>#justiOSthings</h3>
+<p>Chrome DevTools has a great option for responsive design, allowing developers to emulate different screen sizes and ensure that it looks great. However, because it\u2019s just an emulator, my designs came out looking a bit wonky on iPhone at first. My heading text wasn\u2019t italicized, my portfolio images were horrendously stretched (just really blurry colors), and my email form looked like this:</p>
+${validate_component(BlogGallery, "BlogGallery").$$render($$result, { columns: "2", className: "half-width" }, {}, {
+        default: () => {
+          return `${validate_component(BlogImage, "BlogImage").$$render($$result, {
+            src: email1,
+            className: "gallery-img",
+            caption: "The email form on an iOS device."
+          }, {}, {})}
+    ${validate_component(BlogImage, "BlogImage").$$render($$result, {
+            src: email2,
+            className: "gallery-img",
+            caption: "The email form on an Android device."
+          }, {}, {})}`;
+        }
+      })}
+<p>So if DevTools doesn\u2019t work, what does? If you have a Mac and an iPhone, you can enable Inspect Element on your iPhone and then connect to your computer. If not, tough luck. However BroswerStack offers ten-minute trials to test on an actual iPhone. Although the time seems ridiculously short, it actually really helped! Just a bit of fiddling in DevTools got me where I wanted.</p>
+<h3>Flash of Unstyled Content (FOUC)</h3>
+<p>The first time I experienced this in dev mode, it was terrifying. My background orbs were black, my text was in Times New Roman, everything was in the wrong place. Scenes out of a horror movie. This goes away at build time, but I was also experiencing this \u201Cflash of partially-styled content\u201D in production as well. Everything would be the right color, but the layout was still off and the margins didn\u2019t kick in until a second later. I dealt with it for a while, but I ultimately fixed this issue by moving some of the relevant styles from <code>__layout.svelte</code> into <code>app.scss</code>. I\u2019m pretty sure this is because <code>app.html</code> is used in every page and saturated with the Svelte content, so the styles from <code>app.scss</code> are put in place first before the rest of the page finishes loading. Victory!</p>
+<p>\xA0</p>
+<h2>Thanks</h2>
+<p>Thanks to Jason, Ailuropoda Melanoleuca, and ginkoid for answering my many questions. You guys are the best! Thanks to you, the reader, for embarking with my on my journey as well. I hope you enjoyed!</p>
+<p>\xA0</p>
+<h2>Bye</h2>
+<p>I suppose this is it. See you again when there\u2019s a V3\u2026?!</p>
+<p>Just kidding. I hope to blog more often on here, so you can <a href="${"https://buttondown.email/vivian"}" rel="${"nofollow"}">subscribe</a> to my newsletter if you\u2019d like to hear more from me. Have a wonderful day!</p>`;
+    });
+  }
+});
+
 // .svelte-kit/output/server/entries/pages/blog/michelle-feng.svx.js
 var michelle_feng_svx_exports = {};
 __export(michelle_feng_svx_exports, {
   default: () => Michelle_feng,
-  metadata: () => metadata2
+  metadata: () => metadata3
 });
-var mathyProtest, metadata2, title2, slug2, publishDate2, tags2, thumbnail2, summary2, Michelle_feng;
+var mathyProtest, metadata3, title3, slug3, publishDate3, tags3, thumbnail3, summary3, Michelle_feng;
 var init_michelle_feng_svx = __esm({
   ".svelte-kit/output/server/entries/pages/blog/michelle-feng.svx.js"() {
-    init_index_8783c5b0();
-    init_BlogImage_70911919();
-    init_Tag_2f28d930();
+    init_index_88921582();
+    init_BlogImage_583d34a0();
+    init_Tag_1ce0eb4c();
     mathyProtest = "/_app/assets/mathy-protest-f6621b72.webp";
-    metadata2 = {
+    metadata3 = {
       "title": "How Michelle Feng defies math academia norms",
       "slug": "michelle-feng",
       "publishDate": "FEB 1 2020",
@@ -7037,9 +10099,9 @@ var init_michelle_feng_svx = __esm({
       "thumbnail": "mathy-protest.png",
       "summary": "Michelle Feng explains how she discovered and became passionate about applied topology in the context of politics and social justice."
     };
-    ({ title: title2, slug: slug2, publishDate: publishDate2, tags: tags2, thumbnail: thumbnail2, summary: summary2 } = metadata2);
+    ({ title: title3, slug: slug3, publishDate: publishDate3, tags: tags3, thumbnail: thumbnail3, summary: summary3 } = metadata3);
     Michelle_feng = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-      return `${validate_component(PostHeader, "PostHeader").$$render($$result, { title: title2, publishDate: publishDate2, tags: tags2 }, {}, {})}
+      return `${validate_component(PostHeader, "PostHeader").$$render($$result, { title: title3, publishDate: publishDate3, tags: tags3 }, {}, {})}
 <p>When fifth year UCLA PhD student Michelle Feng initially entered undergraduate college as a theoretical math major, she wasn\u2019t expecting a future out of the ordinary. In fact, math seemed like the logical path to take simply because she performed well in math classes growing up. It wasn\u2019t until graduate school that she discovered\u2014and became passionate about\u2014the field she works in today: applied topology in the context of social justice.</p>
 <p>As a teen, Feng developed a deep interest in number theory. She was fascinated by the idea that fundamental problems are simple to understand, yet still remain unsolved by the world\u2019s greatest mathematicians. In the same vein, she found the nature of abstract shapes satisfying, and was drawn to abstract algebra and applied topology.</p>
 <p>Despite loving math, Feng emerged from her undergraduate years at the University of Chicago disillusioned by the elitist culture that surrounded the field of theoretical mathematics. She had very few female and queer students in her math classes and the barriers for marginalized groups discouraged her from enjoying the space. \u201CPeople would comment on my outfits or my appearance which made me really uncomfortable, and that turned me away from math for a long time,\u201D she said.</p>
@@ -7065,15 +10127,15 @@ ${validate_component(BlogImage, "BlogImage").$$render($$result, {
 var oat_milk_guide_svx_exports = {};
 __export(oat_milk_guide_svx_exports, {
   default: () => Oat_milk_guide,
-  metadata: () => metadata3
+  metadata: () => metadata4
 });
-var css13, BlogHalfImage, oatMilk, brownies, metadata3, title3, slug3, publishDate3, tags3, thumbnail3, summary3, Oat_milk_guide;
+var css14, BlogHalfImage, oatMilk, brownies, metadata4, title4, slug4, publishDate4, tags4, thumbnail4, summary4, Oat_milk_guide;
 var init_oat_milk_guide_svx = __esm({
   ".svelte-kit/output/server/entries/pages/blog/oat-milk-guide.svx.js"() {
-    init_index_8783c5b0();
-    init_BlogImage_70911919();
-    init_Tag_2f28d930();
-    css13 = {
+    init_index_88921582();
+    init_BlogImage_583d34a0();
+    init_Tag_1ce0eb4c();
+    css14 = {
       code: ".wrapper.svelte-1q2ajvu{display:grid;width:100%;grid-template-columns:1fr 1fr;background-color:var(--highlight-color);align-items:center;box-shadow:0 0 1.2rem 0.1rem var(--secondary-subtle-color);margin:4rem -2rem;padding:2rem}@media screen and (max-width: 50rem){.wrapper.svelte-1q2ajvu{display:block}}",
       map: null
     };
@@ -7084,7 +10146,7 @@ var init_oat_milk_guide_svx = __esm({
         $$bindings.image(image);
       if ($$props.caption === void 0 && $$bindings.caption && caption !== void 0)
         $$bindings.caption(caption);
-      $$result.css.add(css13);
+      $$result.css.add(css14);
       return `<div class="${"wrapper svelte-1q2ajvu"}"><div class="${"text"}">${slots.default ? slots.default({}) : ``}</div>
 	${validate_component(BlogImage, "BlogImage").$$render($$result, {
         src: image,
@@ -7095,7 +10157,7 @@ var init_oat_milk_guide_svx = __esm({
     });
     oatMilk = "/_app/assets/oat-milk-49e7540c.webp";
     brownies = "/_app/assets/brownies-cf0f0bea.webp";
-    metadata3 = {
+    metadata4 = {
       "title": "An ultimate guide to oat milk",
       "slug": "oat-milk-guide",
       "publishDate": "AUG 1 2020",
@@ -7103,11 +10165,12 @@ var init_oat_milk_guide_svx = __esm({
       "thumbnail": "oat-milk.png",
       "summary": "There\u2019s always more to learn about homemade oat milk. I detail the lessons I\u2019ve learned, ways to expand upon a foolproof recipe, new delicious flavors, and advice on handling leftover oat pulp."
     };
-    ({ title: title3, slug: slug3, publishDate: publishDate3, tags: tags3, thumbnail: thumbnail3, summary: summary3 } = metadata3);
+    ({ title: title4, slug: slug4, publishDate: publishDate4, tags: tags4, thumbnail: thumbnail4, summary: summary4 } = metadata4);
     Oat_milk_guide = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-      return `${validate_component(PostHeader, "PostHeader").$$render($$result, { title: title3, publishDate: publishDate3, tags: tags3 }, {}, {})}
+      return `${validate_component(PostHeader, "PostHeader").$$render($$result, { title: title4, publishDate: publishDate4, tags: tags4 }, {}, {})}
 <p>Whether this is your first rodeo or your hundredth, there\u2019s always more to learn about homemade oat milk. Today, I detail the lessons I\u2019ve learned from my many trials and tribulations, ways to expand upon a foolproof recipe, new delicious flavors, and advice on handling leftover oat pulp.</p>
 <p>Oat milk is by far my favorite milk, in taste but also so much more. It\u2019s vegan, dairy-free, gluten-free (as long as you use certified GF oats), nut-free, soy-free, and it also saves the environment some heavy lifting. I hope you find this guide useful!</p>
+<p>\xA0</p>
 <h2>Oat milk basics</h2>
 <p>I won\u2019t keep you waiting\u2014here\u2019s the recipe! Blend together 4 cups of water, 1 cup of oats, 1 teaspoon of vanilla extract, a pinch of salt, and sweetener to taste. Then, strain the mixture with a tea towel or cheesecloth to separate the oat milk from the oat pulp. Sounds simple, right? I can tell you now that it really <em>is</em> quite simple, but my first couple \u201Cexperiments\u201D were so messy and subpar that my mom essentially begged me never to make oat milk again.</p>
 <p>My ingredients haven\u2019t changed either. I\u2019m not suddenly dishing out hundreds for \u201Cgourmet\u201D oats or special gadgets, and I promise that you also won\u2019t need more than basic kitchen staples to make stellar oat milk. So, what\u2019s the secret?</p>
@@ -7115,6 +10178,7 @@ var init_oat_milk_guide_svx = __esm({
 <p>Starch gelatinization explains exactly why my first batch of oat milk came out gummy and slimy. The unreasonably thick oat lava also covered my hands, arms, and counter in a layer of goop. I didn\u2019t deliberately heat the oat milk, but contact with the whirring blender blades and my warm hands led to an unpalatable mess.</p>
 <p>Essentially, you\u2019ll want to <strong>optimize the cold environment</strong> while making oat milk to avoid the onset of gelatinization. For me, this optimization looks like refrigerating all ingredients for at least a couple of hours before blending and straining\u2014especially the water and sweetener (I use three soaked medjool dates). In a similar vein, I keep my blending duration to a minimum: 5-10 second increments, with 10 seconds of \u201Crest time\u201D in between. I strain as quickly as possible to get my milk back in the fridge, and I also cool my hands down with ice water before working.</p>
 <p>That\u2019s it! Really. Feel free play with the thickness by changing the ratio of oats to water, though I\u2019d say to proceed with caution and adjust little by little. Achieving smooth, creamy, and fully non-slimy oat milk was truly a cathartic experience for me. However, despite the satisfaction of this success, I continued to look beyond and climb to new heights. Next stop: flavored milk!</p>
+<p>\xA0</p>
 <h2>Flavored milk</h2>
 <p>After understanding the thickening properties of oats, mastering the basics for an immaculate milk base follows without a sweat. It\u2019s also the hardest part! You really can\u2019t go wrong when experimenting with new flavors. Some of my favorite variations include:</p>
 <ul><li>matcha milk tea (1 tbsp of matcha powder)</li>
@@ -7129,6 +10193,7 @@ ${validate_component(BlogImage, "BlogImage").$$render($$result, {
         caption: "Matcha oat milk and cherry blossoms."
       }, {}, {})}
 <p>Flavors I haven\u2019t tried (but you definitely should) include black sesame milk and golden milk. Reap the extensive health benefits of turmeric! The doors are wide open, and I trust that you\u2019ll discover even more ingenious flavors.</p>
+<p>\xA0</p>
 <h2>What to do with oat pulp</h2>
 <p>Perhaps you now have show-stopping lavender oat milk, but you\u2019re still staring at the leftover pile of oat pulp beside it. Fear not! This slightly slimy glob is actually highly nutritious and easily incorporated into a variety of recipes. I\u2019ve seen people utilize this pulp in dishes from cookies (only for those who eat gluten or have access to a gluten-free baking flour mix, usually) to guacamole, but I usually prefer to throw it in pancake and brownie recipes.
 Here\u2019s my brownie recipe. It\u2019s food processor-friendly!</p>
@@ -7157,6 +10222,7 @@ ${validate_component(BlogHalfImage, "BlogHalfImage").$$render($$result, {
       })}
 <p>If you make slight adjustments to the ratio (such as using \xBC cup sweetener instead of bananas), don\u2019t sweat it! I\u2019ve found that this recipe is extremely forgiving. In fact, you could hike the amount of flour and nut butter to make brownie-cookies instead. My winged attempt turned out amazing, just like the sandwich cookies from ice cream sandwiches.</p>
 <p>For pancakes, adding in oat pulp is even more lax. Supplement your current recipe with this pulp for a fiber boost!</p>
+<p>\xA0</p>
 <h2>Additional notes</h2>
 <p>While this homemade oat milk is amazing cold or at room temperature, it\u2019ll still cook up when heated. This means no steamy, creamy lattes unless you add stabilizers that prevent gelatinization. The good news is that most store-bought oat milk brands use stabilizers, so I rely Trader Joe\u2019s oat milk for hot drinks instead.</p>
 <p>On the other hand, there <em>is</em> a scenario where homemade oat milk is preferable to its store-bought counterpart, namely oat yogurt. Whereas we\u2019re avoiding gelatinization while making oat milk, we actually take advantage of this thickening while making oat yogurt. With most non-dairy milks (almond, cashew, soy), we usually need a thickening agent to give the yogurt structure, whether it be pectin, agar-agar, or something else. Thankfully, oats have this property built in! Homemade oat yogurt effectively follows the same process as oat milk, but you don\u2019t need to keep anything cold. The strained milk mix is simmered on the stove right after, anyway! I use this <a href="${"https://myfermentedfoods.com/how-make-vegan-yogurt/"}" rel="${"nofollow"}">recipe</a>, and it\u2019s continuously served me well. It\u2019s also super simple! Bring your mixture to 180\u02DAF while whisking and without boiling, remove from the heat, and cool (while still whisking) until 115\u02DAF. Finally, stir in the yogurt starter/existing yogurt, ferment in a warm place for at least eight hours, and enjoy!</p>
@@ -7169,19 +10235,19 @@ ${validate_component(BlogHalfImage, "BlogHalfImage").$$render($$result, {
 var sustainable_textiles_svx_exports = {};
 __export(sustainable_textiles_svx_exports, {
   default: () => Sustainable_textiles,
-  metadata: () => metadata4
+  metadata: () => metadata5
 });
-var textiles1, textiles2, textiles3, metadata4, title4, slug4, publishDate4, tags4, thumbnail4, summary4, Sustainable_textiles;
+var textiles1, textiles2, textiles3, metadata5, title5, slug5, publishDate5, tags5, thumbnail5, summary5, Sustainable_textiles;
 var init_sustainable_textiles_svx = __esm({
   ".svelte-kit/output/server/entries/pages/blog/sustainable-textiles.svx.js"() {
-    init_index_8783c5b0();
-    init_BlogImage_70911919();
-    init_BlogGallery_93d317ee();
-    init_Tag_2f28d930();
+    init_index_88921582();
+    init_BlogImage_583d34a0();
+    init_BlogGallery_55092816();
+    init_Tag_1ce0eb4c();
     textiles1 = "/_app/assets/textiles-1-becaea75.webp";
     textiles2 = "/_app/assets/textiles-2-12aad45c.webp";
     textiles3 = "/_app/assets/textiles-3-a4faa238.webp";
-    metadata4 = {
+    metadata5 = {
       "title": "An antidote to greenwashing",
       "slug": "sustainable-textiles",
       "publishDate": "DEC 3 2021",
@@ -7189,10 +10255,11 @@ var init_sustainable_textiles_svx = __esm({
       "thumbnail": "haute-greenwashing-post.png",
       "summary": "Any brand can say they're sustainable. By delving into the various textiles behind sustainable clothing, we strip the power from companies to decide whether a product is environmentally friendly."
     };
-    ({ title: title4, slug: slug4, publishDate: publishDate4, tags: tags4, thumbnail: thumbnail4, summary: summary4 } = metadata4);
+    ({ title: title5, slug: slug5, publishDate: publishDate5, tags: tags5, thumbnail: thumbnail5, summary: summary5 } = metadata5);
     Sustainable_textiles = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-      return `${validate_component(PostHeader, "PostHeader").$$render($$result, { title: title4, publishDate: publishDate4, tags: tags4 }, {}, {})}
+      return `${validate_component(PostHeader, "PostHeader").$$render($$result, { title: title5, publishDate: publishDate5, tags: tags5 }, {}, {})}
 <p><em>This feature article was first published in Haute Magazine\u2019s \u201COn the Edge\u201D issue. I have posted it to my website to maximize web readability, but please feel free to explore the original <a href="${"https://www.hauteusc.com/ontheedge"}" rel="${"nofollow"}">here</a>, complete with the visual design and photography. Haute is USC\u2019s fashion, arts, and culture magazine.</em></p>
+<p>\xA0</p>
 <h2>Understanding fabrics can help us fight greenwashing</h2>
 <p>Any brand can say they\u2019re sustainable. It\u2019s easy to bluff. In recent years, greenwashing \u2014 providing misleading claims about environmental impact \u2014 has grown prolifically to match skyrocketing consumer demand for sustainable products. It\u2019s illegal, unethical, and it breaches the trust between consumers and brands. Greenwashing isn\u2019t going anywhere anytime soon, but we as consumers can regain control of how dodgy, sketchy marketing scams affect us. Specifically, by delving into the various textiles behind sustainable clothing, we strip the power from companies to decide whether a product is environmentally friendly on our behalf.</p>
 <p>Fast fashion brands stand at the center of many consistent greenwashing scandals. As an industry responsible for 10% of global carbon emissions, the need for pushing back is clear. Megan McSherry, a sustainability educator and USC 2020 alumna, cites H&amp;M as a perfect example of greenwashing. \u201CThey have their conscious collection with green tags on the clothing,\u201D she says. \u201CBut is the business as a whole sustainable? No. Is that conscious line sustainable? No, because they create millions of garments just for that small line every year.\u201D</p>
@@ -7211,6 +10278,7 @@ ${validate_component(BlogGallery, "BlogGallery").$$render($$result, { columns: "
           }, {}, {})}`;
         }
       })}
+<p>\xA0</p>
 <h2>Textiles: good and bad</h2>
 <p>McSherry explains that textiles play a key role in the industry, both upfront during production and later on in its afterlife. \u201CAbout 98% of textiles end up in a landfill,\u201D McSherry says. \u201CWhat is it going to do? Are the dyes going to impact the soil? Is it a petroleum-based product going into the landfill?\u201D Her key questions prompt deeper thought about what happens to our clothing once it\u2019s tossed out of sight.</p>
 <p>The top offenders are petroleum-based fabrics, including polyester and nylon. \u201CThey\u2019re basically plastic,\u201D McSherry says. \u201CEvery time you wash, microplastics are released into the ocean because our washing machines don\u2019t have the capability to filter out teeny-tiny microfibers.\u201D Once they reach the landfill, polyester and nylon take hundreds of years to decompose \u2014 the same predicament behind general plastic waste.</p>
@@ -7225,6 +10293,7 @@ ${validate_component(BlogGallery, "BlogGallery").$$render($$result, { columns: "
 <p>Lenzing\u2019s Eco Color technology provides a more environmentally-friendly method to dye fibers. When the TENCEL Modal is a honey-like consistency during the production process, they add the dye and spin out pre-colored fiber. Eco Colors mitigate the water and dye waste that comes with dyeing the fiber later on. In Austria, if you buy a bag of oranges, it actually comes in a bag that\u2019s made out of our Modal Eco Colors,\u201D Redd says. \u201CYou can just put it into your compost and it will biodegrade, which is really cool.\u201D</p>
 <p>Moving forward, Redd says being carbon neutral by 2050 is one of Lenzing\u2019s top goals. They\u2019ve started the process by offering carbon-zero fiber for TENCEL Modal, Lyocell, and REFIBRA by purchasing carbon credits and offering certification for brands. \u201CCreating more sustainable products and reinvesting in our fibers is really the future,\u201D Redd says.</p>
 <p>When assessing the materials on the clothing tag, McSherry provides a general rule of thumb. \u201CCotton, linen, TENCEL, bamboo lyocell \u2014 all of those are natural materials, and a lot of them grow fairly quickly or are less resource-intensive,\u201D she says. \u201CThe best fabrics are really just well thought out.\u201D</p>
+<p>\xA0</p>
 <h2>The power of transparency</h2>
 <p>So, what is the antidote to greenwashing? How do we catch companies in the act and make informed decisions? Beyond checking the clothing label for specific materials, McSherry urges people to assess brands as a whole by looking into the sustainable claims they find. \u201CDon\u2019t just assume that what brands are saying is true,\u201D she says.</p>
 <p>TENCEL ensures that brands using their fibers are telling the truth, by adding their fiber identification during the production process. \u201CSay you\u2019re in Madewell and you\u2019re looking at a product that says it\u2019s made out of TENCEL,\u201D Redd says. \u201CThat fabric has actually been tested in our lab, and we have given it a certification that it is our fiber.\u201D</p>
@@ -7238,6 +10307,7 @@ ${validate_component(BlogImage, "BlogImage").$$render($$result, {
         src: textiles1,
         caption: "Measuring textile squares in a sewing workspace. <i>(Photo credit: Quan Pham)</i>"
       }, {}, {})}
+<p>\xA0</p>
 <h2>Nuances in the broader picture of sustainable fashion</h2>
 <p>Sustainability extends beyond the numbers of how eco-friendly an item is. We as consumers also need to consider how brands treat their workers and their surrounding communities. With fast fashion, garment worker conditions are a particularly dire concern. \u201CFashion is one of the only industries that really can\u2019t automate very much,\u201D McSherry says. \u201CEvery single garment is sewn by somebody.\u201D</p>
 <p>Before Los Angeles passed S.B. 62, a bill ensuring minimum wage, garment workers made roughly $5 an hour sewing hundreds of garments, working 60 to 80 hours a week. \u201CThat\u2019s not okay,\u201D McSherry says. \u201CIn a state that has a $15 an hour minimum wage, some people are making as low as $2 an hour sewing the clothes that we wear once and then throw away \u2014 it\u2019s horrible.\u201D</p>
@@ -7256,21 +10326,21 @@ ${validate_component(BlogImage, "BlogImage").$$render($$result, {
 var index_svelte_exports2 = {};
 __export(index_svelte_exports2, {
   default: () => Blog,
-  load: () => load2
+  load: () => load3
 });
-async function load2() {
+async function load3() {
   const posts2 = await Promise.all(body);
   return { props: { posts: posts2 } };
 }
-var css$16, PostCard, css14, posts, body, Blog;
+var css$17, PostCard, css15, posts, body, Blog;
 var init_index_svelte2 = __esm({
   ".svelte-kit/output/server/entries/pages/blog/index.svelte.js"() {
-    init_index_8783c5b0();
-    init_Tag_2f28d930();
-    init_EmailInput_f963cc2b();
-    init_SvelteToast_svelte_svelte_type_style_lang_487258db();
-    init_Icon_b6ff11df();
-    css$16 = {
+    init_index_88921582();
+    init_Tag_1ce0eb4c();
+    init_EmailInput_991948a7();
+    init_SvelteToast_svelte_svelte_type_style_lang_382c1799();
+    init_Icon_4e55a523();
+    css$17 = {
       code: ".card-container.svelte-imcoqk.svelte-imcoqk{background-color:var(--postcard-color);box-shadow:0 0 1rem var(--secondary-subtle-color)}.card-container.svelte-imcoqk img.svelte-imcoqk{width:100%}.card-container.svelte-imcoqk .date.svelte-imcoqk{font-size:0.8rem;margin-top:0.5rem}.card-container.svelte-imcoqk .post-description.svelte-imcoqk{padding:0 1rem 0.5rem 1rem}.card-container.svelte-imcoqk h2.svelte-imcoqk{font-size:1.2rem;margin-bottom:0.5rem}.card-container.svelte-imcoqk a.svelte-imcoqk{text-decoration:none;color:var(--text-color)}.card-container.svelte-imcoqk p.svelte-imcoqk{font-size:0.9rem}",
       map: null
     };
@@ -7278,7 +10348,7 @@ var init_index_svelte2 = __esm({
       let { post } = $$props;
       if ($$props.post === void 0 && $$bindings.post && post !== void 0)
         $$bindings.post(post);
-      $$result.css.add(css$16);
+      $$result.css.add(css$17);
       return `<div class="${"card-container svelte-imcoqk"}"><a sveltekit:prefetch href="${"blog/" + escape(post.slug)}" class="${"svelte-imcoqk"}"><img${add_attribute("src", "/thumbnails/" + post.thumbnail + "?w=400&webp", 0)}${add_attribute("alt", post.title, 0)} class="${"svelte-imcoqk"}">
 		<div class="${"post-description svelte-imcoqk"}"><h2 class="${"svelte-imcoqk"}">${escape(post.title)}</h2>
 			<p class="${"date svelte-imcoqk"}">${post.editDate !== void 0 ? `EDITED ${escape(post.editDate)}` : `${post.publishDate !== void 0 ? `${escape(post.publishDate)}` : ``}`}</p>
@@ -7292,32 +10362,34 @@ var init_index_svelte2 = __esm({
 			<p class="${"svelte-imcoqk"}">${escape(post.summary)}</p></div></a>
 </div>`;
     });
-    css14 = {
+    css15 = {
       code: ".post-container.svelte-m3bscn{display:grid;grid-template-columns:repeat(auto-fit, minmax(15rem, 1fr));grid-gap:2rem;padding:3rem 0}.selectedTag.svelte-m3bscn .filter{background-color:var(--highlight-color);box-shadow:0 0 0.2rem var(--primary-light-color);color:var(--primary-color);border:2.5px solid var(--primary-color)}",
       map: null
     };
-    posts = { "./fruit-blobs.svx": () => Promise.resolve().then(() => (init_fruit_blobs_svx(), fruit_blobs_svx_exports)), "./michelle-feng.svx": () => Promise.resolve().then(() => (init_michelle_feng_svx(), michelle_feng_svx_exports)), "./oat-milk-guide.svx": () => Promise.resolve().then(() => (init_oat_milk_guide_svx(), oat_milk_guide_svx_exports)), "./sustainable-textiles.svx": () => Promise.resolve().then(() => (init_sustainable_textiles_svx(), sustainable_textiles_svx_exports)) };
+    posts = { "./fruit-blobs.svx": () => Promise.resolve().then(() => (init_fruit_blobs_svx(), fruit_blobs_svx_exports)), "./made-with-svelte-kit.svx": () => Promise.resolve().then(() => (init_made_with_svelte_kit_svx(), made_with_svelte_kit_svx_exports)), "./michelle-feng.svx": () => Promise.resolve().then(() => (init_michelle_feng_svx(), michelle_feng_svx_exports)), "./oat-milk-guide.svx": () => Promise.resolve().then(() => (init_oat_milk_guide_svx(), oat_milk_guide_svx_exports)), "./sustainable-textiles.svx": () => Promise.resolve().then(() => (init_sustainable_textiles_svx(), sustainable_textiles_svx_exports)) };
     body = [];
     for (const path in posts) {
-      body.push(posts[path]().then(({ metadata: metadata5 }) => metadata5));
+      body.push(posts[path]().then(({ metadata: metadata6 }) => metadata6));
     }
     Blog = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       let { posts: posts2 } = $$props;
       let selectedTags = {};
       for (const post of posts2) {
-        if (post.editDate !== void 0) {
-          post.dateObj = new Date(post.editDate);
-        } else {
-          post.dateObj = new Date(post.publishDate);
-        }
-        for (const postTag of post.tags) {
-          selectedTags[postTag.name] = false;
+        if (post !== void 0) {
+          if (post.editDate !== void 0) {
+            post.dateObj = new Date(post.editDate);
+          } else {
+            post.dateObj = new Date(post.publishDate);
+          }
+          for (const postTag of post.tags) {
+            selectedTags[postTag.name] = false;
+          }
         }
       }
       posts2.sort((a, b) => b.dateObj - a.dateObj);
       if ($$props.posts === void 0 && $$bindings.posts && posts2 !== void 0)
         $$bindings.posts(posts2);
-      $$result.css.add(css14);
+      $$result.css.add(css15);
       return `${$$result.head += `${$$result.title = `<title>blog</title>`, ""}`, ""}
 
 <div class="${"content"}">${validate_component(SvelteToast, "SvelteToast").$$render($$result, {}, {}, {})}
@@ -7345,10 +10417,10 @@ var init_index_svelte2 = __esm({
         }
       })}</div></div>
 	<div class="${"post-container svelte-m3bscn"}">${Object.keys(selectedTags).filter((k) => selectedTags[k]).length === 0 ? `${each(posts2, (post) => {
-        return `${validate_component(PostCard, "PostCard").$$render($$result, { post }, {}, {})}`;
+        return `${post !== void 0 ? `${validate_component(PostCard, "PostCard").$$render($$result, { post }, {}, {})}` : ``}`;
       })}` : `${each(posts2, (post) => {
         return `${each(post.tags, (tag) => {
-          return `${selectedTags[tag.name] ? `${validate_component(PostCard, "PostCard").$$render($$result, { post }, {}, {})}` : ``}`;
+          return `${selectedTags[tag.name] ? `${post !== void 0 ? `${validate_component(PostCard, "PostCard").$$render($$result, { post }, {}, {})}` : ``}` : ``}`;
         })}`;
       })}`}</div>
 	<p>Want reminders when I post? Feel free to subscribe:</p>
@@ -7361,90 +10433,108 @@ var init_index_svelte2 = __esm({
 // .svelte-kit/output/server/nodes/5.js
 var __exports6 = {};
 __export(__exports6, {
-  css: () => css15,
+  css: () => css16,
   entry: () => entry6,
   js: () => js6,
   module: () => index_svelte_exports2
 });
-var entry6, js6, css15;
+var entry6, js6, css16;
 var init__6 = __esm({
   ".svelte-kit/output/server/nodes/5.js"() {
     init_index_svelte2();
-    entry6 = "pages/blog/index.svelte-34c51f77.js";
-    js6 = ["pages/blog/index.svelte-34c51f77.js", "chunks/preload-helper-ec9aa979.js", "chunks/vendor-5c9fc647.js", "chunks/Tag-3273d686.js", "chunks/EmailInput-d38366b6.js"];
-    css15 = ["assets/pages/blog/index.svelte-c0441924.css", "assets/app-a7b924a0.css", "assets/vendor-42482fb6.css", "assets/Tag-5030ad19.css", "assets/EmailInput-f58afbb8.css"];
+    entry6 = "pages/blog/index.svelte-ca9db535.js";
+    js6 = ["pages/blog/index.svelte-ca9db535.js", "chunks/preload-helper-ec9aa979.js", "chunks/vendor-62d2730a.js", "chunks/Tag-ae4dc1d4.js", "chunks/EmailInput-d1a9343b.js"];
+    css16 = ["assets/pages/blog/index.svelte-c0441924.css", "assets/app-12d2dd8f.css", "assets/vendor-5469db33.css", "assets/Tag-5030ad19.css", "assets/EmailInput-f58afbb8.css"];
   }
 });
 
 // .svelte-kit/output/server/nodes/6.js
 var __exports7 = {};
 __export(__exports7, {
-  css: () => css16,
+  css: () => css17,
   entry: () => entry7,
   js: () => js7,
-  module: () => sustainable_textiles_svx_exports
+  module: () => made_with_svelte_kit_svx_exports
 });
-var entry7, js7, css16;
+var entry7, js7, css17;
 var init__7 = __esm({
   ".svelte-kit/output/server/nodes/6.js"() {
-    init_sustainable_textiles_svx();
-    entry7 = "pages/blog/sustainable-textiles.svx-8f28155c.js";
-    js7 = ["pages/blog/sustainable-textiles.svx-8f28155c.js", "chunks/vendor-5c9fc647.js", "chunks/BlogImage-02f557bf.js", "chunks/Tag-3273d686.js", "chunks/BlogGallery-6923edad.js"];
-    css16 = ["assets/app-a7b924a0.css", "assets/vendor-42482fb6.css", "assets/BlogImage-a68039e0.css", "assets/Tag-5030ad19.css", "assets/BlogGallery-494fa2f2.css"];
+    init_made_with_svelte_kit_svx();
+    entry7 = "pages/blog/made-with-svelte-kit.svx-15947146.js";
+    js7 = ["pages/blog/made-with-svelte-kit.svx-15947146.js", "chunks/vendor-62d2730a.js", "chunks/BlogImage-d21e1abf.js", "chunks/Tag-ae4dc1d4.js", "chunks/BlogGallery-fe55d445.js"];
+    css17 = ["assets/app-12d2dd8f.css", "assets/vendor-5469db33.css", "assets/BlogImage-4c10e73e.css", "assets/Tag-5030ad19.css", "assets/BlogGallery-ca2ee3c4.css"];
   }
 });
 
 // .svelte-kit/output/server/nodes/7.js
 var __exports8 = {};
 __export(__exports8, {
-  css: () => css17,
+  css: () => css18,
   entry: () => entry8,
   js: () => js8,
-  module: () => oat_milk_guide_svx_exports
+  module: () => sustainable_textiles_svx_exports
 });
-var entry8, js8, css17;
+var entry8, js8, css18;
 var init__8 = __esm({
   ".svelte-kit/output/server/nodes/7.js"() {
-    init_oat_milk_guide_svx();
-    entry8 = "pages/blog/oat-milk-guide.svx-90d5008f.js";
-    js8 = ["pages/blog/oat-milk-guide.svx-90d5008f.js", "chunks/vendor-5c9fc647.js", "chunks/BlogImage-02f557bf.js", "chunks/Tag-3273d686.js"];
-    css17 = ["assets/pages/blog/oat-milk-guide.svx-c588e15f.css", "assets/app-a7b924a0.css", "assets/vendor-42482fb6.css", "assets/BlogImage-a68039e0.css", "assets/Tag-5030ad19.css"];
+    init_sustainable_textiles_svx();
+    entry8 = "pages/blog/sustainable-textiles.svx-06067e6d.js";
+    js8 = ["pages/blog/sustainable-textiles.svx-06067e6d.js", "chunks/vendor-62d2730a.js", "chunks/BlogImage-d21e1abf.js", "chunks/Tag-ae4dc1d4.js", "chunks/BlogGallery-fe55d445.js"];
+    css18 = ["assets/app-12d2dd8f.css", "assets/vendor-5469db33.css", "assets/BlogImage-4c10e73e.css", "assets/Tag-5030ad19.css", "assets/BlogGallery-ca2ee3c4.css"];
   }
 });
 
 // .svelte-kit/output/server/nodes/8.js
 var __exports9 = {};
 __export(__exports9, {
-  css: () => css18,
+  css: () => css19,
   entry: () => entry9,
   js: () => js9,
-  module: () => michelle_feng_svx_exports
+  module: () => oat_milk_guide_svx_exports
 });
-var entry9, js9, css18;
+var entry9, js9, css19;
 var init__9 = __esm({
   ".svelte-kit/output/server/nodes/8.js"() {
-    init_michelle_feng_svx();
-    entry9 = "pages/blog/michelle-feng.svx-9658016a.js";
-    js9 = ["pages/blog/michelle-feng.svx-9658016a.js", "chunks/vendor-5c9fc647.js", "chunks/BlogImage-02f557bf.js", "chunks/Tag-3273d686.js"];
-    css18 = ["assets/app-a7b924a0.css", "assets/vendor-42482fb6.css", "assets/BlogImage-a68039e0.css", "assets/Tag-5030ad19.css"];
+    init_oat_milk_guide_svx();
+    entry9 = "pages/blog/oat-milk-guide.svx-617835dc.js";
+    js9 = ["pages/blog/oat-milk-guide.svx-617835dc.js", "chunks/vendor-62d2730a.js", "chunks/BlogImage-d21e1abf.js", "chunks/Tag-ae4dc1d4.js"];
+    css19 = ["assets/pages/blog/oat-milk-guide.svx-c588e15f.css", "assets/app-12d2dd8f.css", "assets/vendor-5469db33.css", "assets/BlogImage-4c10e73e.css", "assets/Tag-5030ad19.css"];
   }
 });
 
 // .svelte-kit/output/server/nodes/9.js
 var __exports10 = {};
 __export(__exports10, {
-  css: () => css19,
+  css: () => css20,
   entry: () => entry10,
   js: () => js10,
-  module: () => fruit_blobs_svx_exports
+  module: () => michelle_feng_svx_exports
 });
-var entry10, js10, css19;
+var entry10, js10, css20;
 var init__10 = __esm({
   ".svelte-kit/output/server/nodes/9.js"() {
+    init_michelle_feng_svx();
+    entry10 = "pages/blog/michelle-feng.svx-049010d3.js";
+    js10 = ["pages/blog/michelle-feng.svx-049010d3.js", "chunks/vendor-62d2730a.js", "chunks/BlogImage-d21e1abf.js", "chunks/Tag-ae4dc1d4.js"];
+    css20 = ["assets/app-12d2dd8f.css", "assets/vendor-5469db33.css", "assets/BlogImage-4c10e73e.css", "assets/Tag-5030ad19.css"];
+  }
+});
+
+// .svelte-kit/output/server/nodes/10.js
+var __exports11 = {};
+__export(__exports11, {
+  css: () => css21,
+  entry: () => entry11,
+  js: () => js11,
+  module: () => fruit_blobs_svx_exports
+});
+var entry11, js11, css21;
+var init__11 = __esm({
+  ".svelte-kit/output/server/nodes/10.js"() {
     init_fruit_blobs_svx();
-    entry10 = "pages/blog/fruit-blobs.svx-e6f6d90e.js";
-    js10 = ["pages/blog/fruit-blobs.svx-e6f6d90e.js", "chunks/vendor-5c9fc647.js", "chunks/BlogImage-02f557bf.js", "chunks/Tag-3273d686.js", "chunks/BlogGallery-6923edad.js"];
-    css19 = ["assets/app-a7b924a0.css", "assets/vendor-42482fb6.css", "assets/BlogImage-a68039e0.css", "assets/Tag-5030ad19.css", "assets/BlogGallery-494fa2f2.css"];
+    entry11 = "pages/blog/fruit-blobs.svx-bbe34f2d.js";
+    js11 = ["pages/blog/fruit-blobs.svx-bbe34f2d.js", "chunks/vendor-62d2730a.js", "chunks/BlogImage-d21e1abf.js", "chunks/Tag-ae4dc1d4.js", "chunks/BlogGallery-fe55d445.js"];
+    css21 = ["assets/app-12d2dd8f.css", "assets/vendor-5469db33.css", "assets/BlogImage-4c10e73e.css", "assets/Tag-5030ad19.css", "assets/BlogGallery-ca2ee3c4.css"];
   }
 });
 
@@ -7456,28 +10546,28 @@ __export(home_svelte_exports, {
 var Home;
 var init_home_svelte = __esm({
   ".svelte-kit/output/server/entries/pages/home.svelte.js"() {
-    init_index_8783c5b0();
+    init_index_88921582();
     Home = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       return ``;
     });
   }
 });
 
-// .svelte-kit/output/server/nodes/10.js
-var __exports11 = {};
-__export(__exports11, {
-  css: () => css20,
-  entry: () => entry11,
-  js: () => js11,
+// .svelte-kit/output/server/nodes/11.js
+var __exports12 = {};
+__export(__exports12, {
+  css: () => css22,
+  entry: () => entry12,
+  js: () => js12,
   module: () => home_svelte_exports
 });
-var entry11, js11, css20;
-var init__11 = __esm({
-  ".svelte-kit/output/server/nodes/10.js"() {
+var entry12, js12, css22;
+var init__12 = __esm({
+  ".svelte-kit/output/server/nodes/11.js"() {
     init_home_svelte();
-    entry11 = "pages/home.svelte-9eaa7d75.js";
-    js11 = ["pages/home.svelte-9eaa7d75.js", "chunks/vendor-5c9fc647.js", "chunks/navigation-b10cf5bf.js", "chunks/singletons-4a680913.js"];
-    css20 = ["assets/vendor-42482fb6.css"];
+    entry12 = "pages/home.svelte-d6648351.js";
+    js12 = ["pages/home.svelte-d6648351.js", "chunks/vendor-62d2730a.js", "chunks/navigation-b10cf5bf.js", "chunks/singletons-4a680913.js"];
+    css22 = ["assets/vendor-5469db33.css"];
   }
 });
 
@@ -7528,7 +10618,7 @@ function getRawBody(req) {
 }
 
 // .svelte-kit/output/server/app.js
-init_index_8783c5b0();
+init_index_88921582();
 var __accessCheck2 = (obj, member, msg) => {
   if (!member.has(obj))
     throw TypeError("Cannot " + msg);
@@ -7728,12 +10818,12 @@ function devalue(value) {
   }
   walk(value);
   var names = new Map();
-  Array.from(counts).filter(function(entry12) {
-    return entry12[1] > 1;
+  Array.from(counts).filter(function(entry13) {
+    return entry13[1] > 1;
   }).sort(function(a, b) {
     return b[1] - a[1];
-  }).forEach(function(entry12, i2) {
-    names.set(entry12[0], getName(i2));
+  }).forEach(function(entry13, i2) {
+    names.set(entry13[0], getName(i2));
   });
   function stringify(thing) {
     if (names.has(thing)) {
@@ -8022,8 +11112,8 @@ async function render_response({
   ssr,
   stuff
 }) {
-  const css21 = new Set(options.manifest._.entry.css);
-  const js12 = new Set(options.manifest._.entry.js);
+  const css23 = new Set(options.manifest._.entry.css);
+  const js13 = new Set(options.manifest._.entry.js);
   const styles = new Map();
   const serialized_data = [];
   let rendered;
@@ -8035,9 +11125,9 @@ async function render_response({
   if (ssr) {
     branch.forEach(({ node, loaded, fetched, uses_credentials }) => {
       if (node.css)
-        node.css.forEach((url2) => css21.add(url2));
+        node.css.forEach((url2) => css23.add(url2));
       if (node.js)
-        node.js.forEach((url2) => js12.add(url2));
+        node.js.forEach((url2) => js13.add(url2));
       if (node.styles)
         Object.entries(node.styles).forEach(([k, v]) => styles.set(k, v));
       if (fetched && page_config.hydrate)
@@ -8108,10 +11198,10 @@ ${rendered.css.code}</style>`;
       head += `
 	<style${options.dev ? " data-svelte" : ""}>${inlined_style}</style>`;
     }
-    head += Array.from(css21).map((dep) => `
+    head += Array.from(css23).map((dep) => `
 	<link${styles.has(dep) ? " disabled" : ""} rel="stylesheet" href="${options.prefix + dep}">`).join("");
     if (page_config.router || page_config.hydrate) {
-      head += Array.from(js12).map((dep) => `
+      head += Array.from(js13).map((dep) => `
 	<link rel="modulepreload" href="${options.prefix + dep}">`).join("");
       head += `
 			<script type="module">
@@ -9049,10 +12139,10 @@ var App = class {
 // .svelte-kit/vercel-tmp/manifest.js
 var manifest = {
   appDir: "_app",
-  assets: new Set(["favicon.svg", "thumbnails/breakthrough.png", "thumbnails/climate-tracker.jpg", "thumbnails/fruit-blobs.png", "thumbnails/haute-greenwashing-post.png", "thumbnails/haute-greenwashing.png", "thumbnails/mathy-protest.png", "thumbnails/nyt-stem-writing.jpg", "thumbnails/oat-milk.png", "thumbnails/teachers.jfif", "thumbnails/technica.jpg"]),
+  assets: new Set(["favicon.svg", "thumbnails/breakthrough.png", "thumbnails/climate-tracker.jpg", "thumbnails/fruit-blobs.png", "thumbnails/haute-greenwashing-post.png", "thumbnails/haute-greenwashing.png", "thumbnails/mathy-protest.png", "thumbnails/nyt-stem-writing.jpg", "thumbnails/oat-milk.png", "thumbnails/teachers.jfif", "thumbnails/technica.jpg", "thumbnails/vwl-site.png"]),
   _: {
     mime: { ".svg": "image/svg+xml", ".png": "image/png", ".jpg": "image/jpeg" },
-    entry: { "file": "start-a637dbb2.js", "js": ["start-a637dbb2.js", "chunks/vendor-5c9fc647.js", "chunks/preload-helper-ec9aa979.js", "chunks/singletons-4a680913.js"], "css": ["assets/vendor-42482fb6.css"] },
+    entry: { "file": "start-a95b92e7.js", "js": ["start-a95b92e7.js", "chunks/vendor-62d2730a.js", "chunks/preload-helper-ec9aa979.js", "chunks/singletons-4a680913.js"], "css": ["assets/vendor-5469db33.css"] },
     nodes: [
       () => Promise.resolve().then(() => (init__(), __exports)),
       () => Promise.resolve().then(() => (init__2(), __exports2)),
@@ -9064,7 +12154,8 @@ var manifest = {
       () => Promise.resolve().then(() => (init__8(), __exports8)),
       () => Promise.resolve().then(() => (init__9(), __exports9)),
       () => Promise.resolve().then(() => (init__10(), __exports10)),
-      () => Promise.resolve().then(() => (init__11(), __exports11))
+      () => Promise.resolve().then(() => (init__11(), __exports11)),
+      () => Promise.resolve().then(() => (init__12(), __exports12))
     ],
     routes: [
       {
@@ -9101,10 +12192,18 @@ var manifest = {
       },
       {
         type: "page",
+        pattern: /^\/blog\/made-with-svelte-kit\/?$/,
+        params: null,
+        path: "/blog/made-with-svelte-kit",
+        a: [0, 6],
+        b: [1]
+      },
+      {
+        type: "page",
         pattern: /^\/blog\/sustainable-textiles\/?$/,
         params: null,
         path: "/blog/sustainable-textiles",
-        a: [0, 6],
+        a: [0, 7],
         b: [1]
       },
       {
@@ -9112,7 +12211,7 @@ var manifest = {
         pattern: /^\/blog\/oat-milk-guide\/?$/,
         params: null,
         path: "/blog/oat-milk-guide",
-        a: [0, 7],
+        a: [0, 8],
         b: [1]
       },
       {
@@ -9120,7 +12219,7 @@ var manifest = {
         pattern: /^\/blog\/michelle-feng\/?$/,
         params: null,
         path: "/blog/michelle-feng",
-        a: [0, 8],
+        a: [0, 9],
         b: [1]
       },
       {
@@ -9128,7 +12227,7 @@ var manifest = {
         pattern: /^\/blog\/fruit-blobs\/?$/,
         params: null,
         path: "/blog/fruit-blobs",
-        a: [0, 9],
+        a: [0, 10],
         b: [1]
       },
       {
@@ -9136,7 +12235,7 @@ var manifest = {
         pattern: /^\/home\/?$/,
         params: null,
         path: "/home",
-        a: [0, 10],
+        a: [0, 11],
         b: [1]
       }
     ]

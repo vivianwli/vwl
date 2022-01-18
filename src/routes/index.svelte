@@ -26,7 +26,6 @@
 	import write3 from '$lib/assets/greenwashing-2.png?w=350&webp';
 
 	import { SvelteToast } from '@zerodevx/svelte-toast';
-	import { blur } from 'svelte/transition';
 
 	let aboutSection = 'at-usc';
 </script>
@@ -35,7 +34,7 @@
 	<title>home</title>
 </svelte:head>
 
-<div in:blur={{ duration: 800, delay: 800 }} out:blur={{ duration: 800 }} class="content">
+<div class="content">
 	<SvelteToast />
 	<!-- cover page! -->
 	<div class="section">
@@ -456,6 +455,7 @@
 	.outro h2 {
 		background-color: var(--primary-color);
 		background-image: none;
+		font-size: 1.5rem;
 	}
 	.about {
 		@media screen and (max-width: 50rem) {

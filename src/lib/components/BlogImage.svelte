@@ -15,7 +15,7 @@
 		width: 50%;
 		display: block;
 		margin: 2rem auto 1rem auto;
-		box-shadow: 0 0 1.2rem 0.1rem var(--secondary-color);
+		box-shadow: 0 0 1.2rem 0.1rem var(--secondary-subtle-color);
 		@media screen and (max-width: 50rem) {
 			width: 90%;
 		}

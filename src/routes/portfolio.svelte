@@ -15,7 +15,6 @@
 	import iy8 from '$lib/assets/iy8.png?webp';
 	import oracle from '$lib/assets/blair-oracle.png?h=600&webp';
 	import climateduSite from '$lib/assets/climatedu-website.png?h=600&webp';
-	import { blur } from 'svelte/transition';
 
 	import { page } from '$app/stores';
 
@@ -109,7 +108,7 @@
 	<title>portfolio</title>
 </svelte:head>
 
-<div in:blur={{ duration: 800, delay: 800 }} out:blur={{ duration: 800 }} class="content">
+<div class="content">
 	<h1>portfolio</h1>
 	<div class="tabs">
 		<div class="tab-selector">
@@ -468,7 +467,7 @@
 				h2 {
 					background-image: none;
 					background-color: var(--lighter);
-					font-size: 1.25rem;
+					font-size: 1.2rem;
 					margin-bottom: 0.5rem;
 				}
 				p {

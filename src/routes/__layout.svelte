@@ -1,6 +1,13 @@
+<script context="module">
+	export const load = async ({ url }) => ({
+		props: {
+			key: url.pathname
+		}
+	});
+</script>
+
 <script>
 	import '../app.scss';
-	import { onMount } from 'svelte';
 
 	import { page } from '$app/stores';
 	import { goto } from '$app/navigation';
@@ -8,6 +15,8 @@
 	import { browser } from '$app/env';
 	import { toast } from '@zerodevx/svelte-toast';
 	import { fly } from 'svelte/transition';
+	import PageTransition from '$lib/components/PageTransition.svelte';
+	export let key;
 
 	import Hamburger from 'svelte-hamburgers';
 	import Menu from '$lib/components/Menu.svelte';
@@ -19,14 +28,6 @@
 	let darkTheme;
 	let opened = 'closed';
 	$: if ($navigating) opened = 'closed';
-
-	onMount(() => {
-		const savedTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
-		darkTheme = savedTheme ?? 'light';
-		darkTheme === 'light'
-			? document.documentElement.setAttribute('data-theme', 'light')
-			: document.documentElement.setAttribute('data-theme', 'dark');
-	});
 
 	function switchTheme(event) {
 		darkTheme === 'light' ? (darkTheme = 'dark') : (darkTheme = 'light');
@@ -48,6 +49,16 @@
 	let portfolio = $page.url.pathName === '/portfolio' ? 'portfolio' : '';
 </script>
 
+<svelte:head>
+	<script>
+		let savedTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+		darkTheme = savedTheme ?? 'light';
+		darkTheme === 'light'
+			? document.documentElement.setAttribute('data-theme', 'light')
+			: document.documentElement.setAttribute('data-theme', 'dark');
+	</script>
+</svelte:head>
+
 <div class="scroll-bar-wrap">
 	<div class="scroll-box">
 		<div class="header">
@@ -65,9 +76,33 @@
 				{/if}
 			</div>
 			<nav>
-				<a sveltekit:prefetch href="/">home</a>
-				<a sveltekit:prefetch href="/portfolio">portfolio</a>
-				<a sveltekit:prefetch href="/blog">blog</a>
+				<a
+					sveltekit:prefetch
+					sveltekit:noscroll
+					href="/"
+					on:click={() =>
+						setTimeout(() => {
+							document.body.scrollTop = document.documentElement.scrollTop = 0;
+						}, 600)}>home</a
+				>
+				<a
+					sveltekit:prefetch
+					sveltekit:noscroll
+					href="/portfolio"
+					on:click={() =>
+						setTimeout(() => {
+							document.body.scrollTop = document.documentElement.scrollTop = 0;
+						}, 600)}>portfolio</a
+				>
+				<a
+					sveltekit:prefetch
+					sveltekit:noscroll
+					href="/blog"
+					on:click={() =>
+						setTimeout(() => {
+							document.body.scrollTop = document.documentElement.scrollTop = 0;
+						}, 600)}>blog</a
+				>
 			</nav>
 		</div>
 		<div class="dark-switch">
@@ -76,7 +111,9 @@
 			</div>
 		</div>
 		<div class="page-content {portfolio}">
-			<slot />
+			<PageTransition refresh={key}>
+				<slot />
+			</PageTransition>
 		</div>
 	</div>
 	<div class="background">

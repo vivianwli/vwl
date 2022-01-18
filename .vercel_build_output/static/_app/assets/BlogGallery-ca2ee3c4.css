@@ -1,0 +1,1 @@
+.gallery.svelte-rdygkv{display:grid;grid-template-columns:repeat(var(--columns),1fr)}@media screen and (max-width: 50rem){.gallery.svelte-rdygkv{display:block}}.half-width.svelte-rdygkv{margin:auto;width:50%}@media screen and (max-width: 50rem){.half-width.svelte-rdygkv{width:90%}}

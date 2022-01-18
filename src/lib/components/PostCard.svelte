@@ -5,7 +5,15 @@
 </script>
 
 <div class="card-container">
-	<a sveltekit:prefetch href="blog/{post.slug}">
+	<a
+		sveltekit:prefetch
+		sveltekit:noscroll
+		href="blog/{post.slug}"
+		on:click={() =>
+			setTimeout(() => {
+				document.body.scrollTop = document.documentElement.scrollTop = 0;
+			}, 600)}
+	>
 		<img src={'/thumbnails/' + post.thumbnail + '?w=400&webp'} alt={post.title} />
 		<div class="post-description">
 			<h2>{post.title}</h2>

@@ -114,8 +114,18 @@ h2 {
 	-moz-text-fill-color: transparent;
 
 	font-weight: 600;
-	font-size: 1.5rem;
+	font-size: 2rem;
 	margin-bottom: 1rem;
+}
+
+h3 {
+	color: var(--secondary-selected-color);
+}
+
+code {
+	background-color: var(--highlight-color);
+	padding: 0.25rem;
+	border-radius: 0.3rem;
 }
 
 /* when there's more than one button in a row */
@@ -203,6 +213,7 @@ nav {
 		&:hover {
 			color: var(--primary-color);
 			text-shadow: 0 0 0.2rem var(--primary-light-color);
+			cursor: pointer;
 		}
 	}
 }
@@ -228,5 +239,22 @@ nav {
 				padding: 15vh 10vw;
 			}
 		}
+	}
+}
+pre code {
+	display: block;
+	padding: 1.5rem;
+	white-space: pre;
+	.hljs-keyword {
+		color: #c4a9a1;
+	}
+	.hljs-name {
+		color: #91aaf2;
+	}
+	.hljs-string {
+		color: #be8187;
+	}
+	.hljs-attr {
+		color: var(--secondary-selected-color);
 	}
 }

@@ -1,10 +1,10 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-a637dbb2.js",
+    "file": "start-a95b92e7.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
-      "_vendor-5c9fc647.js",
+      "_vendor-62d2730a.js",
       "_preload-helper-ec9aa979.js",
       "_singletons-4a680913.js"
     ],
@@ -15,6 +15,7 @@
       "src/routes/portfolio.svelte",
       "src/routes/resume.svelte",
       "src/routes/blog/index.svelte",
+      "src/routes/blog/made-with-svelte-kit.svx",
       "src/routes/blog/sustainable-textiles.svx",
       "src/routes/blog/oat-milk-guide.svx",
       "src/routes/blog/michelle-feng.svx",
@@ -23,43 +24,43 @@
     ]
   },
   "src/routes/__layout.svelte": {
-    "file": "pages/__layout.svelte-8c98ccd4.js",
+    "file": "pages/__layout.svelte-703c8a38.js",
     "src": "src/routes/__layout.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-5c9fc647.js",
-      "_stores-4a6615d7.js",
+      "_vendor-62d2730a.js",
+      "_stores-d7124508.js",
       "_navigation-b10cf5bf.js",
       "_singletons-4a680913.js"
     ],
     "css": [
-      "assets/pages/__layout.svelte-ae8a0a80.css",
-      "assets/app-a7b924a0.css"
+      "assets/pages/__layout.svelte-96b5c87f.css",
+      "assets/app-12d2dd8f.css"
     ]
   },
   ".svelte-kit/runtime/components/error.svelte": {
-    "file": "error.svelte-01161cc0.js",
+    "file": "error.svelte-284a74ff.js",
     "src": ".svelte-kit/runtime/components/error.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-5c9fc647.js"
+      "_vendor-62d2730a.js"
     ]
   },
   "src/routes/index.svelte": {
-    "file": "pages/index.svelte-a2f1c973.js",
+    "file": "pages/index.svelte-843ee1ea.js",
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-5c9fc647.js",
-      "_Tag-3273d686.js",
-      "_EmailInput-d38366b6.js"
+      "_vendor-62d2730a.js",
+      "_Tag-ae4dc1d4.js",
+      "_EmailInput-d1a9343b.js"
     ],
     "css": [
-      "assets/pages/index.svelte-86409e33.css",
-      "assets/app-a7b924a0.css"
+      "assets/pages/index.svelte-8045ed9d.css",
+      "assets/app-12d2dd8f.css"
     ],
     "assets": [
       "assets/vwl-96b80c25.svg",
@@ -67,125 +68,141 @@
     ]
   },
   "src/routes/portfolio.svelte": {
-    "file": "pages/portfolio.svelte-f206216c.js",
+    "file": "pages/portfolio.svelte-6f0bd2da.js",
     "src": "src/routes/portfolio.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-5c9fc647.js",
-      "_Tag-3273d686.js",
-      "_stores-4a6615d7.js"
+      "_vendor-62d2730a.js",
+      "_Tag-ae4dc1d4.js",
+      "_stores-d7124508.js"
     ],
     "css": [
-      "assets/pages/portfolio.svelte-e6f7fe62.css",
-      "assets/app-a7b924a0.css"
+      "assets/pages/portfolio.svelte-622bf7cd.css",
+      "assets/app-12d2dd8f.css"
     ]
   },
   "src/routes/resume.svelte": {
-    "file": "pages/resume.svelte-eb4c99c3.js",
+    "file": "pages/resume.svelte-661b803f.js",
     "src": "src/routes/resume.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-5c9fc647.js"
+      "_vendor-62d2730a.js"
     ]
   },
   "src/routes/blog/index.svelte": {
-    "file": "pages/blog/index.svelte-34c51f77.js",
+    "file": "pages/blog/index.svelte-ca9db535.js",
     "src": "src/routes/blog/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_preload-helper-ec9aa979.js",
-      "_vendor-5c9fc647.js",
-      "_Tag-3273d686.js",
-      "_EmailInput-d38366b6.js"
+      "_vendor-62d2730a.js",
+      "_Tag-ae4dc1d4.js",
+      "_EmailInput-d1a9343b.js"
     ],
     "dynamicImports": [
       "src/routes/blog/fruit-blobs.svx",
+      "src/routes/blog/made-with-svelte-kit.svx",
       "src/routes/blog/michelle-feng.svx",
       "src/routes/blog/oat-milk-guide.svx",
       "src/routes/blog/sustainable-textiles.svx"
     ],
     "css": [
       "assets/pages/blog/index.svelte-c0441924.css",
-      "assets/app-a7b924a0.css"
+      "assets/app-12d2dd8f.css"
+    ]
+  },
+  "src/routes/blog/made-with-svelte-kit.svx": {
+    "file": "pages/blog/made-with-svelte-kit.svx-15947146.js",
+    "src": "src/routes/blog/made-with-svelte-kit.svx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-62d2730a.js",
+      "_BlogImage-d21e1abf.js",
+      "_BlogGallery-fe55d445.js",
+      "_Tag-ae4dc1d4.js"
+    ],
+    "css": [
+      "assets/app-12d2dd8f.css"
     ]
   },
   "src/routes/blog/sustainable-textiles.svx": {
-    "file": "pages/blog/sustainable-textiles.svx-8f28155c.js",
+    "file": "pages/blog/sustainable-textiles.svx-06067e6d.js",
     "src": "src/routes/blog/sustainable-textiles.svx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-5c9fc647.js",
-      "_BlogImage-02f557bf.js",
-      "_BlogGallery-6923edad.js",
-      "_Tag-3273d686.js"
+      "_vendor-62d2730a.js",
+      "_BlogImage-d21e1abf.js",
+      "_BlogGallery-fe55d445.js",
+      "_Tag-ae4dc1d4.js"
     ],
     "css": [
-      "assets/app-a7b924a0.css"
+      "assets/app-12d2dd8f.css"
     ]
   },
   "src/routes/blog/oat-milk-guide.svx": {
-    "file": "pages/blog/oat-milk-guide.svx-90d5008f.js",
+    "file": "pages/blog/oat-milk-guide.svx-617835dc.js",
     "src": "src/routes/blog/oat-milk-guide.svx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-5c9fc647.js",
-      "_BlogImage-02f557bf.js",
-      "_Tag-3273d686.js"
+      "_vendor-62d2730a.js",
+      "_BlogImage-d21e1abf.js",
+      "_Tag-ae4dc1d4.js"
     ],
     "css": [
       "assets/pages/blog/oat-milk-guide.svx-c588e15f.css",
-      "assets/app-a7b924a0.css"
+      "assets/app-12d2dd8f.css"
     ]
   },
   "src/routes/blog/michelle-feng.svx": {
-    "file": "pages/blog/michelle-feng.svx-9658016a.js",
+    "file": "pages/blog/michelle-feng.svx-049010d3.js",
     "src": "src/routes/blog/michelle-feng.svx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-5c9fc647.js",
-      "_BlogImage-02f557bf.js",
-      "_Tag-3273d686.js"
+      "_vendor-62d2730a.js",
+      "_BlogImage-d21e1abf.js",
+      "_Tag-ae4dc1d4.js"
     ],
     "css": [
-      "assets/app-a7b924a0.css"
+      "assets/app-12d2dd8f.css"
     ]
   },
   "src/routes/blog/fruit-blobs.svx": {
-    "file": "pages/blog/fruit-blobs.svx-e6f6d90e.js",
+    "file": "pages/blog/fruit-blobs.svx-bbe34f2d.js",
     "src": "src/routes/blog/fruit-blobs.svx",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-5c9fc647.js",
-      "_BlogImage-02f557bf.js",
-      "_BlogGallery-6923edad.js",
-      "_Tag-3273d686.js"
+      "_vendor-62d2730a.js",
+      "_BlogImage-d21e1abf.js",
+      "_BlogGallery-fe55d445.js",
+      "_Tag-ae4dc1d4.js"
     ],
     "css": [
-      "assets/app-a7b924a0.css"
+      "assets/app-12d2dd8f.css"
     ]
   },
   "src/routes/home.svelte": {
-    "file": "pages/home.svelte-9eaa7d75.js",
+    "file": "pages/home.svelte-d6648351.js",
     "src": "src/routes/home.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-5c9fc647.js",
+      "_vendor-62d2730a.js",
       "_navigation-b10cf5bf.js",
       "_singletons-4a680913.js"
     ]
   },
-  "_vendor-5c9fc647.js": {
-    "file": "chunks/vendor-5c9fc647.js",
+  "_vendor-62d2730a.js": {
+    "file": "chunks/vendor-62d2730a.js",
     "css": [
-      "assets/vendor-42482fb6.css"
+      "assets/vendor-5469db33.css"
     ]
   },
   "_singletons-4a680913.js": {
@@ -194,10 +211,10 @@
   "_preload-helper-ec9aa979.js": {
     "file": "chunks/preload-helper-ec9aa979.js"
   },
-  "_stores-4a6615d7.js": {
-    "file": "chunks/stores-4a6615d7.js",
+  "_stores-d7124508.js": {
+    "file": "chunks/stores-d7124508.js",
     "imports": [
-      "_vendor-5c9fc647.js"
+      "_vendor-62d2730a.js"
     ]
   },
   "_navigation-b10cf5bf.js": {
@@ -206,45 +223,45 @@
       "_singletons-4a680913.js"
     ]
   },
-  "_Tag-3273d686.js": {
-    "file": "chunks/Tag-3273d686.js",
+  "_Tag-ae4dc1d4.js": {
+    "file": "chunks/Tag-ae4dc1d4.js",
     "imports": [
-      "_vendor-5c9fc647.js"
+      "_vendor-62d2730a.js"
     ],
     "css": [
       "assets/Tag-5030ad19.css",
-      "assets/app-a7b924a0.css"
+      "assets/app-12d2dd8f.css"
     ]
   },
-  "_EmailInput-d38366b6.js": {
-    "file": "chunks/EmailInput-d38366b6.js",
+  "_EmailInput-d1a9343b.js": {
+    "file": "chunks/EmailInput-d1a9343b.js",
     "imports": [
-      "_vendor-5c9fc647.js"
+      "_vendor-62d2730a.js"
     ],
     "css": [
       "assets/EmailInput-f58afbb8.css",
-      "assets/app-a7b924a0.css"
+      "assets/app-12d2dd8f.css"
     ]
   },
-  "_BlogImage-02f557bf.js": {
-    "file": "chunks/BlogImage-02f557bf.js",
+  "_BlogImage-d21e1abf.js": {
+    "file": "chunks/BlogImage-d21e1abf.js",
     "imports": [
-      "_vendor-5c9fc647.js",
-      "_Tag-3273d686.js"
+      "_vendor-62d2730a.js",
+      "_Tag-ae4dc1d4.js"
     ],
     "css": [
-      "assets/BlogImage-a68039e0.css",
-      "assets/app-a7b924a0.css"
+      "assets/BlogImage-4c10e73e.css",
+      "assets/app-12d2dd8f.css"
     ]
   },
-  "_BlogGallery-6923edad.js": {
-    "file": "chunks/BlogGallery-6923edad.js",
+  "_BlogGallery-fe55d445.js": {
+    "file": "chunks/BlogGallery-fe55d445.js",
     "imports": [
-      "_vendor-5c9fc647.js"
+      "_vendor-62d2730a.js"
     ],
     "css": [
-      "assets/BlogGallery-494fa2f2.css",
-      "assets/app-a7b924a0.css"
+      "assets/BlogGallery-ca2ee3c4.css",
+      "assets/app-12d2dd8f.css"
     ]
   }
 }

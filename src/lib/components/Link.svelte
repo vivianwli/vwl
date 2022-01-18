@@ -3,7 +3,15 @@
 	export let link = '/';
 </script>
 
-<a sveltekit:prefetch href={link}>
+<a
+	sveltekit:prefetch
+	sveltekit:noscroll
+	href={link}
+	on:click={() =>
+		setTimeout(() => {
+			document.body.scrollTop = document.documentElement.scrollTop = 0;
+		}, 600)}
+>
 	<slot />
 </a>
 

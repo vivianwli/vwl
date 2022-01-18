@@ -14,6 +14,9 @@ const config = {
 		target: '#svelte',
 
 		vite: {
+			optimizeDeps: {
+				include: ['highlight.js/lib/core']
+			},
 			plugins: [imagetools({ force: true })],
 			css: {
 				preprocessorOptions: {

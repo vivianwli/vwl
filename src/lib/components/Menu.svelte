@@ -10,7 +10,16 @@
 {#if open}
 	<div>
 		{#each ['home', 'portfolio', 'blog'] as link, i}
-			<a sveltekit:prefetch href={'/' + link} transition:fly={{ y: -15, delay: 50 * i }}>
+			<a
+				sveltekit:prefetch
+				sveltekit:noscroll
+				href={'/' + link}
+				transition:fly={{ y: -15, delay: 50 * i }}
+				on:click={() =>
+					setTimeout(() => {
+						document.body.scrollTop = document.documentElement.scrollTop = 0;
+					}, 600)}
+			>
 				{link}
 			</a>
 		{/each}

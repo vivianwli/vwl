@@ -20,8 +20,6 @@
 	import Tag from '$lib/components/Tag.svelte';
 	import EmailInput from '$lib/components/EmailInput.svelte';
 	import { SvelteToast } from '@zerodevx/svelte-toast';
-	import { blur } from 'svelte/transition';
-	import { flip } from 'svelte/animate';
 	export let posts;
 
 	const options = {
@@ -37,13 +35,15 @@
 	}
 
 	for (const post of posts) {
-		if (post.editDate !== undefined) {
-			post.dateObj = new Date(post.editDate);
-		} else {
-			post.dateObj = new Date(post.publishDate);
-		}
-		for (const postTag of post.tags) {
-			selectedTags[postTag.name] = false;
+		if (post !== undefined) {
+			if (post.editDate !== undefined) {
+				post.dateObj = new Date(post.editDate);
+			} else {
+				post.dateObj = new Date(post.publishDate);
+			}
+			for (const postTag of post.tags) {
+				selectedTags[postTag.name] = false;
+			}
 		}
 	}
 	posts.sort((a, b) => b.dateObj - a.dateObj);
@@ -53,7 +53,7 @@
 	<title>blog</title>
 </svelte:head>
 
-<div in:blur={{ duration: 800, delay: 800 }} out:blur={{ duration: 800 }} class="content">
+<div class="content">
 	<SvelteToast />
 	<h1>musings</h1>
 	<p>A humble abode for my ideas, experiments, and reflections. Welcome!</p>
@@ -85,13 +85,17 @@
 	<div class="post-container">
 		{#if Object.keys(selectedTags).filter((k) => selectedTags[k]).length === 0}
 			{#each posts as post}
-				<PostCard {post} />
+				{#if post !== undefined}
+					<PostCard {post} />
+				{/if}
 			{/each}
 		{:else}
 			{#each posts as post}
 				{#each post.tags as tag}
 					{#if selectedTags[tag.name]}
-						<PostCard {post} />
+						{#if post !== undefined}
+							<PostCard {post} />
+						{/if}
 					{/if}
 				{/each}
 			{/each}

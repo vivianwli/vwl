@@ -4,7 +4,15 @@
 	import Tag from '$lib/components/Tag.svelte';
 </script>
 
-<a sveltekit:prefetch href={article.link}>
+<a
+	sveltekit:prefetch
+	sveltekit:noscroll
+	href={article.link}
+	on:click={() =>
+		setTimeout(() => {
+			document.body.scrollTop = document.documentElement.scrollTop = 0;
+		}, 600)}
+>
 	<div class="card-container">
 		<img src={'/thumbnails/' + article.thumbnail + '?w=400&webp'} alt={article.title} />
 		<div class="post-description">
