@@ -17,6 +17,7 @@ summary: 'My 20-something-day journey to create this website from scratch. What 
     import regret from '$lib/assets/regret.png?w=600&webp';
     import email1 from '$lib/assets/ios-email-input.png?w=300&webp';
     import email2 from '$lib/assets/android-email-input.png?w=300&webp';
+    import vwlDesign from '$lib/assets/vwl-site.png?w=600&webp';
     
     const code1 = 
     `<script>
@@ -42,7 +43,9 @@ I’ve also been entertaining the idea of creating a layman’s guide to buildin
 
 ## Preparing for battle
 
-I first spent three days in Figma designing the website, from color scheme to style guide to full layouts of the home, blog, and portfolio pages (in both desktop and mobile view). Honestly, it was a lot of work, but it set me up for success when actually coding the site, and I didn’t have to question my design decisions down the line. I’m also glad that I prioritized the mobile view early on, instead of freaking out about responsive design long after the rest of the website was implemented. I love Figma (so much), so no complaints here. Feel free to browse my [Figma document](https://www.figma.com/file/h7KckVZmrTNeVQd2afZwME/website?node-id=92%3A573) if you’re curious!
+I first spent three days in Figma designing the website, from color scheme to style guide to full layouts of the home, blog, and portfolio pages (in both desktop and mobile view). Honestly, it was a lot of work, but it set me up for success when actually coding the site, and I didn’t have to question my design decisions down the line. I’m also glad that I prioritized the mobile view early on, instead of freaking out about responsive design long after the rest of the website was implemented. I love Figma (so much), so no complaints here. Feel free to browse my [Figma document](https://www.figma.com/file/h7KckVZmrTNeVQd2afZwME/website?node-id=92%3A573) if you’re curious! If you'd like to dive deeper into about my design process, let me know and I might make a more design-focused post in the future.
+
+<BlogImage src={vwlDesign} caption="The styled covered page for my website design (vivianwli.com)" />
 
 Before I popped open the code editor, I also started by doing the [Svelte tutorial](https://svelte.dev/tutorial/basics) in full. It was very interactive and helpful, and it also set me up to know which resources to reach for later on. I also took [notes](https://www.notion.so/svelte-notes-6cac9e1403e04b1c8647ec518ee0b11e) on what I learned from the tutorial. They’re not amazing, comprehensive notes or anything, but they show the amount of preparation that I did before taking the plunge.
 
