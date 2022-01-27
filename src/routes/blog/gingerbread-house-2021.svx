@@ -70,14 +70,14 @@ The final dusting of powdered sugar across the rooftop and window sills brought 
 ## Our magnum opus
 
 <BlogGallery columns=2>
-    <BlogImage className="gallery-img" src={gingerbread1} caption="Gingerbread house" />
-    <BlogImage className="gallery-img" src={gingerbread2} caption="Gingerbread house" />
-    <BlogImage className="gallery-img" src={gingerbread3} caption="Gingerbread house" />
-    <BlogImage className="gallery-img" src={gingerbread4} caption="Gingerbread house" />
-    <BlogImage className="gallery-img" src={gingerbread5} caption="Gingerbread house" />
-    <BlogImage className="gallery-img" src={gingerbread6} caption="Gingerbread house" />
-    <BlogImage className="gallery-img" src={gingerbread7} caption="Gingerbread house" />
-    <BlogImage className="gallery-img" src={gingerbread8} caption="Gingerbread house" />  
+    <BlogImage className="gallery-img" src={gingerbread1} caption="Gingerbread house up close and personal" />
+    <BlogImage className="gallery-img" src={gingerbread2} caption="Gingerbread house (back) in ambient indoor lighting." />
+    <BlogImage className="gallery-img" src={gingerbread3} caption="Gingerbread house (front) in ambient indoor lighting." />
+    <BlogImage className="gallery-img" src={gingerbread4} caption="Gingerbread house (front) during sunset hour." />
+    <BlogImage className="gallery-img" src={gingerbread5} caption="Gingerbread house (front) during sunset hour." />
+    <BlogImage className="gallery-img" src={gingerbread6} caption="The gingerbread house and I in the chilly outdoors!" />
+    <BlogImage className="gallery-img" src={gingerbread7} caption="Spice drop rooftop in the crisp winter air." />
+    <BlogImage className="gallery-img" src={gingerbread8} caption="Gingerbread house (front) in the crisp winter air." />  
 </BlogGallery>
 
 I also shot and edited this stop motion video. Enjoy!

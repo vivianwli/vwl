@@ -39,7 +39,7 @@
 		margin-bottom: 3rem;
 	}
 	h1 {
-		line-height: 3rem;
+		line-height: 4rem;
 		@media screen and (max-width: 32rem) {
 			font-size: 2.5rem;
 		}
