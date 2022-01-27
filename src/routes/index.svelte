@@ -15,15 +15,15 @@
 
 	//image imports
 	import vwl from '$lib/assets/vwl.svg';
-	import vivian from '$lib/assets/vivian.png?w=350&webp';
-	import design1 from '$lib/assets/market-fermentation-2.png?w=200&webp';
-	import design2 from '$lib/assets/trader-joes-big.png?w=300&webp';
-	import code1 from '$lib/assets/research-2.png?w=300&webp';
-	import code2 from '$lib/assets/intro-code.svg?w=300&webp';
-	import code3 from '$lib/assets/research-1.png?w=300&webp';
-	import write1 from '$lib/assets/greenwashing-1.png?w=350&webp';
-	import write2 from '$lib/assets/viv-nytimes.png?w=300&webp';
-	import write3 from '$lib/assets/greenwashing-2.png?w=350&webp';
+	import vivian from '$lib/assets/vivian.png?w=600&webp';
+	import design1 from '$lib/assets/market-fermentation-2.png?w=400&webp';
+	import design2 from '$lib/assets/trader-joes-big.png?w=600&webp';
+	import code1 from '$lib/assets/research-2.png?w=400&webp';
+	import code2 from '$lib/assets/intro-code.svg?w=400&webp';
+	import code3 from '$lib/assets/research-1.png?w=400&webp';
+	import write1 from '$lib/assets/greenwashing-1.png?w=500&webp';
+	import write2 from '$lib/assets/viv-nytimes.png?w=400&webp';
+	import write3 from '$lib/assets/greenwashing-2.png?w=500&webp';
 
 	import { SvelteToast } from '@zerodevx/svelte-toast';
 
@@ -32,6 +32,10 @@
 
 <svelte:head>
 	<title>home</title>
+	<meta property="og:title" content="vivian li's website" />
+	<meta property="og:type" content="website" />
+	<meta property="og:image" content="/thumbnails/vwl-site.png" />
+	<meta property="og:url" content="https://www.vivianwli.com" />
 </svelte:head>
 
 <div class="content">

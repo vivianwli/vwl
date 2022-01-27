@@ -4,10 +4,18 @@
 	export let publishDate;
 	export let editDate;
 	export let tags;
+	export let thumbnail;
+	export let slug;
+	export let summary;
 </script>
 
 <svelte:head>
 	<title>{title}</title>
+	<meta property="og:title" content={title} />
+	<meta property="og:type" content="article" />
+	<meta property="og:image" content={'/thumbnails/' + thumbnail} />
+	<meta property="og:url" content={'https://www.vivianwli.com/blog/' + slug} />
+	<meta property="og:description" content={summary} />
 </svelte:head>
 
 <!--Title-->

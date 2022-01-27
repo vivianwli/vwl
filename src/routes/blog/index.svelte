@@ -51,6 +51,10 @@
 
 <svelte:head>
 	<title>blog</title>
+	<meta property="og:title" content="vivian li's blog" />
+	<meta property="og:type" content="website" />
+	<meta property="og:image" content="/thumbnails/vwl-site.png" />
+	<meta property="og:url" content="https://www.vivianwli.com/blog" />
 </svelte:head>
 
 <div class="content">

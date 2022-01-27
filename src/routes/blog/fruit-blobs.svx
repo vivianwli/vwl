@@ -18,7 +18,7 @@ summary: 'I received a Discord Nitro gift for my birthday month (July!), which u
   import blobs4 from '$lib/assets/basicbasket.png?w=600&webp';
 </script>
 
-<PostHeader {title} {publishDate} {editDate} {tags} />
+<PostHeader {title} {publishDate} {editDate} {tags} {thumbnail} {slug} {summary} />
 
 I received a Discord Nitro gift for my birthday month (July!), which ultimately catalyzed the creation of these fruit and vegetable blob emojis. The day after I received the gift, I started aggressively joining servers to use their emotes globally. Then, I noticed that Blob Hub Studios was actively accepting pack submissions and that there was a crucial demand in the market for fruit blobs, so I took the plunge.
 

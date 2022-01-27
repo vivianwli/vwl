@@ -13,7 +13,7 @@ summary: 'Michelle Feng explains how she discovered and became passionate about 
   import mathyProtest from '$lib/assets/mathy-protest.png?w=600&webp';
 </script>
 
-<PostHeader {title} {publishDate} {tags} />
+<PostHeader {title} {publishDate} {tags} {thumbnail} {slug} {summary} />
 
 When fifth year UCLA PhD student Michelle Feng initially entered undergraduate college as a theoretical math major, she wasn't expecting a future out of the ordinary. In fact, math seemed like the logical path to take simply because she performed well in math classes growing up. It wasn't until graduate school that she discovered—and became passionate about—the field she works in today: applied topology in the context of social justice.
 

@@ -16,7 +16,7 @@ summary: "Any brand can say they're sustainable. By delving into the various tex
   import textiles3 from '$lib/assets/textiles-3.png?w=600&webp';
 </script>
 
-<PostHeader {title} {publishDate} {tags} />
+<PostHeader {title} {publishDate} {tags} {thumbnail} {slug} {summary} />
 
 _This feature article was first published in Haute Magazine's "On the Edge" issue. I have posted it to my website to maximize web readability, but please feel free to explore the original [here](https://www.hauteusc.com/ontheedge), complete with the visual design and photography. Haute is USC's fashion, arts, and culture magazine._
 

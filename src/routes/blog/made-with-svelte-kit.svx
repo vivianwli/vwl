@@ -29,7 +29,7 @@ summary: 'My 20-something-day journey to create this website from scratch. What 
 
 </script>
 
-<PostHeader {title} {publishDate} {tags} />
+<PostHeader {title} {publishDate} {tags} {slug} {thumbnail} {summary} />
 
 So, Svelte is not for the faint-hearted. 😭
 

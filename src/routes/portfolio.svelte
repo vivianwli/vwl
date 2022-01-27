@@ -106,6 +106,10 @@
 
 <svelte:head>
 	<title>portfolio</title>
+	<meta property="og:title" content="vivian li's portfolio" />
+	<meta property="og:type" content="website" />
+	<meta property="og:image" content="/thumbnails/vwl-site.png" />
+	<meta property="og:url" content="https://www.vivianwli.com/portfolio" />
 </svelte:head>
 
 <div class="content">

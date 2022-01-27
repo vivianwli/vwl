@@ -1,0 +1,97 @@
+---
+title: 'A four-day gingerbread house'
+slug: 'gingerbread-house-2021'
+publishDate: 'JAN 26 2022'
+tags: [{ name: 'food' }, { name: 'art' }]
+thumbnail: 'gingerbread-5.jpg'
+summary: 'Jason and I built a gingerbread house from scratch—an incredibly deliberate process from research to construction to reflection. We gave our beloved house a photoshoot, too.'
+---
+
+<script>
+    import PostHeader from '$lib/components/PostHeader.svelte';
+    import BlogImage from '$lib/components/BlogImage.svelte';
+    import BlogGallery from '$lib/components/BlogGallery.svelte';
+    import gingerbread1 from '$lib/assets/gingerbread-1.jpg';
+    import gingerbread2 from '$lib/assets/gingerbread-2.jpg';
+    import gingerbread3 from '$lib/assets/gingerbread-3.jpg';
+    import gingerbread4 from '$lib/assets/gingerbread-4.jpg';
+    import gingerbread5 from '$lib/assets/gingerbread-5.jpg';
+    import gingerbread8 from '$lib/assets/gingerbread-8.jpg';
+    import gingerbread6 from '$lib/assets/gingerbread-6.jpg';
+    import gingerbread7 from '$lib/assets/gingerbread-7.jpg';
+    import jason from '$lib/assets/jason-rolling-dough.jpg';
+</script>
+
+<PostHeader {title} {publishDate} {tags} {slug} {thumbnail} {summary} />
+
+Here's the gingerbread house that I made this year.
+
+<BlogImage src={gingerbread5} caption="Our magnificent gingerbread house during sunset hour." />
+
+Now, how did we create this beauty?
+
+## Day 0
+
+We started with [a Pinterest board](https://www.pinterest.com/teacupkittie/gingerbread-house/). Hurrah! We had a blueprint. Specifically, we were looking at intricate designs made with simple ingredients—less clutter from colorful candies, and more embellishments of royal icing.
+
+In our research, we also took to observing media. We watched the Great British Bake Off (Holidays edition!), Claire Saffitz’s [attempt to make the greatest gingerbread house](https://www.youtube.com/watch?v=lB_VOwKiRjE), [year one](https://www.youtube.com/watch?v=ksgkpdxPPy8) _and_ [year two](https://www.youtube.com/watch?v=_SBSSfbih8U) of the NYT Cooking Gingerbread Showdown. I’d also been passively consuming this content for years. It was a bucket list item of mine to build a gingerbread house. The time had come.
+
+We also surveyed the vast marketplace of gingerbread house recipes. It needed to be delicious, yet possess undoubtable structural integrity. It proved to be quite the challenge, but we were inspired by Claire Saffitz’s notably thick walls. More than anything, we wanted our house to stay upright. Surely, these walls wouldn’t fall. We used these resources:
+
+- [Gingerbread house recipe](https://cooking.nytimes.com/guides/47-how-to-make-a-gingerbread-house) from NYT cooking
+- [Gingerbread house pattern](https://s3.documentcloud.org/documents/4321014/Template-for-a-Gingerbread-House.pdf) from NYT cooking
+- [Royal icing recipe](https://food52.com/recipes/32341-gingerbread-house-glue) from Food52
+- [Stained glass windows guide](https://www.wilton.com/how-to-make-a-candy-stained-glass-window/WLTECH-7845.html) from Wilton
+
+## Day 1
+
+After grocery shopping, we made the dough, split into two identical batches as recommended by NYT and Claire. Into the fridge overnight!
+
+<BlogImage src={jason} caption="Jason hard at work in the kitchen." />
+
+## Day 2
+
+We baked the gingerbread and cut it after cooling. Some recipes recommend to cut the gingerbread while the slabs are still warm, but the NYT recipe instructed us to wait for the gingerbread to cool (trust🤞🏻). _Spoiler alert:_ it was still possible to cut the gingerbread nearly two weeks after, when we realized that we needed to cut windows. Regardless of the timeframe, we just needed to be careful while cutting. Cutting cooled gingerbread was a success!
+
+## Day 3
+
+The magic began here—roughly 14 days after Day 2 (drying out for structural integrity). We crushed 15 jolly ranchers and spread little clumps of each color in each window frame, aiming for one blue/purple, one green, and one pink/red. Some of our slabs actually had a bit of concavity to them, so they wouldn’t lie flat on the baking sheet. To avoid having the melted jolly ranchers seep down under the slab, we placed a little wads of paper towel underneath our silicone mat to prop the slab corners up. It worked! The stained glass candy windows were absolutely beautiful when held up to the light. We bought flickering LED tea lights to illuminate the windows from inside the house :)
+
+We also whipped up the royal icing and embarked on the laborious journey of icing the individual pieces: the scalloped roof shingles, the decorative foliage, and the window frame details. These would dry overnight before we put the house together, eliminating any final-day smudge disasters.
+
+## Day 4
+
+Time to assemble! Honestly, it was pretty seamless. The icing was sturdy and nothing fell. I chalk this success up the immense patience that Jason and I have (or maybe exhaustion). We watched TV while the slabs were drying together—first the front and sides, then the back, and finally one roof after the other.
+
+For the decorations, we added a row of spice drops along the roof, a spice drop Christmas tree (courtesy of a very abnormally large spice drop and some pearlescent nonpareils), royal icing icicles, and candy canes for the front yard.
+
+The final dusting of powdered sugar across the rooftop and window sills brought the scene to life. After admiring our creation in real time, we gave it a photoshoot. The moment you’ve been waiting for...
+
+## Our magnum opus
+
+<BlogGallery columns=2>
+    <BlogImage className="gallery-img" src={gingerbread1} caption="Gingerbread house" />
+    <BlogImage className="gallery-img" src={gingerbread2} caption="Gingerbread house" />
+    <BlogImage className="gallery-img" src={gingerbread3} caption="Gingerbread house" />
+    <BlogImage className="gallery-img" src={gingerbread4} caption="Gingerbread house" />
+    <BlogImage className="gallery-img" src={gingerbread5} caption="Gingerbread house" />
+    <BlogImage className="gallery-img" src={gingerbread6} caption="Gingerbread house" />
+    <BlogImage className="gallery-img" src={gingerbread7} caption="Gingerbread house" />
+    <BlogImage className="gallery-img" src={gingerbread8} caption="Gingerbread house" />  
+</BlogGallery>
+
+I also shot and edited this stop motion video. Enjoy!
+
+<div class="iframe-container">
+    <iframe class="iframe"
+        src="https://www.youtube.com/embed/b8QaIJUQYi4">
+    </iframe>
+</div>
+
+## Reflections
+
+1. Creating the detailed icing decorations would have certainly been easier if we used a thinner royal icing. Ultra-thick royal icing is a must for the construction, but it was rather arduous to pipe because it was so dense. The royal icing icicles were especially difficult because they formed droplets instead of sharp ends—perhaps using a thinner icing would help with this, too.
+2. We made our door just a _tiny_ but too small (based on the NYT pattern), such that the LED light would not be able to come in and out of the gingerbread house. So, those lights will flicker incessantly until they go out for good. If you’re adding lights, make the door bigger!
+3. Buy a pack of 40 mini candy canes with the expectation that you’ll really only be able to salvage a ~10. They often come cracked, and they crack **really** easily.
+
+See you next year for another gingerbread house (?) 🥳

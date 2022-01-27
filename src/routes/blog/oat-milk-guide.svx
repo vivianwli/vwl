@@ -15,7 +15,7 @@ summary: 'There’s always more to learn about homemade oat milk. I detail the l
   import brownies from '$lib/assets/brownies.jpg?w=600&webp';
 </script>
 
-<PostHeader {title} {publishDate} {tags} />
+<PostHeader {title} {publishDate} {tags} {thumbnail} {slug} {summary} />
 
 Whether this is your first rodeo or your hundredth, there’s always more to learn about homemade oat milk. Today, I detail the lessons I’ve learned from my many trials and tribulations, ways to expand upon a foolproof recipe, new delicious flavors, and advice on handling leftover oat pulp.
 
