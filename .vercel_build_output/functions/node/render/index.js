@@ -1641,10 +1641,10 @@ var init_install_fetch = __esm({
           [PullSteps](readRequest) {
             const stream = this._controlledReadableByteStream;
             if (this._queueTotalSize > 0) {
-              const entry13 = this._queue.shift();
-              this._queueTotalSize -= entry13.byteLength;
+              const entry14 = this._queue.shift();
+              this._queueTotalSize -= entry14.byteLength;
               ReadableByteStreamControllerHandleQueueDrain(this);
-              const view = new Uint8Array(entry13.buffer, entry13.byteOffset, entry13.byteLength);
+              const view = new Uint8Array(entry14.buffer, entry14.byteOffset, entry14.byteLength);
               readRequest._chunkSteps(view);
               return;
             }
@@ -5626,7 +5626,7 @@ function create_ssr_component(fn) {
       return {
         html,
         css: {
-          code: Array.from(result.css).map((css23) => css23.code).join("\n"),
+          code: Array.from(result.css).map((css24) => css24.code).join("\n"),
           map: null
         },
         head: result.title + result.head
@@ -5795,11 +5795,11 @@ var init_SvelteToast_svelte_svelte_type_style_lang_382c1799 = __esm({
       const push = (msg, opts = {}) => {
         const param = __spreadValues({ target: "default" }, _obj(msg) ? msg : __spreadProps(__spreadValues({}, opts), { msg }));
         const conf = options[param.target] || {};
-        const entry13 = __spreadProps(__spreadValues(__spreadValues(__spreadValues({}, defaults), conf), param), {
+        const entry14 = __spreadProps(__spreadValues(__spreadValues(__spreadValues({}, defaults), conf), param), {
           theme: __spreadValues(__spreadValues({}, conf.theme), param.theme),
           id: ++count
         });
-        update((n) => entry13.reversed ? [...n, entry13] : [entry13, ...n]);
+        update((n) => entry14.reversed ? [...n, entry14] : [entry14, ...n]);
         return count;
       };
       const pop = (id) => {
@@ -5841,7 +5841,7 @@ var init_Icon_4e55a523 = __esm({
       let { src } = $$props;
       let { size = "1em" } = $$props;
       let { color = void 0 } = $$props;
-      let { title: title6 = void 0 } = $$props;
+      let { title: title7 = void 0 } = $$props;
       let { className = "" } = $$props;
       let innerHtml;
       let attr;
@@ -5851,8 +5851,8 @@ var init_Icon_4e55a523 = __esm({
         $$bindings.size(size);
       if ($$props.color === void 0 && $$bindings.color && color !== void 0)
         $$bindings.color(color);
-      if ($$props.title === void 0 && $$bindings.title && title6 !== void 0)
-        $$bindings.title(title6);
+      if ($$props.title === void 0 && $$bindings.title && title7 !== void 0)
+        $$bindings.title(title7);
       if ($$props.className === void 0 && $$bindings.className && className !== void 0)
         $$bindings.className(className);
       {
@@ -5870,7 +5870,7 @@ var init_Icon_4e55a523 = __esm({
       }
       {
         {
-          innerHtml = (title6 ? `<title>${title6}</title>` : "") + src.c;
+          innerHtml = (title7 ? `<title>${title7}</title>` : "") + src.c;
         }
       }
       return `<svg${spread([
@@ -5934,7 +5934,7 @@ var init_layout_svelte = __esm({
       }
       $$unsubscribe_navigating();
       return `${open ? `<div class="${"svelte-16u9tyq"}">${each(["home", "portfolio", "blog"], (link, i2) => {
-        return `<a sveltekit:prefetch${add_attribute("href", "/" + link, 0)} class="${"svelte-16u9tyq"}">${escape(link)}
+        return `<a sveltekit:prefetch sveltekit:noscroll${add_attribute("href", "/" + link, 0)} class="${"svelte-16u9tyq"}">${escape(link)}
 			</a>`;
       })}</div>` : ``}`;
     });
@@ -5950,7 +5950,7 @@ var init_layout_svelte = __esm({
       c: '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>'
     };
     css = {
-      code: ".background.svelte-opdz7w.svelte-opdz7w{position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:-1}.background.svelte-opdz7w span.svelte-opdz7w{backface-visibility:hidden;position:absolute;animation-name:svelte-opdz7w-move;animation-duration:60s;animation-timing-function:linear;animation-iteration-count:infinite}.background.svelte-opdz7w span.svelte-opdz7w:nth-child(1){color:var(--blob-1);top:39%;left:70%;animation-duration:14.9s;animation-delay:-53.2s;transform-origin:-21vw -9vh;width:16rem;height:16rem;border-radius:16rem;box-shadow:-32rem 0 8.435026098rem currentColor}.background.svelte-opdz7w span.svelte-opdz7w:nth-child(2){color:var(--blob-2);top:71%;left:8%;animation-duration:68.2s;animation-delay:-9.4s;transform-origin:-16vw -9vh;width:13rem;height:13rem;border-radius:13rem;box-shadow:-26rem 0 8.5540036859rem currentColor}.background.svelte-opdz7w span.svelte-opdz7w:nth-child(3){color:var(--blob-1);top:23%;left:67%;animation-duration:44.6s;animation-delay:-28.6s;transform-origin:-7vw -16vh;width:13rem;height:13rem;border-radius:13rem;box-shadow:-26rem 0 6.0773624272rem currentColor}.background.svelte-opdz7w span.svelte-opdz7w:nth-child(4){color:var(--blob-2);top:27%;left:53%;animation-duration:43.3s;animation-delay:-22.7s;transform-origin:18vw -20vh;width:16rem;height:16rem;border-radius:16rem;box-shadow:32rem 0 11.7879650326rem currentColor}.background.svelte-opdz7w span.svelte-opdz7w:nth-child(5){color:var(--blob-2);top:67%;left:21%;animation-duration:25.1s;animation-delay:-3.9s;transform-origin:23vw 1vh;width:13rem;height:13rem;border-radius:13rem;box-shadow:-26rem 0 6.4892280063rem currentColor}.background.svelte-opdz7w span.svelte-opdz7w:nth-child(6){color:var(--blob-2);top:74%;left:88%;animation-duration:64.5s;animation-delay:-38.9s;transform-origin:-18vw 18vh;width:10rem;height:10rem;border-radius:10rem;box-shadow:-20rem 0 5.382088078rem currentColor}.background.svelte-opdz7w span.svelte-opdz7w:nth-child(7){color:var(--blob-2);top:49%;left:75%;animation-duration:29.5s;animation-delay:-5.1s;transform-origin:-14vw 12vh;width:16rem;height:16rem;border-radius:16rem;box-shadow:32rem 0 6.5970363756rem currentColor}.background.svelte-opdz7w span.svelte-opdz7w:nth-child(8){color:var(--blob-1);top:86%;left:61%;animation-duration:25.6s;animation-delay:-50s;transform-origin:-21vw 4vh;width:10rem;height:10rem;border-radius:10rem;box-shadow:20rem 0 2.894587824rem currentColor}.background.svelte-opdz7w span.svelte-opdz7w:nth-child(9){color:var(--blob-1);top:8%;left:37%;animation-duration:48.6s;animation-delay:-55.8s;transform-origin:-21vw -12vh;width:10rem;height:10rem;border-radius:10rem;box-shadow:-20rem 0 4.6704312184rem currentColor}.background.svelte-opdz7w span.svelte-opdz7w:nth-child(10){color:var(--blob-1);top:77%;left:68%;animation-duration:45.3s;animation-delay:-13.9s;transform-origin:-19vw 8vh;width:16rem;height:16rem;border-radius:16rem;box-shadow:-32rem 0 5.2473949557rem currentColor}.background.svelte-opdz7w span.svelte-opdz7w:nth-child(11){color:var(--blob-1);top:66%;left:76%;animation-duration:66.8s;animation-delay:-58.8s;transform-origin:-11vw 14vh;width:16rem;height:16rem;border-radius:16rem;box-shadow:32rem 0 7.0864480998rem currentColor}.background.svelte-opdz7w span.svelte-opdz7w:nth-child(12){color:var(--blob-1);top:24%;left:38%;animation-duration:50.4s;animation-delay:-32.1s;transform-origin:-7vw 5vh;width:13rem;height:13rem;border-radius:13rem;box-shadow:26rem 0 6.9500965292rem currentColor}.background.svelte-opdz7w span.svelte-opdz7w:nth-child(13){color:var(--blob-2);top:49%;left:41%;animation-duration:61.8s;animation-delay:-34s;transform-origin:-15vw 0vh;width:13rem;height:13rem;border-radius:13rem;box-shadow:26rem 0 5.9333341341rem currentColor}.background.svelte-opdz7w span.svelte-opdz7w:nth-child(14){color:var(--blob-1);top:84%;left:21%;animation-duration:29.1s;animation-delay:-5.7s;transform-origin:22vw 8vh;width:10rem;height:10rem;border-radius:10rem;box-shadow:20rem 0 3.100076673rem currentColor}.background.svelte-opdz7w span.svelte-opdz7w:nth-child(15){color:var(--blob-2);top:54%;left:43%;animation-duration:40.7s;animation-delay:-47.8s;transform-origin:-17vw 7vh;width:10rem;height:10rem;border-radius:10rem;box-shadow:-20rem 0 5.8216090035rem currentColor}.background.svelte-opdz7w span.svelte-opdz7w:nth-child(16){color:var(--blob-1);top:19%;left:75%;animation-duration:41.5s;animation-delay:-69.8s;transform-origin:22vw -3vh;width:16rem;height:16rem;border-radius:16rem;box-shadow:32rem 0 8.0913915716rem currentColor}.background.svelte-opdz7w span.svelte-opdz7w:nth-child(17){color:var(--blob-2);top:26%;left:1%;animation-duration:64.8s;animation-delay:-41.4s;transform-origin:-8vw -24vh;width:16rem;height:16rem;border-radius:16rem;box-shadow:-32rem 0 6.7349405014rem currentColor}.background.svelte-opdz7w span.svelte-opdz7w:nth-child(18){color:var(--blob-2);top:24%;left:52%;animation-duration:39.2s;animation-delay:-12.7s;transform-origin:-11vw -24vh;width:10rem;height:10rem;border-radius:10rem;box-shadow:20rem 0 6.823052662rem currentColor}.background.svelte-opdz7w span.svelte-opdz7w:nth-child(19){color:var(--blob-2);top:17%;left:52%;animation-duration:47.5s;animation-delay:-42.7s;transform-origin:6vw -3vh;width:13rem;height:13rem;border-radius:13rem;box-shadow:-26rem 0 4.8207898892rem currentColor}.background.svelte-opdz7w span.svelte-opdz7w:nth-child(20){color:var(--blob-1);top:59%;left:42%;animation-duration:44.2s;animation-delay:-34s;transform-origin:-9vw -8vh;width:13rem;height:13rem;border-radius:13rem;box-shadow:-26rem 0 8.5948482554rem currentColor}@keyframes svelte-opdz7w-move{100%{transform:translate3d(0, 0, 1px) rotate(360deg)}}.header.svelte-opdz7w.svelte-opdz7w{position:fixed;width:fit-content;z-index:4}.custom-icon{color:var(--secondary-color);font-size:2rem;opacity:75%}.custom-icon:hover{color:var(--secondary-selected-color);cursor:pointer}.filled-moon{fill:var(--secondary-color)}.filled-moon:hover{fill:var(--secondary-selected-color)}.open.svelte-opdz7w.svelte-opdz7w{position:absolute;top:0;background-color:var(--bg-color);box-shadow:0 0 12rem var(--secondary-color);height:100vh;width:15rem;z-index:-1}",
+      code: ".background.svelte-13253q4.svelte-13253q4{position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:-1}.background.svelte-13253q4 span.svelte-13253q4{backface-visibility:hidden;position:absolute;animation-name:svelte-13253q4-move;animation-duration:60s;animation-timing-function:linear;animation-iteration-count:infinite}.background.svelte-13253q4 span.svelte-13253q4:nth-child(1){color:var(--blob-1);top:32%;left:23%;animation-duration:60.7s;animation-delay:-57.8s;transform-origin:-8vw 8vh;width:16rem;height:16rem;border-radius:16rem;box-shadow:-32rem 0 4.5993417966rem currentColor}.background.svelte-13253q4 span.svelte-13253q4:nth-child(2){color:var(--blob-2);top:77%;left:11%;animation-duration:34.2s;animation-delay:-27.6s;transform-origin:-6vw -13vh;width:10rem;height:10rem;border-radius:10rem;box-shadow:20rem 0 4.1138886507rem currentColor}.background.svelte-13253q4 span.svelte-13253q4:nth-child(3){color:var(--blob-2);top:4%;left:95%;animation-duration:26.7s;animation-delay:-48.4s;transform-origin:19vw 4vh;width:16rem;height:16rem;border-radius:16rem;box-shadow:32rem 0 9.1017344089rem currentColor}.background.svelte-13253q4 span.svelte-13253q4:nth-child(4){color:var(--blob-1);top:22%;left:96%;animation-duration:43.1s;animation-delay:-52.5s;transform-origin:19vw 5vh;width:16rem;height:16rem;border-radius:16rem;box-shadow:32rem 0 7.5754503522rem currentColor}.background.svelte-13253q4 span.svelte-13253q4:nth-child(5){color:var(--blob-1);top:23%;left:16%;animation-duration:25.9s;animation-delay:-29.3s;transform-origin:-9vw 9vh;width:16rem;height:16rem;border-radius:16rem;box-shadow:32rem 0 11.6182468223rem currentColor}.background.svelte-13253q4 span.svelte-13253q4:nth-child(6){color:var(--blob-2);top:87%;left:51%;animation-duration:30.4s;animation-delay:-47.3s;transform-origin:-10vw -11vh;width:16rem;height:16rem;border-radius:16rem;box-shadow:-32rem 0 10.6145497946rem currentColor}.background.svelte-13253q4 span.svelte-13253q4:nth-child(7){color:var(--blob-1);top:62%;left:18%;animation-duration:31s;animation-delay:-12.9s;transform-origin:13vw -13vh;width:13rem;height:13rem;border-radius:13rem;box-shadow:-26rem 0 7.9785605866rem currentColor}.background.svelte-13253q4 span.svelte-13253q4:nth-child(8){color:var(--blob-2);top:85%;left:49%;animation-duration:36.9s;animation-delay:-51.3s;transform-origin:19vw 13vh;width:16rem;height:16rem;border-radius:16rem;box-shadow:32rem 0 8.081577812rem currentColor}.background.svelte-13253q4 span.svelte-13253q4:nth-child(9){color:var(--blob-2);top:58%;left:11%;animation-duration:68.6s;animation-delay:-11.5s;transform-origin:-12vw 16vh;width:16rem;height:16rem;border-radius:16rem;box-shadow:32rem 0 9.9892460029rem currentColor}.background.svelte-13253q4 span.svelte-13253q4:nth-child(10){color:var(--blob-1);top:21%;left:29%;animation-duration:60.4s;animation-delay:-17.7s;transform-origin:-15vw -10vh;width:13rem;height:13rem;border-radius:13rem;box-shadow:26rem 0 6.886933748rem currentColor}.background.svelte-13253q4 span.svelte-13253q4:nth-child(11){color:var(--blob-2);top:36%;left:54%;animation-duration:43.9s;animation-delay:-56.8s;transform-origin:-19vw 1vh;width:13rem;height:13rem;border-radius:13rem;box-shadow:-26rem 0 4.7519475971rem currentColor}.background.svelte-13253q4 span.svelte-13253q4:nth-child(12){color:var(--blob-1);top:64%;left:24%;animation-duration:54.9s;animation-delay:-28.9s;transform-origin:10vw -8vh;width:10rem;height:10rem;border-radius:10rem;box-shadow:20rem 0 5.6998024874rem currentColor}.background.svelte-13253q4 span.svelte-13253q4:nth-child(13){color:var(--blob-2);top:85%;left:97%;animation-duration:16s;animation-delay:-30.1s;transform-origin:5vw -7vh;width:16rem;height:16rem;border-radius:16rem;box-shadow:32rem 0 9.7358264969rem currentColor}.background.svelte-13253q4 span.svelte-13253q4:nth-child(14){color:var(--blob-2);top:61%;left:7%;animation-duration:31s;animation-delay:-14.1s;transform-origin:21vw -15vh;width:13rem;height:13rem;border-radius:13rem;box-shadow:-26rem 0 6.9470816187rem currentColor}.background.svelte-13253q4 span.svelte-13253q4:nth-child(15){color:var(--blob-2);top:74%;left:16%;animation-duration:63.9s;animation-delay:-5.9s;transform-origin:14vw 14vh;width:10rem;height:10rem;border-radius:10rem;box-shadow:20rem 0 6.5667701977rem currentColor}.background.svelte-13253q4 span.svelte-13253q4:nth-child(16){color:var(--blob-2);top:60%;left:71%;animation-duration:62s;animation-delay:-29.2s;transform-origin:10vw -4vh;width:16rem;height:16rem;border-radius:16rem;box-shadow:32rem 0 4.5564869401rem currentColor}.background.svelte-13253q4 span.svelte-13253q4:nth-child(17){color:var(--blob-2);top:5%;left:84%;animation-duration:40.4s;animation-delay:-45.6s;transform-origin:18vw 9vh;width:10rem;height:10rem;border-radius:10rem;box-shadow:20rem 0 5.5160018692rem currentColor}.background.svelte-13253q4 span.svelte-13253q4:nth-child(18){color:var(--blob-1);top:89%;left:92%;animation-duration:37s;animation-delay:-44.3s;transform-origin:10vw -6vh;width:16rem;height:16rem;border-radius:16rem;box-shadow:32rem 0 6.6474904595rem currentColor}.background.svelte-13253q4 span.svelte-13253q4:nth-child(19){color:var(--blob-1);top:86%;left:87%;animation-duration:19.7s;animation-delay:-39s;transform-origin:19vw 14vh;width:10rem;height:10rem;border-radius:10rem;box-shadow:-20rem 0 4.9774288696rem currentColor}.background.svelte-13253q4 span.svelte-13253q4:nth-child(20){color:var(--blob-1);top:29%;left:73%;animation-duration:55s;animation-delay:-65.1s;transform-origin:5vw 0vh;width:10rem;height:10rem;border-radius:10rem;box-shadow:-20rem 0 4.5855225318rem currentColor}@keyframes svelte-13253q4-move{100%{transform:translate3d(0, 0, 1px) rotate(360deg)}}.header.svelte-13253q4.svelte-13253q4{position:fixed;width:fit-content;z-index:4}.custom-icon{color:var(--secondary-color);font-size:2rem;opacity:75%}.custom-icon:hover{color:var(--secondary-selected-color);cursor:pointer}.dark{fill:var(--secondary-color)}.dark:hover{fill:var(--secondary-selected-color)}.open.svelte-13253q4.svelte-13253q4{position:absolute;top:0;background-color:var(--bg-color);box-shadow:0 0 12rem var(--secondary-color);height:100vh;width:15rem;z-index:-1}",
       map: null
     };
     load = async ({ url }) => ({ props: { key: url.pathname } });
@@ -5961,7 +5961,6 @@ var init_layout_svelte = __esm({
       $$unsubscribe_navigating = subscribe(navigating, (value) => $navigating = value);
       let { key } = $$props;
       let open;
-      let themes = ["moon", "filled-moon"];
       let darkTheme;
       let opened = "closed";
       let emailSubmitted = $page.url.searchParams.get("emailSubmitted");
@@ -5982,14 +5981,14 @@ var init_layout_svelte = __esm({
           if ($navigating)
             opened = "closed";
         }
-        $$rendered = `${$$result.head += `<script data-svelte="svelte-1iuvi1l">let savedTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+        $$rendered = `${$$result.head += `<script data-svelte="svelte-1m58yue">savedTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
 		darkTheme = savedTheme ?? 'light';
 		darkTheme === 'light'
 			? document.documentElement.setAttribute('data-theme', 'light')
 			: document.documentElement.setAttribute('data-theme', 'dark');
 	<\/script>`, ""}
 
-<div class="${"scroll-bar-wrap"}"><div class="${"scroll-box"}"><div class="${"header svelte-opdz7w"}"><div class="${"mobile-nav"}"><div style="display: contents; --color:${"var(--secondary-color)"}; --padding:${"2rem"};">${validate_component(Hamburger, "Hamburger").$$render($$result, { type: "squeeze", open }, {
+<div class="${"scroll-bar-wrap"}"><div class="${"scroll-box"}"><div class="${"header svelte-13253q4"}"><div class="${"mobile-nav"}"><div style="display: contents; --color:${"var(--secondary-color)"}; --padding:${"2rem"};">${validate_component(Hamburger, "Hamburger").$$render($$result, { type: "squeeze", open }, {
           open: ($$value) => {
             open = $$value;
             $$settled = false;
@@ -6001,39 +6000,39 @@ var init_layout_svelte = __esm({
             $$settled = false;
           }
         }, {})}
-				${opened === "open" ? `<div class="${"open svelte-opdz7w"}"></div>` : ``}</div>
+				${opened === "open" ? `<div class="${"open svelte-13253q4"}"></div>` : ``}</div>
 			<nav><a sveltekit:prefetch sveltekit:noscroll href="${"/"}">home</a>
 				<a sveltekit:prefetch sveltekit:noscroll href="${"/portfolio"}">portfolio</a>
 				<a sveltekit:prefetch sveltekit:noscroll href="${"/blog"}">blog</a></nav></div>
 		<div class="${"dark-switch"}"><div>${validate_component(Icon, "Icon").$$render($$result, {
           src: FiMoon,
-          className: "custom-icon " + themes[darkTheme]
+          className: "custom-icon " + darkTheme
         }, {}, {})}</div></div>
-		<div class="${"page-content " + escape(portfolio) + " svelte-opdz7w"}">${validate_component(PageTransition, "PageTransition").$$render($$result, { refresh: key }, {}, {
+		<div class="${"page-content " + escape(portfolio) + " svelte-13253q4"}">${validate_component(PageTransition, "PageTransition").$$render($$result, { refresh: key }, {}, {
           default: () => {
             return `${slots.default ? slots.default({}) : ``}`;
           }
         })}</div></div>
-	<div class="${"background svelte-opdz7w"}"><span class="${"svelte-opdz7w"}"></span>
-		<span class="${"svelte-opdz7w"}"></span>
-		<span class="${"svelte-opdz7w"}"></span>
-		<span class="${"svelte-opdz7w"}"></span>
-		<span class="${"svelte-opdz7w"}"></span>
-		<span class="${"svelte-opdz7w"}"></span>
-		<span class="${"svelte-opdz7w"}"></span>
-		<span class="${"svelte-opdz7w"}"></span>
-		<span class="${"svelte-opdz7w"}"></span>
-		<span class="${"svelte-opdz7w"}"></span>
-		<span class="${"svelte-opdz7w"}"></span>
-		<span class="${"svelte-opdz7w"}"></span>
-		<span class="${"svelte-opdz7w"}"></span>
-		<span class="${"svelte-opdz7w"}"></span>
-		<span class="${"svelte-opdz7w"}"></span>
-		<span class="${"svelte-opdz7w"}"></span>
-		<span class="${"svelte-opdz7w"}"></span>
-		<span class="${"svelte-opdz7w"}"></span>
-		<span class="${"svelte-opdz7w"}"></span>
-		<span class="${"svelte-opdz7w"}"></span></div>
+	<div class="${"background svelte-13253q4"}"><span class="${"svelte-13253q4"}"></span>
+		<span class="${"svelte-13253q4"}"></span>
+		<span class="${"svelte-13253q4"}"></span>
+		<span class="${"svelte-13253q4"}"></span>
+		<span class="${"svelte-13253q4"}"></span>
+		<span class="${"svelte-13253q4"}"></span>
+		<span class="${"svelte-13253q4"}"></span>
+		<span class="${"svelte-13253q4"}"></span>
+		<span class="${"svelte-13253q4"}"></span>
+		<span class="${"svelte-13253q4"}"></span>
+		<span class="${"svelte-13253q4"}"></span>
+		<span class="${"svelte-13253q4"}"></span>
+		<span class="${"svelte-13253q4"}"></span>
+		<span class="${"svelte-13253q4"}"></span>
+		<span class="${"svelte-13253q4"}"></span>
+		<span class="${"svelte-13253q4"}"></span>
+		<span class="${"svelte-13253q4"}"></span>
+		<span class="${"svelte-13253q4"}"></span>
+		<span class="${"svelte-13253q4"}"></span>
+		<span class="${"svelte-13253q4"}"></span></div>
 </div>`;
       } while (!$$settled);
       $$unsubscribe_page();
@@ -6055,9 +6054,9 @@ var entry, js, css2;
 var init__ = __esm({
   ".svelte-kit/output/server/nodes/0.js"() {
     init_layout_svelte();
-    entry = "pages/__layout.svelte-703c8a38.js";
-    js = ["pages/__layout.svelte-703c8a38.js", "chunks/vendor-62d2730a.js", "chunks/stores-d7124508.js", "chunks/navigation-b10cf5bf.js", "chunks/singletons-4a680913.js"];
-    css2 = ["assets/pages/__layout.svelte-96b5c87f.css", "assets/app-12d2dd8f.css", "assets/vendor-5469db33.css"];
+    entry = "pages/__layout.svelte-0b7d2b2c.js";
+    js = ["pages/__layout.svelte-0b7d2b2c.js", "chunks/vendor-0e906c74.js", "chunks/stores-ada5a490.js", "chunks/navigation-b10cf5bf.js", "chunks/singletons-4a680913.js"];
+    css2 = ["assets/pages/__layout.svelte-b49ad7a5.css", "assets/app-ec155f4d.css", "assets/vendor-5469db33.css"];
   }
 });
 
@@ -6105,8 +6104,8 @@ var entry2, js2, css3;
 var init__2 = __esm({
   ".svelte-kit/output/server/nodes/1.js"() {
     init_error_svelte();
-    entry2 = "error.svelte-284a74ff.js";
-    js2 = ["error.svelte-284a74ff.js", "chunks/vendor-62d2730a.js"];
+    entry2 = "error.svelte-e2e6f93c.js";
+    js2 = ["error.svelte-e2e6f93c.js", "chunks/vendor-0e906c74.js"];
     css3 = ["assets/vendor-5469db33.css"];
   }
 });
@@ -6389,7 +6388,7 @@ var init_index_svelte = __esm({
       if ($$props.link === void 0 && $$bindings.link && link !== void 0)
         $$bindings.link(link);
       $$result.css.add(css$13);
-      return `<a sveltekit:prefetch${add_attribute("href", link, 0)} class="${"svelte-jrov8f"}">${slots.default ? slots.default({}) : ``}
+      return `<a sveltekit:prefetch sveltekit:noscroll${add_attribute("href", link, 0)} class="${"svelte-jrov8f"}">${slots.default ? slots.default({}) : ``}
 </a>`;
     });
     FiArrowDownCircle = {
@@ -6448,22 +6447,22 @@ var init_index_svelte = __esm({
       c: '<path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>'
     };
     vwl = "/_app/assets/vwl-96b80c25.svg";
-    vivian = "/_app/assets/vivian-f8785193.webp";
-    design1 = "/_app/assets/market-fermentation-2-e752231c.webp";
-    design2 = "/_app/assets/trader-joes-big-ac9c4434.webp";
-    code1 = "/_app/assets/research-2-6e54c590.webp";
-    code2 = "/_app/assets/intro-code-95867d96.svg?w=300&webp";
-    code3 = "/_app/assets/research-1-14ae9195.webp";
-    write1 = "/_app/assets/greenwashing-1-b8b8274f.webp";
-    write2 = "/_app/assets/viv-nytimes-7b55cee0.webp";
-    write3 = "/_app/assets/greenwashing-2-ff857b82.webp";
+    vivian = "/_app/assets/vivian-1e319a32.webp";
+    design1 = "/_app/assets/market-fermentation-2-403a87cd.webp";
+    design2 = "/_app/assets/trader-joes-big-83b182ed.webp";
+    code1 = "/_app/assets/research-2-cc48fcc1.webp";
+    code2 = "/_app/assets/intro-code-95867d96.svg?w=400&webp";
+    code3 = "/_app/assets/research-1-4b3660ab.webp";
+    write1 = "/_app/assets/greenwashing-1-2d433eb3.webp";
+    write2 = "/_app/assets/viv-nytimes-18b09010.webp";
+    write3 = "/_app/assets/greenwashing-2-a6351c4d.webp";
     css6 = {
       code: ".section.svelte-vu37sm.svelte-vu37sm{scroll-snap-align:start}.logo.svelte-vu37sm.svelte-vu37sm{width:40vw;margin:auto;padding-top:10vh;margin-bottom:10vh}@media screen and (max-width: 50rem){.logo.svelte-vu37sm.svelte-vu37sm{width:50vw}}.logo.svelte-vu37sm img.svelte-vu37sm{width:100%;margin:auto}.arrow{opacity:50%;width:100%;margin:auto;margin-top:15vh;margin-bottom:10vh}.arrow:hover{color:var(--secondary-color);cursor:default}.mini-section.svelte-vu37sm.svelte-vu37sm{display:grid;grid-template-columns:1fr 1fr;margin-top:10vh}@media screen and (max-width: 50rem){.mini-section.svelte-vu37sm.svelte-vu37sm{grid-template-columns:1fr;grid-template-rows:1fr 1fr}}.mini-section.svelte-vu37sm img.svelte-vu37sm{box-shadow:0 0 1.2rem 0.1rem var(--secondary-color);max-width:100%}.things.svelte-vu37sm .mini-section.svelte-vu37sm{margin:20vh 0vw 10vh 0vw}.things.svelte-vu37sm .arrow{margin-top:5vh}.mini-section.svelte-vu37sm .avatar.svelte-vu37sm{width:75%;max-width:20rem;margin:auto;border-radius:100%}@media screen and (max-width: 50rem){.mini-section.svelte-vu37sm .avatar.svelte-vu37sm{width:100%}}.text-right.svelte-vu37sm.svelte-vu37sm{display:flex;justify-content:center;flex-direction:column;margin-left:10%}@media screen and (max-width: 50rem){.text-right.svelte-vu37sm.svelte-vu37sm{margin:auto}}.text-left.svelte-vu37sm.svelte-vu37sm{display:flex;flex-direction:column;justify-content:center;align-items:flex-end;text-align:right;margin-right:10%}@media screen and (max-width: 50rem){.text-left.svelte-vu37sm.svelte-vu37sm{margin:auto}}.intro.svelte-vu37sm.svelte-vu37sm{padding-top:5vh}.intro.svelte-vu37sm .text-right.svelte-vu37sm{margin-left:0}.intro.svelte-vu37sm h1.svelte-vu37sm{margin-top:0;line-height:3rem}.image-stack.svelte-vu37sm.svelte-vu37sm{display:grid;grid-template-columns:repeat(12, 1fr);align-content:center;position:relative;padding-top:2em;max-width:25rem}.image-right.svelte-vu37sm.svelte-vu37sm{margin-left:10%}@media screen and (max-width: 50rem){.image-right.svelte-vu37sm.svelte-vu37sm{order:-1;margin:auto}}.image-left.svelte-vu37sm.svelte-vu37sm{margin-right:10%}@media screen and (max-width: 50rem){.image-left.svelte-vu37sm.svelte-vu37sm{margin:auto}}.design-top.svelte-vu37sm.svelte-vu37sm{grid-column:8/-1;grid-row:1;z-index:1;transform:rotate(12deg)}.design-bottom.svelte-vu37sm.svelte-vu37sm{grid-column:1/span 8;grid-row:1;padding-top:20%;transform:rotate(-10deg)}.code-top.svelte-vu37sm.svelte-vu37sm{grid-column:7/-1;grid-row:1;z-index:2;padding-top:20%;transform:rotate(10deg)}.code-middle.svelte-vu37sm.svelte-vu37sm{grid-column:1/span 7;grid-row:1;z-index:1;padding-top:75%}.code-bottom.svelte-vu37sm.svelte-vu37sm{grid-column:3/span 6;grid-row:1;transform:rotate(-5deg)}.write-top.svelte-vu37sm.svelte-vu37sm{grid-column:4/-1;grid-row:1;z-index:2;padding-top:40%;transform:rotate(-15deg)}.write-middle.svelte-vu37sm.svelte-vu37sm{grid-column:1/span 6;grid-row:1;z-index:1;transform:rotate(-5deg)}.write-bottom.svelte-vu37sm.svelte-vu37sm{grid-column:4/-1;grid-row:1;padding-top:7.5%;transform:rotate(8deg)}.outro.svelte-vu37sm.svelte-vu37sm{margin:15vh 0}.outro-content.svelte-vu37sm.svelte-vu37sm{display:grid;grid-template-columns:1fr 7rem 1.3fr}@media screen and (max-width: 50rem){.outro-content.svelte-vu37sm.svelte-vu37sm{display:flex;flex-direction:column}}.outro.svelte-vu37sm h1.svelte-vu37sm{width:fit-content;margin:auto}.outro.svelte-vu37sm h2.svelte-vu37sm{background-color:var(--primary-color);background-image:none;font-size:1.5rem}@media screen and (max-width: 50rem){.about.svelte-vu37sm.svelte-vu37sm{order:-1}}.outro.svelte-vu37sm span.svelte-vu37sm{height:80%;width:4px;background-color:var(--secondary-color);border-radius:99px;opacity:50%;margin:auto}.contact.svelte-vu37sm.svelte-vu37sm{text-align:right;display:flex;flex-direction:column;align-items:flex-end}.media-icon-container.svelte-vu37sm.svelte-vu37sm{display:grid;grid-template-columns:repeat(3, min-content) 1fr;grid-template-rows:1fr 1fr;grid-gap:0.75rem}.media-icon{font-size:3rem !important}.contact.svelte-vu37sm p.svelte-vu37sm{margin:5% 0}.selectedTag.svelte-vu37sm .filter{background-color:var(--highlight-color);box-shadow:0 0 0.2rem var(--primary-light-color);color:var(--primary-color);border:2.5px solid var(--primary-color)}.hidden{visibility:hidden}",
       map: null
     };
     Routes = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       $$result.css.add(css6);
-      return `${$$result.head += `${$$result.title = `<title>home</title>`, ""}`, ""}
+      return `${$$result.head += `${$$result.title = `<title>home</title>`, ""}<meta property="${"og:title"}" content="${"vivian li's website"}" data-svelte="svelte-lejy8w"><meta property="${"og:type"}" content="${"website"}" data-svelte="svelte-lejy8w"><meta property="${"og:image"}" content="${"/thumbnails/vwl-site.png"}" data-svelte="svelte-lejy8w"><meta property="${"og:url"}" content="${"https://www.vivianwli.com"}" data-svelte="svelte-lejy8w">`, ""}
 
 <div class="${"content"}">${validate_component(SvelteToast, "SvelteToast").$$render($$result, {}, {}, {})}
 	
@@ -6482,7 +6481,7 @@ var init_index_svelte = __esm({
 					<b>Welcome to my playground</b>!
 				</p>
 				${validate_component(Link, "Link").$$render($$result, {
-        link: "https://drive.google.com/file/d/1mkq5Q-g9xGp5N2UZcgNrXokr2vZ4QfOS/view?usp=sharing"
+        link: "https://drive.google.com/file/d/1hCMsXYMXhtcDfGwaqLa2xAStBQDChc-W/view?usp=sharing"
       }, {}, {
         default: () => {
           return `resume`;
@@ -6528,7 +6527,7 @@ var init_index_svelte = __esm({
 					components, figuring out what they mean, and sharing them with others. Thankfully, I get
 					to do a lot of that here.
 				</p>
-				<div class="${"buttons"}">${validate_component(Link, "Link").$$render($$result, { link: "/portfolio" }, {}, {
+				<div class="${"buttons"}">${validate_component(Link, "Link").$$render($$result, { link: "/portfolio?tab=journalism" }, {}, {
         default: () => {
           return `my writing portfolio`;
         }
@@ -6631,9 +6630,9 @@ var entry3, js3, css7;
 var init__3 = __esm({
   ".svelte-kit/output/server/nodes/2.js"() {
     init_index_svelte();
-    entry3 = "pages/index.svelte-843ee1ea.js";
-    js3 = ["pages/index.svelte-843ee1ea.js", "chunks/vendor-62d2730a.js", "chunks/Tag-ae4dc1d4.js", "chunks/EmailInput-d1a9343b.js"];
-    css7 = ["assets/pages/index.svelte-8045ed9d.css", "assets/app-12d2dd8f.css", "assets/vendor-5469db33.css", "assets/Tag-5030ad19.css", "assets/EmailInput-f58afbb8.css"];
+    entry3 = "pages/index.svelte-046aa6ac.js";
+    js3 = ["pages/index.svelte-046aa6ac.js", "chunks/vendor-0e906c74.js", "chunks/Tag-4aa40753.js", "chunks/EmailInput-26df116f.js"];
+    css7 = ["assets/pages/index.svelte-8045ed9d.css", "assets/app-ec155f4d.css", "assets/vendor-5469db33.css", "assets/Tag-5030ad19.css", "assets/EmailInput-f58afbb8.css"];
   }
 });
 
@@ -6659,7 +6658,7 @@ var init_portfolio_svelte = __esm({
       if ($$props.article === void 0 && $$bindings.article && article !== void 0)
         $$bindings.article(article);
       $$result.css.add(css$14);
-      return `<a sveltekit:prefetch${add_attribute("href", article.link, 0)} class="${"svelte-dt7gsf"}"><div class="${"card-container svelte-dt7gsf"}"><img${add_attribute("src", "/thumbnails/" + article.thumbnail + "?w=400&webp", 0)}${add_attribute("alt", article.title, 0)} class="${"svelte-dt7gsf"}">
+      return `<a sveltekit:prefetch sveltekit:noscroll${add_attribute("href", article.link, 0)} class="${"svelte-dt7gsf"}"><div class="${"card-container svelte-dt7gsf"}"><img${add_attribute("src", "/thumbnails/" + article.thumbnail + "?w=400&webp", 0)}${add_attribute("alt", article.title, 0)} class="${"svelte-dt7gsf"}">
 		<div class="${"post-description svelte-dt7gsf"}"><h2 class="${"svelte-dt7gsf"}">${escape(article.title)}</h2>
 			<p class="${"date svelte-dt7gsf"}">${escape(article.info)}</p>
 			<div class="${"buttons svelte-dt7gsf"}">${each(article.tags, (tag) => {
@@ -6674,7 +6673,7 @@ var init_portfolio_svelte = __esm({
     });
     traderJoes = "/_app/assets/trader-joes-big-41af4d84.webp";
     oatte = "/_app/assets/oatte-d6f9a7ab.webp";
-    hackscIG = "/_app/assets/hacksc-ig-6ebd822d.webp";
+    hackscIG = "/_app/assets/hacksc-ig-ef3c94be.webp";
     climateduIG = "/_app/assets/climatedu-ig-ccc172aa.webp";
     marketFermentation = "/_app/assets/market-fermentation-2-1984fe14.webp";
     blobs = "/_app/assets/blobs-portfolio-6de5b2d2.webp";
@@ -6760,7 +6759,7 @@ var init_portfolio_svelte = __esm({
       ];
       $$result.css.add(css8);
       $$unsubscribe_page();
-      return `${$$result.head += `${$$result.title = `<title>portfolio</title>`, ""}`, ""}
+      return `${$$result.head += `${$$result.title = `<title>portfolio</title>`, ""}<meta property="${"og:title"}" content="${"vivian li's portfolio"}" data-svelte="svelte-h8188z"><meta property="${"og:type"}" content="${"website"}" data-svelte="svelte-h8188z"><meta property="${"og:image"}" content="${"/thumbnails/vwl-site.png"}" data-svelte="svelte-h8188z"><meta property="${"og:url"}" content="${"https://www.vivianwli.com/portfolio"}" data-svelte="svelte-h8188z">`, ""}
 
 <div class="${"content"}"><h1 class="${"svelte-lokfdm"}">portfolio</h1>
 	<div class="${"tabs svelte-lokfdm"}"><div class="${"tab-selector svelte-lokfdm"}"><div class="${"design-selector svelte-lokfdm"}"></div>
@@ -6886,9 +6885,9 @@ var entry4, js4, css9;
 var init__4 = __esm({
   ".svelte-kit/output/server/nodes/3.js"() {
     init_portfolio_svelte();
-    entry4 = "pages/portfolio.svelte-6f0bd2da.js";
-    js4 = ["pages/portfolio.svelte-6f0bd2da.js", "chunks/vendor-62d2730a.js", "chunks/Tag-ae4dc1d4.js", "chunks/stores-d7124508.js"];
-    css9 = ["assets/pages/portfolio.svelte-622bf7cd.css", "assets/app-12d2dd8f.css", "assets/vendor-5469db33.css", "assets/Tag-5030ad19.css"];
+    entry4 = "pages/portfolio.svelte-5cb5f09e.js";
+    js4 = ["pages/portfolio.svelte-5cb5f09e.js", "chunks/vendor-0e906c74.js", "chunks/Tag-4aa40753.js", "chunks/stores-ada5a490.js"];
+    css9 = ["assets/pages/portfolio.svelte-622bf7cd.css", "assets/app-ec155f4d.css", "assets/vendor-5469db33.css", "assets/Tag-5030ad19.css"];
   }
 });
 
@@ -6902,7 +6901,7 @@ var init_resume_svelte = __esm({
   ".svelte-kit/output/server/entries/pages/resume.svelte.js"() {
     init_index_88921582();
     Resume = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-      location = "https://drive.google.com/file/d/1mkq5Q-g9xGp5N2UZcgNrXokr2vZ4QfOS/view?usp=sharing";
+      location = "https://drive.google.com/file/d/1hCMsXYMXhtcDfGwaqLa2xAStBQDChc-W/view?usp=sharing";
       return ``;
     });
   }
@@ -6920,43 +6919,52 @@ var entry5, js5, css10;
 var init__5 = __esm({
   ".svelte-kit/output/server/nodes/4.js"() {
     init_resume_svelte();
-    entry5 = "pages/resume.svelte-661b803f.js";
-    js5 = ["pages/resume.svelte-661b803f.js", "chunks/vendor-62d2730a.js"];
+    entry5 = "pages/resume.svelte-1bb2bf71.js";
+    js5 = ["pages/resume.svelte-1bb2bf71.js", "chunks/vendor-0e906c74.js"];
     css10 = ["assets/vendor-5469db33.css"];
   }
 });
 
-// .svelte-kit/output/server/chunks/BlogImage-583d34a0.js
+// .svelte-kit/output/server/chunks/BlogImage-10d5ac5e.js
 var css$15, PostHeader, css11, BlogImage;
-var init_BlogImage_583d34a0 = __esm({
-  ".svelte-kit/output/server/chunks/BlogImage-583d34a0.js"() {
+var init_BlogImage_10d5ac5e = __esm({
+  ".svelte-kit/output/server/chunks/BlogImage-10d5ac5e.js"() {
     init_index_88921582();
     init_Tag_1ce0eb4c();
     css$15 = {
-      code: ".container.svelte-g5xv50{margin-bottom:3rem}h1.svelte-g5xv50{line-height:3rem}@media screen and (max-width: 32rem){h1.svelte-g5xv50{font-size:2.5rem}}",
+      code: ".container.svelte-mda5gf{margin-bottom:3rem}h1.svelte-mda5gf{line-height:4rem}@media screen and (max-width: 32rem){h1.svelte-mda5gf{font-size:2.5rem}}",
       map: null
     };
     PostHeader = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-      let { title: title6 } = $$props;
-      let { publishDate: publishDate6 } = $$props;
+      let { title: title7 } = $$props;
+      let { publishDate: publishDate7 } = $$props;
       let { editDate: editDate2 } = $$props;
-      let { tags: tags6 } = $$props;
-      if ($$props.title === void 0 && $$bindings.title && title6 !== void 0)
-        $$bindings.title(title6);
-      if ($$props.publishDate === void 0 && $$bindings.publishDate && publishDate6 !== void 0)
-        $$bindings.publishDate(publishDate6);
+      let { tags: tags7 } = $$props;
+      let { thumbnail: thumbnail7 } = $$props;
+      let { slug: slug7 } = $$props;
+      let { summary: summary7 } = $$props;
+      if ($$props.title === void 0 && $$bindings.title && title7 !== void 0)
+        $$bindings.title(title7);
+      if ($$props.publishDate === void 0 && $$bindings.publishDate && publishDate7 !== void 0)
+        $$bindings.publishDate(publishDate7);
       if ($$props.editDate === void 0 && $$bindings.editDate && editDate2 !== void 0)
         $$bindings.editDate(editDate2);
-      if ($$props.tags === void 0 && $$bindings.tags && tags6 !== void 0)
-        $$bindings.tags(tags6);
+      if ($$props.tags === void 0 && $$bindings.tags && tags7 !== void 0)
+        $$bindings.tags(tags7);
+      if ($$props.thumbnail === void 0 && $$bindings.thumbnail && thumbnail7 !== void 0)
+        $$bindings.thumbnail(thumbnail7);
+      if ($$props.slug === void 0 && $$bindings.slug && slug7 !== void 0)
+        $$bindings.slug(slug7);
+      if ($$props.summary === void 0 && $$bindings.summary && summary7 !== void 0)
+        $$bindings.summary(summary7);
       $$result.css.add(css$15);
-      return `${$$result.head += `${$$result.title = `<title>${escape(title6)}</title>`, ""}`, ""}
+      return `${$$result.head += `${$$result.title = `<title>${escape(title7)}</title>`, ""}<meta property="${"og:title"}"${add_attribute("content", title7, 0)} data-svelte="svelte-3kds6d"><meta property="${"og:type"}" content="${"article"}" data-svelte="svelte-3kds6d"><meta property="${"og:image"}"${add_attribute("content", "/thumbnails/" + thumbnail7, 0)} data-svelte="svelte-3kds6d"><meta property="${"og:url"}"${add_attribute("content", "https://www.vivianwli.com/blog/" + slug7, 0)} data-svelte="svelte-3kds6d"><meta property="${"og:description"}"${add_attribute("content", summary7, 0)} data-svelte="svelte-3kds6d">`, ""}
 
 
-<div class="${"container svelte-g5xv50"}"><h1 class="${"svelte-g5xv50"}">${escape(title6)}</h1>
-	<p class="${"date"}">PUBLISHED ${escape(publishDate6)}
+<div class="${"container svelte-mda5gf"}"><h1 class="${"svelte-mda5gf"}">${escape(title7)}</h1>
+	<p class="${"date"}">PUBLISHED ${escape(publishDate7)}
 		${editDate2 ? `\u2022 LAST EDITED ${escape(editDate2)}` : ``}</p>
-	<div class="${"buttons"}">${each(tags6, (tag) => {
+	<div class="${"buttons"}">${each(tags7, (tag) => {
         return `${validate_component(Tag, "Tag").$$render($$result, { className: "inactive" }, {}, {
           default: () => {
             return `${escape(tag.name)}`;
@@ -7020,7 +7028,7 @@ var blobs1, blobs2, blobs3, blobs4, metadata, title, slug, publishDate, editDate
 var init_fruit_blobs_svx = __esm({
   ".svelte-kit/output/server/entries/pages/blog/fruit-blobs.svx.js"() {
     init_index_88921582();
-    init_BlogImage_583d34a0();
+    init_BlogImage_10d5ac5e();
     init_BlogGallery_55092816();
     init_Tag_1ce0eb4c();
     blobs1 = "/_app/assets/blobberries-6ef93a8b.webp";
@@ -7038,7 +7046,15 @@ var init_fruit_blobs_svx = __esm({
     };
     ({ title, slug, publishDate, editDate, tags, thumbnail, summary } = metadata);
     Fruit_blobs = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-      return `${validate_component(PostHeader, "PostHeader").$$render($$result, { title, publishDate, editDate, tags }, {}, {})}
+      return `${validate_component(PostHeader, "PostHeader").$$render($$result, {
+        title,
+        publishDate,
+        editDate,
+        tags,
+        thumbnail,
+        slug,
+        summary
+      }, {}, {})}
 <p>I received a Discord Nitro gift for my birthday month (July!), which ultimately catalyzed the creation of these fruit and vegetable blob emojis. The day after I received the gift, I started aggressively joining servers to use their emotes globally. Then, I noticed that Blob Hub Studios was actively accepting pack submissions and that there was a crucial demand in the market for fruit blobs, so I took the plunge.</p>
 <p>Join my <a href="${"https://discord.gg/AA2pvSU"}" rel="${"nofollow"}">Discord server</a> and use these blob emojis for your self (global use only available for Nitro users)! Additionally, my blobs are copyrighted by Blob Hub Studios. Join the <a href="${"https://discord.gg/yATKMY8"}" rel="${"nofollow"}">larger network</a>, too, which is home to over 12,000 unique blobs. Since submitting this pack, I\u2019ve been named a Blob Designer as part of the Blob Hub Staff. Below are some of my favorite emojis I\u2019ve created!</p>
 ${validate_component(BlogGallery, "BlogGallery").$$render($$result, { columns: "2" }, {}, {
@@ -7065,6 +7081,131 @@ ${validate_component(BlogGallery, "BlogGallery").$$render($$result, { columns: "
           }, {}, {})}`;
         }
       })}`;
+    });
+  }
+});
+
+// .svelte-kit/output/server/entries/pages/blog/gingerbread-house-2021.svx.js
+var gingerbread_house_2021_svx_exports = {};
+__export(gingerbread_house_2021_svx_exports, {
+  default: () => Gingerbread_house_2021,
+  metadata: () => metadata2
+});
+var gingerbread1, gingerbread2, gingerbread3, gingerbread4, gingerbread5, gingerbread8, gingerbread6, gingerbread7, jason, metadata2, title2, slug2, publishDate2, tags2, thumbnail2, summary2, Gingerbread_house_2021;
+var init_gingerbread_house_2021_svx = __esm({
+  ".svelte-kit/output/server/entries/pages/blog/gingerbread-house-2021.svx.js"() {
+    init_index_88921582();
+    init_BlogImage_10d5ac5e();
+    init_BlogGallery_55092816();
+    init_Tag_1ce0eb4c();
+    gingerbread1 = "/_app/assets/gingerbread-1-baea9cb1.jpg";
+    gingerbread2 = "/_app/assets/gingerbread-2-9448f9ca.jpg";
+    gingerbread3 = "/_app/assets/gingerbread-3-11ae6a6e.jpg";
+    gingerbread4 = "/_app/assets/gingerbread-4-6b69c9ae.jpg";
+    gingerbread5 = "/_app/assets/gingerbread-5-0f03423b.jpg";
+    gingerbread8 = "/_app/assets/gingerbread-8-447625a3.jpg";
+    gingerbread6 = "/_app/assets/gingerbread-6-e4ddf410.jpg";
+    gingerbread7 = "/_app/assets/gingerbread-7-e1fad775.jpg";
+    jason = "/_app/assets/jason-rolling-dough-728a44e7.jpg";
+    metadata2 = {
+      "title": "A four-day gingerbread house",
+      "slug": "gingerbread-house-2021",
+      "publishDate": "JAN 26 2022",
+      "tags": [{ "name": "food" }, { "name": "art" }],
+      "thumbnail": "gingerbread-5.jpg",
+      "summary": "Jason and I built a gingerbread house from scratch\u2014an incredibly deliberate process from research to construction to reflection. We gave our beloved house a photoshoot, too."
+    };
+    ({ title: title2, slug: slug2, publishDate: publishDate2, tags: tags2, thumbnail: thumbnail2, summary: summary2 } = metadata2);
+    Gingerbread_house_2021 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      return `${validate_component(PostHeader, "PostHeader").$$render($$result, {
+        title: title2,
+        publishDate: publishDate2,
+        tags: tags2,
+        slug: slug2,
+        thumbnail: thumbnail2,
+        summary: summary2
+      }, {}, {})}
+<p>Here\u2019s the gingerbread house that I made this year.</p>
+${validate_component(BlogImage, "BlogImage").$$render($$result, {
+        src: gingerbread5,
+        caption: "Our magnificent gingerbread house during sunset hour."
+      }, {}, {})}
+<p>Now, how did we create this beauty?</p>
+<h2>Day 0</h2>
+<p>We started with <a href="${"https://www.pinterest.com/teacupkittie/gingerbread-house/"}" rel="${"nofollow"}">a Pinterest board</a>. Hurrah! We had a blueprint. Specifically, we were looking at intricate designs made with simple ingredients\u2014less clutter from colorful candies, and more embellishments of royal icing.</p>
+<p>In our research, we also took to observing media. We watched the Great British Bake Off (Holidays edition!), Claire Saffitz\u2019s <a href="${"https://www.youtube.com/watch?v=lB_VOwKiRjE"}" rel="${"nofollow"}">attempt to make the greatest gingerbread house</a>, <a href="${"https://www.youtube.com/watch?v=ksgkpdxPPy8"}" rel="${"nofollow"}">year one</a> <em>and</em> <a href="${"https://www.youtube.com/watch?v=_SBSSfbih8U"}" rel="${"nofollow"}">year two</a> of the NYT Cooking Gingerbread Showdown. I\u2019d also been passively consuming this content for years. It was a bucket list item of mine to build a gingerbread house. The time had come.</p>
+<p>We also surveyed the vast marketplace of gingerbread house recipes. It needed to be delicious, yet possess undoubtable structural integrity. It proved to be quite the challenge, but we were inspired by Claire Saffitz\u2019s notably thick walls. More than anything, we wanted our house to stay upright. Surely, these walls wouldn\u2019t fall. We used these resources:</p>
+<ul><li><a href="${"https://cooking.nytimes.com/guides/47-how-to-make-a-gingerbread-house"}" rel="${"nofollow"}">Gingerbread house recipe</a> from NYT cooking</li>
+<li><a href="${"https://s3.documentcloud.org/documents/4321014/Template-for-a-Gingerbread-House.pdf"}" rel="${"nofollow"}">Gingerbread house pattern</a> from NYT cooking</li>
+<li><a href="${"https://food52.com/recipes/32341-gingerbread-house-glue"}" rel="${"nofollow"}">Royal icing recipe</a> from Food52</li>
+<li><a href="${"https://www.wilton.com/how-to-make-a-candy-stained-glass-window/WLTECH-7845.html"}" rel="${"nofollow"}">Stained glass windows guide</a> from Wilton</li></ul>
+<h2>Day 1</h2>
+<p>After grocery shopping, we made the dough, split into two identical batches as recommended by NYT and Claire. Into the fridge overnight!</p>
+${validate_component(BlogImage, "BlogImage").$$render($$result, {
+        src: jason,
+        caption: "Jason hard at work in the kitchen."
+      }, {}, {})}
+<h2>Day 2</h2>
+<p>We baked the gingerbread and cut it after cooling. Some recipes recommend to cut the gingerbread while the slabs are still warm, but the NYT recipe instructed us to wait for the gingerbread to cool (trust\u{1F91E}\u{1F3FB}). <em>Spoiler alert:</em> it was still possible to cut the gingerbread nearly two weeks after, when we realized that we needed to cut windows. Regardless of the timeframe, we just needed to be careful while cutting. Cutting cooled gingerbread was a success!</p>
+<h2>Day 3</h2>
+<p>The magic began here\u2014roughly 14 days after Day 2 (drying out for structural integrity). We crushed 15 jolly ranchers and spread little clumps of each color in each window frame, aiming for one blue/purple, one green, and one pink/red. Some of our slabs actually had a bit of concavity to them, so they wouldn\u2019t lie flat on the baking sheet. To avoid having the melted jolly ranchers seep down under the slab, we placed a little wads of paper towel underneath our silicone mat to prop the slab corners up. It worked! The stained glass candy windows were absolutely beautiful when held up to the light. We bought flickering LED tea lights to illuminate the windows from inside the house :)</p>
+<p>We also whipped up the royal icing and embarked on the laborious journey of icing the individual pieces: the scalloped roof shingles, the decorative foliage, and the window frame details. These would dry overnight before we put the house together, eliminating any final-day smudge disasters.</p>
+<h2>Day 4</h2>
+<p>Time to assemble! Honestly, it was pretty seamless. The icing was sturdy and nothing fell. I chalk this success up the immense patience that Jason and I have (or maybe exhaustion). We watched TV while the slabs were drying together\u2014first the front and sides, then the back, and finally one roof after the other.</p>
+<p>For the decorations, we added a row of spice drops along the roof, a spice drop Christmas tree (courtesy of a very abnormally large spice drop and some pearlescent nonpareils), royal icing icicles, and candy canes for the front yard.</p>
+<p>The final dusting of powdered sugar across the rooftop and window sills brought the scene to life. After admiring our creation in real time, we gave it a photoshoot. The moment you\u2019ve been waiting for\u2026</p>
+<h2>Our magnum opus</h2>
+${validate_component(BlogGallery, "BlogGallery").$$render($$result, { columns: "2" }, {}, {
+        default: () => {
+          return `${validate_component(BlogImage, "BlogImage").$$render($$result, {
+            className: "gallery-img",
+            src: gingerbread1,
+            caption: "Gingerbread house up close and personal"
+          }, {}, {})}
+    ${validate_component(BlogImage, "BlogImage").$$render($$result, {
+            className: "gallery-img",
+            src: gingerbread2,
+            caption: "Gingerbread house (back) in ambient indoor lighting."
+          }, {}, {})}
+    ${validate_component(BlogImage, "BlogImage").$$render($$result, {
+            className: "gallery-img",
+            src: gingerbread3,
+            caption: "Gingerbread house (front) in ambient indoor lighting."
+          }, {}, {})}
+    ${validate_component(BlogImage, "BlogImage").$$render($$result, {
+            className: "gallery-img",
+            src: gingerbread4,
+            caption: "Gingerbread house (front) during sunset hour."
+          }, {}, {})}
+    ${validate_component(BlogImage, "BlogImage").$$render($$result, {
+            className: "gallery-img",
+            src: gingerbread5,
+            caption: "Gingerbread house (front) during sunset hour."
+          }, {}, {})}
+    ${validate_component(BlogImage, "BlogImage").$$render($$result, {
+            className: "gallery-img",
+            src: gingerbread6,
+            caption: "The gingerbread house and I in the chilly outdoors!"
+          }, {}, {})}
+    ${validate_component(BlogImage, "BlogImage").$$render($$result, {
+            className: "gallery-img",
+            src: gingerbread7,
+            caption: "Spice drop rooftop in the crisp winter air."
+          }, {}, {})}
+    ${validate_component(BlogImage, "BlogImage").$$render($$result, {
+            className: "gallery-img",
+            src: gingerbread8,
+            caption: "Gingerbread house (front) in the crisp winter air."
+          }, {}, {})}`;
+        }
+      })}
+<p>I also shot and edited this stop motion video. Enjoy!</p>
+<div class="${"iframe-container"}"><iframe class="${"iframe"}" src="${"https://www.youtube.com/embed/b8QaIJUQYi4"}"></iframe></div>
+<h2>Reflections</h2>
+<ol><li>Creating the detailed icing decorations would have certainly been easier if we used a thinner royal icing. Ultra-thick royal icing is a must for the construction, but it was rather arduous to pipe because it was so dense. The royal icing icicles were especially difficult because they formed droplets instead of sharp ends\u2014perhaps using a thinner icing would help with this, too.</li>
+<li>We made our door just a <em>tiny</em> but too small (based on the NYT pattern), such that the LED light would not be able to come in and out of the gingerbread house. So, those lights will flicker incessantly until they go out for good. If you\u2019re adding lights, make the door bigger!</li>
+<li>Buy a pack of 40 mini candy canes with the expectation that you\u2019ll really only be able to salvage a ~10. They often come cracked, and they crack <strong>really</strong> easily.</li></ol>
+<p>See you next year for another gingerbread house (?) \u{1F973}</p>`;
     });
   }
 });
@@ -9924,13 +10065,13 @@ var init_css = __esm({
 var made_with_svelte_kit_svx_exports = {};
 __export(made_with_svelte_kit_svx_exports, {
   default: () => Made_with_svelte_kit,
-  metadata: () => metadata2
+  metadata: () => metadata3
 });
-var css$16, HighlightSvelte, HighlightSvelte$1, advice, portfolioGrid, regret, email1, email2, metadata2, title2, slug2, publishDate2, tags2, thumbnail2, summary2, Made_with_svelte_kit;
+var css$16, HighlightSvelte, HighlightSvelte$1, advice, portfolioGrid, regret, email1, email2, vwlDesign, metadata3, title3, slug3, publishDate3, tags3, thumbnail3, summary3, Made_with_svelte_kit;
 var init_made_with_svelte_kit_svx = __esm({
   ".svelte-kit/output/server/entries/pages/blog/made-with-svelte-kit.svx.js"() {
     init_index_88921582();
-    init_BlogImage_583d34a0();
+    init_BlogImage_10d5ac5e();
     init_BlogGallery_55092816();
     init_core();
     init_xml();
@@ -9968,7 +10109,8 @@ var init_made_with_svelte_kit_svx = __esm({
     regret = "/_app/assets/regret-bd8609a1.webp";
     email1 = "/_app/assets/ios-email-input-4085fc8a.webp";
     email2 = "/_app/assets/android-email-input-46726c1c.webp";
-    metadata2 = {
+    vwlDesign = "/_app/assets/vwl-site-6108720d.webp";
+    metadata3 = {
       "title": "Made with Svelte(Kit)",
       "slug": "made-with-svelte-kit",
       "publishDate": "JAN 18 2022",
@@ -9976,7 +10118,7 @@ var init_made_with_svelte_kit_svx = __esm({
       "thumbnail": "vwl-site.png",
       "summary": "My 20-something-day journey to create this website from scratch. What came easily, what to avoid, etc. Essentially, a layman\u2019s guide to building a personal website. A very meta post."
     };
-    ({ title: title2, slug: slug2, publishDate: publishDate2, tags: tags2, thumbnail: thumbnail2, summary: summary2 } = metadata2);
+    ({ title: title3, slug: slug3, publishDate: publishDate3, tags: tags3, thumbnail: thumbnail3, summary: summary3 } = metadata3);
     Made_with_svelte_kit = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       const code12 = `<script>
     import vivian from '$lib/assets/vivian.png';
@@ -9984,14 +10126,25 @@ var init_made_with_svelte_kit_svx = __esm({
 ...
 <img src={vivian} alt="viv" />`;
       const code22 = `import vivian from '$lib/assets/vivian.png?w=350&webp';`;
-      return `${validate_component(PostHeader, "PostHeader").$$render($$result, { title: title2, publishDate: publishDate2, tags: tags2 }, {}, {})}
+      return `${validate_component(PostHeader, "PostHeader").$$render($$result, {
+        title: title3,
+        publishDate: publishDate3,
+        tags: tags3,
+        slug: slug3,
+        thumbnail: thumbnail3,
+        summary: summary3
+      }, {}, {})}
 <p>So, Svelte is not for the faint-hearted. \u{1F62D}</p>
 <p>Not that I don\u2019t recommend it. Svelte and SvelteKit are intuitively wonderful in many ways\u2014enough so that someone without years of web dev experience (like me) could pick it up fairly easily. However, because it is such a new framework, I came prepared for the frustration that ensues when things <em>just don\u2019t work</em>.</p>
 <p>I\u2019ve also been entertaining the idea of creating a layman\u2019s guide to building a personal website for a while now. I was pretty set on giving my personal website a refresh this winter break (check out the old one, <a href="${"http://vivsdivs.com/"}" rel="${"nofollow"}">vivsdivs.com</a>). It seemed like the perfect opportunity to learn something new and share my experience. If you\u2019re interested in how I made this website\u2014what came easily, what to avoid, etc., read on. I hope you find something useful :)</p>
 <p><strong>Why Svelte?</strong> There are so many great options out there. The short answer is that I love <em>The Pudding</em>, and they use SvelteKit. Also, it seemed that a reasonable amount of people have moved their blogs from Gatsby to SvelteKit, in the same way that they moved from Jekyll to Gatsby a few years back. Might as well be ahead of the curve, right? \u{1F609}</p>
 <p>\xA0</p>
 <h2>Preparing for battle</h2>
-<p>I first spent three days in Figma designing the website, from color scheme to style guide to full layouts of the home, blog, and portfolio pages (in both desktop and mobile view). Honestly, it was a lot of work, but it set me up for success when actually coding the site, and I didn\u2019t have to question my design decisions down the line. I\u2019m also glad that I prioritized the mobile view early on, instead of freaking out about responsive design long after the rest of the website was implemented. I love Figma (so much), so no complaints here. Feel free to browse my <a href="${"https://www.figma.com/file/h7KckVZmrTNeVQd2afZwME/website?node-id=92%3A573"}" rel="${"nofollow"}">Figma document</a> if you\u2019re curious!</p>
+<p>I first spent three days in Figma designing the website, from color scheme to style guide to full layouts of the home, blog, and portfolio pages (in both desktop and mobile view). Honestly, it was a lot of work, but it set me up for success when actually coding the site, and I didn\u2019t have to question my design decisions down the line. I\u2019m also glad that I prioritized the mobile view early on, instead of freaking out about responsive design long after the rest of the website was implemented. I love Figma (so much), so no complaints here. Feel free to browse my <a href="${"https://www.figma.com/file/h7KckVZmrTNeVQd2afZwME/website?node-id=92%3A573"}" rel="${"nofollow"}">Figma document</a> if you\u2019re curious! If you\u2019d like to dive deeper into about my design process, let me know and I might make a more design-focused post in the future.</p>
+${validate_component(BlogImage, "BlogImage").$$render($$result, {
+        src: vwlDesign,
+        caption: "The styled covered page for my website design (vivianwli.com)"
+      }, {}, {})}
 <p>Before I popped open the code editor, I also started by doing the <a href="${"https://svelte.dev/tutorial/basics"}" rel="${"nofollow"}">Svelte tutorial</a> in full. It was very interactive and helpful, and it also set me up to know which resources to reach for later on. I also took <a href="${"https://www.notion.so/svelte-notes-6cac9e1403e04b1c8647ec518ee0b11e"}" rel="${"nofollow"}">notes</a> on what I learned from the tutorial. They\u2019re not amazing, comprehensive notes or anything, but they show the amount of preparation that I did before taking the plunge.</p>
 <p>Now, we\u2019re ready. Onward!</p>
 <p>\xA0</p>
@@ -10082,16 +10235,16 @@ ${validate_component(BlogGallery, "BlogGallery").$$render($$result, { columns: "
 var michelle_feng_svx_exports = {};
 __export(michelle_feng_svx_exports, {
   default: () => Michelle_feng,
-  metadata: () => metadata3
+  metadata: () => metadata4
 });
-var mathyProtest, metadata3, title3, slug3, publishDate3, tags3, thumbnail3, summary3, Michelle_feng;
+var mathyProtest, metadata4, title4, slug4, publishDate4, tags4, thumbnail4, summary4, Michelle_feng;
 var init_michelle_feng_svx = __esm({
   ".svelte-kit/output/server/entries/pages/blog/michelle-feng.svx.js"() {
     init_index_88921582();
-    init_BlogImage_583d34a0();
+    init_BlogImage_10d5ac5e();
     init_Tag_1ce0eb4c();
     mathyProtest = "/_app/assets/mathy-protest-f6621b72.webp";
-    metadata3 = {
+    metadata4 = {
       "title": "How Michelle Feng defies math academia norms",
       "slug": "michelle-feng",
       "publishDate": "FEB 1 2020",
@@ -10099,9 +10252,16 @@ var init_michelle_feng_svx = __esm({
       "thumbnail": "mathy-protest.png",
       "summary": "Michelle Feng explains how she discovered and became passionate about applied topology in the context of politics and social justice."
     };
-    ({ title: title3, slug: slug3, publishDate: publishDate3, tags: tags3, thumbnail: thumbnail3, summary: summary3 } = metadata3);
+    ({ title: title4, slug: slug4, publishDate: publishDate4, tags: tags4, thumbnail: thumbnail4, summary: summary4 } = metadata4);
     Michelle_feng = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-      return `${validate_component(PostHeader, "PostHeader").$$render($$result, { title: title3, publishDate: publishDate3, tags: tags3 }, {}, {})}
+      return `${validate_component(PostHeader, "PostHeader").$$render($$result, {
+        title: title4,
+        publishDate: publishDate4,
+        tags: tags4,
+        thumbnail: thumbnail4,
+        slug: slug4,
+        summary: summary4
+      }, {}, {})}
 <p>When fifth year UCLA PhD student Michelle Feng initially entered undergraduate college as a theoretical math major, she wasn\u2019t expecting a future out of the ordinary. In fact, math seemed like the logical path to take simply because she performed well in math classes growing up. It wasn\u2019t until graduate school that she discovered\u2014and became passionate about\u2014the field she works in today: applied topology in the context of social justice.</p>
 <p>As a teen, Feng developed a deep interest in number theory. She was fascinated by the idea that fundamental problems are simple to understand, yet still remain unsolved by the world\u2019s greatest mathematicians. In the same vein, she found the nature of abstract shapes satisfying, and was drawn to abstract algebra and applied topology.</p>
 <p>Despite loving math, Feng emerged from her undergraduate years at the University of Chicago disillusioned by the elitist culture that surrounded the field of theoretical mathematics. She had very few female and queer students in her math classes and the barriers for marginalized groups discouraged her from enjoying the space. \u201CPeople would comment on my outfits or my appearance which made me really uncomfortable, and that turned me away from math for a long time,\u201D she said.</p>
@@ -10127,13 +10287,13 @@ ${validate_component(BlogImage, "BlogImage").$$render($$result, {
 var oat_milk_guide_svx_exports = {};
 __export(oat_milk_guide_svx_exports, {
   default: () => Oat_milk_guide,
-  metadata: () => metadata4
+  metadata: () => metadata5
 });
-var css14, BlogHalfImage, oatMilk, brownies, metadata4, title4, slug4, publishDate4, tags4, thumbnail4, summary4, Oat_milk_guide;
+var css14, BlogHalfImage, oatMilk, brownies, metadata5, title5, slug5, publishDate5, tags5, thumbnail5, summary5, Oat_milk_guide;
 var init_oat_milk_guide_svx = __esm({
   ".svelte-kit/output/server/entries/pages/blog/oat-milk-guide.svx.js"() {
     init_index_88921582();
-    init_BlogImage_583d34a0();
+    init_BlogImage_10d5ac5e();
     init_Tag_1ce0eb4c();
     css14 = {
       code: ".wrapper.svelte-1q2ajvu{display:grid;width:100%;grid-template-columns:1fr 1fr;background-color:var(--highlight-color);align-items:center;box-shadow:0 0 1.2rem 0.1rem var(--secondary-subtle-color);margin:4rem -2rem;padding:2rem}@media screen and (max-width: 50rem){.wrapper.svelte-1q2ajvu{display:block}}",
@@ -10157,7 +10317,7 @@ var init_oat_milk_guide_svx = __esm({
     });
     oatMilk = "/_app/assets/oat-milk-49e7540c.webp";
     brownies = "/_app/assets/brownies-cf0f0bea.webp";
-    metadata4 = {
+    metadata5 = {
       "title": "An ultimate guide to oat milk",
       "slug": "oat-milk-guide",
       "publishDate": "AUG 1 2020",
@@ -10165,9 +10325,16 @@ var init_oat_milk_guide_svx = __esm({
       "thumbnail": "oat-milk.png",
       "summary": "There\u2019s always more to learn about homemade oat milk. I detail the lessons I\u2019ve learned, ways to expand upon a foolproof recipe, new delicious flavors, and advice on handling leftover oat pulp."
     };
-    ({ title: title4, slug: slug4, publishDate: publishDate4, tags: tags4, thumbnail: thumbnail4, summary: summary4 } = metadata4);
+    ({ title: title5, slug: slug5, publishDate: publishDate5, tags: tags5, thumbnail: thumbnail5, summary: summary5 } = metadata5);
     Oat_milk_guide = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-      return `${validate_component(PostHeader, "PostHeader").$$render($$result, { title: title4, publishDate: publishDate4, tags: tags4 }, {}, {})}
+      return `${validate_component(PostHeader, "PostHeader").$$render($$result, {
+        title: title5,
+        publishDate: publishDate5,
+        tags: tags5,
+        thumbnail: thumbnail5,
+        slug: slug5,
+        summary: summary5
+      }, {}, {})}
 <p>Whether this is your first rodeo or your hundredth, there\u2019s always more to learn about homemade oat milk. Today, I detail the lessons I\u2019ve learned from my many trials and tribulations, ways to expand upon a foolproof recipe, new delicious flavors, and advice on handling leftover oat pulp.</p>
 <p>Oat milk is by far my favorite milk, in taste but also so much more. It\u2019s vegan, dairy-free, gluten-free (as long as you use certified GF oats), nut-free, soy-free, and it also saves the environment some heavy lifting. I hope you find this guide useful!</p>
 <p>\xA0</p>
@@ -10235,19 +10402,19 @@ ${validate_component(BlogHalfImage, "BlogHalfImage").$$render($$result, {
 var sustainable_textiles_svx_exports = {};
 __export(sustainable_textiles_svx_exports, {
   default: () => Sustainable_textiles,
-  metadata: () => metadata5
+  metadata: () => metadata6
 });
-var textiles1, textiles2, textiles3, metadata5, title5, slug5, publishDate5, tags5, thumbnail5, summary5, Sustainable_textiles;
+var textiles1, textiles2, textiles3, metadata6, title6, slug6, publishDate6, tags6, thumbnail6, summary6, Sustainable_textiles;
 var init_sustainable_textiles_svx = __esm({
   ".svelte-kit/output/server/entries/pages/blog/sustainable-textiles.svx.js"() {
     init_index_88921582();
-    init_BlogImage_583d34a0();
+    init_BlogImage_10d5ac5e();
     init_BlogGallery_55092816();
     init_Tag_1ce0eb4c();
     textiles1 = "/_app/assets/textiles-1-becaea75.webp";
     textiles2 = "/_app/assets/textiles-2-12aad45c.webp";
     textiles3 = "/_app/assets/textiles-3-a4faa238.webp";
-    metadata5 = {
+    metadata6 = {
       "title": "An antidote to greenwashing",
       "slug": "sustainable-textiles",
       "publishDate": "DEC 3 2021",
@@ -10255,9 +10422,16 @@ var init_sustainable_textiles_svx = __esm({
       "thumbnail": "haute-greenwashing-post.png",
       "summary": "Any brand can say they're sustainable. By delving into the various textiles behind sustainable clothing, we strip the power from companies to decide whether a product is environmentally friendly."
     };
-    ({ title: title5, slug: slug5, publishDate: publishDate5, tags: tags5, thumbnail: thumbnail5, summary: summary5 } = metadata5);
+    ({ title: title6, slug: slug6, publishDate: publishDate6, tags: tags6, thumbnail: thumbnail6, summary: summary6 } = metadata6);
     Sustainable_textiles = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-      return `${validate_component(PostHeader, "PostHeader").$$render($$result, { title: title5, publishDate: publishDate5, tags: tags5 }, {}, {})}
+      return `${validate_component(PostHeader, "PostHeader").$$render($$result, {
+        title: title6,
+        publishDate: publishDate6,
+        tags: tags6,
+        thumbnail: thumbnail6,
+        slug: slug6,
+        summary: summary6
+      }, {}, {})}
 <p><em>This feature article was first published in Haute Magazine\u2019s \u201COn the Edge\u201D issue. I have posted it to my website to maximize web readability, but please feel free to explore the original <a href="${"https://www.hauteusc.com/ontheedge"}" rel="${"nofollow"}">here</a>, complete with the visual design and photography. Haute is USC\u2019s fashion, arts, and culture magazine.</em></p>
 <p>\xA0</p>
 <h2>Understanding fabrics can help us fight greenwashing</h2>
@@ -10349,7 +10523,7 @@ var init_index_svelte2 = __esm({
       if ($$props.post === void 0 && $$bindings.post && post !== void 0)
         $$bindings.post(post);
       $$result.css.add(css$17);
-      return `<div class="${"card-container svelte-imcoqk"}"><a sveltekit:prefetch href="${"blog/" + escape(post.slug)}" class="${"svelte-imcoqk"}"><img${add_attribute("src", "/thumbnails/" + post.thumbnail + "?w=400&webp", 0)}${add_attribute("alt", post.title, 0)} class="${"svelte-imcoqk"}">
+      return `<div class="${"card-container svelte-imcoqk"}"><a sveltekit:prefetch sveltekit:noscroll href="${"blog/" + escape(post.slug)}" class="${"svelte-imcoqk"}"><img${add_attribute("src", "/thumbnails/" + post.thumbnail + "?w=400&webp", 0)}${add_attribute("alt", post.title, 0)} class="${"svelte-imcoqk"}">
 		<div class="${"post-description svelte-imcoqk"}"><h2 class="${"svelte-imcoqk"}">${escape(post.title)}</h2>
 			<p class="${"date svelte-imcoqk"}">${post.editDate !== void 0 ? `EDITED ${escape(post.editDate)}` : `${post.publishDate !== void 0 ? `${escape(post.publishDate)}` : ``}`}</p>
 			<div class="${"buttons"}">${each(post.tags, (tag) => {
@@ -10366,10 +10540,10 @@ var init_index_svelte2 = __esm({
       code: ".post-container.svelte-m3bscn{display:grid;grid-template-columns:repeat(auto-fit, minmax(15rem, 1fr));grid-gap:2rem;padding:3rem 0}.selectedTag.svelte-m3bscn .filter{background-color:var(--highlight-color);box-shadow:0 0 0.2rem var(--primary-light-color);color:var(--primary-color);border:2.5px solid var(--primary-color)}",
       map: null
     };
-    posts = { "./fruit-blobs.svx": () => Promise.resolve().then(() => (init_fruit_blobs_svx(), fruit_blobs_svx_exports)), "./made-with-svelte-kit.svx": () => Promise.resolve().then(() => (init_made_with_svelte_kit_svx(), made_with_svelte_kit_svx_exports)), "./michelle-feng.svx": () => Promise.resolve().then(() => (init_michelle_feng_svx(), michelle_feng_svx_exports)), "./oat-milk-guide.svx": () => Promise.resolve().then(() => (init_oat_milk_guide_svx(), oat_milk_guide_svx_exports)), "./sustainable-textiles.svx": () => Promise.resolve().then(() => (init_sustainable_textiles_svx(), sustainable_textiles_svx_exports)) };
+    posts = { "./fruit-blobs.svx": () => Promise.resolve().then(() => (init_fruit_blobs_svx(), fruit_blobs_svx_exports)), "./gingerbread-house-2021.svx": () => Promise.resolve().then(() => (init_gingerbread_house_2021_svx(), gingerbread_house_2021_svx_exports)), "./made-with-svelte-kit.svx": () => Promise.resolve().then(() => (init_made_with_svelte_kit_svx(), made_with_svelte_kit_svx_exports)), "./michelle-feng.svx": () => Promise.resolve().then(() => (init_michelle_feng_svx(), michelle_feng_svx_exports)), "./oat-milk-guide.svx": () => Promise.resolve().then(() => (init_oat_milk_guide_svx(), oat_milk_guide_svx_exports)), "./sustainable-textiles.svx": () => Promise.resolve().then(() => (init_sustainable_textiles_svx(), sustainable_textiles_svx_exports)) };
     body = [];
     for (const path in posts) {
-      body.push(posts[path]().then(({ metadata: metadata6 }) => metadata6));
+      body.push(posts[path]().then(({ metadata: metadata7 }) => metadata7));
     }
     Blog = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       let { posts: posts2 } = $$props;
@@ -10390,7 +10564,7 @@ var init_index_svelte2 = __esm({
       if ($$props.posts === void 0 && $$bindings.posts && posts2 !== void 0)
         $$bindings.posts(posts2);
       $$result.css.add(css15);
-      return `${$$result.head += `${$$result.title = `<title>blog</title>`, ""}`, ""}
+      return `${$$result.head += `${$$result.title = `<title>blog</title>`, ""}<meta property="${"og:title"}" content="${"vivian li's blog"}" data-svelte="svelte-6np8tt"><meta property="${"og:type"}" content="${"website"}" data-svelte="svelte-6np8tt"><meta property="${"og:image"}" content="${"/thumbnails/vwl-site.png"}" data-svelte="svelte-6np8tt"><meta property="${"og:url"}" content="${"https://www.vivianwli.com/blog"}" data-svelte="svelte-6np8tt">`, ""}
 
 <div class="${"content"}">${validate_component(SvelteToast, "SvelteToast").$$render($$result, {}, {}, {})}
 	<h1>musings</h1>
@@ -10442,9 +10616,9 @@ var entry6, js6, css16;
 var init__6 = __esm({
   ".svelte-kit/output/server/nodes/5.js"() {
     init_index_svelte2();
-    entry6 = "pages/blog/index.svelte-ca9db535.js";
-    js6 = ["pages/blog/index.svelte-ca9db535.js", "chunks/preload-helper-ec9aa979.js", "chunks/vendor-62d2730a.js", "chunks/Tag-ae4dc1d4.js", "chunks/EmailInput-d1a9343b.js"];
-    css16 = ["assets/pages/blog/index.svelte-c0441924.css", "assets/app-12d2dd8f.css", "assets/vendor-5469db33.css", "assets/Tag-5030ad19.css", "assets/EmailInput-f58afbb8.css"];
+    entry6 = "pages/blog/index.svelte-3bbef5b7.js";
+    js6 = ["pages/blog/index.svelte-3bbef5b7.js", "chunks/preload-helper-ec9aa979.js", "chunks/vendor-0e906c74.js", "chunks/Tag-4aa40753.js", "chunks/EmailInput-26df116f.js"];
+    css16 = ["assets/pages/blog/index.svelte-c0441924.css", "assets/app-ec155f4d.css", "assets/vendor-5469db33.css", "assets/Tag-5030ad19.css", "assets/EmailInput-f58afbb8.css"];
   }
 });
 
@@ -10454,15 +10628,15 @@ __export(__exports7, {
   css: () => css17,
   entry: () => entry7,
   js: () => js7,
-  module: () => made_with_svelte_kit_svx_exports
+  module: () => gingerbread_house_2021_svx_exports
 });
 var entry7, js7, css17;
 var init__7 = __esm({
   ".svelte-kit/output/server/nodes/6.js"() {
-    init_made_with_svelte_kit_svx();
-    entry7 = "pages/blog/made-with-svelte-kit.svx-15947146.js";
-    js7 = ["pages/blog/made-with-svelte-kit.svx-15947146.js", "chunks/vendor-62d2730a.js", "chunks/BlogImage-d21e1abf.js", "chunks/Tag-ae4dc1d4.js", "chunks/BlogGallery-fe55d445.js"];
-    css17 = ["assets/app-12d2dd8f.css", "assets/vendor-5469db33.css", "assets/BlogImage-4c10e73e.css", "assets/Tag-5030ad19.css", "assets/BlogGallery-ca2ee3c4.css"];
+    init_gingerbread_house_2021_svx();
+    entry7 = "pages/blog/gingerbread-house-2021.svx-1889cff6.js";
+    js7 = ["pages/blog/gingerbread-house-2021.svx-1889cff6.js", "chunks/vendor-0e906c74.js", "chunks/BlogImage-ec7a3d1b.js", "chunks/Tag-4aa40753.js", "chunks/BlogGallery-a7257cb9.js"];
+    css17 = ["assets/app-ec155f4d.css", "assets/vendor-5469db33.css", "assets/BlogImage-3a25515d.css", "assets/Tag-5030ad19.css", "assets/BlogGallery-ca2ee3c4.css"];
   }
 });
 
@@ -10472,15 +10646,15 @@ __export(__exports8, {
   css: () => css18,
   entry: () => entry8,
   js: () => js8,
-  module: () => sustainable_textiles_svx_exports
+  module: () => made_with_svelte_kit_svx_exports
 });
 var entry8, js8, css18;
 var init__8 = __esm({
   ".svelte-kit/output/server/nodes/7.js"() {
-    init_sustainable_textiles_svx();
-    entry8 = "pages/blog/sustainable-textiles.svx-06067e6d.js";
-    js8 = ["pages/blog/sustainable-textiles.svx-06067e6d.js", "chunks/vendor-62d2730a.js", "chunks/BlogImage-d21e1abf.js", "chunks/Tag-ae4dc1d4.js", "chunks/BlogGallery-fe55d445.js"];
-    css18 = ["assets/app-12d2dd8f.css", "assets/vendor-5469db33.css", "assets/BlogImage-4c10e73e.css", "assets/Tag-5030ad19.css", "assets/BlogGallery-ca2ee3c4.css"];
+    init_made_with_svelte_kit_svx();
+    entry8 = "pages/blog/made-with-svelte-kit.svx-6a37bae7.js";
+    js8 = ["pages/blog/made-with-svelte-kit.svx-6a37bae7.js", "chunks/vendor-0e906c74.js", "chunks/BlogImage-ec7a3d1b.js", "chunks/Tag-4aa40753.js", "chunks/BlogGallery-a7257cb9.js"];
+    css18 = ["assets/app-ec155f4d.css", "assets/vendor-5469db33.css", "assets/BlogImage-3a25515d.css", "assets/Tag-5030ad19.css", "assets/BlogGallery-ca2ee3c4.css"];
   }
 });
 
@@ -10490,15 +10664,15 @@ __export(__exports9, {
   css: () => css19,
   entry: () => entry9,
   js: () => js9,
-  module: () => oat_milk_guide_svx_exports
+  module: () => sustainable_textiles_svx_exports
 });
 var entry9, js9, css19;
 var init__9 = __esm({
   ".svelte-kit/output/server/nodes/8.js"() {
-    init_oat_milk_guide_svx();
-    entry9 = "pages/blog/oat-milk-guide.svx-617835dc.js";
-    js9 = ["pages/blog/oat-milk-guide.svx-617835dc.js", "chunks/vendor-62d2730a.js", "chunks/BlogImage-d21e1abf.js", "chunks/Tag-ae4dc1d4.js"];
-    css19 = ["assets/pages/blog/oat-milk-guide.svx-c588e15f.css", "assets/app-12d2dd8f.css", "assets/vendor-5469db33.css", "assets/BlogImage-4c10e73e.css", "assets/Tag-5030ad19.css"];
+    init_sustainable_textiles_svx();
+    entry9 = "pages/blog/sustainable-textiles.svx-098bdfad.js";
+    js9 = ["pages/blog/sustainable-textiles.svx-098bdfad.js", "chunks/vendor-0e906c74.js", "chunks/BlogImage-ec7a3d1b.js", "chunks/Tag-4aa40753.js", "chunks/BlogGallery-a7257cb9.js"];
+    css19 = ["assets/app-ec155f4d.css", "assets/vendor-5469db33.css", "assets/BlogImage-3a25515d.css", "assets/Tag-5030ad19.css", "assets/BlogGallery-ca2ee3c4.css"];
   }
 });
 
@@ -10508,15 +10682,15 @@ __export(__exports10, {
   css: () => css20,
   entry: () => entry10,
   js: () => js10,
-  module: () => michelle_feng_svx_exports
+  module: () => oat_milk_guide_svx_exports
 });
 var entry10, js10, css20;
 var init__10 = __esm({
   ".svelte-kit/output/server/nodes/9.js"() {
-    init_michelle_feng_svx();
-    entry10 = "pages/blog/michelle-feng.svx-049010d3.js";
-    js10 = ["pages/blog/michelle-feng.svx-049010d3.js", "chunks/vendor-62d2730a.js", "chunks/BlogImage-d21e1abf.js", "chunks/Tag-ae4dc1d4.js"];
-    css20 = ["assets/app-12d2dd8f.css", "assets/vendor-5469db33.css", "assets/BlogImage-4c10e73e.css", "assets/Tag-5030ad19.css"];
+    init_oat_milk_guide_svx();
+    entry10 = "pages/blog/oat-milk-guide.svx-b02966b1.js";
+    js10 = ["pages/blog/oat-milk-guide.svx-b02966b1.js", "chunks/vendor-0e906c74.js", "chunks/BlogImage-ec7a3d1b.js", "chunks/Tag-4aa40753.js"];
+    css20 = ["assets/pages/blog/oat-milk-guide.svx-c588e15f.css", "assets/app-ec155f4d.css", "assets/vendor-5469db33.css", "assets/BlogImage-3a25515d.css", "assets/Tag-5030ad19.css"];
   }
 });
 
@@ -10526,15 +10700,33 @@ __export(__exports11, {
   css: () => css21,
   entry: () => entry11,
   js: () => js11,
-  module: () => fruit_blobs_svx_exports
+  module: () => michelle_feng_svx_exports
 });
 var entry11, js11, css21;
 var init__11 = __esm({
   ".svelte-kit/output/server/nodes/10.js"() {
+    init_michelle_feng_svx();
+    entry11 = "pages/blog/michelle-feng.svx-7f0e54f6.js";
+    js11 = ["pages/blog/michelle-feng.svx-7f0e54f6.js", "chunks/vendor-0e906c74.js", "chunks/BlogImage-ec7a3d1b.js", "chunks/Tag-4aa40753.js"];
+    css21 = ["assets/app-ec155f4d.css", "assets/vendor-5469db33.css", "assets/BlogImage-3a25515d.css", "assets/Tag-5030ad19.css"];
+  }
+});
+
+// .svelte-kit/output/server/nodes/11.js
+var __exports12 = {};
+__export(__exports12, {
+  css: () => css22,
+  entry: () => entry12,
+  js: () => js12,
+  module: () => fruit_blobs_svx_exports
+});
+var entry12, js12, css22;
+var init__12 = __esm({
+  ".svelte-kit/output/server/nodes/11.js"() {
     init_fruit_blobs_svx();
-    entry11 = "pages/blog/fruit-blobs.svx-bbe34f2d.js";
-    js11 = ["pages/blog/fruit-blobs.svx-bbe34f2d.js", "chunks/vendor-62d2730a.js", "chunks/BlogImage-d21e1abf.js", "chunks/Tag-ae4dc1d4.js", "chunks/BlogGallery-fe55d445.js"];
-    css21 = ["assets/app-12d2dd8f.css", "assets/vendor-5469db33.css", "assets/BlogImage-4c10e73e.css", "assets/Tag-5030ad19.css", "assets/BlogGallery-ca2ee3c4.css"];
+    entry12 = "pages/blog/fruit-blobs.svx-2dc21593.js";
+    js12 = ["pages/blog/fruit-blobs.svx-2dc21593.js", "chunks/vendor-0e906c74.js", "chunks/BlogImage-ec7a3d1b.js", "chunks/Tag-4aa40753.js", "chunks/BlogGallery-a7257cb9.js"];
+    css22 = ["assets/app-ec155f4d.css", "assets/vendor-5469db33.css", "assets/BlogImage-3a25515d.css", "assets/Tag-5030ad19.css", "assets/BlogGallery-ca2ee3c4.css"];
   }
 });
 
@@ -10553,21 +10745,21 @@ var init_home_svelte = __esm({
   }
 });
 
-// .svelte-kit/output/server/nodes/11.js
-var __exports12 = {};
-__export(__exports12, {
-  css: () => css22,
-  entry: () => entry12,
-  js: () => js12,
+// .svelte-kit/output/server/nodes/12.js
+var __exports13 = {};
+__export(__exports13, {
+  css: () => css23,
+  entry: () => entry13,
+  js: () => js13,
   module: () => home_svelte_exports
 });
-var entry12, js12, css22;
-var init__12 = __esm({
-  ".svelte-kit/output/server/nodes/11.js"() {
+var entry13, js13, css23;
+var init__13 = __esm({
+  ".svelte-kit/output/server/nodes/12.js"() {
     init_home_svelte();
-    entry12 = "pages/home.svelte-d6648351.js";
-    js12 = ["pages/home.svelte-d6648351.js", "chunks/vendor-62d2730a.js", "chunks/navigation-b10cf5bf.js", "chunks/singletons-4a680913.js"];
-    css22 = ["assets/vendor-5469db33.css"];
+    entry13 = "pages/home.svelte-05f9db7d.js";
+    js13 = ["pages/home.svelte-05f9db7d.js", "chunks/vendor-0e906c74.js", "chunks/navigation-b10cf5bf.js", "chunks/singletons-4a680913.js"];
+    css23 = ["assets/vendor-5469db33.css"];
   }
 });
 
@@ -10818,12 +11010,12 @@ function devalue(value) {
   }
   walk(value);
   var names = new Map();
-  Array.from(counts).filter(function(entry13) {
-    return entry13[1] > 1;
+  Array.from(counts).filter(function(entry14) {
+    return entry14[1] > 1;
   }).sort(function(a, b) {
     return b[1] - a[1];
-  }).forEach(function(entry13, i2) {
-    names.set(entry13[0], getName(i2));
+  }).forEach(function(entry14, i2) {
+    names.set(entry14[0], getName(i2));
   });
   function stringify(thing) {
     if (names.has(thing)) {
@@ -11112,8 +11304,8 @@ async function render_response({
   ssr,
   stuff
 }) {
-  const css23 = new Set(options.manifest._.entry.css);
-  const js13 = new Set(options.manifest._.entry.js);
+  const css24 = new Set(options.manifest._.entry.css);
+  const js14 = new Set(options.manifest._.entry.js);
   const styles = new Map();
   const serialized_data = [];
   let rendered;
@@ -11125,9 +11317,9 @@ async function render_response({
   if (ssr) {
     branch.forEach(({ node, loaded, fetched, uses_credentials }) => {
       if (node.css)
-        node.css.forEach((url2) => css23.add(url2));
+        node.css.forEach((url2) => css24.add(url2));
       if (node.js)
-        node.js.forEach((url2) => js13.add(url2));
+        node.js.forEach((url2) => js14.add(url2));
       if (node.styles)
         Object.entries(node.styles).forEach(([k, v]) => styles.set(k, v));
       if (fetched && page_config.hydrate)
@@ -11198,10 +11390,10 @@ ${rendered.css.code}</style>`;
       head += `
 	<style${options.dev ? " data-svelte" : ""}>${inlined_style}</style>`;
     }
-    head += Array.from(css23).map((dep) => `
+    head += Array.from(css24).map((dep) => `
 	<link${styles.has(dep) ? " disabled" : ""} rel="stylesheet" href="${options.prefix + dep}">`).join("");
     if (page_config.router || page_config.hydrate) {
-      head += Array.from(js13).map((dep) => `
+      head += Array.from(js14).map((dep) => `
 	<link rel="modulepreload" href="${options.prefix + dep}">`).join("");
       head += `
 			<script type="module">
@@ -12139,10 +12331,10 @@ var App = class {
 // .svelte-kit/vercel-tmp/manifest.js
 var manifest = {
   appDir: "_app",
-  assets: new Set(["favicon.svg", "thumbnails/breakthrough.png", "thumbnails/climate-tracker.jpg", "thumbnails/fruit-blobs.png", "thumbnails/haute-greenwashing-post.png", "thumbnails/haute-greenwashing.png", "thumbnails/mathy-protest.png", "thumbnails/nyt-stem-writing.jpg", "thumbnails/oat-milk.png", "thumbnails/teachers.jfif", "thumbnails/technica.jpg", "thumbnails/vwl-site.png"]),
+  assets: new Set(["favicon.svg", "thumbnails/breakthrough.png", "thumbnails/climate-tracker.jpg", "thumbnails/fruit-blobs.png", "thumbnails/gingerbread-5.jpg", "thumbnails/haute-greenwashing-post.png", "thumbnails/haute-greenwashing.png", "thumbnails/mathy-protest.png", "thumbnails/nyt-stem-writing.jpg", "thumbnails/oat-milk.png", "thumbnails/teachers.jfif", "thumbnails/technica.jpg", "thumbnails/vwl-site.png"]),
   _: {
     mime: { ".svg": "image/svg+xml", ".png": "image/png", ".jpg": "image/jpeg" },
-    entry: { "file": "start-a95b92e7.js", "js": ["start-a95b92e7.js", "chunks/vendor-62d2730a.js", "chunks/preload-helper-ec9aa979.js", "chunks/singletons-4a680913.js"], "css": ["assets/vendor-5469db33.css"] },
+    entry: { "file": "start-a4da1548.js", "js": ["start-a4da1548.js", "chunks/vendor-0e906c74.js", "chunks/preload-helper-ec9aa979.js", "chunks/singletons-4a680913.js"], "css": ["assets/vendor-5469db33.css"] },
     nodes: [
       () => Promise.resolve().then(() => (init__(), __exports)),
       () => Promise.resolve().then(() => (init__2(), __exports2)),
@@ -12155,7 +12347,8 @@ var manifest = {
       () => Promise.resolve().then(() => (init__9(), __exports9)),
       () => Promise.resolve().then(() => (init__10(), __exports10)),
       () => Promise.resolve().then(() => (init__11(), __exports11)),
-      () => Promise.resolve().then(() => (init__12(), __exports12))
+      () => Promise.resolve().then(() => (init__12(), __exports12)),
+      () => Promise.resolve().then(() => (init__13(), __exports13))
     ],
     routes: [
       {
@@ -12192,10 +12385,18 @@ var manifest = {
       },
       {
         type: "page",
+        pattern: /^\/blog\/gingerbread-house-2021\/?$/,
+        params: null,
+        path: "/blog/gingerbread-house-2021",
+        a: [0, 6],
+        b: [1]
+      },
+      {
+        type: "page",
         pattern: /^\/blog\/made-with-svelte-kit\/?$/,
         params: null,
         path: "/blog/made-with-svelte-kit",
-        a: [0, 6],
+        a: [0, 7],
         b: [1]
       },
       {
@@ -12203,7 +12404,7 @@ var manifest = {
         pattern: /^\/blog\/sustainable-textiles\/?$/,
         params: null,
         path: "/blog/sustainable-textiles",
-        a: [0, 7],
+        a: [0, 8],
         b: [1]
       },
       {
@@ -12211,7 +12412,7 @@ var manifest = {
         pattern: /^\/blog\/oat-milk-guide\/?$/,
         params: null,
         path: "/blog/oat-milk-guide",
-        a: [0, 8],
+        a: [0, 9],
         b: [1]
       },
       {
@@ -12219,7 +12420,7 @@ var manifest = {
         pattern: /^\/blog\/michelle-feng\/?$/,
         params: null,
         path: "/blog/michelle-feng",
-        a: [0, 9],
+        a: [0, 10],
         b: [1]
       },
       {
@@ -12227,7 +12428,7 @@ var manifest = {
         pattern: /^\/blog\/fruit-blobs\/?$/,
         params: null,
         path: "/blog/fruit-blobs",
-        a: [0, 10],
+        a: [0, 11],
         b: [1]
       },
       {
@@ -12235,7 +12436,7 @@ var manifest = {
         pattern: /^\/home\/?$/,
         params: null,
         path: "/home",
-        a: [0, 11],
+        a: [0, 12],
         b: [1]
       }
     ]

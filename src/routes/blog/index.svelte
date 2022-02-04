@@ -112,7 +112,7 @@
 <style>
 	.post-container {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+		grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
 		grid-gap: 2rem;
 		padding: 3rem 0;
 	}

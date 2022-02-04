@@ -24,8 +24,17 @@
 
 	import Icon from 'svelte-icons-pack/Icon.svelte';
 	import FiMoon from 'svelte-icons-pack/fi/FiMoon';
-	let themes = ['moon', 'filled-moon'];
+
+	let savedTheme;
 	let darkTheme;
+	if (browser) {
+		savedTheme = browser && localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+		darkTheme = savedTheme ?? 'light';
+		darkTheme === 'light'
+			? document.documentElement.setAttribute('data-theme', 'light')
+			: document.documentElement.setAttribute('data-theme', 'dark');
+	}
+
 	let opened = 'closed';
 	$: if ($navigating) opened = 'closed';
 
@@ -33,6 +42,7 @@
 		darkTheme === 'light' ? (darkTheme = 'dark') : (darkTheme = 'light');
 		document.documentElement.setAttribute('data-theme', darkTheme);
 		localStorage.setItem('theme', darkTheme);
+		console.log(darkTheme);
 	}
 	function openClose() {
 		opened === 'closed' ? (opened = 'open') : (opened = 'closed');
@@ -51,7 +61,7 @@
 
 <svelte:head>
 	<script>
-		let savedTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+		savedTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
 		darkTheme = savedTheme ?? 'light';
 		darkTheme === 'light'
 			? document.documentElement.setAttribute('data-theme', 'light')
@@ -107,7 +117,7 @@
 		</div>
 		<div class="dark-switch">
 			<div on:click={switchTheme}>
-				<Icon src={FiMoon} className={'custom-icon ' + themes[darkTheme]} />
+				<Icon src={FiMoon} className={'custom-icon ' + darkTheme} />
 			</div>
 		</div>
 		<div class="page-content {portfolio}">
@@ -201,7 +211,7 @@
 			cursor: pointer;
 		}
 	}
-	:global(.filled-moon) {
+	:global(.dark) {
 		fill: var(--secondary-color);
 		&:hover {
 			fill: var(--secondary-selected-color);
