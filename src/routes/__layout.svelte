@@ -53,7 +53,7 @@
 	if (emailSubmitted) {
 		toast.push('email submitted!');
 		toast.pop((i) => i.target !== 'new');
-		browser && goto($page.url.pathName, { replaceState: true });
+		browser && goto('/blog', { replaceState: true });
 		emailSubmitted = false;
 	}
 	let portfolio = $page.url.pathName === '/portfolio' ? 'portfolio' : '';

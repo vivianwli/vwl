@@ -5950,7 +5950,7 @@ var init_layout_svelte = __esm({
       c: '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>'
     };
     css = {
-      code: ".background.svelte-13253q4.svelte-13253q4{position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:-1}.background.svelte-13253q4 span.svelte-13253q4{backface-visibility:hidden;position:absolute;animation-name:svelte-13253q4-move;animation-duration:60s;animation-timing-function:linear;animation-iteration-count:infinite}.background.svelte-13253q4 span.svelte-13253q4:nth-child(1){color:var(--blob-1);top:32%;left:23%;animation-duration:60.7s;animation-delay:-57.8s;transform-origin:-8vw 8vh;width:16rem;height:16rem;border-radius:16rem;box-shadow:-32rem 0 4.5993417966rem currentColor}.background.svelte-13253q4 span.svelte-13253q4:nth-child(2){color:var(--blob-2);top:77%;left:11%;animation-duration:34.2s;animation-delay:-27.6s;transform-origin:-6vw -13vh;width:10rem;height:10rem;border-radius:10rem;box-shadow:20rem 0 4.1138886507rem currentColor}.background.svelte-13253q4 span.svelte-13253q4:nth-child(3){color:var(--blob-2);top:4%;left:95%;animation-duration:26.7s;animation-delay:-48.4s;transform-origin:19vw 4vh;width:16rem;height:16rem;border-radius:16rem;box-shadow:32rem 0 9.1017344089rem currentColor}.background.svelte-13253q4 span.svelte-13253q4:nth-child(4){color:var(--blob-1);top:22%;left:96%;animation-duration:43.1s;animation-delay:-52.5s;transform-origin:19vw 5vh;width:16rem;height:16rem;border-radius:16rem;box-shadow:32rem 0 7.5754503522rem currentColor}.background.svelte-13253q4 span.svelte-13253q4:nth-child(5){color:var(--blob-1);top:23%;left:16%;animation-duration:25.9s;animation-delay:-29.3s;transform-origin:-9vw 9vh;width:16rem;height:16rem;border-radius:16rem;box-shadow:32rem 0 11.6182468223rem currentColor}.background.svelte-13253q4 span.svelte-13253q4:nth-child(6){color:var(--blob-2);top:87%;left:51%;animation-duration:30.4s;animation-delay:-47.3s;transform-origin:-10vw -11vh;width:16rem;height:16rem;border-radius:16rem;box-shadow:-32rem 0 10.6145497946rem currentColor}.background.svelte-13253q4 span.svelte-13253q4:nth-child(7){color:var(--blob-1);top:62%;left:18%;animation-duration:31s;animation-delay:-12.9s;transform-origin:13vw -13vh;width:13rem;height:13rem;border-radius:13rem;box-shadow:-26rem 0 7.9785605866rem currentColor}.background.svelte-13253q4 span.svelte-13253q4:nth-child(8){color:var(--blob-2);top:85%;left:49%;animation-duration:36.9s;animation-delay:-51.3s;transform-origin:19vw 13vh;width:16rem;height:16rem;border-radius:16rem;box-shadow:32rem 0 8.081577812rem currentColor}.background.svelte-13253q4 span.svelte-13253q4:nth-child(9){color:var(--blob-2);top:58%;left:11%;animation-duration:68.6s;animation-delay:-11.5s;transform-origin:-12vw 16vh;width:16rem;height:16rem;border-radius:16rem;box-shadow:32rem 0 9.9892460029rem currentColor}.background.svelte-13253q4 span.svelte-13253q4:nth-child(10){color:var(--blob-1);top:21%;left:29%;animation-duration:60.4s;animation-delay:-17.7s;transform-origin:-15vw -10vh;width:13rem;height:13rem;border-radius:13rem;box-shadow:26rem 0 6.886933748rem currentColor}.background.svelte-13253q4 span.svelte-13253q4:nth-child(11){color:var(--blob-2);top:36%;left:54%;animation-duration:43.9s;animation-delay:-56.8s;transform-origin:-19vw 1vh;width:13rem;height:13rem;border-radius:13rem;box-shadow:-26rem 0 4.7519475971rem currentColor}.background.svelte-13253q4 span.svelte-13253q4:nth-child(12){color:var(--blob-1);top:64%;left:24%;animation-duration:54.9s;animation-delay:-28.9s;transform-origin:10vw -8vh;width:10rem;height:10rem;border-radius:10rem;box-shadow:20rem 0 5.6998024874rem currentColor}.background.svelte-13253q4 span.svelte-13253q4:nth-child(13){color:var(--blob-2);top:85%;left:97%;animation-duration:16s;animation-delay:-30.1s;transform-origin:5vw -7vh;width:16rem;height:16rem;border-radius:16rem;box-shadow:32rem 0 9.7358264969rem currentColor}.background.svelte-13253q4 span.svelte-13253q4:nth-child(14){color:var(--blob-2);top:61%;left:7%;animation-duration:31s;animation-delay:-14.1s;transform-origin:21vw -15vh;width:13rem;height:13rem;border-radius:13rem;box-shadow:-26rem 0 6.9470816187rem currentColor}.background.svelte-13253q4 span.svelte-13253q4:nth-child(15){color:var(--blob-2);top:74%;left:16%;animation-duration:63.9s;animation-delay:-5.9s;transform-origin:14vw 14vh;width:10rem;height:10rem;border-radius:10rem;box-shadow:20rem 0 6.5667701977rem currentColor}.background.svelte-13253q4 span.svelte-13253q4:nth-child(16){color:var(--blob-2);top:60%;left:71%;animation-duration:62s;animation-delay:-29.2s;transform-origin:10vw -4vh;width:16rem;height:16rem;border-radius:16rem;box-shadow:32rem 0 4.5564869401rem currentColor}.background.svelte-13253q4 span.svelte-13253q4:nth-child(17){color:var(--blob-2);top:5%;left:84%;animation-duration:40.4s;animation-delay:-45.6s;transform-origin:18vw 9vh;width:10rem;height:10rem;border-radius:10rem;box-shadow:20rem 0 5.5160018692rem currentColor}.background.svelte-13253q4 span.svelte-13253q4:nth-child(18){color:var(--blob-1);top:89%;left:92%;animation-duration:37s;animation-delay:-44.3s;transform-origin:10vw -6vh;width:16rem;height:16rem;border-radius:16rem;box-shadow:32rem 0 6.6474904595rem currentColor}.background.svelte-13253q4 span.svelte-13253q4:nth-child(19){color:var(--blob-1);top:86%;left:87%;animation-duration:19.7s;animation-delay:-39s;transform-origin:19vw 14vh;width:10rem;height:10rem;border-radius:10rem;box-shadow:-20rem 0 4.9774288696rem currentColor}.background.svelte-13253q4 span.svelte-13253q4:nth-child(20){color:var(--blob-1);top:29%;left:73%;animation-duration:55s;animation-delay:-65.1s;transform-origin:5vw 0vh;width:10rem;height:10rem;border-radius:10rem;box-shadow:-20rem 0 4.5855225318rem currentColor}@keyframes svelte-13253q4-move{100%{transform:translate3d(0, 0, 1px) rotate(360deg)}}.header.svelte-13253q4.svelte-13253q4{position:fixed;width:fit-content;z-index:4}.custom-icon{color:var(--secondary-color);font-size:2rem;opacity:75%}.custom-icon:hover{color:var(--secondary-selected-color);cursor:pointer}.dark{fill:var(--secondary-color)}.dark:hover{fill:var(--secondary-selected-color)}.open.svelte-13253q4.svelte-13253q4{position:absolute;top:0;background-color:var(--bg-color);box-shadow:0 0 12rem var(--secondary-color);height:100vh;width:15rem;z-index:-1}",
+      code: ".background.svelte-gg4js.svelte-gg4js{position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:-1}.background.svelte-gg4js span.svelte-gg4js{backface-visibility:hidden;position:absolute;animation-name:svelte-gg4js-move;animation-duration:60s;animation-timing-function:linear;animation-iteration-count:infinite}.background.svelte-gg4js span.svelte-gg4js:nth-child(1){color:var(--blob-1);top:29%;left:98%;animation-duration:43.8s;animation-delay:-39.4s;transform-origin:-13vw -2vh;width:13rem;height:13rem;border-radius:13rem;box-shadow:-26rem 0 5.2225858442rem currentColor}.background.svelte-gg4js span.svelte-gg4js:nth-child(2){color:var(--blob-2);top:93%;left:16%;animation-duration:15.6s;animation-delay:-41s;transform-origin:3vw 23vh;width:10rem;height:10rem;border-radius:10rem;box-shadow:20rem 0 6.694114144rem currentColor}.background.svelte-gg4js span.svelte-gg4js:nth-child(3){color:var(--blob-2);top:9%;left:55%;animation-duration:60.5s;animation-delay:-23.8s;transform-origin:10vw -15vh;width:13rem;height:13rem;border-radius:13rem;box-shadow:26rem 0 6.9049725312rem currentColor}.background.svelte-gg4js span.svelte-gg4js:nth-child(4){color:var(--blob-2);top:93%;left:26%;animation-duration:58.6s;animation-delay:-38.6s;transform-origin:17vw -3vh;width:16rem;height:16rem;border-radius:16rem;box-shadow:-32rem 0 10.7969396378rem currentColor}.background.svelte-gg4js span.svelte-gg4js:nth-child(5){color:var(--blob-2);top:29%;left:9%;animation-duration:18s;animation-delay:-58.6s;transform-origin:-7vw -3vh;width:16rem;height:16rem;border-radius:16rem;box-shadow:32rem 0 9.5540116995rem currentColor}.background.svelte-gg4js span.svelte-gg4js:nth-child(6){color:var(--blob-2);top:38%;left:94%;animation-duration:20.7s;animation-delay:-44.5s;transform-origin:22vw 18vh;width:16rem;height:16rem;border-radius:16rem;box-shadow:-32rem 0 10.7967509989rem currentColor}.background.svelte-gg4js span.svelte-gg4js:nth-child(7){color:var(--blob-1);top:27%;left:95%;animation-duration:45.8s;animation-delay:-60.5s;transform-origin:22vw 17vh;width:10rem;height:10rem;border-radius:10rem;box-shadow:-20rem 0 5.7590372648rem currentColor}.background.svelte-gg4js span.svelte-gg4js:nth-child(8){color:var(--blob-2);top:32%;left:93%;animation-duration:27.7s;animation-delay:-13.8s;transform-origin:13vw 9vh;width:16rem;height:16rem;border-radius:16rem;box-shadow:-32rem 0 11.6527114347rem currentColor}.background.svelte-gg4js span.svelte-gg4js:nth-child(9){color:var(--blob-1);top:95%;left:19%;animation-duration:68.9s;animation-delay:-53.5s;transform-origin:16vw -16vh;width:10rem;height:10rem;border-radius:10rem;box-shadow:-20rem 0 6.5722600774rem currentColor}.background.svelte-gg4js span.svelte-gg4js:nth-child(10){color:var(--blob-1);top:100%;left:47%;animation-duration:67.2s;animation-delay:-22.7s;transform-origin:1vw -17vh;width:13rem;height:13rem;border-radius:13rem;box-shadow:26rem 0 3.3683681865rem currentColor}.background.svelte-gg4js span.svelte-gg4js:nth-child(11){color:var(--blob-1);top:28%;left:15%;animation-duration:31s;animation-delay:-62.2s;transform-origin:14vw -3vh;width:10rem;height:10rem;border-radius:10rem;box-shadow:20rem 0 5.1618134062rem currentColor}.background.svelte-gg4js span.svelte-gg4js:nth-child(12){color:var(--blob-1);top:83%;left:6%;animation-duration:24.5s;animation-delay:-2.9s;transform-origin:11vw -20vh;width:16rem;height:16rem;border-radius:16rem;box-shadow:32rem 0 10.6927692364rem currentColor}.background.svelte-gg4js span.svelte-gg4js:nth-child(13){color:var(--blob-2);top:4%;left:36%;animation-duration:62s;animation-delay:-51s;transform-origin:-13vw -16vh;width:16rem;height:16rem;border-radius:16rem;box-shadow:32rem 0 8.333952002rem currentColor}.background.svelte-gg4js span.svelte-gg4js:nth-child(14){color:var(--blob-1);top:6%;left:16%;animation-duration:27.1s;animation-delay:-59s;transform-origin:-22vw 11vh;width:10rem;height:10rem;border-radius:10rem;box-shadow:20rem 0 5.8997856434rem currentColor}.background.svelte-gg4js span.svelte-gg4js:nth-child(15){color:var(--blob-2);top:53%;left:9%;animation-duration:67.6s;animation-delay:-64.3s;transform-origin:4vw 15vh;width:13rem;height:13rem;border-radius:13rem;box-shadow:26rem 0 6.6105293401rem currentColor}.background.svelte-gg4js span.svelte-gg4js:nth-child(16){color:var(--blob-2);top:67%;left:99%;animation-duration:45s;animation-delay:-11.4s;transform-origin:-18vw -24vh;width:13rem;height:13rem;border-radius:13rem;box-shadow:26rem 0 5.3606253003rem currentColor}.background.svelte-gg4js span.svelte-gg4js:nth-child(17){color:var(--blob-1);top:13%;left:83%;animation-duration:54.4s;animation-delay:-19.6s;transform-origin:-24vw 8vh;width:10rem;height:10rem;border-radius:10rem;box-shadow:20rem 0 3.2749859633rem currentColor}.background.svelte-gg4js span.svelte-gg4js:nth-child(18){color:var(--blob-2);top:21%;left:94%;animation-duration:18.9s;animation-delay:-15.7s;transform-origin:-6vw 11vh;width:13rem;height:13rem;border-radius:13rem;box-shadow:-26rem 0 4.7478160368rem currentColor}.background.svelte-gg4js span.svelte-gg4js:nth-child(19){color:var(--blob-1);top:32%;left:81%;animation-duration:61s;animation-delay:-17.3s;transform-origin:-8vw 3vh;width:10rem;height:10rem;border-radius:10rem;box-shadow:-20rem 0 4.4520818774rem currentColor}.background.svelte-gg4js span.svelte-gg4js:nth-child(20){color:var(--blob-2);top:54%;left:14%;animation-duration:48s;animation-delay:-51.1s;transform-origin:-14vw 23vh;width:10rem;height:10rem;border-radius:10rem;box-shadow:-20rem 0 3.0753193069rem currentColor}@keyframes svelte-gg4js-move{100%{transform:translate3d(0, 0, 1px) rotate(360deg)}}.header.svelte-gg4js.svelte-gg4js{position:fixed;width:fit-content;z-index:4}.custom-icon{color:var(--secondary-color);font-size:2rem;opacity:75%}.custom-icon:hover{color:var(--secondary-selected-color);cursor:pointer}.dark{fill:var(--secondary-color)}.dark:hover{fill:var(--secondary-selected-color)}.open.svelte-gg4js.svelte-gg4js{position:absolute;top:0;background-color:var(--bg-color);box-shadow:0 0 12rem var(--secondary-color);height:100vh;width:15rem;z-index:-1}",
       map: null
     };
     load = async ({ url }) => ({ props: { key: url.pathname } });
@@ -5988,7 +5988,7 @@ var init_layout_svelte = __esm({
 			: document.documentElement.setAttribute('data-theme', 'dark');
 	<\/script>`, ""}
 
-<div class="${"scroll-bar-wrap"}"><div class="${"scroll-box"}"><div class="${"header svelte-13253q4"}"><div class="${"mobile-nav"}"><div style="display: contents; --color:${"var(--secondary-color)"}; --padding:${"2rem"};">${validate_component(Hamburger, "Hamburger").$$render($$result, { type: "squeeze", open }, {
+<div class="${"scroll-bar-wrap"}"><div class="${"scroll-box"}"><div class="${"header svelte-gg4js"}"><div class="${"mobile-nav"}"><div style="display: contents; --color:${"var(--secondary-color)"}; --padding:${"2rem"};">${validate_component(Hamburger, "Hamburger").$$render($$result, { type: "squeeze", open }, {
           open: ($$value) => {
             open = $$value;
             $$settled = false;
@@ -6000,7 +6000,7 @@ var init_layout_svelte = __esm({
             $$settled = false;
           }
         }, {})}
-				${opened === "open" ? `<div class="${"open svelte-13253q4"}"></div>` : ``}</div>
+				${opened === "open" ? `<div class="${"open svelte-gg4js"}"></div>` : ``}</div>
 			<nav><a sveltekit:prefetch sveltekit:noscroll href="${"/"}">home</a>
 				<a sveltekit:prefetch sveltekit:noscroll href="${"/portfolio"}">portfolio</a>
 				<a sveltekit:prefetch sveltekit:noscroll href="${"/blog"}">blog</a></nav></div>
@@ -6008,31 +6008,31 @@ var init_layout_svelte = __esm({
           src: FiMoon,
           className: "custom-icon " + darkTheme
         }, {}, {})}</div></div>
-		<div class="${"page-content " + escape(portfolio) + " svelte-13253q4"}">${validate_component(PageTransition, "PageTransition").$$render($$result, { refresh: key }, {}, {
+		<div class="${"page-content " + escape(portfolio) + " svelte-gg4js"}">${validate_component(PageTransition, "PageTransition").$$render($$result, { refresh: key }, {}, {
           default: () => {
             return `${slots.default ? slots.default({}) : ``}`;
           }
         })}</div></div>
-	<div class="${"background svelte-13253q4"}"><span class="${"svelte-13253q4"}"></span>
-		<span class="${"svelte-13253q4"}"></span>
-		<span class="${"svelte-13253q4"}"></span>
-		<span class="${"svelte-13253q4"}"></span>
-		<span class="${"svelte-13253q4"}"></span>
-		<span class="${"svelte-13253q4"}"></span>
-		<span class="${"svelte-13253q4"}"></span>
-		<span class="${"svelte-13253q4"}"></span>
-		<span class="${"svelte-13253q4"}"></span>
-		<span class="${"svelte-13253q4"}"></span>
-		<span class="${"svelte-13253q4"}"></span>
-		<span class="${"svelte-13253q4"}"></span>
-		<span class="${"svelte-13253q4"}"></span>
-		<span class="${"svelte-13253q4"}"></span>
-		<span class="${"svelte-13253q4"}"></span>
-		<span class="${"svelte-13253q4"}"></span>
-		<span class="${"svelte-13253q4"}"></span>
-		<span class="${"svelte-13253q4"}"></span>
-		<span class="${"svelte-13253q4"}"></span>
-		<span class="${"svelte-13253q4"}"></span></div>
+	<div class="${"background svelte-gg4js"}"><span class="${"svelte-gg4js"}"></span>
+		<span class="${"svelte-gg4js"}"></span>
+		<span class="${"svelte-gg4js"}"></span>
+		<span class="${"svelte-gg4js"}"></span>
+		<span class="${"svelte-gg4js"}"></span>
+		<span class="${"svelte-gg4js"}"></span>
+		<span class="${"svelte-gg4js"}"></span>
+		<span class="${"svelte-gg4js"}"></span>
+		<span class="${"svelte-gg4js"}"></span>
+		<span class="${"svelte-gg4js"}"></span>
+		<span class="${"svelte-gg4js"}"></span>
+		<span class="${"svelte-gg4js"}"></span>
+		<span class="${"svelte-gg4js"}"></span>
+		<span class="${"svelte-gg4js"}"></span>
+		<span class="${"svelte-gg4js"}"></span>
+		<span class="${"svelte-gg4js"}"></span>
+		<span class="${"svelte-gg4js"}"></span>
+		<span class="${"svelte-gg4js"}"></span>
+		<span class="${"svelte-gg4js"}"></span>
+		<span class="${"svelte-gg4js"}"></span></div>
 </div>`;
       } while (!$$settled);
       $$unsubscribe_page();
@@ -6054,9 +6054,9 @@ var entry, js, css2;
 var init__ = __esm({
   ".svelte-kit/output/server/nodes/0.js"() {
     init_layout_svelte();
-    entry = "pages/__layout.svelte-0b7d2b2c.js";
-    js = ["pages/__layout.svelte-0b7d2b2c.js", "chunks/vendor-0e906c74.js", "chunks/stores-ada5a490.js", "chunks/navigation-b10cf5bf.js", "chunks/singletons-4a680913.js"];
-    css2 = ["assets/pages/__layout.svelte-b49ad7a5.css", "assets/app-ec155f4d.css", "assets/vendor-5469db33.css"];
+    entry = "pages/__layout.svelte-336b164a.js";
+    js = ["pages/__layout.svelte-336b164a.js", "chunks/vendor-0e906c74.js", "chunks/stores-ada5a490.js", "chunks/navigation-b10cf5bf.js", "chunks/singletons-4a680913.js"];
+    css2 = ["assets/pages/__layout.svelte-5f4725a9.css", "assets/app-ec155f4d.css", "assets/vendor-5469db33.css"];
   }
 });
 
@@ -10537,7 +10537,7 @@ var init_index_svelte2 = __esm({
 </div>`;
     });
     css15 = {
-      code: ".post-container.svelte-m3bscn{display:grid;grid-template-columns:repeat(auto-fit, minmax(15rem, 1fr));grid-gap:2rem;padding:3rem 0}.selectedTag.svelte-m3bscn .filter{background-color:var(--highlight-color);box-shadow:0 0 0.2rem var(--primary-light-color);color:var(--primary-color);border:2.5px solid var(--primary-color)}",
+      code: ".post-container.svelte-monhdd{display:grid;grid-template-columns:repeat(auto-fill, minmax(15rem, 1fr));grid-gap:2rem;padding:3rem 0}.selectedTag.svelte-monhdd .filter{background-color:var(--highlight-color);box-shadow:0 0 0.2rem var(--primary-light-color);color:var(--primary-color);border:2.5px solid var(--primary-color)}",
       map: null
     };
     posts = { "./fruit-blobs.svx": () => Promise.resolve().then(() => (init_fruit_blobs_svx(), fruit_blobs_svx_exports)), "./gingerbread-house-2021.svx": () => Promise.resolve().then(() => (init_gingerbread_house_2021_svx(), gingerbread_house_2021_svx_exports)), "./made-with-svelte-kit.svx": () => Promise.resolve().then(() => (init_made_with_svelte_kit_svx(), made_with_svelte_kit_svx_exports)), "./michelle-feng.svx": () => Promise.resolve().then(() => (init_michelle_feng_svx(), michelle_feng_svx_exports)), "./oat-milk-guide.svx": () => Promise.resolve().then(() => (init_oat_milk_guide_svx(), oat_milk_guide_svx_exports)), "./sustainable-textiles.svx": () => Promise.resolve().then(() => (init_sustainable_textiles_svx(), sustainable_textiles_svx_exports)) };
@@ -10570,7 +10570,7 @@ var init_index_svelte2 = __esm({
 	<h1>musings</h1>
 	<p>A humble abode for my ideas, experiments, and reflections. Welcome!</p>
 	<div class="${"buttons"}">${each(Object.keys(selectedTags).filter((k) => selectedTags[k]), (tag) => {
-        return `<div class="${["svelte-m3bscn", selectedTags[tag] ? "selectedTag" : ""].join(" ").trim()}">${validate_component(Tag, "Tag").$$render($$result, { className: "filter" }, {}, {
+        return `<div class="${["svelte-monhdd", selectedTags[tag] ? "selectedTag" : ""].join(" ").trim()}">${validate_component(Tag, "Tag").$$render($$result, { className: "filter" }, {}, {
           default: () => {
             return `${escape(tag)}`;
           }
@@ -10578,7 +10578,7 @@ var init_index_svelte2 = __esm({
 			</div>`;
       })}
 		${each(Object.keys(selectedTags).filter((k) => !selectedTags[k]), (tag) => {
-        return `<div class="${["svelte-m3bscn", selectedTags[tag] ? "selectedTag" : ""].join(" ").trim()}">${validate_component(Tag, "Tag").$$render($$result, { className: "filter" }, {}, {
+        return `<div class="${["svelte-monhdd", selectedTags[tag] ? "selectedTag" : ""].join(" ").trim()}">${validate_component(Tag, "Tag").$$render($$result, { className: "filter" }, {}, {
           default: () => {
             return `${escape(tag)}`;
           }
@@ -10590,7 +10590,7 @@ var init_index_svelte2 = __esm({
           return `clear all`;
         }
       })}</div></div>
-	<div class="${"post-container svelte-m3bscn"}">${Object.keys(selectedTags).filter((k) => selectedTags[k]).length === 0 ? `${each(posts2, (post) => {
+	<div class="${"post-container svelte-monhdd"}">${Object.keys(selectedTags).filter((k) => selectedTags[k]).length === 0 ? `${each(posts2, (post) => {
         return `${post !== void 0 ? `${validate_component(PostCard, "PostCard").$$render($$result, { post }, {}, {})}` : ``}`;
       })}` : `${each(posts2, (post) => {
         return `${each(post.tags, (tag) => {
@@ -10616,9 +10616,9 @@ var entry6, js6, css16;
 var init__6 = __esm({
   ".svelte-kit/output/server/nodes/5.js"() {
     init_index_svelte2();
-    entry6 = "pages/blog/index.svelte-3bbef5b7.js";
-    js6 = ["pages/blog/index.svelte-3bbef5b7.js", "chunks/preload-helper-ec9aa979.js", "chunks/vendor-0e906c74.js", "chunks/Tag-4aa40753.js", "chunks/EmailInput-26df116f.js"];
-    css16 = ["assets/pages/blog/index.svelte-c0441924.css", "assets/app-ec155f4d.css", "assets/vendor-5469db33.css", "assets/Tag-5030ad19.css", "assets/EmailInput-f58afbb8.css"];
+    entry6 = "pages/blog/index.svelte-d7cf4f23.js";
+    js6 = ["pages/blog/index.svelte-d7cf4f23.js", "chunks/preload-helper-ec9aa979.js", "chunks/vendor-0e906c74.js", "chunks/Tag-4aa40753.js", "chunks/EmailInput-26df116f.js"];
+    css16 = ["assets/pages/blog/index.svelte-330dec77.css", "assets/app-ec155f4d.css", "assets/vendor-5469db33.css", "assets/Tag-5030ad19.css", "assets/EmailInput-f58afbb8.css"];
   }
 });
 
@@ -12334,7 +12334,7 @@ var manifest = {
   assets: new Set(["favicon.svg", "thumbnails/breakthrough.png", "thumbnails/climate-tracker.jpg", "thumbnails/fruit-blobs.png", "thumbnails/gingerbread-5.jpg", "thumbnails/haute-greenwashing-post.png", "thumbnails/haute-greenwashing.png", "thumbnails/mathy-protest.png", "thumbnails/nyt-stem-writing.jpg", "thumbnails/oat-milk.png", "thumbnails/teachers.jfif", "thumbnails/technica.jpg", "thumbnails/vwl-site.png"]),
   _: {
     mime: { ".svg": "image/svg+xml", ".png": "image/png", ".jpg": "image/jpeg" },
-    entry: { "file": "start-a4da1548.js", "js": ["start-a4da1548.js", "chunks/vendor-0e906c74.js", "chunks/preload-helper-ec9aa979.js", "chunks/singletons-4a680913.js"], "css": ["assets/vendor-5469db33.css"] },
+    entry: { "file": "start-9d3f7120.js", "js": ["start-9d3f7120.js", "chunks/vendor-0e906c74.js", "chunks/preload-helper-ec9aa979.js", "chunks/singletons-4a680913.js"], "css": ["assets/vendor-5469db33.css"] },
     nodes: [
       () => Promise.resolve().then(() => (init__(), __exports)),
       () => Promise.resolve().then(() => (init__2(), __exports2)),
