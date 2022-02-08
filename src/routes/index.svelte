@@ -106,7 +106,9 @@
 				<p>
 					Okay, this one is relatively a work in progress. I've coded random projects in the past
 					(thanks, high school!), and I'm now on a mission to better understand interactive media
-					and data journalism. Feel free to follow along :)
+					and data journalism. I also coded this website with SvelteKit (here's <a
+						href="/blog/made-with-svelte-kit">how</a
+					>)
 				</p>
 				<div class="buttons">
 					<Link link="https://github.com/teacupkittie">my github</Link>
