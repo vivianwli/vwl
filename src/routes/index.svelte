@@ -1,11 +1,13 @@
 <script>
+	// component imports
 	import Link from '$lib/components/Link.svelte';
 	import Tag from '$lib/components/Tag.svelte';
 	import EmailInput from '$lib/components/EmailInput.svelte';
-	import Icon from 'svelte-icons-pack/Icon.svelte';
+	import Arrow from '$lib/components/Arrow.svelte';
+	import { SvelteToast } from '@zerodevx/svelte-toast';
 
 	// icon imports
-	import FiArrowDownCircle from 'svelte-icons-pack/fi/FiArrowDownCircle';
+	import Icon from 'svelte-icons-pack/Icon.svelte';
 	import FiMail from 'svelte-icons-pack/fi/FiMail';
 	import FiGithub from 'svelte-icons-pack/fi/FiGithub';
 	import FiLinkedin from 'svelte-icons-pack/fi/FiLinkedin';
@@ -25,8 +27,7 @@
 	import write2 from '$lib/assets/viv-nytimes.png?w=400&webp';
 	import write3 from '$lib/assets/greenwashing-2.png?w=500&webp';
 
-	import { SvelteToast } from '@zerodevx/svelte-toast';
-
+	// setting the default section in "about me"
 	let aboutSection = 'at-usc';
 </script>
 
@@ -39,13 +40,14 @@
 </svelte:head>
 
 <div class="content">
+	<!-- toast that only shows after user subscribes to the newsletter -->
 	<SvelteToast />
-	<!-- cover page! -->
+	<!-- cover page / hero -->
 	<div class="section">
 		<div class="logo">
 			<img src={vwl} alt="logo" />
 		</div>
-		<Icon src={FiArrowDownCircle} className="custom-icon arrow" />
+		<Arrow />
 	</div>
 	<!-- introduction! -->
 	<div class="section">
@@ -66,10 +68,11 @@
 				>
 			</div>
 		</div>
-		<Icon src={FiArrowDownCircle} className="custom-icon arrow" />
+		<Arrow />
 	</div>
 	<!-- the things that i do -->
 	<div class="section things">
+		<!-- design -->
 		<div class="mini-section">
 			<div class="text-left">
 				<h1>i design...</h1>
@@ -89,6 +92,7 @@
 				</div>
 			</div>
 		</div>
+		<!-- code -->
 		<div class="mini-section">
 			<div class="image-stack image-left">
 				<div class="image-stack-item code-top">
@@ -114,6 +118,7 @@
 				</div>
 			</div>
 		</div>
+		<!-- write -->
 		<div class="mini-section">
 			<div class="text-left">
 				<h1>i write...</h1>
@@ -139,12 +144,13 @@
 				</div>
 			</div>
 		</div>
-		<Icon src={FiArrowDownCircle} className="custom-icon arrow" />
+		<Arrow />
 	</div>
 	<!-- outro! -->
 	<div class="section outro">
 		<h1>i create.</h1>
 		<div class="outro-content">
+			<!-- contact -->
 			<div class="contact">
 				<h2>want to chat?</h2>
 				<div class="media-icon-container">
@@ -170,11 +176,14 @@
 					</a>
 				</div>
 				<p>Subscribe to my newsletter:<br /> (this will take you to my blog!)</p>
-				<EmailInput className="right-justified" />
+				<EmailInput />
 			</div>
+			<!-- styled divider -->
 			<span />
+			<!-- about me -->
 			<div class="about">
 				<h2>want to know more?</h2>
+				<!-- content-filtering buttons -->
 				<div class="buttons">
 					<div
 						class:selectedTag={aboutSection === 'at-usc'}
@@ -195,6 +204,7 @@
 						<Tag className="filter">fun facts</Tag>
 					</div>
 				</div>
+				<!-- things i do at usc -->
 				{#if aboutSection === 'at-usc'}
 					<div>
 						<ul>
@@ -225,6 +235,7 @@
 							<li>i skate, bake, run, and enjoy our beautiful campus</li>
 						</ul>
 					</div>
+					<!-- things i care about -->
 				{:else if aboutSection === 'care-about'}
 					<div>
 						<ul>
@@ -237,6 +248,7 @@
 							<li>being nice to people :)</li>
 						</ul>
 					</div>
+					<!-- fun facts -->
 				{:else}
 					<div>
 						<ul>
@@ -259,6 +271,7 @@
 	.section {
 		scroll-snap-align: start;
 	}
+
 	/* title page style */
 	.logo {
 		width: 40vw;
@@ -274,45 +287,28 @@
 		margin: auto;
 	}
 
-	/* arrow icon style*/
-	:global(.arrow) {
-		opacity: 50%;
-		width: 100%;
-		margin: auto;
-		margin-top: 15vh;
-		margin-bottom: 10vh;
-		&:hover {
-			color: var(--secondary-color);
-			cursor: default;
-		}
-	}
-
 	/* style for each little image + text section! */
 	.mini-section {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		margin-top: 10vh;
 
+		/* split into two rows for small screen sizes */
 		@media screen and (max-width: 50rem) {
 			grid-template-columns: 1fr;
 			grid-template-rows: 1fr 1fr;
 		}
-	}
 
-	/* glow + resizing for every image in these mini sections */
-	.mini-section img {
-		box-shadow: 0 0 1.2rem 0.1rem var(--secondary-color);
-		max-width: 100%;
+		/* glow + resizing for every image in these mini sections */
+		img {
+			box-shadow: 0 0 1.2rem 0.1rem var(--secondary-color);
+			max-width: 100%;
+		}
 	}
 
 	/* more space in between each thing in the things section (thing: design, code, write) */
 	.things .mini-section {
 		margin: 20vh 0vw 10vh 0vw;
-	}
-
-	/* less space between the end of "things" and the arrow */
-	.things :global(.arrow) {
-		margin-top: 5vh;
 	}
 
 	/* unique style for my profile picture */
@@ -326,7 +322,7 @@
 		}
 	}
 
-	/* padding + centering for my text blocks */
+	/* padding + centering for my left- and right-justified variants */
 	.text-right {
 		display: flex;
 		justify-content: center;
@@ -347,9 +343,24 @@
 			margin: auto;
 		}
 	}
+	.image-right {
+		margin-left: 10%;
 
-	/* giving enough standalone slide space (so it looks good with scroll-snapping!) */
+		@media screen and (max-width: 50rem) {
+			order: -1;
+			margin: auto;
+		}
+	}
+	.image-left {
+		margin-right: 10%;
+		@media screen and (max-width: 50rem) {
+			margin: auto;
+		}
+	}
+
+	/* intro custom styles */
 	.intro {
+		/* giving enough standalone slide space (so it looks good with scroll-snapping!) */
 		padding-top: 5vh;
 
 		.text-right {
@@ -371,22 +382,9 @@
 		padding-top: 2em;
 		max-width: 25rem;
 	}
-	.image-right {
-		margin-left: 10%;
-
-		@media screen and (max-width: 50rem) {
-			order: -1;
-			margin: auto;
-		}
-	}
-	.image-left {
-		margin-right: 10%;
-		@media screen and (max-width: 50rem) {
-			margin: auto;
-		}
-	}
 
 	/* positioning for each individual picture */
+	/* "design" section */
 	.design-top {
 		grid-column: 8 / -1;
 		grid-row: 1;
@@ -400,6 +398,7 @@
 		transform: rotate(-10deg);
 	}
 
+	/* "code" section */
 	.code-top {
 		grid-column: 7 / -1;
 		grid-row: 1;
@@ -419,6 +418,7 @@
 		transform: rotate(-5deg);
 	}
 
+	/* "write" section */
 	.write-top {
 		grid-column: 4 / -1;
 		grid-row: 1;
@@ -442,64 +442,79 @@
 	/* outro style */
 	.outro {
 		margin: 15vh 0;
-	}
-	.outro-content {
-		display: grid;
-		grid-template-columns: 1fr 7rem 1.3fr;
 
-		@media screen and (max-width: 50rem) {
+		/* custom headings */
+		h1 {
+			width: fit-content;
+			margin: auto;
+		}
+		h2 {
+			background-color: var(--primary-color);
+			background-image: none;
+			font-size: 1.5rem;
+		}
+
+		.outro-content {
+			display: grid;
+			grid-template-columns: 1fr 7rem 1.3fr;
+
+			/* split into two roles for smaller screen sizes */
+			@media screen and (max-width: 50rem) {
+				display: flex;
+				flex-direction: column;
+			}
+		}
+
+		/* divider styles */
+		span {
+			height: 80%;
+			width: 4px;
+			background-color: var(--secondary-color);
+			border-radius: 99px;
+			opacity: 50%;
+			margin: auto;
+		}
+
+		.about {
+			/* we want this section to show up first on smaller screens */
+			@media screen and (max-width: 50rem) {
+				order: -1;
+			}
+
+			.selectedTag :global(.filter) {
+				background-color: var(--highlight-color);
+				box-shadow: 0 0 0.2rem var(--primary-light-color);
+				color: var(--primary-color);
+				border: 2.5px solid var(--primary-color);
+			}
+		}
+
+		.contact {
+			text-align: right;
 			display: flex;
 			flex-direction: column;
-		}
-	}
-	.outro h1 {
-		width: fit-content;
-		margin: auto;
-	}
-	.outro h2 {
-		background-color: var(--primary-color);
-		background-image: none;
-		font-size: 1.5rem;
-	}
-	.about {
-		@media screen and (max-width: 50rem) {
-			order: -1;
-		}
-	}
-	.outro span {
-		height: 80%;
-		width: 4px;
-		background-color: var(--secondary-color);
-		border-radius: 99px;
-		opacity: 50%;
-		margin: auto;
-	}
-	.contact {
-		text-align: right;
-		display: flex;
-		flex-direction: column;
-		align-items: flex-end;
-	}
-	.media-icon-container {
-		display: grid;
-		grid-template-columns: repeat(3, min-content) 1fr;
-		grid-template-rows: 1fr 1fr;
-		grid-gap: 0.75rem;
-	}
-	:global(.media-icon) {
-		font-size: 3rem !important;
-	}
-	.contact p {
-		margin: 5% 0;
-	}
-	.selectedTag :global(.filter) {
-		background-color: var(--highlight-color);
-		box-shadow: 0 0 0.2rem var(--primary-light-color);
-		color: var(--primary-color);
-		border: 2.5px solid var(--primary-color);
-	}
+			align-items: flex-end;
 
-	:global(.hidden) {
-		visibility: hidden;
+			p {
+				margin: 5% 0;
+			}
+
+			/* media icon styles */
+			.media-icon-container {
+				display: grid;
+				grid-template-columns: repeat(3, min-content) 1fr;
+				grid-template-rows: 1fr 1fr;
+				grid-gap: 0.75rem;
+			}
+
+			:global(.media-icon) {
+				font-size: 3rem !important;
+			}
+
+			// hiding two placeholder icons that allow the grid to be right-justified
+			:global(.hidden) {
+				visibility: hidden;
+			}
+		}
 	}
 </style>

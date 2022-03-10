@@ -1,1 +1,0 @@
-import{S as t,i as n,s as o}from"../chunks/vendor-0e906c74.js";function a(e){return location="https://drive.google.com/file/d/1hCMsXYMXhtcDfGwaqLa2xAStBQDChc-W/view?usp=sharing",[]}class c extends t{constructor(s){super();n(this,s,a,null,o,{})}}export{c as default};

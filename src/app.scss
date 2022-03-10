@@ -1,15 +1,16 @@
-/* Write your global styles here, in SCSS syntax. Variables and mixins from the src/variables.scss file are available here without importing */
 @import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@300;600&family=Noto+Serif+Display:ital,wght@1,700&display=swap');
 @import 'svelte-hamburgers/scss/base';
 @import 'svelte-hamburgers/scss/types/squeeze';
 :root {
+	/* defaults */
 	font-family: 'Epilogue', Helvetica, sans-serif;
 	color: var(--text-color);
 	background-color: var(--bg-color);
 	line-height: 1.5;
 	transition: 0.3s ease;
+	--header-font: 'Noto Serif Display';
 
-	/* just in case */
+	/* greys palette */
 	--lightest: #f2f2f7;
 	--lighter: #dadae5;
 	--light: #b4b4bf;
@@ -34,12 +35,11 @@
 	--transparent: rgba(0, 0, 0, 0);
 	--postcard-color: rgba(242, 242, 247, 0.2); // var(--lightest), 20% opacity
 
-	/* blob-colors */
+	/* blob colors */
 	--blob-1: rgba(178, 195, 246, 0.35);
 	--blob-2: rgba(196, 169, 161, 0.35);
 
-	--header-font: 'Noto Serif Display';
-
+	/* toast styles */
 	--toastBackground: #dccac4;
 	--toastColor: #45454d;
 	--toastBarBackground: #c4a9a1;
@@ -64,11 +64,62 @@
 	--transparent: rgba(0, 0, 0, 0);
 	--postcard-color: rgba(69, 69, 77, 0.2); //var(--darker), 20% opacity
 
-	/* blob-colors */
+	/* blob colors */
 	--blob-1: rgba(55, 80, 153, 0.2);
 	--blob-2: rgba(115, 83, 73, 0.2);
 }
 
+/* highest-level content placement styles */
+.scroll-bar-wrap {
+	position: relative;
+	width: 100%;
+	.scroll-box {
+		position: relative;
+
+		.page-content {
+			z-index: 1;
+			padding: 15vh 15vw;
+		}
+
+		/* if we're on the portfolio page, adjust the horizontal padding for small screen sizes */
+		.portfolio {
+			@media screen and (max-width: 32rem) {
+				padding: 15vh 10vw;
+			}
+		}
+	}
+}
+
+/* navbar styles */
+nav {
+	padding: 1rem;
+	@media screen and (max-width: 50rem) {
+		display: none;
+	}
+	a {
+		display: block;
+		text-decoration: none;
+		color: var(--secondary-color);
+		margin: 1rem;
+		font-size: 1.2rem;
+		line-height: normal;
+		&:hover {
+			color: var(--primary-color);
+			text-shadow: 0 0 0.2rem var(--primary-light-color);
+			cursor: pointer;
+		}
+	}
+}
+
+/* hamburger style - MOBILE ONLY */
+.mobile-nav {
+	display: none;
+	@media screen and (max-width: 50rem) {
+		display: block;
+	}
+}
+
+/* frequently used tags */
 h1 {
 	/* fallback for the gradient */
 	background-color: var(--dark);
@@ -135,6 +186,73 @@ code {
 	grid-gap: 0.5rem;
 }
 
+/* list styles */
+ul {
+	padding-left: 1rem;
+}
+ol {
+	padding-left: 1rem;
+}
+li {
+	margin-bottom: 0.5rem;
+}
+
+/* link styles */
+a {
+	color: var(--primary-color);
+	&:hover {
+		color: var(--primary-selected-color);
+	}
+}
+
+/* consistent date style, used in various components */
+.date {
+	line-height: 1rem;
+	color: var(--secondary-color);
+	font-weight: 600;
+	font-style: italic;
+	font-size: 0.9rem;
+}
+
+/* code block styles */
+pre code {
+	display: block;
+	padding: 1.5rem;
+	white-space: pre;
+	.hljs-keyword {
+		color: #c4a9a1;
+	}
+	.hljs-name {
+		color: #91aaf2;
+	}
+	.hljs-string {
+		color: #be8187;
+	}
+	.hljs-attr {
+		color: var(--secondary-selected-color);
+	}
+}
+
+/* youtube video iframe styles */
+.iframe-container {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	padding-top: 66.67%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+
+/* Then style the iframe to fit in the container div with full height and width */
+.iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* scrollbar, track, and thumb styles */
 body::-webkit-scrollbar {
 	width: 11px;
 }
@@ -159,119 +277,8 @@ body::-webkit-scrollbar-thumb {
 	border: 3px solid var(--bg-color);
 }
 
+/* scroll snap implementation */
 html {
 	scroll-snap-type: y proximity;
 	scroll-padding-top: 20vh;
-}
-
-.right-justified {
-	justify-content: flex-end;
-}
-
-ul {
-	padding-left: 1rem;
-}
-ol {
-	padding-left: 1rem;
-}
-li {
-	margin-bottom: 0.5rem;
-}
-a {
-	color: var(--primary-color);
-	&:hover {
-		color: var(--primary-selected-color);
-	}
-}
-
-.date {
-	line-height: 1rem;
-	color: var(--secondary-color);
-	font-weight: 600;
-	font-style: italic;
-	font-size: 0.9rem;
-}
-
-.dark-switch {
-	position: fixed;
-	right: 0;
-	top: 0;
-	padding: 2rem;
-}
-nav {
-	padding: 1rem;
-	@media screen and (max-width: 50rem) {
-		display: none;
-	}
-	a {
-		display: block;
-		text-decoration: none;
-		color: var(--secondary-color);
-		margin: 1rem;
-		font-size: 1.2rem;
-		line-height: normal;
-		&:hover {
-			color: var(--primary-color);
-			text-shadow: 0 0 0.2rem var(--primary-light-color);
-			cursor: pointer;
-		}
-	}
-}
-.mobile-nav {
-	display: none;
-	@media screen and (max-width: 50rem) {
-		display: block;
-	}
-}
-
-.scroll-bar-wrap {
-	position: relative;
-	width: 100%;
-	.scroll-box {
-		position: relative;
-
-		.page-content {
-			z-index: 1;
-			padding: 15vh 15vw;
-		}
-		.portfolio {
-			@media screen and (max-width: 32rem) {
-				padding: 15vh 10vw;
-			}
-		}
-	}
-}
-pre code {
-	display: block;
-	padding: 1.5rem;
-	white-space: pre;
-	.hljs-keyword {
-		color: #c4a9a1;
-	}
-	.hljs-name {
-		color: #91aaf2;
-	}
-	.hljs-string {
-		color: #be8187;
-	}
-	.hljs-attr {
-		color: var(--secondary-selected-color);
-	}
-}
-.iframe-container {
-	position: relative;
-	overflow: hidden;
-	width: 100%;
-	padding-top: 66.67%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
-}
-
-/* Then style the iframe to fit in the container div with full height and width */
-.iframe {
-	position: absolute;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
-	width: 100%;
-	height: 100%;
 }

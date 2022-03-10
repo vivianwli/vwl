@@ -1,11 +1,14 @@
 <script>
+	// component imports
 	import Tag from '$lib/components/Tag.svelte';
 	import ArticleCard from '$lib/components/ArticleCard.svelte';
 
+	// icon imports
 	import Icon from 'svelte-icons-pack/Icon.svelte';
 	import FiMail from 'svelte-icons-pack/fi/FiMail';
 	import FiLinkedin from 'svelte-icons-pack/fi/FiLinkedin';
 
+	// image imports
 	import traderJoes from '$lib/assets/trader-joes-big.png?webp';
 	import oatte from '$lib/assets/oatte.png?webp';
 	import hackscIG from '$lib/assets/hacksc-ig.png?h=600&webp';
@@ -16,24 +19,14 @@
 	import oracle from '$lib/assets/blair-oracle.png?h=600&webp';
 	import climateduSite from '$lib/assets/climatedu-website.png?h=600&webp';
 
+	// svelte imports
 	import { page } from '$app/stores';
 
-	function clear() {
-		for (const key in journalismTags) {
-			journalismTags[key] = false;
-		}
-		for (const key in designTags) {
-			designTags[key] = false;
-		}
-	}
-	function noneSelected() {
-		return Object.keys(designTags).filter((k) => designTags[k]).length === 0;
-	}
-
+	// logic to determine which tab is active or "on top"
 	let designPos;
 	let journalismPos;
 
-	let tab = $page.url.searchParams.get('tab');
+	let tab = $page.url.searchParams.get('tab'); // based on url params, i.e. "?tab=journalism"
 	if (tab === 'journalism') {
 		designPos = 'bottom';
 		journalismPos = 'top';
@@ -42,9 +35,26 @@
 		journalismPos = 'bottom';
 	}
 
+	// all tags start off inactive by default
 	let designTags = { '3D': false, 'social-media': false, illustration: false, 'ui-ux': false };
 	let journalismTags = { print: false, video: false };
 
+	// reset all filtering tags to be inactive
+	function clear() {
+		for (const key in journalismTags) {
+			journalismTags[key] = false;
+		}
+		for (const key in designTags) {
+			designTags[key] = false;
+		}
+	}
+
+	// check to confirm that no tags have been selected
+	function noneSelected() {
+		return Object.keys(designTags).filter((k) => designTags[k]).length === 0;
+	}
+
+	// journalism card info
 	let journalismItems = [
 		{
 			link: 'blog/sustainable-textiles',
@@ -114,7 +124,10 @@
 
 <div class="content">
 	<h1>portfolio</h1>
+
+	<!-- outer tabs wrapper -->
 	<div class="tabs">
+		<!-- tab selector is perfectly sized to match the tabs, necessary because the two tabs are directly overlapping grids (if one is on the bottom, it will never be selected)-->
 		<div class="tab-selector">
 			<div
 				class="design-selector"
@@ -133,16 +146,21 @@
 				}}
 			/>
 		</div>
+		<!-- design tab -->
 		<div class="design-tab tab {designPos}">
 			<h2 class="tab-label">design</h2>
+			<!-- tab shape -->
 			<svg viewBox="0 0 263 108" fill="none" xmlns="http://www.w3.org/2000/svg">
 				<path
 					d="M34.3647 18.5394L26.4733 35.1565C20.9981 46.6858 11.3657 53.6959 0.998535 53.6959V107.392H262.5V53.6959C252.318 53.6959 242.831 46.9326 237.304 35.7337L228.534 17.9622C223.007 6.76327 213.52 0 203.338 0H59.8395C49.4724 0 39.84 7.01005 34.3647 18.5394Z"
 				/>
 			</svg>
+			<!-- rectangular shape to give the illusion of a large folder with a tab -->
 			<div class="tab-page">
 				<div class="tab-page-content">
+					<!-- filters -->
 					<div class="buttons">
+						<!-- first display all selected tags -->
 						{#each Object.keys(designTags).filter((k) => designTags[k]) as tag}
 							<div
 								class:selectedTag={designTags[tag]}
@@ -153,6 +171,7 @@
 								<Tag className="filter">{tag}</Tag>
 							</div>
 						{/each}
+						<!-- then display all unselected tags -->
 						{#each Object.keys(designTags).filter((k) => !designTags[k]) as tag}
 							<div
 								class:selectedTag={designTags[tag]}
@@ -167,7 +186,10 @@
 							<Tag className="clear">clear all</Tag>
 						</div>
 					</div>
+
+					<!-- tab content separated into rows -->
 					<div class="content-container">
+						<!-- we want to display the 3D row if it is explicitly filtered, or if no filters have been applied -->
 						{#if noneSelected() || designTags['3D']}
 							<div class="threed content-row">
 								<div class="img-container">
@@ -192,6 +214,8 @@
 								</div>
 							</div>
 						{/if}
+
+						<!-- social media row -->
 						{#if noneSelected() || designTags['social-media']}
 							<div class="social-media content-row">
 								<div class="img-container">
@@ -220,6 +244,8 @@
 								</div>
 							</div>
 						{/if}
+
+						<!-- illustration row -->
 						{#if noneSelected() || designTags['illustration']}
 							<div class="illustration content-row">
 								<div class="img-container">
@@ -252,6 +278,8 @@
 								</div>
 							</div>
 						{/if}
+
+						<!-- UI/UX row -->
 						{#if noneSelected() || designTags['ui-ux']}
 							<div class="ui-ux content-row">
 								<div class="img-container">
@@ -283,6 +311,7 @@
 				</div>
 			</div>
 		</div>
+		<!-- journalism tab -->
 		<div class="journalism-tab tab {journalismPos}">
 			<h2 class="tab-label">journalism</h2>
 			<svg viewBox="0 0 263 108" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -318,6 +347,8 @@
 						</div>
 					</div>
 					<div class="content-container">
+						<!-- render an article card for each journalism item-->
+						<!-- display only filtered ones if a filter has been selected, otherwise display all -->
 						{#if Object.keys(journalismTags).filter((k) => journalismTags[k]).length === 0}
 							{#each journalismItems as article}
 								<ArticleCard {article} />
@@ -336,6 +367,8 @@
 			</div>
 		</div>
 	</div>
+
+	<!-- outro -->
 	<div class="outro">
 		<h2>don't be shy...</h2>
 		<div class="icons">
@@ -350,12 +383,15 @@
 </div>
 
 <style lang="scss">
+	/* extra padding for "portfolio" header */
 	h1 {
 		margin-bottom: 2rem;
 		@media screen and (max-width: 32rem) {
 			padding: 0 5vw;
 		}
 	}
+
+	/* tab drop shadow */
 	svg {
 		filter: drop-shadow(0 0 1rem var(--secondary-subtle-color));
 		grid-row: 1 / span 2;
@@ -365,34 +401,46 @@
 			height: 90%;
 		}
 	}
+
+	/* position both tabs in the same place on the grid */
 	.tab-page {
 		background-color: var(--bg-color);
 		grid-row: 2 / -1;
 		grid-column: 1 / -1;
 		z-index: 1;
 		height: 100%;
-	}
-	.top {
-		z-index: 2;
-		svg {
-			fill: var(--bg-color);
+		.tab-page-content {
+			margin: 2rem;
 		}
 	}
+
+	/* top tab styles */
+	.top {
+		z-index: 2; // place the top tab in front via z-index
+		svg {
+			fill: var(--bg-color); // give the top tab foreground color
+		}
+	}
+
+	/* bottom tab styles */
 	.bottom {
 		.tab-page {
-			box-shadow: 0 0 1rem var(--secondary-subtle-color);
+			box-shadow: 0 0 1rem var(--secondary-subtle-color); // only give bottom tab the drop shadow (avoid double)
 		}
 		svg {
-			fill: var(--bg-shadow-color);
+			fill: var(--bg-shadow-color); // give the bottom tab a darker color
 		}
 		.tab-page-content {
 			display: none;
 		}
 	}
+
 	.tabs {
 		display: grid;
 		max-width: 100%;
 		width: 100%;
+
+		/* tab selector sizing to match with the tabs */
 		.tab-selector {
 			grid-column: 1;
 			grid-row: 1;
@@ -401,6 +449,8 @@
 			height: 2.5rem;
 			display: grid;
 			grid-template-columns: 2.5rem 11rem 11rem auto;
+
+			/* responsive sizing */
 			@media screen and (max-width: 50rem) {
 				grid-template-columns: 0rem 11rem 11rem auto;
 			}
@@ -414,6 +464,8 @@
 				grid-column: 3;
 			}
 		}
+
+		/* place each tab grid in the same part of the outer grid */
 		.tab {
 			grid-column: 1;
 			grid-row: 1;
@@ -432,6 +484,8 @@
 				align-self: center;
 			}
 		}
+
+		/* only the top row of each grid is different, to accommodate unique tab placement */
 		.design-tab {
 			grid-template-columns: 2.5rem 12rem auto;
 			@media screen and (max-width: 50rem) {
@@ -451,9 +505,7 @@
 			}
 		}
 	}
-	.tab-page-content {
-		margin: 2rem;
-	}
+
 	.selectedTag :global(.filter) {
 		background-color: var(--highlight-color);
 		box-shadow: 0 0 0.2rem var(--primary-light-color);
@@ -464,9 +516,12 @@
 		margin: 1.5rem 0;
 		display: flex;
 		gap: 1.5rem;
+
+		/* image container styling for design tab */
 		.img-container {
 			display: grid;
 			.description {
+				// hide description by default
 				display: none;
 				h2 {
 					background-image: none;
@@ -487,6 +542,7 @@
 				align-content: end;
 			}
 			&:hover .description {
+				// show description on hover
 				display: grid;
 			}
 		}
@@ -497,10 +553,14 @@
 			grid-column: 1;
 			grid-row: 1;
 		}
+
+		// split rows vertically on small screen
 		@media screen and (max-width: 50rem) {
 			flex-direction: column;
 		}
 	}
+
+	/* outro styles */
 	.outro {
 		display: flex;
 		flex-direction: column;

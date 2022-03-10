@@ -20,9 +20,7 @@ const config = {
 			plugins: [imagetools({ force: true })],
 			css: {
 				preprocessorOptions: {
-					scss: {
-						additionalData: '@import "src/variables.scss";'
-					}
+					scss: {}
 				}
 			}
 		}
@@ -30,9 +28,7 @@ const config = {
 
 	preprocess: [
 		preprocess({
-			scss: {
-				prependData: '@import "src/variables.scss";'
-			}
+			scss: {}
 		}),
 		mdsvex({ extensions: ['.md', '.svx'] })
 	]
