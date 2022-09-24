@@ -11,13 +11,15 @@
 	--header-font: 'Noto Serif Display';
 
 	/* greys palette */
+	--absolutelight: #fefeff;
 	--lightest: #f2f2f7;
 	--lighter: #dadae5;
 	--light: #b4b4bf;
 	--mid: #9595a6;
 	--dark: #737380;
 	--darker: #45454d;
-	--darkest: rgb(22, 22, 26);
+	--darkest: #16161a;
+	--absolutedark: #020202;
 
 	/* light mode colors */
 	--primary-color: #c4a9a1;
@@ -34,6 +36,7 @@
 	--gradient-color: linear-gradient(20deg, var(--darkest), var(--light));
 	--transparent: rgba(0, 0, 0, 0);
 	--postcard-color: rgba(242, 242, 247, 0.2); // var(--lightest), 20% opacity
+	--absolute: var(--absolutelight);
 
 	/* blob colors */
 	--blob-1: rgba(178, 195, 246, 0.35);
@@ -63,6 +66,7 @@
 	--gradient-color: linear-gradient(20deg, var(--dark), var(--lighter));
 	--transparent: rgba(0, 0, 0, 0);
 	--postcard-color: rgba(69, 69, 77, 0.2); //var(--darker), 20% opacity
+	--absolute: var(--absolutedark);
 
 	/* blob colors */
 	--blob-1: rgba(55, 80, 153, 0.2);
@@ -84,7 +88,7 @@
 		/* if we're on the portfolio page, adjust the horizontal padding for small screen sizes */
 		.portfolio {
 			@media screen and (max-width: 32rem) {
-				padding: 15vh 10vw;
+				padding: 15vh 7.5vw;
 			}
 		}
 	}

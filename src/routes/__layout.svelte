@@ -79,7 +79,7 @@
 	}
 
 	// determine if we're on the portfolio page - custom styles located in app.scss
-	let portfolio = $page.url.pathName === '/portfolio' ? 'portfolio' : '';
+	let portfolio = $page.url.pathname === '/portfolio' ? 'portfolio' : '';
 </script>
 
 <svelte:head>

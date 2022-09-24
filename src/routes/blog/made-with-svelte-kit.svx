@@ -73,18 +73,18 @@ Here’s the [CodePen](https://codepen.io/Mamboleoo/pen/BxMQYQ) that I reference
 
 Even in the presence of ✨fun new technology✨, one must not forget about good old flex and grid. I read through the complete guides this time ([flex](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) and [grid](https://kit.svelte.dev/docs)), thanks to CSS-Tricks. With these tools (and units like `fr` and `min-content`), creating responsive layouts was honestly pretty fun. One example: grid was key to creating the faux file folder on the portfolio page.
 
-Essentially, I have an SVG for each tab—just the tab part, not the rectangular folder body. Why? I expect the file folder to resize frequently, whether due to different screen sizes, or whether certain rows are filtered. The rectangular folder body for each tab is just a `div`, designed to be easily resized by its grid container. I also had the tab label text (”design” and “journalism”).
+Essentially, I have an SVG for each tab—just the tab part, not the rectangular folder body. Why? I expect the file folder to resize frequently, whether due to different screen sizes, or whether certain rows are filtered. The rectangular folder body for each tab is just a `div`, designed to be easily resized by its grid container. I also had the tab label text (”design” and “writing”).
 
 Here’s how I put everything together using grid. I’ll refer to these elements by their class name; feel free to inspect the page or follow along using the [GitHub repo](https://github.com/teacupkittie/vwl).
 
 - `.tabs` : a parent grid with only one cell, to ensure that the two tabs are stacked on top of each other using `z-index`
-- `.design-tab` and `.journalism-tab`: grids with `grid-template-columns` determined by `rems` to ensure that each SVG tab is always in the right place. I used column 1 as an offset, column 2 as the tab itself, and column 3 as `auto`. Here’s a picture:
+- `.design-tab` and `.writing-tab`: grids with `grid-template-columns` determined by `rems` to ensure that each SVG tab is always in the right place. I used column 1 as an offset, column 2 as the tab itself, and column 3 as `auto`. Here’s a picture:
   <BlogImage src={portfolioGrid} caption="Grid layout outlines from the Chrome DevTools view." />
 - `.tab-page-content`: a regular ol’ container inside each tab
 - `.buttons`: a flex container holding the tags, `.content-container`: a regular container on each page
 - `.content-row`: a flex container holding the items on each row, with each row pertaining to one category. I could have totally done some horizontal masonry madness to autofill the page content, but I wanted to have better control over exactly how the page looked—an example where hardcoding and softcoding meet.
 
-Later on, I also added in `.tab-selector`, which sits on top of the tabs (`z-index`-wise). These are fitted to be directly on top of the two SVGs, because I realized that the journalism tab can’t be clicked (the design tab is the exact same size, and directly on top). I also used grid for this!
+Later on, I also added in `.tab-selector`, which sits on top of the tabs (`z-index`-wise). These are fitted to be directly on top of the two SVGs, because I realized that the writing tab can’t be clicked (the design tab is the exact same size, and directly on top). I also used grid for this!
 
 ### Blogging with `mdsvex`
 
