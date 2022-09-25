@@ -338,16 +338,19 @@
 								<div class="{category.tag} content-row">
 									{#each row as item}
 									<div class="img-container">
-										<div class="description" style="position: fixed; left: {m.x + 5}px; top: {m.y + 5}px">
-											<h2>{item.title}</h2>
-											<p>
-												{item.description}
-												{#if "link" in item}
-													More <a href={item.link}>here</a>.
-												{/if}
-											</p>
-										</div>
-										<img src={item.src} alt={item.title} />
+										<a href={item.link}>
+											<div class="description" style="position: fixed; left: {m.x + 5}px; top: {m.y + 5}px">
+												<h2>{item.title}</h2>
+												<p>
+													{item.description}
+													{#if "link" in item}
+														<span class="more-link">Click to see more.</span>
+														<span class="more-link-mobile">More <a href={item.link}>here</a>.</span>
+													{/if}
+												</p>
+											</div>
+											<img src={item.src} alt={item.title} />
+										</a>
 									</div>
 									{/each}
 								</div>
@@ -590,10 +593,20 @@
 			&:hover .description {
 				// show description on hover
 				opacity: 90%;
+				z-index: 10;
 			}
 			&:focus .description {
 				// show description on focus
 				opacity: 90%;
+				z-index: 10;
+			}
+
+			.more-link {
+				display: inline;
+				font-style: italic;
+			}
+			.more-link-mobile {
+				display: none;
 			}
 		}
 		img {
@@ -607,6 +620,10 @@
 		// split rows vertically on small screen
 		@media screen and (max-width: 50rem) {
 			flex-direction: column;
+
+			a{
+				pointer-events: none;
+			}
 			.description {
 				box-shadow: 0 0 2rem var(--secondary-subtle-color) !important;
 				top: auto !important; 
@@ -617,6 +634,13 @@
 				box-sizing: border-box !important;
 				border: none !important;
 				border-radius: 0 !important;
+				pointer-events: all;
+			}
+			.more-link {
+				display: none !important;
+			}
+			.more-link-mobile {
+				display: inline !important;
 			}
 		}
 	}

@@ -10,7 +10,7 @@
 <style>
 	button {
 		width: fit-content;
-		border: 2.5px solid var(--secondary-color);
+		border: 2px solid var(--secondary-color);
 		background-color: var(--transparent);
 		border-radius: 30px;
 		color: var(--secondary-color);

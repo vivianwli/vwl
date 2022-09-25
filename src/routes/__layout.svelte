@@ -103,7 +103,10 @@
 					on:click={openClose}
 					type="squeeze"
 					--color="var(--secondary-color)"
-					--padding="2rem"
+					--padding="2.4rem"
+					--layer-width="25px"
+					--layer-height="3px"
+					--layer-spacing="5px"
 				/>
 				<Menu bind:open />
 				{#if opened === 'open'}
