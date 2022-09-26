@@ -34,7 +34,7 @@
 	}
 	.inactive {
 		color: var(--primary-color);
-		border: 2.5px solid var(--primary-color);
+		border: 2px solid var(--primary-color);
 	}
 	.inactive:hover {
 		background-color: var(--transparent);

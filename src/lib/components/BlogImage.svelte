@@ -1,7 +1,7 @@
 <script>
 	import '../../app.scss';
 	export let src;
-	export let caption;
+	export let caption = null;
 	export let className;
 </script>
 
