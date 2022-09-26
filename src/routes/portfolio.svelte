@@ -204,14 +204,6 @@
 						description: "Brand guide for the USC Presidential Working Group's Student Sustainability Committee. Designed in Figma.",
 						link: "https://www.figma.com/file/bkBckw68TnfQXLYtaNBRla/SSC?node-id=131%3A34",
 						src: sscCover
-					}
-				],
-				[
-					{
-						title: "HackSC interim website",
-						description: "\"Themeless\" interim website design for HackSC, to be reused during the time period between hackathons, typically summer to winter of each year. Designed as a team that I led.",
-						link: "https://www.figma.com/file/avCtBh86T7U4PxCbnVAmhc/HackSC-Interim-Website?node-id=1%3A533",
-						src: hackSCSite
 					},
 					{
 						title: "OtterSec website",
@@ -221,6 +213,12 @@
 					}
 				],
 				[
+					{
+						title: "HackSC interim website",
+						description: "\"Themeless\" interim website design for HackSC, to be reused during the time period between hackathons, typically summer to winter of each year. Designed as a team that I led.",
+						link: "https://www.figma.com/file/avCtBh86T7U4PxCbnVAmhc/HackSC-Interim-Website?node-id=1%3A533",
+						src: hackSCSite
+					},
 					{
 						title: "ORACLE of Blair",
 						description: "Web and graphic design for our senior class model of the 2020 Presidential election. Designed in Figma.",
