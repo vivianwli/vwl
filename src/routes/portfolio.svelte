@@ -22,6 +22,14 @@
 	import sirensMerch from '$lib/assets/sirens-merch.png?webp';
 	import oracle from '$lib/assets/blair-oracle.png?webp';
 	import climateduSite from '$lib/assets/climatedu-website.png?webp';
+	import stillIntoYou from '$lib/assets/still-into-you.png?webp';
+	import drawdown from '$lib/assets/drawdown.png?webp';
+	import sscFlyer from '$lib/assets/ssc-flyer.png?webp';
+	import hackSCSponsor from '$lib/assets/hacksc-sponsorship.png?webp';
+	import hackSCSite from '$lib/assets/hacksc-cover.png?webp';
+	import osec from '$lib/assets/ottersec-cover.png?webp';
+	import nyt from '$lib/assets/nyt-thumbnail.png?webp';
+	import sscCover from '$lib/assets/ssc-brand-guide-cover.png?webp';
 
 	// svelte imports
 	import { page } from '$app/stores';
@@ -137,11 +145,120 @@
 
 	let designItems = [
 		{
+			tag: "illustration",
+			rows: [
+				[
+					{
+						title: "Sirens merch graphic",
+						description: "Matisse-inspired sweatshirt graphic design for Sirens A Cappella. Made in Figma and Adobe Fresco.",
+						src: sirensMerch
+					},
+					{
+						title: "Fruit blob emojis",
+						description: "Custom emojis made for Discord, illustrated in Adobe Fresco!",
+						link: "blog/fruit-blobs",
+						src: blobs
+					},
+					{
+						title: "Market fermentation",
+						description: "Movie poster made in Adobe Illustrator and InDesign.",
+						src: marketFermentation
+					},
+				],
+				[
+					{
+						title: "b1c shirt graphic",
+						description: "Merch graphic for cyberscurity team \"b1c\", centered around the theme of making waves.",
+						src: b1c
+					},
+					{
+						title: "Good Job album cover",
+						description: "Album cover design for Sirens A Cappella's release of Good Job by Alicia Keys. Made in Figma.",
+						src: goodJob
+					},
+					{
+						title: "iy8 logo",
+						description: "Sample logo (very not official) for Cohort 8 of IYA (note the 8!). Illustrated in Adobe Fresco.",
+						src: iy8
+					},
+					{
+						title: "NYT Maker Week 2022 shirt",
+						description: "Winning T-shirt design for Maker Week at the New York Times, the all-company hackathon.",
+						src: makerTee
+					},
+				]
+			]
+		},
+		{
+			tag: "ui-ux",
+			rows: [
+				[
+					{
+						title: "The New York Times (2022)",
+						description: "I worked on various interfaces, both internal and reader-facing, during my summer internship at the New York Times. I coded these, too!",
+						link: "/blog/new-york-times-2022",
+						src: nyt
+					},
+					{
+						title: "Student Sustainability Committee brand guide",
+						description: "Brand guide for the USC Presidential Working Group's Student Sustainability Committee. Designed in Figma.",
+						link: "https://www.figma.com/file/bkBckw68TnfQXLYtaNBRla/SSC?node-id=131%3A34",
+						src: sscCover
+					}
+				],
+				[
+					{
+						title: "HackSC interim website",
+						description: "\"Themeless\" interim website design for HackSC, to be reused during the time period between hackathons, typically summer to winter of each year. Designed as a team that I led.",
+						link: "https://www.figma.com/file/avCtBh86T7U4PxCbnVAmhc/HackSC-Interim-Website?node-id=1%3A533",
+						src: hackSCSite
+					},
+					{
+						title: "OtterSec website",
+						description: "Landing page for OtterSec, a blockchain security auditing firm. Designed in Figma and developed with SvelteKit.",
+						link: "https://osec.io",
+						src: osec
+					}
+				],
+				[
+					{
+						title: "ORACLE of Blair",
+						description: "Web and graphic design for our senior class model of the 2020 Presidential election. Designed in Figma.",
+						link: "https://polistat.mbhs.edu",
+						src: oracle
+					},
+					{
+						title: "climatedu",
+						description: "Website platform design for climatedu.org, an online climate course for middle and high school students. Designed in Figma.",
+						link: "https://climatedu.org",
+						src: climateduSite
+					}
+				]
+			]
+		},
+		{
+			tag: "informational",
+			rows: [
+				[
+					{
+						title: "Student Sustainability Committee infographic",
+						description: "One-pager for the USC Presidential Working Group's Student Sustainability Committee. Designed in Figma.",
+						src: sscFlyer
+					},
+					{
+						title: "HackSC Sponsorship packet",
+						description: "Sponsorship packed used for pitching HackSC to potential sponsor companies. Designed in Figma.",
+						src: hackSCSponsor
+					}
+				]
+			]
+		},
+		{
 			tag: "3D",
 			rows: [
 				[
 					{
-						title: "low poly Trader Joe's",
+						title: "Low poly Trader Joe's",
 						description: "This low-poly scene was my very first project in Blender. I love grocery stores and the holidays (especially Christmas), so it's a perfect combination!",
 						src: traderJoes
 					},
@@ -173,65 +290,20 @@
 			]
 		},
 		{
-			tag: "illustration",
+			tag: "animation",
 			rows: [
 				[
 					{
-						title: "Sirens merch graphic",
-						description: "Matisse-inspired sweatshirt graphic design for Sirens A Cappella. Made in Figma and Adobe Fresco.",
-						src: sirensMerch
+						title: "Still into you lyric video",
+						description: "Lyric video for \"Still Into You\" by Paramore. Designed in Figma and Illustrator, animated with After Effects.",
+						link: "https://youtu.be/7ea1WhX4Wu8?t=36",
+						src: stillIntoYou
 					},
 					{
-						title: "fruit blob emojis",
-						description: "Custom emojis made for Discord, illustrated in Adobe Fresco!",
-						link: "blog/fruit-blobs",
-						src: blobs
-					},
-					{
-						title: "market fermentation",
-						description: "Movie poster made in Adobe Illustrator and InDesign.",
-						src: marketFermentation
-					},
-				],
-				[
-					{
-						title: "b1c shirt graphic",
-						description: "Merch graphic for cyberscurity team \"b1c\", centered around the theme of making waves.",
-						src: b1c
-					},
-					{
-						title: "good job album cover",
-						description: "Album cover design for Sirens A Cappella's release of Good Job by Alicia Keys. Made in Figma.",
-						src: goodJob
-					},
-					{
-						title: "iy8 logo",
-						description: "Sample logo (very not official) for Cohort 8 of IYA (note the 8!). Illustrated in Adobe Fresco.",
-						src: iy8
-					},
-					{
-						title: "NYT Maker Week 2022 shirt",
-						description: "Winning T-shirt design for Maker Week at the New York Times, the all-company hackathon.",
-						src: makerTee
-					},
-				]
-			]
-		},
-		{
-			tag: "ui-ux",
-			rows: [
-				[
-					{
-						title: "ORACLE of Blair",
-						description: "Web and graphic design for our senior class model of the 2020 Presidential election. Designed in Figma.",
-						link: "https://polistat.mbhs.edu",
-						src: oracle
-					},
-					{
-						title: "climatedu",
-						description: "Website platform design for climatedu.org, an online climate course for middle and high school students. Designed in Figma.",
-						link: "https://climatedu.org",
-						src: climateduSite
+						title: "Drawdown for dummies ep. 1",
+						description: "Episode 1 of Drawdown for dummies, a video series breaking down Project Drawdown's 100 top solutions to bring us to climate drawdown. Made in Premiere Pro and After Effects.",
+						link: "https://youtu.be/UWAu4PoBFxA",
+						src: drawdown
 					}
 				]
 			]
@@ -341,7 +413,8 @@
 										<a href={item.link}>
 											<div class="description" style="position: fixed; left: {m.x + 5}px; top: {m.y + 5}px">
 												<h2>{item.title}</h2>
-												<p>
+												<Tag className="inactive">{category.tag}</Tag>
+												<p style="margin-top: 0.75rem">
 													{item.description}
 													{#if "link" in item}
 														<span class="more-link">Click to see more.</span>
