@@ -1,3 +1,3 @@
 <script>
-	location = 'https://drive.google.com/file/d/1-I2Z7vmmcc6uCoja53Wm11zrLwe0yJDL/view';
+	location = 'https://drive.google.com/file/d/10G-H7MlsP8Hh_U7Si_7WWwgIvqSsCGj8/view?usp=sharing';
 </script>
