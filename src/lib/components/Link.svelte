@@ -17,21 +17,22 @@
 
 <style>
 	a {
+		transition: 0.3s ease;
 		width: fit-content;
-		border: 2px solid var(--primary-color);
-		background-color: var(--transparent);
+		border: none;
+		background-color: var(--highlight-color);
+		box-shadow: 0 0 0.4rem var(--transparent);
 		border-radius: 30px;
-		color: var(--primary-color);
-		font-family: 'Epilogue';
+		color: var(--primary-selected-color);
+		font-family: 'Space Mono';
 		font-weight: 600;
 		font-size: 0.8rem;
-		text-decoration: none;
 		padding: 0.4rem 0.7rem;
 		cursor: pointer;
 		white-space: nowrap;
+		text-decoration: none;
 	}
 	a:hover {
-		background-color: var(--highlight-color);
-		box-shadow: 0 0 0.2rem var(--primary-light-color);
+		box-shadow: 0 0 0.4rem rgba(153, 120, 110, 0.4);
 	}
 </style>

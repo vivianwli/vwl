@@ -185,23 +185,14 @@
 				<h2>want to know more?</h2>
 				<!-- content-filtering buttons -->
 				<div class="buttons">
-					<div
-						class:selectedTag={aboutSection === 'at-usc'}
-						on:click={() => (aboutSection = 'at-usc')}
-					>
-						<Tag className="filter">what I do at USC</Tag>
+					<div on:click={() => (aboutSection = 'at-usc')}>
+						<Tag className={aboutSection ? 'selected' : ''}>what I do at USC</Tag>
 					</div>
-					<div
-						class:selectedTag={aboutSection === 'care-about'}
-						on:click={() => (aboutSection = 'care-about')}
-					>
-						<Tag className="filter">things I care about</Tag>
+					<div on:click={() => (aboutSection = 'care-about')}>
+						<Tag className={aboutSection ? 'selected' : ''}>things I care about</Tag>
 					</div>
-					<div
-						class:selectedTag={aboutSection === 'fun-facts'}
-						on:click={() => (aboutSection = 'fun-facts')}
-					>
-						<Tag className="filter">fun facts</Tag>
+					<div on:click={() => (aboutSection = 'fun-facts')}>
+						<Tag className={aboutSection ? 'selected' : ''}>fun facts</Tag>
 					</div>
 				</div>
 				<!-- things i do at usc -->
@@ -479,13 +470,6 @@
 			/* we want this section to show up first on smaller screens */
 			@media screen and (max-width: 50rem) {
 				order: -1;
-			}
-
-			.selectedTag :global(.filter) {
-				background-color: var(--highlight-color);
-				box-shadow: 0 0 0.2rem var(--primary-light-color);
-				color: var(--primary-color);
-				border: 2.5px solid var(--primary-color);
 			}
 		}
 

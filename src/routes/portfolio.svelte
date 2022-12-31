@@ -75,8 +75,9 @@
 			title: 'Bamboo housing',
 			thumbnail: 'bamboo.png',
 			info: 'JUL 1 2022',
-			summary: 'A visual review of bamboo construction for residential use. How is bamboo currently used in the built environment, and how can it flourish in the future?',
-			tags: ["research", "visualization"]
+			summary:
+				'A visual review of bamboo construction for residential use. How is bamboo currently used in the built environment, and how can it flourish in the future?',
+			tags: ['research', 'visualization']
 		},
 		{
 			link: 'blog/sustainable-textiles',
@@ -85,15 +86,17 @@
 			info: 'DEC 3 2021 • HAUTE MAGAZINE',
 			summary:
 				"An in-depth feature on textiles and their impact in the context of sustainable fashion. Written for Haute Magazine's Fall 2021 issue, On the Edge.",
-			tags: ["journalism"]
+			tags: ['journalism']
 		},
 		{
 			link: 'https://drive.google.com/file/d/1rFpdk-Jk-Yu2RCvrqzmTKbINfGt8sUdt/view',
-			title: 'Predicting COVID-19 cases via LSTM modeling with weather, mobility, and demographic data',
+			title:
+				'Predicting COVID-19 cases via LSTM modeling with weather, mobility, and demographic data',
 			thumbnail: 'covid-model.png',
 			info: 'NOV 1 2020 • UMD INSTITUTE FOR RESEARCH IN ELECTRONICS AND APPLIED PHYSICS',
-			summary: "A research project exploring the potential of applying machine learning (more specifically, an entity-aware long short term memory network) to COVID-19 case prediction.",
-			tags: ["research"]
+			summary:
+				'A research project exploring the potential of applying machine learning (more specifically, an entity-aware long short term memory network) to COVID-19 case prediction.',
+			tags: ['research']
 		},
 		{
 			link: 'https://youtu.be/UmOasRlMuXs',
@@ -102,7 +105,7 @@
 			info: 'JUN 25 2020 • BREAKTHROUGH JUNIOR CHALLENGE',
 			summary:
 				'A synthesized explanation of yet another reason climate change should matter to us—the potential normalcy of pandemics via zoonotic diseases.',
-			tags: ["educational", "video"]
+			tags: ['educational', 'video']
 		},
 		{
 			link: 'https://www.nytimes.com/2020/05/07/learning/an-unexpected-dinner-guest-marine-plastic-pollution-hides-a-neurological-toxin-in-our-food.html',
@@ -112,7 +115,7 @@
 			info: 'MAY 7 2020 • THE NEW YORK TIMES',
 			summary:
 				'One of eight winning essays (among 1,618 entries) from the New York Times Learning Network\'s STEM Writing Contest. Also published on <a href="https://phys.org/news/2019-09-marine-plastic-pollution-neurological-toxin.html">Phys.org</a>.',
-			tags: ["journalism"]
+			tags: ['journalism']
 		},
 		{
 			link: 'https://msmagazine.com/2019/12/16/inside-the-feminist-tech-jamboree-helping-girls-break-barriers-in-stem/',
@@ -121,7 +124,7 @@
 			info: 'DEC 16 2019 • MS. MAGAZINE',
 			summary:
 				'Behind-the-scenes of Technica, an all-women and non-binary hackathon hosted annually at the University of Maryland, College Park. Published as a part of "The Future is Ms."',
-			tags: ["journalism"]
+			tags: ['journalism']
 		},
 		{
 			link: 'http://climatetracker.org/youths-reporting-on-youths/',
@@ -130,7 +133,7 @@
 			info: 'OCT 2 2019 • CLIMATE TRACKER',
 			summary:
 				'Profiles of international leaders at the UN Youth Action Summit alongside the global climate strikes on September 20, 2019. Written with Yamila Frej and Amogh Dimri during a three-day mentorship with Climate Tracker.',
-			tags: ["journalism"]
+			tags: ['journalism']
 		},
 		{
 			link: 'https://silverchips.mbhs.edu/content/raising-the-standard-for-mcps-in-ongoing-contract-negotiations-32318/',
@@ -139,174 +142,193 @@
 			info: 'NOV 13 2019 • SILVER CHIPS ONLINE',
 			summary:
 				"Coverage of teachers' responses to the teacher strikes in Chicago, especially in light of recent contract re-negotiations for Mongomery County Public Schools.",
-			tags: ["journalism"]
+			tags: ['journalism']
 		}
 	];
 
 	let designItems = [
 		{
-			tag: "illustration",
+			tag: 'illustration',
 			rows: [
 				[
 					{
-						title: "Sirens merch graphic",
-						description: "Matisse-inspired sweatshirt graphic design for Sirens A Cappella. Made in Figma and Adobe Fresco.",
+						title: 'Sirens merch graphic',
+						description:
+							'Matisse-inspired sweatshirt graphic design for Sirens A Cappella. Made in Figma and Adobe Fresco.',
 						src: sirensMerch
 					},
 					{
-						title: "Fruit blob emojis",
-						description: "Custom emojis made for Discord, illustrated in Adobe Fresco!",
-						link: "blog/fruit-blobs",
+						title: 'Fruit blob emojis',
+						description: 'Custom emojis made for Discord, illustrated in Adobe Fresco!',
+						link: 'blog/fruit-blobs',
 						src: blobs
 					},
 					{
-						title: "Market fermentation",
-						description: "Movie poster made in Adobe Illustrator and InDesign.",
+						title: 'Market fermentation',
+						description: 'Movie poster made in Adobe Illustrator and InDesign.',
 						src: marketFermentation
-					},
+					}
 				],
 				[
 					{
-						title: "b1c shirt graphic",
-						description: "Merch graphic for cyberscurity team \"b1c\", centered around the theme of making waves.",
+						title: 'b1c shirt graphic',
+						description:
+							'Merch graphic for cyberscurity team "b1c", centered around the theme of making waves.',
 						src: b1c
 					},
 					{
-						title: "Good Job album cover",
-						description: "Album cover design for Sirens A Cappella's release of Good Job by Alicia Keys. Made in Figma.",
+						title: 'Good Job album cover',
+						description:
+							"Album cover design for Sirens A Cappella's release of Good Job by Alicia Keys. Made in Figma.",
 						src: goodJob
 					},
 					{
-						title: "iy8 logo",
-						description: "Sample logo (very not official) for Cohort 8 of IYA (note the 8!). Illustrated in Adobe Fresco.",
+						title: 'iy8 logo',
+						description:
+							'Sample logo (very not official) for Cohort 8 of IYA (note the 8!). Illustrated in Adobe Fresco.',
 						src: iy8
 					},
 					{
-						title: "NYT Maker Week 2022 shirt",
-						description: "Winning T-shirt design for Maker Week at the New York Times, the all-company hackathon.",
+						title: 'NYT Maker Week 2022 shirt',
+						description:
+							'Winning T-shirt design for Maker Week at the New York Times, the all-company hackathon.',
 						src: makerTee
-					},
+					}
 				]
 			]
 		},
 		{
-			tag: "ui-ux",
+			tag: 'ui-ux',
 			rows: [
 				[
 					{
-						title: "The New York Times (2022)",
-						description: "I worked on various interfaces, both internal and reader-facing, during my summer internship at the New York Times. I coded these, too!",
-						link: "/blog/new-york-times-2022",
+						title: 'The New York Times (2022)',
+						description:
+							'I worked on various interfaces, both internal and reader-facing, during my summer internship at the New York Times. I coded these, too!',
+						link: '/blog/new-york-times-2022',
 						src: nyt
 					},
 					{
-						title: "Student Sustainability Committee brand guide",
-						description: "Brand guide for the USC Presidential Working Group's Student Sustainability Committee. Designed in Figma.",
-						link: "https://www.figma.com/file/bkBckw68TnfQXLYtaNBRla/SSC?node-id=131%3A34",
+						title: 'Student Sustainability Committee brand guide',
+						description:
+							"Brand guide for the USC Presidential Working Group's Student Sustainability Committee. Designed in Figma.",
+						link: 'https://www.figma.com/file/bkBckw68TnfQXLYtaNBRla/SSC?node-id=131%3A34',
 						src: sscCover
 					},
 					{
-						title: "OtterSec website",
-						description: "Landing page for OtterSec, a blockchain security auditing firm. Designed in Figma and developed with SvelteKit.",
-						link: "https://osec.io",
+						title: 'OtterSec website',
+						description:
+							'Landing page for OtterSec, a blockchain security auditing firm. Designed in Figma and developed with SvelteKit.',
+						link: 'https://osec.io',
 						src: osec
 					}
 				],
 				[
 					{
-						title: "HackSC interim website",
-						description: "\"Themeless\" interim website design for HackSC, to be reused during the time period between hackathons, typically summer to winter of each year. Designed as a team that I led.",
-						link: "https://www.figma.com/file/avCtBh86T7U4PxCbnVAmhc/HackSC-Interim-Website?node-id=1%3A533",
+						title: 'HackSC interim website',
+						description:
+							'"Themeless" interim website design for HackSC, to be reused during the time period between hackathons, typically summer to winter of each year. Designed as a team that I led.',
+						link: 'https://www.figma.com/file/avCtBh86T7U4PxCbnVAmhc/HackSC-Interim-Website?node-id=1%3A533',
 						src: hackSCSite
 					},
 					{
-						title: "ORACLE of Blair",
-						description: "Web and graphic design for our senior class model of the 2020 Presidential election. Designed in Figma.",
-						link: "https://polistat.mbhs.edu",
+						title: 'ORACLE of Blair',
+						description:
+							'Web and graphic design for our senior class model of the 2020 Presidential election. Designed in Figma.',
+						link: 'https://polistat.mbhs.edu',
 						src: oracle
 					},
 					{
-						title: "climatedu",
-						description: "Website platform design for climatedu.org, an online climate course for middle and high school students. Designed in Figma.",
-						link: "https://climatedu.org",
+						title: 'climatedu',
+						description:
+							'Website platform design for climatedu.org, an online climate course for middle and high school students. Designed in Figma.',
+						link: 'https://climatedu.org',
 						src: climateduSite
 					}
 				]
 			]
 		},
 		{
-			tag: "informational",
+			tag: 'informational',
 			rows: [
 				[
 					{
-						title: "Student Sustainability Committee infographic",
-						description: "One-pager for the USC Presidential Working Group's Student Sustainability Committee. Designed in Figma.",
+						title: 'Student Sustainability Committee infographic',
+						description:
+							"One-pager for the USC Presidential Working Group's Student Sustainability Committee. Designed in Figma.",
 						src: sscFlyer
 					},
 					{
-						title: "HackSC Sponsorship packet",
-						description: "Sponsorship packed used for pitching HackSC to potential sponsor companies. Designed in Figma.",
+						title: 'HackSC Sponsorship packet',
+						description:
+							'Sponsorship packed used for pitching HackSC to potential sponsor companies. Designed in Figma.',
 						src: hackSCSponsor
 					}
 				]
 			]
 		},
 		{
-			tag: "3D",
+			tag: '3D',
 			rows: [
 				[
 					{
 						title: "Low poly Trader Joe's",
-						description: "This low-poly scene was my very first project in Blender. I love grocery stores and the holidays (especially Christmas), so it's a perfect combination!",
+						description:
+							"This low-poly scene was my very first project in Blender. I love grocery stores and the holidays (especially Christmas), so it's a perfect combination!",
 						src: traderJoes
 					},
 					{
-						title: "oatte oat milk lattes",
-						description: "I used Adobe Illustrator and Dimension to create this imaginary product, featuring almond black tea, red bean, matcha, and cinnamon cold brew flavors.",
+						title: 'oatte oat milk lattes',
+						description:
+							'I used Adobe Illustrator and Dimension to create this imaginary product, featuring almond black tea, red bean, matcha, and cinnamon cold brew flavors.',
 						src: oatte
-					},
+					}
 				]
 			]
 		},
 		{
-			tag: "social-media",
+			tag: 'social-media',
 			rows: [
 				[
 					{
-						title: "HackSC Instagram",
-						description: "Brand identity and Instagram assets for HackSC 2022. Neon gradients, glow effects, and blobs. Made in Figma!",
-						link: "https://instagram.com/hackscofficial",
+						title: 'HackSC Instagram',
+						description:
+							'Brand identity and Instagram assets for HackSC 2022. Neon gradients, glow effects, and blobs. Made in Figma!',
+						link: 'https://instagram.com/hackscofficial',
 						src: hackscIG
 					},
 					{
-						title: "climatedu Instagram",
-						description: "Themed doodles for climatedu's weekly Infographic posts. Illustrations in Adobe Fresco on iPad, assembled in Figma.",
-						link: "https://instagram.com/climateduteam",
+						title: 'climatedu Instagram',
+						description:
+							"Themed doodles for climatedu's weekly Infographic posts. Illustrations in Adobe Fresco on iPad, assembled in Figma.",
+						link: 'https://instagram.com/climateduteam',
 						src: climateduIG
 					}
 				]
 			]
 		},
 		{
-			tag: "animation",
+			tag: 'animation',
 			rows: [
 				[
 					{
-						title: "Still into you lyric video",
-						description: "Lyric video for \"Still Into You\" by Paramore. Designed in Figma and Illustrator, animated with After Effects.",
-						link: "https://youtu.be/7ea1WhX4Wu8?t=36",
+						title: 'Still into you lyric video',
+						description:
+							'Lyric video for "Still Into You" by Paramore. Designed in Figma and Illustrator, animated with After Effects.',
+						link: 'https://youtu.be/7ea1WhX4Wu8?t=36',
 						src: stillIntoYou
 					},
 					{
-						title: "Drawdown for dummies ep. 1",
-						description: "Episode 1 of Drawdown for dummies, a video series breaking down Project Drawdown's 100 top solutions to bring us to climate drawdown. Made in Premiere Pro and After Effects.",
-						link: "https://youtu.be/UWAu4PoBFxA",
+						title: 'Drawdown for dummies ep. 1',
+						description:
+							"Episode 1 of Drawdown for dummies, a video series breaking down Project Drawdown's 100 top solutions to bring us to climate drawdown. Made in Premiere Pro and After Effects.",
+						link: 'https://youtu.be/UWAu4PoBFxA',
 						src: drawdown
 					}
 				]
 			]
 		}
-	]
+	];
 
 	for (const article of writingItems) {
 		for (const tag of article.tags) {
@@ -358,7 +380,10 @@
 			/>
 		</div>
 		<!-- design tab -->
-		<div class="design-tab tab {designPos}" on:mousemove={(e) => (m = { x: e.clientX, y: e.clientY })}>
+		<div
+			class="design-tab tab {designPos}"
+			on:mousemove={(e) => (m = { x: e.clientX, y: e.clientY })}
+		>
 			<h2 class="tab-label">design</h2>
 			<!-- tab shape -->
 			<svg viewBox="0 0 263 108" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -374,23 +399,21 @@
 						<!-- first display all selected tags -->
 						{#each Object.keys(designTags).filter((k) => designTags[k]) as tag}
 							<div
-								class:selectedTag={designTags[tag]}
 								on:click={() => {
 									designTags[tag] = !designTags[tag];
 								}}
 							>
-								<Tag className="filter">{tag}</Tag>
+								<Tag className={designTags[tag] ? 'selected' : ''}>{tag}</Tag>
 							</div>
 						{/each}
 						<!-- then display all unselected tags -->
 						{#each Object.keys(designTags).filter((k) => !designTags[k]) as tag}
 							<div
-								class:selectedTag={designTags[tag]}
 								on:click={() => {
 									designTags[tag] = !designTags[tag];
 								}}
 							>
-								<Tag className="filter">{tag}</Tag>
+								<Tag className={designTags[tag] ? 'selected' : ''}>{tag}</Tag>
 							</div>
 						{/each}
 						<div on:click={() => clear()}>
@@ -404,32 +427,36 @@
 						<!-- we display each category in designItems by row -->
 						{#each designItems as category}
 							{#if noneSelected() || designTags[category.tag]}
-							{#each category.rows as row}
-								<div class="{category.tag} content-row">
-									{#each row as item}
-									<div class="img-container">
-										<a href={item.link}>
-											<div class="description" style="position: fixed; left: {m.x + 5}px; top: {m.y + 5}px">
-												<h2>{item.title}</h2>
-												<Tag className="inactive">{category.tag}</Tag>
-												<p style="margin-top: 0.75rem">
-													{item.description}
-													{#if "link" in item}
-														<span class="more-link">Click to see more.</span>
-														<span class="more-link-mobile">More <a href={item.link}>here</a>.</span>
-													{/if}
-												</p>
+								{#each category.rows as row}
+									<div class="{category.tag} content-row">
+										{#each row as item}
+											<div class="img-container">
+												<a href={item.link}>
+													<div
+														class="description"
+														style="position: fixed; left: {m.x + 5}px; top: {m.y + 5}px"
+													>
+														<h2>{item.title}</h2>
+														<Tag className="inactive">{category.tag}</Tag>
+														<p style="margin-top: 0.75rem">
+															{item.description}
+															{#if 'link' in item}
+																<span class="more-link">Click to see more.</span>
+																<span class="more-link-mobile"
+																	>More <a href={item.link}>here</a>.</span
+																>
+															{/if}
+														</p>
+													</div>
+													<img src={item.src} alt={item.title} />
+												</a>
 											</div>
-											<img src={item.src} alt={item.title} />
-										</a>
+										{/each}
 									</div>
-									{/each}
-								</div>
-							{/each}
+								{/each}
 							{/if}
 						{/each}
-						
-						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -446,22 +473,20 @@
 					<div class="buttons">
 						{#each Object.keys(writingTags).filter((k) => writingTags[k]) as tag}
 							<div
-								class:selectedTag={writingTags[tag]}
 								on:click={() => {
 									writingTags[tag] = !writingTags[tag];
 								}}
 							>
-								<Tag className="filter">{tag}</Tag>
+								<Tag className={writingTags[tag] ? 'selected' : ''}>{tag}</Tag>
 							</div>
 						{/each}
 						{#each Object.keys(writingTags).filter((k) => !writingTags[k]) as tag}
 							<div
-								class:selectedTag={writingTags[tag]}
 								on:click={() => {
 									writingTags[tag] = !writingTags[tag];
 								}}
 							>
-								<Tag className="filter">{tag}</Tag>
+								<Tag className={writingTags[tag] ? 'selected' : ''}>{tag}</Tag>
 							</div>
 						{/each}
 						<div on:click={() => clear()}>
@@ -630,9 +655,7 @@
 
 	.selectedTag :global(.filter) {
 		background-color: var(--highlight-color);
-		box-shadow: 0 0 0.2rem var(--primary-light-color);
-		color: var(--primary-color);
-		border: 2.5px solid var(--primary-color);
+		color: var(--primary-selected-color);
 	}
 	.content-row {
 		margin: 1.5rem 0;
@@ -692,12 +715,12 @@
 		@media screen and (max-width: 50rem) {
 			flex-direction: column;
 
-			a{
+			a {
 				pointer-events: none;
 			}
 			.description {
 				box-shadow: 0 0 2rem var(--secondary-subtle-color) !important;
-				top: auto !important; 
+				top: auto !important;
 				left: 0 !important;
 				bottom: 0 !important;
 				height: min-content !important;

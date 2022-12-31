@@ -76,23 +76,21 @@
 		<!-- display selected tags first -->
 		{#each Object.keys(selectedTags).filter((k) => selectedTags[k]) as tag}
 			<div
-				class:selectedTag={selectedTags[tag]}
 				on:click={() => {
 					selectedTags[tag] = !selectedTags[tag];
 				}}
 			>
-				<Tag className="filter">{tag}</Tag>
+				<Tag className={selectedTags[tag] ? 'selected' : ''}>{tag}</Tag>
 			</div>
 		{/each}
 		<!-- display inactive tags -->
 		{#each Object.keys(selectedTags).filter((k) => !selectedTags[k]) as tag}
 			<div
-				class:selectedTag={selectedTags[tag]}
 				on:click={() => {
 					selectedTags[tag] = !selectedTags[tag];
 				}}
 			>
-				<Tag className="filter">{tag}</Tag>
+				<Tag className={selectedTags[tag] ? 'selected' : ''}>{tag}</Tag>
 			</div>
 		{/each}
 		<!-- clear all button -->
@@ -136,13 +134,5 @@
 		grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
 		grid-gap: 2rem;
 		padding: 3rem 0;
-	}
-
-	/* selected tag style */
-	.selectedTag :global(.filter) {
-		background-color: var(--highlight-color);
-		box-shadow: 0 0 0.2rem var(--primary-light-color);
-		color: var(--primary-color);
-		border: 2.5px solid var(--primary-color);
 	}
 </style>

@@ -21,7 +21,7 @@
 		background-color: transparent;
 		border-radius: 30px;
 		color: var(--text-color);
-		font-family: 'Epilogue';
+		font-family: 'Space Mono';
 		font-weight: 300;
 		padding: 0.4rem 0.7rem;
 		width: 100%;

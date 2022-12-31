@@ -1,6 +1,7 @@
 <script>
 	import '../../app.scss';
 	export let className;
+	export let selected;
 </script>
 
 <button class={className}>
@@ -9,12 +10,14 @@
 
 <style>
 	button {
+		transition: 0.3s ease;
 		width: fit-content;
-		border: 2px solid var(--secondary-color);
-		background-color: var(--transparent);
+		border: none;
+		background-color: var(--secondary-highlight-color);
+		box-shadow: 0 0 0.4rem var(--transparent);
 		border-radius: 30px;
-		color: var(--secondary-color);
-		font-family: 'Epilogue';
+		color: var(--dark);
+		font-family: 'Space Mono';
 		font-weight: 600;
 		font-size: 0.8rem;
 		padding: 0.4rem 0.7rem;
@@ -22,22 +25,30 @@
 		white-space: nowrap;
 	}
 	button:hover {
-		background-color: var(--secondary-highlight-color);
-		box-shadow: 0 0 0.2rem var(--secondary-color);
+		box-shadow: 0 0 0.4rem var(--secondary-button-shadow-color);
 	}
+
 	.clear {
-		border: none;
+		background-color: var(--transparent);
 		height: 100%;
 	}
 	.clear:hover {
 		box-shadow: none;
 	}
+
 	.inactive {
-		color: var(--primary-color);
-		border: 2px solid var(--primary-color);
+		background-color: var(--highlight-color);
+		color: var(--primary-selected-color);
 	}
 	.inactive:hover {
-		background-color: var(--transparent);
 		box-shadow: none;
+	}
+
+	.selected {
+		background-color: var(--highlight-color);
+		color: var(--primary-selected-color);
+	}
+	.selected:hover {
+		box-shadow: 0 0 0.4rem var(--primary-button-shadow-color);
 	}
 </style>
