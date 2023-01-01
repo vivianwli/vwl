@@ -148,56 +148,6 @@
 
 	let designItems = [
 		{
-			tag: 'illustration',
-			rows: [
-				[
-					{
-						title: 'Sirens merch graphic',
-						description:
-							'Matisse-inspired sweatshirt graphic design for Sirens A Cappella. Made in Figma and Adobe Fresco.',
-						src: sirensMerch
-					},
-					{
-						title: 'Fruit blob emojis',
-						description: 'Custom emojis made for Discord, illustrated in Adobe Fresco!',
-						link: 'blog/fruit-blobs',
-						src: blobs
-					},
-					{
-						title: 'Market fermentation',
-						description: 'Movie poster made in Adobe Illustrator and InDesign.',
-						src: marketFermentation
-					}
-				],
-				[
-					{
-						title: 'b1c shirt graphic',
-						description:
-							'Merch graphic for cyberscurity team "b1c", centered around the theme of making waves.',
-						src: b1c
-					},
-					{
-						title: 'Good Job album cover',
-						description:
-							"Album cover design for Sirens A Cappella's release of Good Job by Alicia Keys. Made in Figma.",
-						src: goodJob
-					},
-					{
-						title: 'iy8 logo',
-						description:
-							'Sample logo (very not official) for Cohort 8 of IYA (note the 8!). Illustrated in Adobe Fresco.',
-						src: iy8
-					},
-					{
-						title: 'NYT Maker Week 2022 shirt',
-						description:
-							'Winning T-shirt design for Maker Week at the New York Times, the all-company hackathon.',
-						src: makerTee
-					}
-				]
-			]
-		},
-		{
 			tag: 'ui-ux',
 			rows: [
 				[
@@ -244,6 +194,56 @@
 							'Website platform design for climatedu.org, an online climate course for middle and high school students. Designed in Figma.',
 						link: 'https://climatedu.org',
 						src: climateduSite
+					}
+				]
+			]
+		},
+		{
+			tag: 'illustration',
+			rows: [
+				[
+					{
+						title: 'Sirens merch graphic',
+						description:
+							'Matisse-inspired sweatshirt graphic design for Sirens A Cappella. Made in Figma and Adobe Fresco.',
+						src: sirensMerch
+					},
+					{
+						title: 'Fruit blob emojis',
+						description: 'Custom emojis made for Discord, illustrated in Adobe Fresco!',
+						link: 'blog/fruit-blobs',
+						src: blobs
+					},
+					{
+						title: 'Market fermentation',
+						description: 'Movie poster made in Adobe Illustrator and InDesign.',
+						src: marketFermentation
+					}
+				],
+				[
+					{
+						title: 'b1c shirt graphic',
+						description:
+							'Merch graphic for cyberscurity team "b1c", centered around the theme of making waves.',
+						src: b1c
+					},
+					{
+						title: 'Good Job album cover',
+						description:
+							"Album cover design for Sirens A Cappella's release of Good Job by Alicia Keys. Made in Figma.",
+						src: goodJob
+					},
+					{
+						title: 'iy8 logo',
+						description:
+							'Sample logo (very not official) for Cohort 8 of IYA (note the 8!). Illustrated in Adobe Fresco.',
+						src: iy8
+					},
+					{
+						title: 'NYT Maker Week 2022 shirt',
+						description:
+							'Winning T-shirt design for Maker Week at the New York Times, the all-company hackathon.',
+						src: makerTee
 					}
 				]
 			]

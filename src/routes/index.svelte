@@ -56,10 +56,11 @@
 			<div class="text-right">
 				<h1>hello! i'm vivian li.</h1>
 				<p>
-					I’m a very small girl studying in the <b>Iovine and Young Academy</b>, based in Los
-					Angeles at the University of Southern California. I live to
-					<b>tell stories in beautiful ways</b>, especially around climate solutions and
-					sustainability. I also love many other things and I'm generally doing all sorts of stuff.
+					I’m a very small girl based in Los Angeles, studying in the <b>Iovine and Young Academy</b
+					>
+					at the University of Southern California. I'm a big fan of
+					<b>telling stories in beautiful ways</b>, especially around sustainability and creative
+					expression. I love to explore new spaces, both physical and digital.
 					<b>Welcome to my playground</b>!
 				</p>
 				<Link
@@ -77,9 +78,9 @@
 			<div class="text-left">
 				<h1>i design...</h1>
 				<p>
-					I make pretty things, from brand identities to hand-doodled holiday cards to tiny 3D
-					worlds. Part of that process lies in constantly looking out for minutiae behind the beauty
-					of daily life. Check it out!
+					I make pretty things, from digital product mockups to hand-doodled holiday cards to tiny
+					3D worlds. Part of that process lies in always looking for the small beauties of daily
+					life. Check it out!
 				</p>
 				<Link link="/portfolio">my design portfolio</Link>
 			</div>
@@ -108,9 +109,9 @@
 			<div class="text-right">
 				<h1>i code...</h1>
 				<p>
-					I've coded random projects in the past since high school, and I'm now on a mission to
-					better understand interactive media and data journalism. I also coded this website with
-					SvelteKit (here's <a href="/blog/made-with-svelte-kit">how</a>)!
+					What better tool than code to bring my visual ideas to life? I'm focused on using frontend
+					development to propel interactive media and data storytelling. I also coded this website
+					with SvelteKit (here's <a href="/blog/made-with-svelte-kit">how</a>)!
 				</p>
 				<div class="buttons">
 					<Link link="https://github.com/teacupkittie">my github</Link>
@@ -175,7 +176,7 @@
 						<Icon src={FiTwitter} className="custom-icon media-icon" />
 					</a>
 				</div>
-				<p>Subscribe to my newsletter:<br /> (this will take you to my blog!)</p>
+				<p>Subscribe to my newsletter!<br /> (this will take you to my blog)</p>
 				<EmailInput />
 			</div>
 			<!-- styled divider -->
@@ -186,13 +187,13 @@
 				<!-- content-filtering buttons -->
 				<div class="buttons">
 					<div on:click={() => (aboutSection = 'at-usc')}>
-						<Tag className={aboutSection ? 'selected' : ''}>what I do at USC</Tag>
+						<Tag className={aboutSection === 'at-usc' ? 'selected' : ''}>me at USC</Tag>
 					</div>
 					<div on:click={() => (aboutSection = 'care-about')}>
-						<Tag className={aboutSection ? 'selected' : ''}>things I care about</Tag>
+						<Tag className={aboutSection === 'care-about' ? 'selected' : ''}>my 🤍's</Tag>
 					</div>
 					<div on:click={() => (aboutSection = 'fun-facts')}>
-						<Tag className={aboutSection ? 'selected' : ''}>fun facts</Tag>
+						<Tag className={aboutSection === 'fun-facts' ? 'selected' : ''}>fun facts</Tag>
 					</div>
 				</div>
 				<!-- things i do at usc -->
@@ -201,42 +202,34 @@
 						<ul>
 							<li>
 								i'm in a
-								<a sveltekit:prefetch href="https://iovine-young.usc.edu/">crazy-cool major</a>
-								with some crazy-cool people
+								<strike>confusing</strike> cool
+								<a href="https://iovine-young.usc.edu/">major</a>
+								with cool people
 							</li>
 							<li>
-								i’m a soprano in
-								<a sveltekit:prefetch href="https://uscsirensacappella.weebly.com/">
+								i sing soprano and arrange music for
+								<a prefetch href="https://www.instagram.com/thesirensacappella/">
 									Sirens A Cappella
-								</a> 🤍
+								</a>
 							</li>
+							<li>i'm an Arts and Climate Collective fellow 🌱</li>
 							<li>
-								i'm developing USC's
-								<a
-									sveltekit:prefetch
-									href="https://green.usc.edu/students/presidents-sustainability-internship-program/"
-									>sustainability design guidelines</a
-								>, organizing the Student Sustainability Committee's media presence, and planning
-								the Presidential Symposium
+								i design for <a sveltekit:prefetch href="https://hacksc.com/">HackSC</a>
 							</li>
-							<li>
-								i write for <a sveltekit:prefetch href="https://hauteusc.com/">Haute Mag</a> and
-								design for <a sveltekit:prefetch href="https://hacksc.com/">HackSC</a>
-							</li>
-							<li>i skate, bake, run, and enjoy our beautiful campus</li>
+							<li>i skate, run, and lift</li>
+							<li>i make good food, and then i eat it 😋</li>
 						</ul>
 					</div>
 					<!-- things i care about -->
 				{:else if aboutSection === 'care-about'}
 					<div>
 						<ul>
-							<li>
-								our planet! I try my best to eat plant-based, to be a conscious consumer, and to
-								talk about it when I can (in a non-judgemental way!)
-							</li>
-							<li>my friends and family. They are the most wonderful people</li>
-							<li>making and eating good food</li>
-							<li>being nice to people :)</li>
+							<li>my family and friends</li>
+							<li>good public transportation and walkable cities</li>
+							<li>evangelizing Svelte at all times</li>
+							<li>scouring Yelp for delightful eats</li>
+							<li>doing my own nails 💅🏻</li>
+							<li>singing to Taylor Swift, Dominic Fike, Peach Tree Rascals, and more</li>
 						</ul>
 					</div>
 					<!-- fun facts -->
@@ -245,11 +238,13 @@
 						<ul>
 							<li>
 								the “w” in vwl comes from my Chinese name, 李蔚薇 ("li weiwei"), which refers to the
-								resilient nature of a wild rose. Basically, my parents named me after a weed...
+								resilient nature of a wild rose!
 							</li>
-							<li>i'm a big fan of grocery stores. Trader Joe’s, particularly</li>
-							<li>i write in brown ink rather than black ink</li>
-							<li>my favorite fruits: fresh figs, sumo mandarins, blackberries</li>
+							<li>i'm a big fan of grocery stores and i live above a Trader Joe’s</li>
+							<li>i like to write in brown ink</li>
+							<li>
+								i love all fruits, but my favorites are fresh figs, sumo mandarins, and blackberries
+							</li>
 						</ul>
 					</div>
 				{/if}
