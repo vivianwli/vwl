@@ -1,13 +1,6 @@
-<script context="module">
-	// this runs before the layout is rendered, setting key to the URL path
-	export const load = async ({ url }) => ({
-		props: {
-			key: url.pathname
-		}
-	});
-</script>
-
 <script>
+	export let data;
+
 	// stylesheet import
 	import '../app.scss';
 
@@ -20,9 +13,6 @@
 	// page transition imports
 	import { fly } from 'svelte/transition';
 	import PageTransition from '$lib/components/PageTransition.svelte';
-
-	// page transition variable keeping track of path
-	export let key;
 
 	// toast import
 	import { toast } from '@zerodevx/svelte-toast';
@@ -156,7 +146,7 @@
 		<!-- page content -->
 		<div class="page-content {portfolio}">
 			<!-- when the path (key) changes, a page transition is triggered -->
-			<PageTransition refresh={key}>
+			<PageTransition refresh={data.key}>
 				<slot />
 			</PageTransition>
 		</div>

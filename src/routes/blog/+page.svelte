@@ -1,22 +1,6 @@
-<script context="module">
-	// fetch posts before the component is rendered
-	const posts = import.meta.glob('./*.svx');
-	let body = [];
-	for (const path in posts) {
-		body.push(posts[path]().then(({ metadata }) => metadata));
-	}
-	/** @type {import('@sveltejs/kit').Load} */
-	export async function load() {
-		const posts = await Promise.all(body);
-		return {
-			props: {
-				posts
-			}
-		};
-	}
-</script>
-
 <script>
+	export let data;
+
 	// component imports
 	import PostCard from '$lib/components/PostCard.svelte';
 	import Tag from '$lib/components/Tag.svelte';
@@ -24,9 +8,6 @@
 
 	// toast import
 	import { SvelteToast } from '@zerodevx/svelte-toast';
-
-	// fetched posts
-	export let posts;
 
 	// no selected tags by default
 	let selectedTags = {};
@@ -38,7 +19,7 @@
 		}
 	}
 
-	for (const post of posts) {
+	for (const post of data.posts) {
 		// create a date object for each post
 		if (post !== undefined) {
 			if (post.editDate !== undefined) {
@@ -54,7 +35,7 @@
 		}
 	}
 	// sort posts by date
-	posts.sort((a, b) => b.dateObj - a.dateObj);
+	data.posts.sort((a, b) => b.dateObj - a.dateObj);
 </script>
 
 <svelte:head>
@@ -103,14 +84,14 @@
 	<div class="post-container">
 		<!-- if no tags have been selected, display all posts -->
 		{#if Object.keys(selectedTags).filter((k) => selectedTags[k]).length === 0}
-			{#each posts as post}
+			{#each data.posts as post}
 				{#if post !== undefined}
 					<PostCard {post} />
 				{/if}
 			{/each}
 			<!-- if at least one tag has been selected, only display posts with matching tags -->
 		{:else}
-			{#each posts as post}
+			{#each data.posts as post}
 				{#each post.tags as tag}
 					{#if selectedTags[tag.name]}
 						{#if post !== undefined}
