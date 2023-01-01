@@ -37,8 +37,12 @@
 	--transparent: rgba(0, 0, 0, 0);
 	--postcard-color: rgba(242, 242, 247, 0.2); // var(--lightest), 20% opacity
 	--absolute: var(--absolutelight);
-	--primary-button-shadow-color: rgba(153, 120, 110, 0.4);
-	--secondary-button-shadow-color: rgba(149, 149, 166, 0.5);
+
+	/* button/tag colors */
+	--primary-button-hover-color: rgba(196, 169, 161, 0.3);
+	--primary-button-border-color: rgba(196, 169, 161, 0.5);
+	--secondary-button-hover-color: rgba(149, 149, 166, 0.15);
+	--secondary-button-border-color: rgba(149, 149, 166, 0.3);
 
 	/* blob colors */
 	--blob-1: rgba(178, 195, 246, 0.35);
@@ -71,6 +75,12 @@
 	--absolute: var(--absolutedark);
 	--primary-button-shadow-color: rgba(104, 132, 217, 0.3);
 	--secondary-button-shadow-color: rgba(115, 115, 128, 0.4);
+
+	/* button/tag colors */
+	--primary-button-hover-color: rgba(145, 170, 242, 0.3);
+	--primary-button-border-color: rgba(145, 170, 242, 0.5);
+	--secondary-button-hover-color: rgba(149, 149, 166, 0.2);
+	--secondary-button-border-color: rgba(149, 149, 166, 0.3);
 
 	/* blob colors */
 	--blob-1: rgba(55, 80, 153, 0.2);

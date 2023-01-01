@@ -19,7 +19,7 @@
 	a {
 		transition: 0.3s ease;
 		width: fit-content;
-		border: none;
+		border: 1px solid var(--transparent);
 		background-color: var(--highlight-color);
 		box-shadow: 0 0 0.4rem var(--transparent);
 		border-radius: 30px;
@@ -33,6 +33,7 @@
 		text-decoration: none;
 	}
 	a:hover {
-		box-shadow: 0 0 0.4rem rgba(153, 120, 110, 0.4);
+		border: 1px solid var(--primary-button-border-color);
+		background-color: var(--primary-button-hover-color);
 	}
 </style>

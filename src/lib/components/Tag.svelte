@@ -1,7 +1,6 @@
 <script>
 	import '../../app.scss';
 	export let className;
-	export let selected;
 </script>
 
 <button class={className}>
@@ -12,8 +11,8 @@
 	button {
 		transition: 0.3s ease;
 		width: fit-content;
-		border: none;
 		background-color: var(--secondary-highlight-color);
+		border: 1px solid var(--transparent);
 		box-shadow: 0 0 0.4rem var(--transparent);
 		border-radius: 30px;
 		color: var(--dark);
@@ -25,23 +24,23 @@
 		white-space: nowrap;
 	}
 	button:hover {
-		box-shadow: 0 0 0.4rem var(--secondary-button-shadow-color);
+		border: 1px solid var(--secondary-button-border-color);
+		background-color: var(--secondary-button-hover-color);
 	}
 
 	.clear {
 		background-color: var(--transparent);
+		border: 1px solid var(--transparent) !important;
 		height: 100%;
 	}
 	.clear:hover {
-		box-shadow: none;
+		background-color: rgba(180, 180, 191, 0.1);
 	}
 
 	.inactive {
-		background-color: var(--highlight-color);
+		background-color: var(--highlight-color) !important;
 		color: var(--primary-selected-color);
-	}
-	.inactive:hover {
-		box-shadow: none;
+		border: 1px solid var(--transparent) !important;
 	}
 
 	.selected {
@@ -49,6 +48,7 @@
 		color: var(--primary-selected-color);
 	}
 	.selected:hover {
-		box-shadow: 0 0 0.4rem var(--primary-button-shadow-color);
+		border: 1px solid var(--primary-button-border-color);
+		background-color: var(--primary-button-hover-color);
 	}
 </style>
