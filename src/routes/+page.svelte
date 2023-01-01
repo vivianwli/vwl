@@ -186,13 +186,22 @@
 				<h2>want to know more?</h2>
 				<!-- content-filtering buttons -->
 				<div class="buttons">
-					<div on:click={() => (aboutSection = 'at-usc')}>
+					<div
+						on:click={() => (aboutSection = 'at-usc')}
+						on:keydown={() => (aboutSection = 'at-usc')}
+					>
 						<Tag className={aboutSection === 'at-usc' ? 'selected' : ''}>me at USC</Tag>
 					</div>
-					<div on:click={() => (aboutSection = 'care-about')}>
-						<Tag className={aboutSection === 'care-about' ? 'selected' : ''}>my 🤍's</Tag>
+					<div
+						on:click={() => (aboutSection = 'care-about')}
+						on:keydown={() => (aboutSection = 'care-about')}
+					>
+						<Tag className={aboutSection === 'care-about' ? 'selected' : ''}>my 💕's</Tag>
 					</div>
-					<div on:click={() => (aboutSection = 'fun-facts')}>
+					<div
+						on:click={() => (aboutSection = 'fun-facts')}
+						on:keydown={() => (aboutSection = 'fun-facts')}
+					>
 						<Tag className={aboutSection === 'fun-facts' ? 'selected' : ''}>fun facts</Tag>
 					</div>
 				</div>

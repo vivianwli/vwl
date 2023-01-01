@@ -8,7 +8,7 @@
 	import { page } from '$app/stores';
 	import { goto } from '$app/navigation';
 	import { navigating } from '$app/stores';
-	import { browser } from '$app/env';
+	import { browser } from '$app/environment';
 
 	// page transition imports
 	import { fly } from 'svelte/transition';
@@ -138,7 +138,7 @@
 
 		<!-- dark mode toggle switch -->
 		<div class="dark-switch">
-			<div on:click={switchTheme}>
+			<div on:click={switchTheme} on:keydown={switchTheme}>
 				<Icon src={FiMoon} className={'custom-icon ' + darkTheme} />
 			</div>
 		</div>

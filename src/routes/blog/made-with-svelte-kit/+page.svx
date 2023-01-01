@@ -65,7 +65,7 @@ Here’s the [CodePen](https://codepen.io/Mamboleoo/pen/BxMQYQ) that I reference
 
 ### Svelte(Kit) stuff
 
-- **The docs:** I loved the docs, for both [Svelte](https://svelte.dev/docs) and [SvelteKit](https://kit.svelte.dev/docs). So wonderful and helpful, 10/10. This is where you learn about all sorts of fun things, like SvelteKit’s modules (`$app/env`, `$app/stores`, etc.), loading, and anchor options. Had my back when Stack Overflow didn’t 🥲
+- **The docs:** I loved the docs, for both [Svelte](https://svelte.dev/docs) and [SvelteKit](https://kit.svelte.dev/docs). So wonderful and helpful, 10/10. This is where you learn about all sorts of fun things, like SvelteKit’s modules (`$app/environment`, `$app/stores`, etc.), loading, and anchor options. Had my back when Stack Overflow didn’t 🥲
 - **SvelteKit’s file-based routing system:** very intuitive! It works exactly how you think it does—each page goes into `/routes` as a `.svelte` file.
 - **Svelte transitions:** super easy to use with really beautiful results. I used them for my page transitions (and I really _could_ start throwing them everywhere). One of the quickest things that I did to elevate the feel of my website. The transition usually only runs when your component enters and leaves the DOM, but you can also trigger the animation on a value change with a [#key block](https://stackoverflow.com/questions/62626343/svelte-transition-on-reactive-data-change).
 
