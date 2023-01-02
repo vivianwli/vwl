@@ -738,14 +738,14 @@
 		}
 
 		@media (hover: hover) {
-			&:hover .description {
+			.img-container:hover .description {
 				// show description on hover
 				opacity: 90%;
 				z-index: 10;
 			}
 		}
 
-		&:focus .description {
+		.img-container:focus .description {
 			// show description on focus
 			opacity: 90%;
 			z-index: 10;
