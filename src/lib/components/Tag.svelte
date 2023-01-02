@@ -35,6 +35,7 @@
 		color: var(--primary-selected-color);
 		border: 1px solid var(--transparent) !important;
 		cursor: default !important;
+		pointer-events: none;
 	}
 
 	.selected {

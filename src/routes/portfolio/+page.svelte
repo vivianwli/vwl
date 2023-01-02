@@ -33,6 +33,7 @@
 
 	// svelte imports
 	import { page } from '$app/stores';
+	import { fly } from 'svelte/transition';
 
 	// for tooltip: in the case that x and y position aren't set, the cursor should fall back on a position that is out of view -- in this case, (-500, -500)
 	let m = { x: -500, y: -500 };
@@ -66,6 +67,17 @@
 	// check to confirm that no tags have been selected
 	function noneSelected() {
 		return Object.keys(designTags).filter((k) => designTags[k]).length === 0;
+	}
+
+	let innerWidth;
+	$: isMobile = innerWidth > 800 ? false : true; // determine whether the user is on mobile
+	let currentMobileDescription = '';
+
+	// sets which description is shown on mobile, if any
+	function toggleMobileDescription(title) {
+		currentMobileDescription === title
+			? (currentMobileDescription = '')
+			: (currentMobileDescription = title);
 	}
 
 	// writing card info
@@ -355,6 +367,8 @@
 	<meta property="og:url" content="https://www.vivianwli.com/portfolio" />
 </svelte:head>
 
+<svelte:window bind:innerWidth />
+
 <div class="content">
 	<h1>portfolio</h1>
 
@@ -367,7 +381,6 @@
 				on:click={() => {
 					writingPos = 'bottom';
 					designPos = 'top';
-					console.log('design');
 				}}
 			/>
 			<div
@@ -375,7 +388,6 @@
 				on:click={() => {
 					writingPos = 'top';
 					designPos = 'bottom';
-					console.log('journo');
 				}}
 			/>
 		</div>
@@ -431,25 +443,47 @@
 									<div class="{category.tag} content-row">
 										{#each row as item}
 											<div class="img-container">
-												<a href={item.link}>
-													<div
-														class="description"
-														style="position: fixed; left: {m.x + 5}px; top: {m.y + 5}px"
-													>
-														<h2>{item.title}</h2>
-														<Tag className="inactive">{category.tag}</Tag>
-														<p style="margin-top: 0.75rem">
-															{item.description}
-															{#if 'link' in item}
-																<span class="more-link">Click to see more.</span>
-																<span class="more-link-mobile"
-																	>More <a href={item.link}>here</a>.</span
-																>
-															{/if}
-														</p>
-													</div>
-													<img src={item.src} alt={item.title} />
-												</a>
+												{#if isMobile}
+													{#if currentMobileDescription === item.title}
+														<div
+															transition:fly={{ y: 100, duration: 600 }}
+															class="description mobile"
+														>
+															<h2>{item.title}</h2>
+															<Tag className="inactive">{category.tag}</Tag>
+															<p style="margin-top: 0.75rem">
+																{item.description}
+																{#if 'link' in item}
+																	<span class="more-link-mobile">
+																		More <a href={item.link}>here</a>.
+																	</span>
+																{/if}
+															</p>
+														</div>
+													{/if}
+													<img
+														src={item.src}
+														alt={item.title}
+														on:click={() => toggleMobileDescription(item.title)}
+													/>
+												{:else}
+													<a href={item.link}>
+														<div
+															class="description"
+															style="position: fixed; left: {m.x + 5}px; top: {m.y + 5}px"
+														>
+															<h2>{item.title}</h2>
+															<Tag className="inactive">{category.tag}</Tag>
+															<p style="margin-top: 0.75rem">
+																{item.description}
+																{#if 'link' in item}
+																	<span class="more-link">Click to see more.</span>
+																{/if}
+															</p>
+														</div>
+														<img src={item.src} alt={item.title} />
+													</a>
+												{/if}
 											</div>
 										{/each}
 									</div>
@@ -657,54 +691,71 @@
 		background-color: var(--highlight-color);
 		color: var(--primary-selected-color);
 	}
+
 	.content-row {
 		margin: 1.5rem 0;
 		display: flex;
 		gap: 1.5rem;
 
 		/* image container styling for design tab */
-		.img-container {
-			.description {
-				// hide description by default
-				opacity: 0%;
-				transition: opacity 0.5s;
-				h2 {
-					font-size: 1.2rem;
-					margin-bottom: 0.5rem;
-				}
-				p {
-					margin: 0;
-				}
-				background-color: var(--absolute);
-				border: 1.5px solid var(--lighter);
-				color: var(--text-color);
-				font-size: 0.85rem;
-				padding: 1.5rem;
-				align-content: end;
-				width: 20rem;
-				border-radius: 5px;
+		.description {
+			// hide description by default
+			opacity: 0%;
+			transition: opacity 0.5s;
+			h2 {
+				font-size: 1.2rem;
+				margin-bottom: 0.5rem;
 			}
-			@media (hover: hover) {
-				&:hover .description {
-					// show description on hover
-					opacity: 90%;
-					z-index: 10;
-				}
+			p {
+				margin: 0;
 			}
-			&:focus .description {
-				// show description on focus
+			background-color: var(--absolute);
+			border: 1.5px solid var(--lighter);
+			color: var(--text-color);
+			font-size: 0.85rem;
+			padding: 1.5rem;
+			align-content: end;
+			width: 20rem;
+			border-radius: 5px;
+		}
+
+		.description.mobile {
+			opacity: 90%;
+			z-index: 10;
+			box-shadow: 0 0 2rem var(--secondary-subtle-color);
+			position: fixed;
+			top: auto;
+			left: 0;
+			bottom: 0;
+			height: min-content;
+			width: 100vw;
+			box-sizing: border-box;
+			border: none;
+			border-radius: 0;
+			.more-link-mobile {
+				display: inline;
+			}
+		}
+
+		@media (hover: hover) {
+			&:hover .description {
+				// show description on hover
 				opacity: 90%;
 				z-index: 10;
 			}
-
-			.more-link {
-				display: inline;
-				font-style: italic;
-			}
-			.more-link-mobile {
-				display: none;
-			}
 		}
+
+		&:focus .description {
+			// show description on focus
+			opacity: 90%;
+			z-index: 10;
+		}
+
+		.more-link {
+			display: inline;
+			font-style: italic;
+		}
+
 		img {
 			box-shadow: 0 0 1rem var(--secondary-subtle-color);
 			max-height: 100%;
@@ -716,28 +767,6 @@
 		// split rows vertically on small screen
 		@media screen and (max-width: 50rem) {
 			flex-direction: column;
-
-			a {
-				pointer-events: none;
-			}
-			.description {
-				box-shadow: 0 0 2rem var(--secondary-subtle-color) !important;
-				top: auto !important;
-				left: 0 !important;
-				bottom: 0 !important;
-				height: min-content !important;
-				width: 100vw !important;
-				box-sizing: border-box !important;
-				border: none !important;
-				border-radius: 0 !important;
-				pointer-events: all;
-			}
-			.more-link {
-				display: none !important;
-			}
-			.more-link-mobile {
-				display: inline !important;
-			}
 		}
 	}
 

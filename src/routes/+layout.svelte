@@ -46,7 +46,6 @@
 		darkTheme === 'light' ? (darkTheme = 'dark') : (darkTheme = 'light');
 		document.documentElement.setAttribute('data-theme', darkTheme);
 		localStorage.setItem('theme', darkTheme);
-		console.log(darkTheme);
 	}
 
 	// hamburger menu logic
@@ -56,7 +55,6 @@
 	// hamburger menu toggle
 	function openClose() {
 		opened === 'closed' ? (opened = 'open') : (opened = 'closed');
-		console.log(opened);
 	}
 
 	// redirect and reset URL if they've subscribed to the email newsletter - designed to make Buttondown's redirect feel seamless
@@ -204,6 +202,7 @@
 		right: 0;
 		top: 0;
 		padding: 2rem;
+		z-index: 4;
 	}
 
 	/* hamburger menu placement styles */
