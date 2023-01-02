@@ -684,10 +684,12 @@
 				width: 20rem;
 				border-radius: 5px;
 			}
-			&:hover .description {
-				// show description on hover
-				opacity: 90%;
-				z-index: 10;
+			@media (hover: hover) {
+				&:hover .description {
+					// show description on hover
+					opacity: 90%;
+					z-index: 10;
+				}
 			}
 			&:focus .description {
 				// show description on focus
@@ -757,9 +759,11 @@
 		:global(.media-icon) {
 			font-size: 2.5rem !important;
 			color: var(--primary-color);
-			&:hover {
-				color: var(--primary-selected-color);
-				cursor: pointer;
+			@media (hover: hover) {
+				&:hover {
+					color: var(--primary-selected-color);
+					cursor: pointer;
+				}
 			}
 		}
 	}

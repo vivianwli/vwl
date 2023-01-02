@@ -36,5 +36,8 @@
 		margin: 1rem auto 2rem auto;
 		color: var(--secondary-selected-color);
 		font-style: italic;
+		@media screen and (max-width: 50rem) {
+			width: 90%;
+		}
 	}
 </style>

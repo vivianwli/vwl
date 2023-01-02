@@ -35,12 +35,14 @@
 		display: block;
 		text-decoration: none;
 		color: var(--secondary-color);
-		margin: 1rem;
-		font-size: 1.2rem;
+		margin: 1.75rem;
+		font-size: 1.75rem;
 		line-height: normal;
-		&:hover {
-			color: var(--primary-color);
-			text-shadow: 0 0 0.2rem var(--primary-light-color);
+		@media (hover: hover) {
+			&:hover {
+				color: var(--primary-color);
+				text-shadow: 0 0 0.2rem var(--primary-light-color);
+			}
 		}
 	}
 </style>

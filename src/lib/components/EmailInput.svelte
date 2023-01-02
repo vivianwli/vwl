@@ -53,10 +53,12 @@
 		opacity: 100%;
 		width: 2rem;
 	}
-	button :global(.arrow):hover {
-		margin: 0;
-		color: var(--primary-color);
-		cursor: pointer;
+	@media (hover: hover) {
+		button :global(.arrow):hover {
+			margin: 0;
+			color: var(--primary-color);
+			cursor: pointer;
+		}
 	}
 	.email-input {
 		display: grid;

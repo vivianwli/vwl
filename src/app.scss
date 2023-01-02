@@ -97,6 +97,9 @@
 		.page-content {
 			z-index: 1;
 			padding: 15vh 15vw;
+			@media screen and (max-width: 32rem) {
+				padding: 15vh 10vw;
+			}
 		}
 
 		/* if we're on the portfolio page, adjust the horizontal padding for small screen sizes */
@@ -121,10 +124,12 @@ nav {
 		margin: 1rem;
 		font-size: 1.2rem;
 		line-height: normal;
-		&:hover {
-			color: var(--primary-color);
-			text-shadow: 0 0 0.2rem var(--primary-light-color);
-			cursor: pointer;
+		@media (hover: hover) {
+			&:hover {
+				color: var(--primary-color);
+				text-shadow: 0 0 0.2rem var(--primary-light-color);
+				cursor: pointer;
+			}
 		}
 	}
 }
@@ -218,8 +223,10 @@ li {
 /* link styles */
 a {
 	color: var(--primary-color);
-	&:hover {
-		color: var(--primary-selected-color);
+	@media (hover: hover) {
+		&:hover {
+			color: var(--primary-selected-color);
+		}
 	}
 }
 

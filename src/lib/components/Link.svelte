@@ -32,8 +32,10 @@
 		white-space: nowrap;
 		text-decoration: none;
 	}
-	a:hover {
-		border: 1px solid var(--primary-button-border-color);
-		background-color: var(--primary-button-hover-color);
+	@media (hover: hover) {
+		a:hover {
+			border: 1px solid var(--primary-button-border-color);
+			background-color: var(--primary-button-hover-color);
+		}
 	}
 </style>

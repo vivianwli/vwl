@@ -167,9 +167,11 @@
 		color: var(--secondary-color);
 		font-size: 2rem;
 		opacity: 75%;
-		&:hover {
-			color: var(--secondary-selected-color);
-			cursor: pointer;
+		@media (hover: hover) {
+			&:hover {
+				color: var(--secondary-selected-color);
+				cursor: pointer;
+			}
 		}
 	}
 
@@ -180,17 +182,21 @@
 		margin: auto;
 		margin-top: 15vh;
 		margin-bottom: 10vh;
-		&:hover {
-			color: var(--secondary-color);
-			cursor: default;
+		@media (hover: hover) {
+			&:hover {
+				color: var(--secondary-color);
+				cursor: default;
+			}
 		}
 	}
 
 	/* dark mode toggle styles */
 	:global(.dark) {
 		fill: var(--secondary-color);
-		&:hover {
-			fill: var(--secondary-selected-color);
+		@media (hover: hover) {
+			&:hover {
+				fill: var(--secondary-selected-color);
+			}
 		}
 	}
 	.dark-switch {
@@ -206,8 +212,8 @@
 		top: 0;
 		background-color: var(--bg-color);
 		box-shadow: 0 0 12rem var(--secondary-color);
-		height: 100vh;
-		width: 15rem;
+		height: 100dvh;
+		width: 70vw;
 		z-index: -1;
 	}
 </style>
