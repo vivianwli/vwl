@@ -17,7 +17,7 @@
 
 	//image imports
 	import vwl from '$lib/assets/vwl.svg';
-	import vivian from '$lib/assets/vivian.png?w=600&webp';
+	import vivian from '$lib/assets/vivian-new.png?w=600&webp';
 	import design1 from '$lib/assets/market-fermentation-2.png?w=400&webp';
 	import design2 from '$lib/assets/trader-joes-big.png?w=600&webp';
 	import code1 from '$lib/assets/research-2.png?w=400&webp';
