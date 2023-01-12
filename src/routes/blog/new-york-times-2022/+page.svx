@@ -30,6 +30,10 @@ summary: "A rundown of my internship experience during summer 2022 on the Intera
     import makerWeekTee from '$lib/assets/nyt-maker-2022.png';
     import makerTeam from '$lib/assets/maker-week-team.png';
     import snacks from '$lib/assets/snacks-channel.png';
+    import trendingRacesGif from '$lib/assets/trending-races.gif';
+    import trendingRacesIterations from '$lib/assets/trending-race-iterations.png';
+    import trendingRacesGitHub from '$lib/assets/trending-races-github.png';
+    import trendingRacesPraise from '$lib/assets/trending-races-praise.png';
 </script>
 
 <PostHeader {title} {publishDate} {tags} {slug} {thumbnail} {summary} />
@@ -48,7 +52,7 @@ This was one of my biggest projects of the summer! Essentially, our elections re
 
 Let's imagine that it's a hectic election night and the Alabama Governor's race gets really interesting. Everyone has their eyes peeled. We'd want to move the AL Gov. race to the top of the page. However, to change page layout and attributes, we currently have to go into the code, edit a complicated json, and re-deploy. Once again, it's intimidating for those who aren't already knee-deep in the elections reporting apps. This interface allows users to rearrange sections and edit properties without ever touching the code.
 
-<BlogImage src={layoutEditor} caption="A preview of the asset layout editor's functionalities." />
+<BlogImage src={layoutEditor} className="gallery-img" caption="A preview of the asset layout editor's functionalities." />
 
 I designed this interface in Figma and developed it from scratch. I spent significant time in the sea of CSS-styles, dealing with broad aesthetic and microinteractions. I also connected my interface to the rest of the app, pulling in existing page layouts and creating APIs to send the layouts back to the `election-admin` app.
 
@@ -92,9 +96,25 @@ For this second side-by-side:
 
 As an interface that is touched frequently by many people, this UI/UX audit and refactor ultimately had a pretty positive impact. Several months later, it's evolved to become even better!
 
-### Reader-facing elections components
+### Trending races component
 
-Right now, I'm working with the Graphics and Digital News Design desks to build out reader-facing components for the General election in November 2022. It's not quite public yet, but it will be soon ;)
+Finally, a project that is [live](https://www.nytimes.com/interactive/2022/11/08/us/elections/results-key-races.html)! This trending races component was developed for the front page of the NYT elections results. It became one of my primary projects during October and November, and I'm thankful to have owned a feature that was so central to the Times' election visuals, from the design to the development, animation, algorithm, and testing.
+
+<BlogImage src={trendingRacesGif} className="gallery-img" caption="A GIF showcasing the trending Races animation interaction." />
+
+I'd followed the project from its inception, back when we weren't even sure what exactly to do with Chartbeat API data that we were collecting. Soon after we settled on the idea of a trending races component, I became the primary designer and developer for the feature.
+
+I pushed for design changes that clarified our vote percentage bar, where the reader might otherwise find it ambiguous. Adding a numeric label significantly improved the reader's ability to understand a race's status with just a quick glance. After interviewing several team members (as well as some friends and family for the layman's view), I chose a variation that incorporated a descriptive label while still matching the brand guidelines.
+
+<BlogImage src={trendingRacesIterations} className="gallery-img" caption="A screenshot of potential Trending Race component designs from Figma. We chose a modified version of #2!" />
+
+In a way, GitHub code reviews were also my user interviews. Although I did not start out with such a thorough approach, I quickly realized the importance of determining every possible state that the component could be in, and ensuring that we'd optimized the design for that state. Beyond the "mid-vote count" and "called" states, there was also a "no results" state when races weren't reporting yet, a runoff state, and more. I continuously iterated based on my team's feedback, making adjustments to improve the component's clarity.
+
+<BlogImage src={trendingRacesGitHub} caption="A PR that I made, implementing some design feedback and including the No Results and Runoff designs." />
+
+Alongside the Times audience team, I contributed to our trending algorithm that used total page views and top change in views to show what captured readers' attention in real time. I implemented our algorithm logic in code, surfacing five races with the top views overall, and five races with the biggest change in views from the recent time period. Working on this was definitely high-stress, but it felt so rewarding, too.
+
+<BlogImage src={trendingRacesPraise} caption="High praise from the 🐐 in #election-night-notes." />
 
 ### Self-driving car crash data
 
