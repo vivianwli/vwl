@@ -1,0 +1,35 @@
+---
+title: 'Kleiner Perkins design challenge: Redesigning Netlify'
+slug: 'redesigning-netlify'
+publishDate: 'JAN 17 2020'
+tags: [{ name: 'design' }]
+thumbnail: 'vwl-site.png'
+hidden: true
+summary: ''
+---
+
+<script>
+    import PostHeader from '$lib/components/PostHeader.svelte';
+    import BlogImage from '$lib/components/BlogImage.svelte';
+    import BlogGallery from '$lib/components/BlogGallery.svelte';
+    import redesignHome1 from '$lib/assets/netlify-redesign-home-1.png';
+    import redesignHome2 from '$lib/assets/netlify-redesign-home-2.png';
+    import originalDeploys1 from '$lib/assets/netlify-original-deploys-1.png';
+    import originalDeploys2 from '$lib/assets/netlify-original-deploys-2.png';
+    import redesignUserFlow from '$lib/assets/netlify-redesign-user-flow.png';
+    import originalUserFlow from '$lib/assets/netlify-original-user-flow.png';
+</script>
+
+<PostHeader {title} {publishDate} {tags} {slug} {thumbnail} {summary} />
+
+In this case study, we take a look at how Netlify can modify their user interface and user flow to better clarify and differentiate between key actions.
+
+<BlogGallery columns=2>
+  <BlogImage src={originalDeploys1} className="gallery-img" caption="<b>BEFORE:</b> Original page for production deploys." />
+  <BlogImage src={originalDeploys2} className="gallery-img" caption="<b>AFTER:</b> Original page for deploy previews." />
+</BlogGallery>
+
+<BlogGallery columns=2>
+  <BlogImage src={redesignHome1} className="gallery-img" caption="<b>BEFORE:</b> Redesigned production deploys, integrated with site homepage." />
+  <BlogImage src={redesignHome2} className="gallery-img" caption="<b>AFTER:</b> Redesigned deploy previews, integrated with site homepage." />
+</BlogGallery>
