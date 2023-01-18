@@ -3,9 +3,8 @@ title: 'Kleiner Perkins design challenge: Redesigning Netlify'
 slug: 'redesigning-netlify'
 publishDate: 'JAN 17 2023'
 tags: [{ name: 'design' }]
-thumbnail: 'vwl-site.png'
-hidden: true
-summary: ''
+thumbnail: 'netlify.png'
+summary: 'In this case study, we take a look at how Netlify can modify their user interface and user flow to simplify key actions.'
 ---
 
 <script>
