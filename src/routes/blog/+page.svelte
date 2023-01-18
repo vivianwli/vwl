@@ -85,7 +85,7 @@
 		<!-- if no tags have been selected, display all posts -->
 		{#if Object.keys(selectedTags).filter((k) => selectedTags[k]).length === 0}
 			{#each data.posts as post}
-				{#if post !== undefined}
+				{#if post !== undefined && post.hidden !== true}
 					<PostCard {post} />
 				{/if}
 			{/each}
@@ -94,7 +94,7 @@
 			{#each data.posts as post}
 				{#each post.tags as tag}
 					{#if selectedTags[tag.name]}
-						{#if post !== undefined}
+						{#if post !== undefined && post.hidden !== true}
 							<PostCard {post} />
 						{/if}
 					{/if}
