@@ -1,0 +1,39 @@
+---
+title: 'My HackSC 2023 workshop: intro to Svelte'
+slug: 'hacksc-svelte-workshop'
+publishDate: 'APR 11 2023'
+tags: [{ name: 'code' }]
+thumbnail: 'svelte-workshop.png'
+summary: 'During HackSC 2023, I hosted a workshop introducing our lovely hackers to Svelte and SvelteKit. Watch the recording and view the action shots here!'
+---
+
+<script>
+    import PostHeader from '$lib/components/PostHeader.svelte';
+    import BlogImage from '$lib/components/BlogImage.svelte';
+    import BlogGallery from '$lib/components/BlogGallery.svelte';
+    import workshop1 from '$lib/assets/svelte-workshop-1.jpg';
+    import workshop2 from '$lib/assets/svelte-workshop-2.jpg';
+    import workshop3 from '$lib/assets/svelte-workshop-3.jpg';
+    import workshop4 from '$lib/assets/svelte-workshop-4.jpg';
+    import workshop5 from '$lib/assets/svelte-workshop-5.jpg';
+    import workshop6 from '$lib/assets/svelte-workshop-6.jpg';
+</script>
+
+<PostHeader {title} {publishDate} {tags} {slug} {thumbnail} {summary} />
+
+I was absolutely elated to evangelize about Svelte and SvelteKit this past February at HackSC 2023! I'm the organizing team's Design Lead, but this was my little side quest to share my love for this tool with hackers at the event. Feel free to scroll further for some images, followed by a recording of the workshop!
+
+<BlogGallery columns=2>
+    <BlogImage className="gallery-img" src={workshop1} caption="Introducing the workshop!" />
+    <BlogImage className="gallery-img" src={workshop2} caption="Introducing myself, featuring some avid hand movement." />
+    <BlogImage className="gallery-img" src={workshop3} caption="Totally engaged hackers :)" />
+    <BlogImage className="gallery-img" src={workshop4} caption="Workshop POV: behind the speaker!" />
+    <BlogImage className="gallery-img" src={workshop5} caption="Workshop room at capacity, with hackers sitting on the steps." />
+    <BlogImage className="gallery-img" src={workshop6} caption="Head-on lecture shot." />
+</BlogGallery>
+
+<div class="iframe-container">
+    <iframe class="iframe"
+        src="https://www.youtube.com/embed/PQIbCtuJ2cM">
+    </iframe>
+</div>

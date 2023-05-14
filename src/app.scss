@@ -1,6 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400&family=Epilogue:wght@300;600&family=Noto+Serif+Display:ital,wght@1,700&display=swap');
 @import 'svelte-hamburgers/scss/base';
 @import 'svelte-hamburgers/scss/types/squeeze';
+
+@font-face {
+	font-family: 'Fitzgerald';
+	src: url('lib/assets/HV\ Fitzgerald\ Bold\ Italic.ttf');
+}
+
 :root {
 	/* defaults */
 	font-family: 'Epilogue', Helvetica, sans-serif;
@@ -8,7 +14,7 @@
 	background-color: var(--bg-color);
 	line-height: 1.5;
 	transition: 0.3s ease;
-	--header-font: 'Noto Serif Display';
+	--header-font: 'Fitzgerald';
 
 	/* greys palette */
 	--absolutelight: #fefeff;
@@ -164,7 +170,7 @@ h1 {
 
 	font-family: var(--header-font);
 	font-style: italic;
-	font-size: 3rem;
+	font-size: 3.2rem;
 	margin-bottom: 0;
 }
 
@@ -188,7 +194,7 @@ h2 {
 	-moz-text-fill-color: transparent;
 
 	font-weight: 600;
-	font-size: 2rem;
+	font-size: 1.8rem;
 	margin-bottom: 1rem;
 }
 
