@@ -40,24 +40,24 @@
 
 	// logic to determine which tab is active or "on top"
 	let designPos;
-	let writingPos;
+	let thoughtsPos;
 
-	let tab = $page.url.searchParams.get('tab'); // based on url params, i.e. "?tab=writing"
-	if (tab === 'writing') {
+	let tab = $page.url.searchParams.get('tab'); // based on url params, i.e. "?tab=thoughts"
+	if (tab === 'thoughts') {
 		designPos = 'bottom';
-		writingPos = 'top';
+		thoughtsPos = 'top';
 	} else {
 		designPos = 'top';
-		writingPos = 'bottom';
+		thoughtsPos = 'bottom';
 	}
 
 	let designTags = {};
-	let writingTags = {};
+	let thoughtsTags = {};
 
 	// reset all filtering tags to be inactive
 	function clear() {
-		for (const key in writingTags) {
-			writingTags[key] = false;
+		for (const key in thoughtsTags) {
+			thoughtsTags[key] = false;
 		}
 		for (const key in designTags) {
 			designTags[key] = false;
@@ -80,8 +80,17 @@
 			: (currentMobileDescription = title);
 	}
 
-	// writing card info
-	let writingItems = [
+	// thoughts card info
+	let thoughtsItems = [
+		{
+			link: 'https://todos.vivianwli.com',
+			title: 'Spring 2023 in "To-Do"s',
+			thumbnail: 'todos-thumbnail.png',
+			info: 'MAY 4 2023',
+			summary:
+				'A Priestly chart (connected dot plot) view of my activities across the semester, as tracked by my to-do app. Made with D3, Prisma, Supabase!',
+			tags: ['visualization']
+		},
 		{
 			link: 'https://bamboo.vivianwli.com',
 			title: 'Bamboo housing',
@@ -126,7 +135,7 @@
 			thumbnail: 'nyt-stem-writing.jpg',
 			info: 'MAY 7 2020 • THE NEW YORK TIMES',
 			summary:
-				'One of eight winning essays (among 1,618 entries) from the New York Times Learning Network\'s STEM Writing Contest. Also published on <a href="https://phys.org/news/2019-09-marine-plastic-pollution-neurological-toxin.html">Phys.org</a>.',
+				'One of eight winning essays (among 1,618 entries) from the New York Times Learning Network\'s STEM thoughts Contest. Also published on <a href="https://phys.org/news/2019-09-marine-plastic-pollution-neurological-toxin.html">Phys.org</a>.',
 			tags: ['journalism']
 		},
 		{
@@ -342,16 +351,16 @@
 		}
 	];
 
-	for (const article of writingItems) {
+	for (const article of thoughtsItems) {
 		for (const tag of article.tags) {
-			if (!(tag in writingTags)) {
-				writingTags[tag] = false; // all tags start off inactive by default
+			if (!(tag in thoughtsTags)) {
+				thoughtsTags[tag] = false; // all tags start off inactive by default
 			}
 		}
 	}
 
 	for (const category of designItems) {
-		if (!(category.tag in writingTags)) {
+		if (!(category.tag in thoughtsTags)) {
 			designTags[category.tag] = false; // all tags start off inactive by default
 		}
 	}
@@ -379,14 +388,14 @@
 			<div
 				class="design-selector"
 				on:click={() => {
-					writingPos = 'bottom';
+					thoughtsPos = 'bottom';
 					designPos = 'top';
 				}}
 			/>
 			<div
-				class="writing-selector"
+				class="thoughts-selector"
 				on:click={() => {
-					writingPos = 'top';
+					thoughtsPos = 'top';
 					designPos = 'bottom';
 				}}
 			/>
@@ -494,9 +503,9 @@
 				</div>
 			</div>
 		</div>
-		<!-- writing tab -->
-		<div class="writing-tab tab {writingPos}">
-			<h2 class="tab-label">writing</h2>
+		<!-- thoughts tab -->
+		<div class="thoughts-tab tab {thoughtsPos}">
+			<h2 class="tab-label">thoughts</h2>
 			<svg viewBox="0 0 263 108" fill="none" xmlns="http://www.w3.org/2000/svg">
 				<path
 					d="M34.3647 18.5394L26.4733 35.1565C20.9981 46.6858 11.3657 53.6959 0.998535 53.6959V107.392H262.5V53.6959C252.318 53.6959 242.831 46.9326 237.304 35.7337L228.534 17.9622C223.007 6.76327 213.52 0 203.338 0H59.8395C49.4724 0 39.84 7.01005 34.3647 18.5394Z"
@@ -505,22 +514,22 @@
 			<div class="tab-page">
 				<div class="tab-page-content">
 					<div class="buttons">
-						{#each Object.keys(writingTags).filter((k) => writingTags[k]) as tag}
+						{#each Object.keys(thoughtsTags).filter((k) => thoughtsTags[k]) as tag}
 							<div
 								on:click={() => {
-									writingTags[tag] = !writingTags[tag];
+									thoughtsTags[tag] = !thoughtsTags[tag];
 								}}
 							>
-								<Tag className={writingTags[tag] ? 'selected' : ''}>{tag}</Tag>
+								<Tag className={thoughtsTags[tag] ? 'selected' : ''}>{tag}</Tag>
 							</div>
 						{/each}
-						{#each Object.keys(writingTags).filter((k) => !writingTags[k]) as tag}
+						{#each Object.keys(thoughtsTags).filter((k) => !thoughtsTags[k]) as tag}
 							<div
 								on:click={() => {
-									writingTags[tag] = !writingTags[tag];
+									thoughtsTags[tag] = !thoughtsTags[tag];
 								}}
 							>
-								<Tag className={writingTags[tag] ? 'selected' : ''}>{tag}</Tag>
+								<Tag className={thoughtsTags[tag] ? 'selected' : ''}>{tag}</Tag>
 							</div>
 						{/each}
 						<div on:click={() => clear()}>
@@ -528,16 +537,16 @@
 						</div>
 					</div>
 					<div class="content-container">
-						<!-- render an article card for each writing item-->
+						<!-- render an article card for each thoughts item-->
 						<!-- display only filtered ones if a filter has been selected, otherwise display all -->
-						{#if Object.keys(writingTags).filter((k) => writingTags[k]).length === 0}
-							{#each writingItems as article}
+						{#if Object.keys(thoughtsTags).filter((k) => thoughtsTags[k]).length === 0}
+							{#each thoughtsItems as article}
 								<ArticleCard {article} />
 							{/each}
 						{:else}
-							{#each writingItems as article}
+							{#each thoughtsItems as article}
 								{#each article.tags as tag}
-									{#if writingTags[tag]}
+									{#if thoughtsTags[tag]}
 										<ArticleCard {article} />
 									{/if}
 								{/each}
@@ -641,7 +650,7 @@
 			.design-selector {
 				grid-column: 2;
 			}
-			.writing-selector {
+			.thoughts-selector {
 				grid-column: 3;
 			}
 		}
@@ -676,7 +685,7 @@
 				grid-template-columns: 0 10rem auto;
 			}
 		}
-		.writing-tab {
+		.thoughts-tab {
 			grid-template-columns: 12.5rem 12rem auto;
 			@media screen and (max-width: 50rem) {
 				grid-template-columns: 10rem 12rem auto;
