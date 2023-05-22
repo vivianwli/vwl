@@ -1,4 +1,11 @@
-<div class="background">
+<script>
+	let innerWidth;
+	$: isMobile = innerWidth > 800 ? false : true;
+</script>
+
+<svelte:window bind:innerWidth />
+
+<div class="background {isMobile ? 'mobile' : ''}">
 	<span />
 	<span />
 	<span />
@@ -58,6 +65,10 @@
 					box-shadow: ($particleSize * 2 * $x) 0 $blurRadius currentColor;
 				}
 			}
+		}
+
+		&.mobile span {
+			animation: none;
 		}
 	}
 
