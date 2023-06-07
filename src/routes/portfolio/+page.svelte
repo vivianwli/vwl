@@ -206,7 +206,7 @@
 						title: 'ORACLE of Blair',
 						description:
 							'Web and graphic design for our senior class model of the 2020 Presidential election. Designed in Figma.',
-						link: 'https://polistat.mbhs.edu',
+						link: 'https://2020.polistat.mbhs.edu',
 						src: oracle
 					},
 					{
