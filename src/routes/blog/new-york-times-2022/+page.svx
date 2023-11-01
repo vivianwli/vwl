@@ -40,8 +40,6 @@ summary: "A rundown of my internship experience during summer 2022 on the Intera
 
 This past summer, I interned at the New York Times on the [Interactive News Team (INT)](https://github.com/newsdev/about-int)! I've had the pleasure of working on many projects at the Times, from UI/UX design to spreadsheet wrangling to illustration to fullstack software development. I had such a wonderful experience with the team and with the company, and I'm elated to share what I've learned.
 
-_Note: This is a developing article! I'm working with the team through the rest of the year to see out the 2022 elections cycle. Check back here in December to learn about what I worked on in the fall!_
-
 ## Work-related projects
 
 These were all so fun, I swear. Primarily elections, but also some one-off projects. The elections rig is written in TypeScript, Next.js, and a home-rolled variation on Sveltekit, with express and PostGreSQL handling the backend (if you're curious)!

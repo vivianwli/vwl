@@ -30,6 +30,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"16": "^0.0.2",
 		"@sveltejs/adapter-vercel": "^1.0.0-next.77",
 		"feather-icons": "^4.28.0",
 		"node-sass": "^7.0.1",

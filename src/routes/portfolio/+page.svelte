@@ -29,6 +29,7 @@
 	import hackSCSite from '$lib/assets/hacksc-cover.png?webp';
 	import osec from '$lib/assets/ottersec-cover.png?webp';
 	import nyt from '$lib/assets/nyt-thumbnail.png?webp';
+	import reddit from '$lib/assets/reddit-logo.svg';
 	import sscCover from '$lib/assets/ssc-brand-guide-cover.png?webp';
 
 	// svelte imports
@@ -173,12 +174,21 @@
 			rows: [
 				[
 					{
+						title: 'Reddit Ads Design (2023)',
+						description:
+							'During my summer internship, I worked on three product design projects to simplify the Reddit Ads platform for small businesses, from ad creative to Pixel event integration to viewing performance data. Blog post to come!',
+						// link: '/blog/reddit-ads-design-2023',
+						src: reddit
+					},
+					{
 						title: 'The New York Times (2022)',
 						description:
 							'I worked on various interfaces, both internal and reader-facing, during my summer internship at the New York Times. I coded these, too!',
 						link: '/blog/new-york-times-2022',
 						src: nyt
-					},
+					}
+				],
+				[
 					{
 						title: 'Student Sustainability Committee brand guide',
 						description:
@@ -186,15 +196,6 @@
 						link: 'https://www.figma.com/file/bkBckw68TnfQXLYtaNBRla/SSC?node-id=131%3A34',
 						src: sscCover
 					},
-					{
-						title: 'OtterSec website',
-						description:
-							'Landing page for OtterSec, a blockchain security auditing firm. Designed in Figma and developed with SvelteKit.',
-						link: 'https://osec.io',
-						src: osec
-					}
-				],
-				[
 					{
 						title: 'HackSC interim website',
 						description:

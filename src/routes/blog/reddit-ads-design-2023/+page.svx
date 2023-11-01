@@ -1,0 +1,29 @@
+---
+title: 'Interning at Reddit (2023)'
+slug: 'reddit-ads-design-2023'
+publishDate: 'OCT 31 2023'
+tags: [{ name: 'internship' }, { name: 'ui/ux' }]
+thumbnail: 'reddit-logo.svg'
+hidden: true
+summary: "During my summer internship, I worked on three product design projects to simplify the Reddit Ads platform for small businesses, from ad creative to Pixel event integration to viewing performance data. It was a blast :)"
+---
+
+<script>
+    import PostHeader from '$lib/components/PostHeader.svelte';
+    import BlogImage from '$lib/components/BlogImage.svelte';
+    import BlogGallery from '$lib/components/BlogGallery.svelte';
+    import admin1 from '$lib/assets/election-admin-1.png';
+
+</script>
+
+<PostHeader {title} {publishDate} {tags} {slug} {thumbnail} {summary} />
+
+This past summer, I worked at Reddit on the Ads Design team in New York. I was surrounded by such a talented team of designers, and I was able to learn so much for working with them! The Ads team at Reddit is separated into several verticals, and I worked on three different projects that spanned the Measurement, Growth, and Reporting teams. It was a load of fun!
+
+Before I begin, I wanted to thank everyone on the Reddit Ads and HR teams who made this summer so incredible. Thank you to my mentor **Gordon** and manager **Jen** helped me to scout valuable projects and prepared me to put in my best throughout the summer. Also, thank you to my wonderful team members on each of the three design projects (mentioned below), and my intern friends. You guys rock! Thank you to **Deitrick** and **Waverly** for planning amazing in-person intern events. I loved every second of it.
+
+## Project 1: Image scraper
+
+## Project 2: Pixel event setup
+
+## Project 3: Dashboard data visualization
