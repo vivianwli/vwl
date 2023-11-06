@@ -27,7 +27,6 @@
 	import sscFlyer from '$lib/assets/ssc-flyer.png?webp';
 	import hackSCSponsor from '$lib/assets/hacksc-sponsorship.png?webp';
 	import hackSCSite from '$lib/assets/hacksc-cover.png?webp';
-	import osec from '$lib/assets/ottersec-cover.png?webp';
 	import nyt from '$lib/assets/nyt-thumbnail.png?webp';
 	import reddit from '$lib/assets/reddit-logo.svg';
 	import sscCover from '$lib/assets/ssc-brand-guide-cover.png?webp';

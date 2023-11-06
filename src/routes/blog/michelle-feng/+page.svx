@@ -10,7 +10,7 @@ summary: 'Michelle Feng explains how she discovered and became passionate about 
 <script>
   import PostHeader from '$lib/components/PostHeader.svelte';
   import BlogImage from '$lib/components/BlogImage.svelte';
-  import mathyProtest from '$lib/assets/mathy-protest.png?w=600&webp';
+  import mathyProtest from '$lib/assets/mathy-protest.png';
 </script>
 
 <PostHeader {title} {publishDate} {tags} {thumbnail} {slug} {summary} />

@@ -12,12 +12,12 @@ summary: 'My 20-something-day journey to create this website from scratch. What 
     import BlogImage from '$lib/components/BlogImage.svelte';
     import BlogGallery from '$lib/components/BlogGallery.svelte';
     import { HighlightAuto, HighlightSvelte } from 'svelte-highlight';
-    import advice from '$lib/assets/ginkoids-advice.png?w=600&webp';
-    import portfolioGrid from '$lib/assets/portfolio-grid.png?w=600&webp';
-    import regret from '$lib/assets/regret.png?w=600&webp';
-    import email1 from '$lib/assets/ios-email-input.png?w=300&webp';
-    import email2 from '$lib/assets/android-email-input.png?w=300&webp';
-    import vwlDesign from '$lib/assets/vwl-site.png?w=600&webp';
+    import advice from '$lib/assets/ginkoids-advice.png';
+    import portfolioGrid from '$lib/assets/portfolio-grid.png';
+    import regret from '$lib/assets/regret.png';
+    import email1 from '$lib/assets/ios-email-input.png';
+    import email2 from '$lib/assets/android-email-input.png';
+    import vwlDesign from '$lib/assets/vwl-site.png';
     
     const code1 = 
     `<script>
@@ -25,7 +25,7 @@ summary: 'My 20-something-day journey to create this website from scratch. What 
 <\/script>
 ...
 <img src={vivian} alt="viv" />`;
-    const code2 = `import vivian from '$lib/assets/vivian.png?w=350&webp';`;
+    const code2 = `import vivian from '$lib/assets/vivian.png';`;
 
 </script>
 

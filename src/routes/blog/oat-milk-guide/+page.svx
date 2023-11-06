@@ -11,8 +11,8 @@ summary: 'There’s always more to learn about homemade oat milk. I detail the l
   import PostHeader from '$lib/components/PostHeader.svelte'
   import BlogImage from '$lib/components/BlogImage.svelte';
   import BlogHalfImage from '$lib/components/BlogHalfImage.svelte';
-  import oatMilk from '$lib/assets/oat-milk.png?w=600&webp';
-  import brownies from '$lib/assets/brownies.jpg?w=600&webp';
+  import oatMilk from '$lib/assets/oat-milk.png';
+  import brownies from '$lib/assets/brownies.jpg';
 </script>
 
 <PostHeader {title} {publishDate} {tags} {thumbnail} {slug} {summary} />
