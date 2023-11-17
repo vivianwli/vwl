@@ -4,7 +4,7 @@ slug: 'gingerbread-house-2021'
 publishDate: 'JAN 26 2022'
 tags: [{ name: 'food' }, { name: 'art' }]
 thumbnail: 'gingerbread-5.jpg'
-summary: 'Jason and I built a gingerbread house from scratch—an incredibly deliberate process from research to construction to reflection. We gave our beloved house a photoshoot, too.'
+summary: 'Jason and I built a gingerbread house from scratch—an incredibly deliberate process from research to construction to reflection. We gave our a photoshoot, too.'
 ---
 
 <script>
@@ -19,7 +19,6 @@ summary: 'Jason and I built a gingerbread house from scratch—an incredibly del
     import gingerbread8 from '$lib/assets/gingerbread-8.jpg';
     import gingerbread6 from '$lib/assets/gingerbread-6.jpg';
     import gingerbread7 from '$lib/assets/gingerbread-7.jpg';
-    import jason from '$lib/assets/jason-rolling-dough.jpg';
 </script>
 
 <PostHeader {title} {publishDate} {tags} {slug} {thumbnail} {summary} />
@@ -47,8 +46,6 @@ We also surveyed the vast marketplace of gingerbread house recipes. It needed to
 
 After grocery shopping, we made the dough, split into two identical batches as recommended by NYT and Claire. Into the fridge overnight!
 
-<BlogImage src={jason} caption="Jason hard at work in the kitchen." />
-
 ## Day 2
 
 We baked the gingerbread and cut it after cooling. Some recipes recommend to cut the gingerbread while the slabs are still warm, but the NYT recipe instructed us to wait for the gingerbread to cool (trust🤞🏻). _Spoiler alert:_ it was still possible to cut the gingerbread nearly two weeks after, when we realized that we needed to cut windows. Regardless of the timeframe, we just needed to be careful while cutting. Cutting cooled gingerbread was a success!
@@ -61,7 +58,7 @@ We also whipped up the royal icing and embarked on the laborious journey of icin
 
 ## Day 4
 
-Time to assemble! Honestly, it was pretty seamless. The icing was sturdy and nothing fell. I chalk this success up the immense patience that Jason and I have (or maybe exhaustion). We watched TV while the slabs were drying together—first the front and sides, then the back, and finally one roof after the other.
+Time to assemble! Honestly, it was pretty seamless. The icing was sturdy and nothing fell. I chalk this success up the immense patience that we have (or maybe exhaustion). We let the slabs dry—first the front and sides, then the back, and finally one roof after the other.
 
 For the decorations, we added a row of spice drops along the roof, a spice drop Christmas tree (courtesy of a very abnormally large spice drop and some pearlescent nonpareils), royal icing icicles, and candy canes for the front yard.
 

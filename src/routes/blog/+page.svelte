@@ -50,7 +50,7 @@
 	<!-- toast that only shows after user subscribes to the newsletter -->
 	<SvelteToast />
 	<h1>musings</h1>
-	<p>A humble abode for my ideas, experiments, and reflections. Welcome!</p>
+	<p>Ideas, experiments, and reflections. Also known as Oversharing Corner. Welcome!</p>
 
 	<!-- tag filters -->
 	<div class="buttons">

@@ -40,24 +40,24 @@
 
 	// logic to determine which tab is active or "on top"
 	let designPos;
-	let thoughtsPos;
+	let projectsPos;
 
-	let tab = $page.url.searchParams.get('tab'); // based on url params, i.e. "?tab=thoughts"
-	if (tab === 'thoughts') {
+	let tab = $page.url.searchParams.get('tab'); // based on url params, i.e. "?tab=projects"
+	if (tab === 'projects') {
 		designPos = 'bottom';
-		thoughtsPos = 'top';
+		projectsPos = 'top';
 	} else {
 		designPos = 'top';
-		thoughtsPos = 'bottom';
+		projectsPos = 'bottom';
 	}
 
 	let designTags = {};
-	let thoughtsTags = {};
+	let projectsTags = {};
 
 	// reset all filtering tags to be inactive
 	function clear() {
-		for (const key in thoughtsTags) {
-			thoughtsTags[key] = false;
+		for (const key in projectsTags) {
+			projectsTags[key] = false;
 		}
 		for (const key in designTags) {
 			designTags[key] = false;
@@ -80,8 +80,8 @@
 			: (currentMobileDescription = title);
 	}
 
-	// thoughts card info
-	let thoughtsItems = [
+	// projects card info
+	let projectsItems = [
 		{
 			link: 'https://todos.vivianwli.com',
 			title: 'Spring 2023 in "To-Do"s',
@@ -135,7 +135,7 @@
 			thumbnail: 'nyt-stem-writing.jpg',
 			info: 'MAY 7 2020 • THE NEW YORK TIMES',
 			summary:
-				'One of eight winning essays (among 1,618 entries) from the New York Times Learning Network\'s STEM thoughts Contest. Also published on <a href="https://phys.org/news/2019-09-marine-plastic-pollution-neurological-toxin.html">Phys.org</a>.',
+				'One of eight winning essays (among 1,618 entries) from the New York Times Learning Network\'s STEM projects Contest. Also published on <a href="https://phys.org/news/2019-09-marine-plastic-pollution-neurological-toxin.html">Phys.org</a>.',
 			tags: ['journalism']
 		},
 		{
@@ -351,16 +351,16 @@
 		}
 	];
 
-	for (const article of thoughtsItems) {
+	for (const article of projectsItems) {
 		for (const tag of article.tags) {
-			if (!(tag in thoughtsTags)) {
-				thoughtsTags[tag] = false; // all tags start off inactive by default
+			if (!(tag in projectsTags)) {
+				projectsTags[tag] = false; // all tags start off inactive by default
 			}
 		}
 	}
 
 	for (const category of designItems) {
-		if (!(category.tag in thoughtsTags)) {
+		if (!(category.tag in projectsTags)) {
 			designTags[category.tag] = false; // all tags start off inactive by default
 		}
 	}
@@ -388,14 +388,14 @@
 			<div
 				class="design-selector"
 				on:click={() => {
-					thoughtsPos = 'bottom';
+					projectsPos = 'bottom';
 					designPos = 'top';
 				}}
 			/>
 			<div
-				class="thoughts-selector"
+				class="projects-selector"
 				on:click={() => {
-					thoughtsPos = 'top';
+					projectsPos = 'top';
 					designPos = 'bottom';
 				}}
 			/>
@@ -503,9 +503,9 @@
 				</div>
 			</div>
 		</div>
-		<!-- thoughts tab -->
-		<div class="thoughts-tab tab {thoughtsPos}">
-			<h2 class="tab-label">thoughts</h2>
+		<!-- projects tab -->
+		<div class="projects-tab tab {projectsPos}">
+			<h2 class="tab-label">projects</h2>
 			<svg viewBox="0 0 263 108" fill="none" xmlns="http://www.w3.org/2000/svg">
 				<path
 					d="M34.3647 18.5394L26.4733 35.1565C20.9981 46.6858 11.3657 53.6959 0.998535 53.6959V107.392H262.5V53.6959C252.318 53.6959 242.831 46.9326 237.304 35.7337L228.534 17.9622C223.007 6.76327 213.52 0 203.338 0H59.8395C49.4724 0 39.84 7.01005 34.3647 18.5394Z"
@@ -514,22 +514,22 @@
 			<div class="tab-page">
 				<div class="tab-page-content">
 					<div class="buttons">
-						{#each Object.keys(thoughtsTags).filter((k) => thoughtsTags[k]) as tag}
+						{#each Object.keys(projectsTags).filter((k) => projectsTags[k]) as tag}
 							<div
 								on:click={() => {
-									thoughtsTags[tag] = !thoughtsTags[tag];
+									projectsTags[tag] = !projectsTags[tag];
 								}}
 							>
-								<Tag className={thoughtsTags[tag] ? 'selected' : ''}>{tag}</Tag>
+								<Tag className={projectsTags[tag] ? 'selected' : ''}>{tag}</Tag>
 							</div>
 						{/each}
-						{#each Object.keys(thoughtsTags).filter((k) => !thoughtsTags[k]) as tag}
+						{#each Object.keys(projectsTags).filter((k) => !projectsTags[k]) as tag}
 							<div
 								on:click={() => {
-									thoughtsTags[tag] = !thoughtsTags[tag];
+									projectsTags[tag] = !projectsTags[tag];
 								}}
 							>
-								<Tag className={thoughtsTags[tag] ? 'selected' : ''}>{tag}</Tag>
+								<Tag className={projectsTags[tag] ? 'selected' : ''}>{tag}</Tag>
 							</div>
 						{/each}
 						<div on:click={() => clear()}>
@@ -537,16 +537,16 @@
 						</div>
 					</div>
 					<div class="content-container">
-						<!-- render an article card for each thoughts item-->
+						<!-- render an article card for each projects item-->
 						<!-- display only filtered ones if a filter has been selected, otherwise display all -->
-						{#if Object.keys(thoughtsTags).filter((k) => thoughtsTags[k]).length === 0}
-							{#each thoughtsItems as article}
+						{#if Object.keys(projectsTags).filter((k) => projectsTags[k]).length === 0}
+							{#each projectsItems as article}
 								<ArticleCard {article} />
 							{/each}
 						{:else}
-							{#each thoughtsItems as article}
+							{#each projectsItems as article}
 								{#each article.tags as tag}
-									{#if thoughtsTags[tag]}
+									{#if projectsTags[tag]}
 										<ArticleCard {article} />
 									{/if}
 								{/each}
@@ -650,7 +650,7 @@
 			.design-selector {
 				grid-column: 2;
 			}
-			.thoughts-selector {
+			.projects-selector {
 				grid-column: 3;
 			}
 		}
@@ -685,7 +685,7 @@
 				grid-template-columns: 0 10rem auto;
 			}
 		}
-		.thoughts-tab {
+		.projects-tab {
 			grid-template-columns: 12.5rem 12rem auto;
 			@media screen and (max-width: 50rem) {
 				grid-template-columns: 10rem 12rem auto;

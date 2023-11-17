@@ -129,7 +129,7 @@
 					to do a lot of that here.
 				</p>
 				<div class="buttons">
-					<Link link="/portfolio?tab=thoughts">my writing portfolio</Link>
+					<Link link="/portfolio?tab=projects">my writing portfolio</Link>
 					<Link link="/blog">my blog</Link>
 				</div>
 			</div>

@@ -4,7 +4,6 @@ slug: 'reddit-ads-design-2023'
 publishDate: 'OCT 31 2023'
 tags: [{ name: 'internship' }, { name: 'ui/ux' }]
 thumbnail: 'reddit-logo.svg'
-hidden: true
 summary: "During my summer internship, I worked on three product design projects to simplify the Reddit Ads platform for small businesses, from ad creative to Pixel event integration to viewing performance data. It was a blast :)"
 ---
 
@@ -13,17 +12,52 @@ summary: "During my summer internship, I worked on three product design projects
     import BlogImage from '$lib/components/BlogImage.svelte';
     import BlogGallery from '$lib/components/BlogGallery.svelte';
     import admin1 from '$lib/assets/election-admin-1.png';
-
+    import snoo1 from '$lib/assets/reddit-snoo.jpg';
+    import snoo2 from '$lib/assets/reddit-snoo-2.jpg';
+    import snoo3 from '$lib/assets/reddit-snoo-3.jpg';
+    import coffee from '$lib/assets/reddit-coffee.jpg';
+    import baseball from '$lib/assets/reddit-baseball.jpg';
+    import escape from '$lib/assets/reddit-escape.jpg';
+    import pride from '$lib/assets/reddit-pride.jpg';
+    import fongOn from '$lib/assets/reddit-fong-on.jpg';
 </script>
 
 <PostHeader {title} {publishDate} {tags} {slug} {thumbnail} {summary} />
 
 This past summer, I worked at Reddit on the Ads Design team in New York. I was surrounded by such a talented team of designers, and I was able to learn so much for working with them! The Ads team at Reddit is separated into several verticals, and I worked on three different projects that spanned the Measurement, Growth, and Reporting teams. It was a load of fun!
 
-Before I begin, I wanted to thank everyone on the Reddit Ads and HR teams who made this summer so incredible. Thank you to my mentor **Gordon** and manager **Jen** helped me to scout valuable projects and prepared me to put in my best throughout the summer. Also, thank you to my wonderful team members on each of the three design projects (mentioned below), and my intern friends. You guys rock! Thank you to **Deitrick** and **Waverly** for planning amazing in-person intern events. I loved every second of it.
+Before I begin, I wanted to thank everyone on the Reddit Ads and HR teams who made this summer so incredible. Thank you to my mentor **Gordon** and manager **Jen** helped me to scout valuable projects and prepared me to put in my best throughout the summer. Also, thank you to my wonderful team members on each of my projects (Cameron, Ein, Sarah, Nahva, and more) and my intern friends. You guys rock! Thank you to **Deitrick** and **Waverly** for planning amazing in-person intern events. I loved every second of it.
 
-## Project 1: Image scraper
+## Work projects
 
-## Project 2: Pixel event setup
+I unfortunately can't share too much work here, as my work was under a non-disclosure agreement, but I had a lot of fun developing solutions for three of ths Reddit Ads teams. The short of it is:
+1. An **Image Scraper** that was built into the Reddit Ads "Simple Create" flow, which scraped images from the client's website to be used in ad creative with just the click of a button
+2. A **Pixel Event Setup** overhaul, which reimaged the existing user experience to set up the Reddit Pixel on an advertiser's website and receive conversion event data (e.g. clicks, views, searches)
+3. Explorations of new layouts and data visualization features for the **Reddit Ads home dashboard**, especially incorporating data from breakdowns and insights.
 
-## Project 3: Dashboard data visualization
+My work centered around improving the Reddit Ads experience for small business owners, who don't typically have the same capacity and prior knowledge about advertising on social platforms. When these features are launched publicly, I'll be sure to include more information and screenshots here.
+
+## Exciting non-work things
+
+After a half-remote internship in 2022 (mostly due to the lingering effects of COVID shutdowns), I felt so lucky to be surrounded by fellow Reddit interns every day in the New York office. I loved the community so much, and Reddit's in-person programming (both internship and NYC office) made it even better by planning special activities for us. Here are some delightful moments:
+
+<BlogGallery columns=3>
+    <BlogImage className="gallery-img" src={snoo1} caption="Reddit NYC's MVP, the little Snoo plush! He held down the fort." />
+    <BlogImage className="gallery-img" src={snoo2} caption="Real, live Snoo at Reddit's 18th Cakeday party!" />
+    <BlogImage className="gallery-img" src={snoo3} caption="Snoo in candy form, when Reddit brought in a themed ice cream cart :)" />
+</BlogGallery>
+<BlogGallery columns=2>
+    <BlogImage className="gallery-img" src={baseball} caption="We watched the Yankees and the Mets as an intern class, and I learned about baseball (feat. Olivia)!" />
+    <BlogImage className="gallery-img" src={escape} caption="When our intern group rocked a museum heist escape room >:)" />
+</BlogGallery>
+<BlogGallery columns=3>
+    <BlogImage className="gallery-img" src={fongOn} caption="One of my favorite food places in New York, Fong On! A perfect post-work meal." />
+    <BlogImage className="gallery-img" src={pride} caption="Adorable mini pride donuts (including vegan ones!) for Reddit's office celebration." />
+    <BlogImage className="gallery-img" src={coffee} caption="Me and my coffee addiction from the 33rd floor." />
+</BlogGallery>
+
+
+I can also say that I've officially worked in the tallest building in the western hemisphere. Thank you, Condé Nast!
+
+
+
