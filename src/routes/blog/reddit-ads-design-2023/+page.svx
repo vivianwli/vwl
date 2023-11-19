@@ -11,7 +11,6 @@ summary: "During my summer internship, I worked on three product design projects
     import PostHeader from '$lib/components/PostHeader.svelte';
     import BlogImage from '$lib/components/BlogImage.svelte';
     import BlogGallery from '$lib/components/BlogGallery.svelte';
-    import admin1 from '$lib/assets/election-admin-1.png';
     import snoo1 from '$lib/assets/reddit-snoo.jpg';
     import snoo2 from '$lib/assets/reddit-snoo-2.jpg';
     import snoo3 from '$lib/assets/reddit-snoo-3.jpg';
