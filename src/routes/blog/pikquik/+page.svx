@@ -2,7 +2,7 @@
 title: 'Pikquik case study (ACAD 324 final project)'
 slug: 'pikquik'
 publishDate: 'OCT 1 2023'
-tags: [{ name: 'ui/ux' }]
+tags: [{ name: 'ui/ux' }, { name: 'design'}]
 thumbnail: 'piquik.svg'
 summary: "A walkthrough of my team's final project for ACAD 324, Pikquik: a spunky UI/UX design for a festival food app."
 ---

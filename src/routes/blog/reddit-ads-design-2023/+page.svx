@@ -2,7 +2,7 @@
 title: 'Interning at Reddit (2023)'
 slug: 'reddit-ads-design-2023'
 publishDate: 'OCT 31 2023'
-tags: [{ name: 'internship' }, { name: 'ui/ux' }]
+tags: [{ name: 'internship' }, { name: 'ui/ux' }, { name: 'design'}]
 thumbnail: 'reddit-logo.svg'
 summary: "During my summer internship, I worked on three product design projects to simplify the Reddit Ads platform for small businesses, from ad creative to Pixel event integration to viewing performance data. It was a blast :)"
 ---
