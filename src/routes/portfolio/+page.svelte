@@ -265,6 +265,7 @@
 						title: 'Emily Dickinson\'s "Room of One\'s Own"',
 						description:
 							'For COLT 374: Women Writers in Europe and America, I created a low poly model that brings together the central themes from both Virginia Woolf and Emily Dickinson\'s work.',
+						link: '/blog/dickinson-woolf',
 						src: dickinson
 					}
 				]
