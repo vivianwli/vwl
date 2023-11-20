@@ -9,15 +9,13 @@
 	import FiLinkedin from 'svelte-icons-pack/fi/FiLinkedin';
 
 	// image imports
-	import traderJoes from '$lib/assets/trader-joes-big.png?webp';
-	import oatte from '$lib/assets/oatte.png?webp';
+	import traderJoes from '$lib/assets/trader-joes-big.png?webp&h=1000';
 	import hackscIG from '$lib/assets/hacksc-ig.png?webp';
 	import climateduIG from '$lib/assets/climatedu-ig.png?webp';
 	import marketFermentation from '$lib/assets/market-fermentation-2.png?webp';
 	import blobs from '$lib/assets/blobs-portfolio.png?webp';
 	import iy8 from '$lib/assets/iy8.png?webp';
 	import b1c from '$lib/assets/b1c-surfing.png?webp';
-	import goodJob from '$lib/assets/good-job.png?webp';
 	import makerTee from '$lib/assets/nyt-maker-2022.png?webp';
 	import sirensMerch from '$lib/assets/sirens-merch.png?webp';
 	import oracle from '$lib/assets/blair-oracle.png?webp';
@@ -30,6 +28,11 @@
 	import nyt from '$lib/assets/nyt-thumbnail.png?webp';
 	import reddit from '$lib/assets/reddit-logo.svg';
 	import sscCover from '$lib/assets/ssc-brand-guide-cover.png?webp';
+	import pikquik from '$lib/assets/pikquik.svg?webp&h=600';
+	import todos from '$lib/assets/todos-thumbnail.png?webp&h=600';
+	import bamboo from '$lib/assets/bamboo.png?webp&h=600';
+	import dickinson from '$lib/assets/dickinson-woolf.png?webp&h=1000';
+	import parkSpace from '$lib/assets/park-space-infographic.png?webp&h=1000';
 
 	// svelte imports
 	import { page } from '$app/stores';
@@ -176,7 +179,7 @@
 						title: 'Reddit Ads Design (2023)',
 						description:
 							'During my summer internship, I worked on three product design projects to simplify the Reddit Ads platform for small businesses, from ad creative to Pixel event integration to viewing performance data. Blog post to come!',
-						// link: '/blog/reddit-ads-design-2023',
+						link: '/blog/reddit-ads-design-2023',
 						src: reddit
 					},
 					{
@@ -186,6 +189,29 @@
 						link: '/blog/new-york-times-2022',
 						src: nyt
 					}
+				],
+				[
+					{
+						title: 'Pikquik',
+						description:
+							'My team\'s final project for ACAD 324, a spunky UI/UX design for a festival food app!',
+						link: '/blog/pikquik',
+						src: pikquik
+					},
+					{
+						title: 'Spring 2023 in "To-Do"s',
+						description:
+							'For ACAD 280: Designing for Digital Experiences, I used an app called TickTick to meticulously track and tag my tasks. Then, I visualized it as a connected dot plot, or Priestley chart.',
+						link: 'https://todos.vivianwli.com',
+						src: todos
+					},
+					{
+						title: 'Bamboo housing',
+						description:
+							'A visual review of bamboo construction for residential use. How is bamboo currently used in the built environment, and how can it flourish in the future?',
+						link: 'https://bamboo.vivianwli.com',
+						src: bamboo
+					},
 				],
 				[
 					{
@@ -220,6 +246,31 @@
 			]
 		},
 		{
+			tag: '3D',
+			rows: [
+				[
+					{
+						title: "Low poly Trader Joe's",
+						description:
+							"This low-poly scene was my very first project in Blender. I love grocery stores and the holidays (especially Christmas), so it's a perfect combination!",
+						src: traderJoes
+					},
+					{
+						title: 'LA Park Space',
+						description:
+							'For ARCH 519: Sustainability in the Built Environment, I visualized the trend of park space per capita in LA over time, and compared that to the city\'s goal.',
+						src: parkSpace
+					},
+					{
+						title: 'Emily Dickinson\'s "Room of One\'s Own"',
+						description:
+							'For COLT 374: Women Writers in Europe and America, I created a low poly model that brings together the central themes from both Virginia Woolf and Emily Dickinson\'s work.',
+						src: dickinson
+					}
+				]
+			]
+		},
+		{
 			tag: 'illustration',
 			rows: [
 				[
@@ -247,12 +298,6 @@
 						description:
 							'Merch graphic for cyberscurity team "b1c", centered around the theme of making waves.',
 						src: b1c
-					},
-					{
-						title: 'Good Job album cover',
-						description:
-							"Album cover design for Sirens A Cappella's release of Good Job by Alicia Keys. Made in Figma.",
-						src: goodJob
 					},
 					{
 						title: 'iy8 logo',
@@ -284,25 +329,6 @@
 						description:
 							'Sponsorship packed used for pitching HackSC to potential sponsor companies. Designed in Figma.',
 						src: hackSCSponsor
-					}
-				]
-			]
-		},
-		{
-			tag: '3D',
-			rows: [
-				[
-					{
-						title: "Low poly Trader Joe's",
-						description:
-							"This low-poly scene was my very first project in Blender. I love grocery stores and the holidays (especially Christmas), so it's a perfect combination!",
-						src: traderJoes
-					},
-					{
-						title: 'oatte oat milk lattes',
-						description:
-							'I used Adobe Illustrator and Dimension to create this imaginary product, featuring almond black tea, red bean, matcha, and cinnamon cold brew flavors.',
-						src: oatte
 					}
 				]
 			]

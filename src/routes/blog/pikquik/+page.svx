@@ -4,7 +4,7 @@ slug: 'pikquik'
 publishDate: 'OCT 1 2023'
 tags: [{ name: 'ui/ux' }]
 thumbnail: 'piquik.svg'
-summary: "A walkthrough of my team's final project for ACAD 324, including a spunky UI/UX design for a festival food app."
+summary: "A walkthrough of my team's final project for ACAD 324, Pikquik: a spunky UI/UX design for a festival food app."
 ---
 
 <script>

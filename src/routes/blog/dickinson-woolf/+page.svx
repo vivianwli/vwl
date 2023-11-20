@@ -1,0 +1,18 @@
+---
+title: 'Emily Dickinson’s “room of one\’s own."'
+slug: 'dickinson-woolf'
+publishDate: 'APR 24 2023'
+tags: [{ name: '3D' }, { name: 'art' }]
+thumbnail: 'dickinson-cover.png'
+summary: 'For COLT 374: Women Writers in Europe and America, I created a low poly model that brings together the central themes from both Virginia Woolf and Emily Dickinson\'s work.'
+---
+
+<script>
+    import PostHeader from '$lib/components/PostHeader.svelte';
+    import BlogImage from '$lib/components/BlogImage.svelte';
+    import dickinson from '$lib/assets/dickinson-woolf.jpg';
+</script>
+
+<PostHeader {title} {publishDate} {tags} {slug} {thumbnail} {summary} />
+
+<BlogImage className="gallery-img" src={dickinson} caption="Low poly render of Emily Dickinson's ficticious room." />
