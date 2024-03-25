@@ -56,7 +56,7 @@
 			<div class="text-right">
 				<h1>hello! i'm vivian li.</h1>
 				<p>
-					I’m a very small girl based in Los Angeles, studying in the <b>Iovine and Young Academy</b
+					I’m a small girl based in Los Angeles, studying in the <b>Iovine and Young Academy</b
 					>
 					at the University of Southern California. I'm a big fan of
 					<b>telling stories in beautiful ways</b>, especially around sustainability and creative
