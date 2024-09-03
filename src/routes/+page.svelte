@@ -56,11 +56,9 @@
 			<div class="text-right">
 				<h1>hello! i'm vivian li.</h1>
 				<p>
-					I’m a small girl based in Los Angeles, studying in the <b>Iovine and Young Academy</b
-					>
+					I’m a student based in Los Angeles, studying in the <b>Iovine and Young Academy</b>
 					at the University of Southern California. I'm a big fan of
-					<b>telling stories in beautiful ways</b>, especially around sustainability and creative
-					expression. I love to explore new spaces, both physical and digital.
+					<b>telling stories in beautiful ways</b>, especially about human computer interaction, social connection, and urban sustainability. I love to explore new spaces, both physical and digital.
 					<b>Welcome to my playground</b>!
 				</p>
 				<Link
