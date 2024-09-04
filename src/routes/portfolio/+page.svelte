@@ -13,6 +13,7 @@
 	// svelte imports
 	import { page } from '$app/stores';
 	import { fly } from 'svelte/transition';
+	import { fade } from 'svelte/transition';
 
 	// for tooltip: in the case that x and y position aren't set, the cursor should fall back on a position that is out of view -- in this case, (-500, -500)
 	let m = { x: -500, y: -500 };
@@ -90,7 +91,7 @@
 
 <div class="content">
 	{#if modalItem}
-		<div class="modal-container">
+		<div transition:fade class="modal-container">
 			<PortfolioModal bind:item={modalItem}/>
 		</div>
 	{/if}

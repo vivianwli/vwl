@@ -4,6 +4,7 @@
   import FiX from 'svelte-icons-pack/fi/FiX';
 	import { Jumper } from 'svelte-loading-spinners';
   import { fade } from 'svelte/transition';
+  import { scale } from 'svelte/transition';
 
 	export let item;
 
@@ -15,7 +16,7 @@
 </script>
 
 {#if item}
-<div transition:fade class="modal-container">
+<div transition:scale class="modal-container">
   <div 
     on:click={() => item = null}
     on:keydown={() => item = null}
