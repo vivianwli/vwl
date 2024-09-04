@@ -107,6 +107,7 @@
   p {
     margin-top: 0;
     font-size: 0.9rem;
+    color: var(--text-color);
   }
 
   h1 {
