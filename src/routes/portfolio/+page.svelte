@@ -33,8 +33,7 @@
 	let designTags = {};
 	let projectsTags = {};
 
-	// TODO: change this
-	let modalItem = designItems[0].rows[0][0];
+	let modalItem;
 
 	// reset all filtering tags to be inactive
 	function clear() {
@@ -92,7 +91,7 @@
 <div class="content">
 	{#if modalItem}
 		<div class="modal-container">
-			<PortfolioModal item={modalItem} />
+			<PortfolioModal bind:item={modalItem}/>
 		</div>
 	{/if}
 
@@ -208,7 +207,11 @@
 														on:keydown={() => toggleMobileDescription(item.title)}
 													/>
 												{:else}
-													<a href={item.link}>
+													<div 
+														class="web-item-container"
+														on:click={() => modalItem = item}
+														on:keydown={() => modalItem = item}
+													>
 														<div
 															class="description"
 															style="position: fixed; left: {m.x + 5}px; top: {m.y + 5}px"
@@ -217,13 +220,10 @@
 															<Tag className="inactive">{category.tag}</Tag>
 															<p style="margin-top: 0.75rem">
 																{item.description}
-																{#if 'link' in item}
-																	<span class="more-link">Click to see more.</span>
-																{/if}
 															</p>
 														</div>
 														<img src={item.src} alt={item.title} />
-													</a>
+													</div>
 												{/if}
 											</div>
 										{/each}
@@ -502,14 +502,17 @@
 		@media (hover: hover) {
 			.img-container:hover .description {
 				// show description on hover
-				opacity: 90%;
+				opacity: 95%;
 				z-index: 10;
+			}
+			.img-container {
+				cursor: pointer;
 			}
 		}
 
 		.img-container:focus .description {
 			// show description on focus
-			opacity: 90%;
+			opacity: 95%;
 			z-index: 10;
 		}
 

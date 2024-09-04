@@ -42,6 +42,7 @@
 	--gradient-color: linear-gradient(20deg, var(--darkest), var(--light));
 	--transparent: rgba(0, 0, 0, 0);
 	--postcard-color: rgba(242, 242, 247, 0.2); // var(--lightest), 20% opacity
+	--modal-color: rgba(242, 242, 247, 0.85); 
 	--absolute: var(--absolutelight);
 
 	/* button/tag colors */
@@ -78,6 +79,7 @@
 	--gradient-color: linear-gradient(20deg, var(--dark), var(--lighter));
 	--transparent: rgba(0, 0, 0, 0);
 	--postcard-color: rgba(69, 69, 77, 0.2); //var(--darker), 20% opacity
+	--postcard-color: rgba(69, 69, 77, 0.85); 
 	--absolute: var(--absolutedark);
 	--primary-button-shadow-color: rgba(104, 132, 217, 0.3);
 	--secondary-button-shadow-color: rgba(115, 115, 128, 0.4);

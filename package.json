@@ -24,6 +24,7 @@
 		"svelte": "^3.44.0",
 		"svelte-hamburgers": "^3.0.1",
 		"svelte-highlight": "^5.2.0",
+		"svelte-loading-spinners": "^0.3.6",
 		"svelte-preprocess": "^4.10.1",
 		"vanilla-lazyload": "^17.5.0",
 		"vite-imagetools": "^3.9.0"

@@ -2,6 +2,7 @@
 // image imports
 import traderJoes from '$lib/assets/trader-joes-big.png?webp&h=1000';
 import hackscIG from '$lib/assets/hacksc-ig.png?webp';
+import hibiscus from '$lib/assets/hibiscus.png?webp';
 import climateduIG from '$lib/assets/climatedu-ig.png?webp';
 import marketFermentation from '$lib/assets/market-fermentation-2.png?webp';
 import blobs from '$lib/assets/blobs-portfolio.png?webp';
@@ -16,7 +17,10 @@ import drawdown from '$lib/assets/drawdown.png?webp';
 import sscFlyer from '$lib/assets/ssc-flyer.png?webp';
 import hackSCSponsor from '$lib/assets/hacksc-sponsorship.png?webp';
 import hackSCSite from '$lib/assets/hacksc-cover.png?webp';
+import msr from '$lib/assets/msr.png?webp';
+import msrHacks from '$lib/assets/msrHacks.png?webp';
 import nyt from '$lib/assets/nyt-thumbnail.png?webp';
+import pudding from '$lib/assets/pudding.png?webp';
 import reddit from '$lib/assets/reddit-logo.svg';
 import sscCover from '$lib/assets/ssc-brand-guide-cover.png?webp';
 import pikquik from '$lib/assets/pikquik.svg?webp&h=600';
@@ -118,21 +122,45 @@ export let designItems = [
     rows: [
       [
         {
-          title: 'Reddit Ads Design (2023)',
+          title: 'Microsoft Research',
+          description: 'During my internship at MSR, I worked with the Human Computer and AI Experiences and the Human Understanding and Empathy research groups to design a community platform for sharing UI-driven mental health hacks. View my interactive intern presentation in Figma!',
+          link: "https://www.figma.com/proto/aJhCKHstRCuC1n94h8EXBr/MSR-Hacks-%26-Pitfalls-Project?page-id=0%3A1&node-id=1-47882&node-type=CANVAS&viewport=728%2C320%2C0.02&t=lYdfyIJ4oXbKk5iz-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A47882",
+          src: msr,
+          imgSrc: msrHacks,
+        },
+        {
+          title: 'The Pudding',
+          description: 'During summer 2024, I worked on a visual essay as part of the Pudding Fellowship. Stay tuned for more! In the meantime, you can check out the rest of their work.',
+          link: 'https://pudding.cool',
+          src: pudding,
+        }
+      ],
+      [
+        {
+          title: 'Reddit Ads Design',
           description:
             'During my summer internship, I worked on three product design projects to simplify the Reddit Ads platform for small businesses, from ad creative to Pixel event integration to viewing performance data.',
           link: '/blog/reddit-ads-design-2023',
           src: reddit,
-          pdfSrc: "https://drive.google.com/uc?id=1q04_YwydaGHbkVG7eUJWc8mI47RohGNU&embedded=true"
+          pdfSrc: "1wWo-lOF51xq3U1CoYh8QG1KDioArhWN0"
         },
         {
-          title: 'The New York Times (2022)',
+          title: 'The New York Times',
           description:
             'I worked on various interfaces, both internal and reader-facing, during my summer internship at the New York Times. I coded these, too!',
           link: '/blog/new-york-times-2022',
-          src: nyt
+          src: nyt,
+          pdfSrc: "1GfLeZuHuFtvPIZJMqv03bEnpXoyZVs1L"
         }
       ],
+      // [
+      //   {
+      //     title: 'HackSC Hibiscus',
+      //     description: 'During Spring 2023, I led a team of 10 designers to create the 2023 HackSC brand guide, as well as the design system and UI Kit for our new hackathon platform, Hibiscus.',
+      //     src: hibiscus,
+      //     pdfSrc: "1zxUZ88whlmQh68N6eoNdlgPx_K8CW-Ed"
+      //   }
+      // ],
       [
         {
           title: 'Pikquik',
