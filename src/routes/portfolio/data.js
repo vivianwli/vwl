@@ -1,33 +1,30 @@
 
 // image imports
 import traderJoes from '$lib/assets/trader-joes-big.png?webp&h=1000';
-import hackscIG from '$lib/assets/hacksc-ig.png?webp';
-import hibiscus from '$lib/assets/hibiscus.png?webp';
-import climateduIG from '$lib/assets/climatedu-ig.png?webp';
+import hibiscus from '$lib/assets/hibiscus.png?webp&h=600';
 import marketFermentation from '$lib/assets/market-fermentation-2.png?webp';
 import blobs from '$lib/assets/blobs-portfolio.png?webp';
-import iy8 from '$lib/assets/iy8.png?webp';
 import b1c from '$lib/assets/b1c-surfing.png?webp';
 import makerTee from '$lib/assets/nyt-maker-2022.png?webp';
 import sirensMerch from '$lib/assets/sirens-merch.png?webp';
-import oracle from '$lib/assets/blair-oracle.png?webp';
-import climateduSite from '$lib/assets/climatedu-website.png?webp';
 import stillIntoYou from '$lib/assets/still-into-you.png?webp';
 import drawdown from '$lib/assets/drawdown.png?webp';
 import sscFlyer from '$lib/assets/ssc-flyer.png?webp';
 import hackSCSponsor from '$lib/assets/hacksc-sponsorship.png?webp';
-import hackSCSite from '$lib/assets/hacksc-cover.png?webp';
-import msr from '$lib/assets/msr.png?webp';
+import msr from '$lib/assets/msr.png?webp&h=600';
 import msrHacks from '$lib/assets/msrHacks.png?webp';
 import nyt from '$lib/assets/nyt-thumbnail.png?webp';
-import pudding from '$lib/assets/pudding.png?webp';
+import pudding from '$lib/assets/pudding.png?webp&h=600';
 import reddit from '$lib/assets/reddit-logo.svg';
-import sscCover from '$lib/assets/ssc-brand-guide-cover.png?webp';
+import sscCover from '$lib/assets/ssc-brand-guide-cover.png?webp&h=600';
 import pikquik from '$lib/assets/pikquik.svg?webp&h=600';
 import todos from '$lib/assets/todos-thumbnail.png?webp&h=600';
 import bamboo from '$lib/assets/bamboo.png?webp&h=600';
 import dickinson from '$lib/assets/dickinson-woolf.png?webp&h=1000';
 import parkSpace from '$lib/assets/park-space-infographic.png?webp&h=1000';
+import urbanGreenSpace from '$lib/assets/urban-green-space.png?webp&h=1000';
+import hackSC2024 from '$lib/assets/hacksc-2024.png?webp&h=600';
+import bigFish from '$lib/assets/big-fish.png?webp';
 
 // projects card info
 export let projectsItems = [
@@ -153,29 +150,31 @@ export let designItems = [
           pdfSrc: "1GfLeZuHuFtvPIZJMqv03bEnpXoyZVs1L"
         }
       ],
-      // [
-      //   {
-      //     title: 'HackSC Hibiscus',
-      //     description: 'During Spring 2023, I led a team of 10 designers to create the 2023 HackSC brand guide, as well as the design system and UI Kit for our new hackathon platform, Hibiscus.',
-      //     src: hibiscus,
-      //     pdfSrc: "1zxUZ88whlmQh68N6eoNdlgPx_K8CW-Ed"
-      //   }
-      // ],
       [
         {
           title: 'Pikquik',
           description:
             'My team\'s final project for ACAD 324, a spunky UI/UX design for a festival food app!',
           link: '/blog/pikquik',
-          src: pikquik
+          src: pikquik,
+          pdfSrc: "1ukV4MYhvHfkJip-ozu9nIamJgOzgFS8z"
         },
         {
           title: 'Spring 2023 in "To-Do"s',
           description:
             'For ACAD 280: Designing for Digital Experiences, I used an app called TickTick to meticulously track and tag my tasks. Then, I visualized it as a connected dot plot, or Priestley chart.',
           link: 'https://todos.vivianwli.com',
-          src: todos
+          src: todos,
+          pdfSrc: "10yYYdcVZg2sRw2PqrtNPFNFN_GbluD7n"
         },
+        {
+          title: 'HackSC 2024 design system',
+          description: 'As a part of the design team, I worked on the 2024 brand re-design. I worked on creating the illustrations of our hibiscus mascot, and I also contributed ideas for the other parts of this brand proposal.',
+          src: hackSC2024,
+          pdfSrc: "15ITvYB5u87ghY3ukvm0XHO5GOOStZzyf"
+        }
+      ],
+      [
         {
           title: 'Bamboo housing',
           description:
@@ -183,8 +182,12 @@ export let designItems = [
           link: 'https://bamboo.vivianwli.com',
           src: bamboo
         },
-      ],
-      [
+        {
+          title: 'HackSC Hibiscus',
+          description: 'During Spring 2023, I led a team of 10 designers to create the 2023 HackSC brand guide, as well as the design system and UI Kit for our new hackathon platform, Hibiscus.',
+          src: hibiscus,
+          pdfSrc: "1zxUZ88whlmQh68N6eoNdlgPx_K8CW-Ed"
+        },
         {
           title: 'Student Sustainability Committee brand guide',
           description:
@@ -192,27 +195,6 @@ export let designItems = [
           link: 'https://www.figma.com/file/bkBckw68TnfQXLYtaNBRla/SSC?node-id=131%3A34',
           src: sscCover
         },
-        {
-          title: 'HackSC interim website',
-          description:
-            '"Themeless" interim website design for HackSC, to be reused during the time period between hackathons, typically summer to winter of each year. Designed as a team that I led.',
-          link: 'https://www.figma.com/file/avCtBh86T7U4PxCbnVAmhc/HackSC-Interim-Website?node-id=1%3A533',
-          src: hackSCSite
-        },
-        {
-          title: 'ORACLE of Blair',
-          description:
-            'Web and graphic design for our senior class model of the 2020 Presidential election. Designed in Figma.',
-          link: 'https://2020.polistat.mbhs.edu',
-          src: oracle
-        },
-        {
-          title: 'climatedu',
-          description:
-            'Website platform design for climatedu.org, an online climate course for middle and high school students. Designed in Figma.',
-          link: 'https://climatedu.org',
-          src: climateduSite
-        }
       ]
     ]
   },
@@ -221,16 +203,24 @@ export let designItems = [
     rows: [
       [
         {
+          title: "Urban green space model",
+          description: "For my illustration class final, I created this low poly blender model of a city block that utilizes many different types of green space, including a green roof and a farmer's market. The protected bike lanes are extra cute!",
+          src: urbanGreenSpace,
+          pdfSrc: "1onKvp-ZJIIB997cENj4VZ40xUPCvKoFS"
+        },
+        {
+          title: 'LA park space infographic',
+          description:
+            'For ARCH 519: Sustainability in the Built Environment, I visualized the trend of park space per capita in LA over time, and compared that to the city\'s goal.',
+          src: parkSpace
+        }
+      ],
+      [
+        {
           title: "Low poly Trader Joe's",
           description:
             "This low-poly scene was my very first project in Blender. I love grocery stores and the holidays (especially Christmas), so it's a perfect combination!",
           src: traderJoes
-        },
-        {
-          title: 'LA Park Space',
-          description:
-            'For ARCH 519: Sustainability in the Built Environment, I visualized the trend of park space per capita in LA over time, and compared that to the city\'s goal.',
-          src: parkSpace
         },
         {
           title: 'Emily Dickinson\'s "Room of One\'s Own"',
@@ -272,10 +262,10 @@ export let designItems = [
           src: b1c
         },
         {
-          title: 'iy8 logo',
+          title: 'Big Fish program cover',
           description:
-            'Sample logo (very not official) for Cohort 8 of IYA (note the 8!). Illustrated in Adobe Fresco.',
-          src: iy8
+            'I illustrated this program cover for a production of the musical Big Fish by several BFA students at USC.',
+          src: bigFish
         },
         {
           title: 'NYT Maker Week 2022 shirt',
@@ -301,27 +291,6 @@ export let designItems = [
           description:
             'Sponsorship packed used for pitching HackSC to potential sponsor companies. Designed in Figma.',
           src: hackSCSponsor
-        }
-      ]
-    ]
-  },
-  {
-    tag: 'social-media',
-    rows: [
-      [
-        {
-          title: 'HackSC Instagram',
-          description:
-            'Brand identity and Instagram assets for HackSC 2022. Neon gradients, glow effects, and blobs. Made in Figma!',
-          link: 'https://instagram.com/hackscofficial',
-          src: hackscIG
-        },
-        {
-          title: 'climatedu Instagram',
-          description:
-            "Themed doodles for climatedu's weekly Infographic posts. Illustrations in Adobe Fresco on iPad, assembled in Figma.",
-          link: 'https://instagram.com/climateduteam',
-          src: climateduIG
         }
       ]
     ]
