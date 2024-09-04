@@ -15,7 +15,7 @@ import msr from '$lib/assets/msr.png?webp&h=600';
 import msrHacks from '$lib/assets/msrHacks.png?webp';
 import nyt from '$lib/assets/nyt-thumbnail.png?webp';
 import pudding from '$lib/assets/pudding.png?webp&h=600';
-import reddit from '$lib/assets/reddit-logo.svg';
+import reddit from '$lib/assets/reddit.png';
 import sscCover from '$lib/assets/ssc-brand-guide-cover.png?webp&h=600';
 import pikquik from '$lib/assets/pikquik.svg?webp&h=600';
 import todos from '$lib/assets/todos-thumbnail.png?webp&h=600';
@@ -25,6 +25,8 @@ import parkSpace from '$lib/assets/park-space-infographic.png?webp&h=1000';
 import urbanGreenSpace from '$lib/assets/urban-green-space.png?webp&h=1000';
 import hackSC2024 from '$lib/assets/hacksc-2024.png?webp&h=600';
 import bigFish from '$lib/assets/big-fish.png?webp';
+import sierCover from '$lib/assets/sier-cover.png?webp';
+import sierMockups from '$lib/assets/sier-mockups.png?webp'
 
 // projects card info
 export let projectsItems = [
@@ -148,7 +150,14 @@ export let designItems = [
           link: '/blog/new-york-times-2022',
           src: nyt,
           pdfSrc: "1GfLeZuHuFtvPIZJMqv03bEnpXoyZVs1L"
-        }
+        },
+        {
+          title: 'SIER',
+          description:
+            'For my senior capstone, I joined SIER (Seeing Is Everyone\'s Right), a startup that creates technology for vision-impaired users at an accessible price point. Here is the companion UI that I designed. More to come!',
+          src: sierCover,
+          imgSrc: sierMockups
+        },
       ],
       [
         {
