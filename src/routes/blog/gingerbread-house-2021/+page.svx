@@ -1,4 +1,5 @@
 ---
+hidden: true
 title: 'A four-day gingerbread house'
 slug: 'gingerbread-house-2021'
 publishDate: 'JAN 26 2022'

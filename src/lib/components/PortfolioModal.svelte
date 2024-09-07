@@ -34,7 +34,8 @@
       {#if isLoading}
         <div transition:fade class="spinner-container">
           <Jumper size="60" color="var(--primary-color)" unit="px" duration="1.5s" />
-        </div>  
+          <p>Media loading...</p>
+        </div> 
       {/if}
       {#if item.pdfSrc}
         <iframe
@@ -129,6 +130,7 @@
     width: 100%;
     height: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     position: absolute;
