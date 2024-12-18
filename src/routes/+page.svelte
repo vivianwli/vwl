@@ -62,7 +62,7 @@
 					<b>Welcome to my playground</b>!
 				</p>
 				<Link
-					link="https://drive.google.com/file/d/1-I2Z7vmmcc6uCoja53Wm11zrLwe0yJDL/view?usp=sharing"
+					link="https://drive.google.com/file/d/1eqs-dREP_3Qtj55CanXbJo_l9Lv4esYJ/view?usp=sharing"
 					>resume</Link
 				>
 			</div>
