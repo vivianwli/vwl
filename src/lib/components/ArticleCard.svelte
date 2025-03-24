@@ -8,6 +8,7 @@
 	sveltekit:prefetch
 	sveltekit:noscroll
 	href={article.link}
+	target="_blank"
 	on:click={() =>
 		setTimeout(() => {
 			document.body.scrollTop = document.documentElement.scrollTop = 0;

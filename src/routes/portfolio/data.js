@@ -13,9 +13,10 @@ import sscFlyer from '$lib/assets/ssc-flyer.png?webp';
 import hackSCSponsor from '$lib/assets/hacksc-sponsorship.png?webp';
 import msr from '$lib/assets/msr.png?webp&h=600';
 import msrHacks from '$lib/assets/msrHacks.png?webp';
-import nyt from '$lib/assets/nyt-thumbnail.png?webp';
-import pudding from '$lib/assets/pudding.png?webp&h=600';
-import reddit from '$lib/assets/reddit.png';
+import nyt from '$lib/assets/nyt-thumbnail.png?webp&h=600';
+import pudding from '$lib/assets/pudding.png?webp&h=800';
+import reddit from '$lib/assets/reddit.png?webp&h=800';
+import onomatopoeiaOdyssey from '$lib/assets/onomatopoeia-odyssey.png';
 import sscCover from '$lib/assets/ssc-brand-guide-cover.png?webp&h=600';
 import pikquik from '$lib/assets/pikquik.svg?webp&h=600';
 import todos from '$lib/assets/todos-thumbnail.png?webp&h=600';
@@ -25,11 +26,29 @@ import parkSpace from '$lib/assets/park-space-infographic.png?webp&h=1000';
 import urbanGreenSpace from '$lib/assets/urban-green-space.png?webp&h=1000';
 import hackSC2024 from '$lib/assets/hacksc-2024.png?webp&h=600';
 import bigFish from '$lib/assets/big-fish.png?webp';
-import sierCover from '$lib/assets/sier-cover.png?webp';
+import sierCover from '$lib/assets/sier-cover.png?webp&h=800';
 import sierMockups from '$lib/assets/sier-mockups.png?webp'
 
 // projects card info
 export let projectsItems = [
+  {
+    link: 'https://pudding.cool/2025/03/language/',
+    title: 'How do animals sound across languages?',
+    thumbnail: 'pudding-thumbnail.png',
+    info: 'MAR 2025',
+    summary:
+      'How can cultures hear the same physical sounds yet translate them into language so differently? Analyzing animal onomatopoeia across languages can demystify how we shape sound into meaning.',
+    tags: ['visualization', 'journalism']
+  },
+  {
+    link: 'https://openaccess.cms-conferences.org/publications/book/978-1-964867-35-9/article/978-1-964867-35-9_88',
+    title: 'Optimizing UX design to enhance user confidence in digital products',
+    thumbnail: 'ux-confidence.png',
+    info: 'DEC 2024',
+    summary:
+      'A crucial outcome of strong UX design is user confidence, defined as a user’s trust in their ability to effectively interact with a product. This study identifies five key design principles that enhance user confidence.',
+    tags: ['research']
+  },
   {
     link: 'https://todos.vivianwli.com',
     title: 'Spring 2023 in "To-Do"s',
@@ -128,11 +147,13 @@ export let designItems = [
           imgSrc: msrHacks,
         },
         {
-          title: 'The Pudding',
-          description: 'During summer 2024, I worked on a visual essay as part of the Pudding Fellowship. Stay tuned for more! In the meantime, you can check out the rest of their work.',
-          link: 'https://pudding.cool',
-          src: pudding,
-        }
+          title: 'The New York Times',
+          description:
+            'I designed and coded various interactive experiences and editorial articles during several internships at the New York Times (Summer 2022, Fall 2022, Fall 2024). Check out a project from 2022 below.',
+          link: 'https://www.nytimes.com/by/vivian-li',
+          src: nyt,
+          pdfSrc: "1GfLeZuHuFtvPIZJMqv03bEnpXoyZVs1L"
+        },
       ],
       [
         {
@@ -144,12 +165,11 @@ export let designItems = [
           pdfSrc: "1wWo-lOF51xq3U1CoYh8QG1KDioArhWN0"
         },
         {
-          title: 'The New York Times',
-          description:
-            'I worked on various interfaces, both internal and reader-facing, during my summer internship at the New York Times. I coded these, too!',
-          link: '/blog/new-york-times-2022',
-          src: nyt,
-          pdfSrc: "1GfLeZuHuFtvPIZJMqv03bEnpXoyZVs1L"
+          title: 'The Pudding',
+          description: 'During 2024, I designed, coded, and wrote a visual essay on cross-linguistic animal sounds as part of the Pudding Fellowship.',
+          link: 'https://pudding.cool/2025/03/language/',
+          src: pudding,
+          imgSrc: onomatopoeiaOdyssey,
         },
         {
           title: 'SIER',

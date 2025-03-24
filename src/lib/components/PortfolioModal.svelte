@@ -27,7 +27,7 @@
     <p>
       {item.description}
       {#if item.link}
-        <a href={item.link} class="more-link">Click to see more.</a>
+        <a href={item.link} class="more-link" target="_blank">Click to see more.</a>
       {/if}
     </p>
     <div class="media-container">
