@@ -1,0 +1,9 @@
+{
+  "buildCommand": "npm ci && npm run build",
+  "framework": "sveltekit",
+  "functions": {
+    "**": {
+      "runtime": "nodejs22.x"
+    }
+  }
+}
