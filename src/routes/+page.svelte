@@ -39,7 +39,7 @@
 		<div class="mini-section intro">
 			<img class="avatar" src={vivian} alt="viv" />
 			<div class="text-right">
-				<h1>hello! i'm vivian li.</h1>
+				<h1>hello! <br/>i'm vivian li.</h1>
 				<p>
 					I’m a product designer and UX engineer based in New York City. <b
 						>I love to use design and data to tell stories in beautiful ways</b
@@ -225,6 +225,8 @@
 		margin-right: 10%;
 		@media screen and (max-width: 50rem) {
 			margin: auto;
+			align-items: flex-start;
+			text-align: left;
 		}
 	}
 	.image-right {
@@ -254,6 +256,9 @@
 		h1 {
 			margin-top: 0;
 			line-height: 3rem;
+			@media screen and (max-width: 50rem) {
+				margin-top: 1rem;
+			}
 		}
 	}
 

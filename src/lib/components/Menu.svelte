@@ -35,8 +35,7 @@
 		display: block;
 		text-decoration: none;
 		color: var(--secondary-color);
-		margin: 1.75rem;
-		font-size: 1.75rem;
+		margin: 1.25rem;
 		line-height: normal;
 		@media (hover: hover) {
 			&:hover {
