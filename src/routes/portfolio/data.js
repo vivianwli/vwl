@@ -1,32 +1,32 @@
 // image imports
-import traderJoes from '$lib/assets/trader-joes-big.png?webp&h=1000';
+import traderJoes from '$lib/assets/trader-joes-big.png?webp&h=600';
 import hibiscus from '$lib/assets/hibiscus.png?webp&h=600';
-import marketFermentation from '$lib/assets/market-fermentation-2.png?webp';
-import blobs from '$lib/assets/blobs-portfolio.png?webp';
-import b1c from '$lib/assets/b1c-surfing.png?webp';
-import makerTee from '$lib/assets/nyt-maker-2022.png?webp';
-import sirensMerch from '$lib/assets/sirens-merch.png?webp';
-import stillIntoYou from '$lib/assets/still-into-you.png?webp';
-import drawdown from '$lib/assets/drawdown.png?webp';
-import sscFlyer from '$lib/assets/ssc-flyer.png?webp';
-import hackSCSponsor from '$lib/assets/hacksc-sponsorship.png?webp';
+import marketFermentation from '$lib/assets/market-fermentation-2.png?webp&h=600';
+import blobs from '$lib/assets/blobs-portfolio.png?webp&h=600';
+import b1c from '$lib/assets/b1c-surfing.png?webp&h=600';
+import makerTee from '$lib/assets/nyt-maker-2022.png?webp&h=600';
+import sirensMerch from '$lib/assets/sirens-merch.png?webp&h=600';
+import stillIntoYou from '$lib/assets/still-into-you.png?webp&h=600';
+import drawdown from '$lib/assets/drawdown.png?webp&h=600';
+import sscFlyer from '$lib/assets/ssc-flyer.png?webp&h=600';
+import hackSCSponsor from '$lib/assets/hacksc-sponsorship.png?webp&h=600';
 import msr from '$lib/assets/msr.png?webp&h=600';
-import msrHacks from '$lib/assets/msrHacks.png?webp';
+import msrHacks from '$lib/assets/msrHacks.png?webp&h=600';
 import nyt from '$lib/assets/nyt-thumbnail.png?webp&h=600';
-import pudding from '$lib/assets/pudding.png?webp&h=800';
-import reddit from '$lib/assets/reddit.png?webp&h=800';
-import onomatopoeiaOdyssey from '$lib/assets/onomatopoeia-odyssey.png';
+import pudding from '$lib/assets/pudding.png?webp&h=600';
+import reddit from '$lib/assets/reddit.png?webp&h=600';
+import onomatopoeiaOdyssey from '$lib/assets/onomatopoeia-odyssey.png?webp&h=600';
 import sscCover from '$lib/assets/ssc-brand-guide-cover.png?webp&h=600';
 import pikquik from '$lib/assets/pikquik.svg?webp&h=600';
 import todos from '$lib/assets/todos-thumbnail.png?webp&h=600';
 import bamboo from '$lib/assets/bamboo.png?webp&h=600';
-import dickinson from '$lib/assets/dickinson-woolf.png?webp&h=1000';
-import parkSpace from '$lib/assets/park-space-infographic.png?webp&h=1000';
-import urbanGreenSpace from '$lib/assets/urban-green-space.png?webp&h=1000';
+import dickinson from '$lib/assets/dickinson-woolf.png?webp&h=600';
+import parkSpace from '$lib/assets/park-space-infographic.png?webp&h=600';
+import urbanGreenSpace from '$lib/assets/urban-green-space.png?webp&h=600';
 import hackSC2024 from '$lib/assets/hacksc-2024.png?webp&h=600';
-import bigFish from '$lib/assets/big-fish.png?webp';
-import sierCover from '$lib/assets/sier-cover.png?webp&h=800';
-import sierMockups from '$lib/assets/sier-mockups.png?webp';
+import bigFish from '$lib/assets/big-fish.png?webp&h=600';
+import sierCover from '$lib/assets/sier-cover.png?webp&h=600';
+import sierMockups from '$lib/assets/sier-mockups.png?webp&h=600';
 
 // projects card info
 export let projectsItems = [
@@ -328,25 +328,4 @@ export let designItems = [
 			]
 		]
 	},
-	{
-		tag: 'animation',
-		rows: [
-			[
-				{
-					title: 'Still into you lyric video',
-					description:
-						'Lyric video for "Still Into You" by Paramore. Designed in Figma and Illustrator, animated with After Effects.',
-					link: 'https://youtu.be/7ea1WhX4Wu8?t=36',
-					src: stillIntoYou
-				},
-				{
-					title: 'Drawdown for dummies ep. 1',
-					description:
-						"Episode 1 of Drawdown for dummies, a video series breaking down Project Drawdown's 100 top solutions to bring us to climate drawdown. Made in Premiere Pro and After Effects.",
-					link: 'https://youtu.be/UWAu4PoBFxA',
-					src: drawdown
-				}
-			]
-		]
-	}
 ];
