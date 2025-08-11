@@ -36,6 +36,7 @@
 		text-decoration: none;
 		color: var(--secondary-color);
 		margin: 1.25rem;
+		font-size: 1.25em;
 		line-height: normal;
 		@media (hover: hover) {
 			&:hover {
