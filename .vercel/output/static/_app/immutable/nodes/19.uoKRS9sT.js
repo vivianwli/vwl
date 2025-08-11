@@ -1,0 +1,1 @@
+import{S as t,i as n,s}from"../chunks/CJqUcAxU.js";import"../chunks/IHki7fMi.js";function i(e){return location="https://drive.google.com/file/d/1TXagebBFxBuqNJklIUnUdHZQGbolxD_F/view?usp=share_link",[]}class r extends t{constructor(o){super(),n(this,o,i,null,s,{})}}export{r as component};

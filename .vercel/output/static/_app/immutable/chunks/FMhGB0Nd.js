@@ -1,0 +1,6 @@
+import{E as m,F as b}from"./CJqUcAxU.js";function C(t){return t<.5?4*t*t*t:.5*Math.pow(2*t-2,3)+1}function d(t){const o=t-1;return o*o*o+1}function x(t,{delay:o=0,duration:c=400,easing:r=C,amount:a=5,opacity:e=0}={}){const n=getComputedStyle(t),s=+n.opacity,i=n.filter==="none"?"":n.filter,u=s*(1-e),[f,l]=m(a);return{delay:o,duration:c,easing:r,css:(y,p)=>`opacity: ${s-u*p}; filter: ${i} blur(${p*f}${l});`}}function O(t,{delay:o=0,duration:c=400,easing:r=b}={}){const a=+getComputedStyle(t).opacity;return{delay:o,duration:c,easing:r,css:e=>`opacity: ${e*a}`}}function U(t,{delay:o=0,duration:c=400,easing:r=d,x:a=0,y:e=0,opacity:n=0}={}){const s=getComputedStyle(t),i=+s.opacity,u=s.transform==="none"?"":s.transform,f=i*(1-n),[l,y]=m(a),[p,g]=m(e);return{delay:o,duration:c,easing:r,css:($,_)=>`
+			transform: ${u} translate(${(1-$)*l}${y}, ${(1-$)*p}${g});
+			opacity: ${i-f*_}`}}function V(t,{delay:o=0,duration:c=400,easing:r=d,start:a=0,opacity:e=0}={}){const n=getComputedStyle(t),s=+n.opacity,i=n.transform==="none"?"":n.transform,u=1-a,f=s*(1-e);return{delay:o,duration:c,easing:r,css:(l,y)=>`
+			transform: ${i} scale(${1-u*y});
+			opacity: ${s-f*y}
+		`}}export{O as a,x as b,d as c,U as f,V as s};

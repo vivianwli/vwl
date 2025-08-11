@@ -12,7 +12,7 @@
 	import FiInstagram from 'svelte-icons-pack/fi/FiInstagram';
 
 	//image imports
-	import vivian from '$lib/assets/vivian-aug2025.png?w=600&webp';
+	import vivian from '$lib/assets/vivian-aug2025.png';
 	import design1 from '$lib/assets/market-fermentation-2.png?w=400&webp';
 	import design2 from '$lib/assets/trader-joes-big.png?w=600&webp';
 	import code1 from '$lib/assets/research-2.png?w=400&webp';
