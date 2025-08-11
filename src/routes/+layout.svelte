@@ -42,7 +42,7 @@
 	}
 
 	// switching color theme
-	function switchTheme(event) {
+	function switchTheme() {
 		darkTheme === 'light' ? (darkTheme = 'dark') : (darkTheme = 'light');
 		document.documentElement.setAttribute('data-theme', darkTheme);
 		localStorage.setItem('theme', darkTheme);

@@ -92,7 +92,7 @@
 <div class="content">
 	{#if modalItem}
 		<div transition:fade class="modal-container">
-			<PortfolioModal bind:item={modalItem}/>
+			<PortfolioModal bind:item={modalItem} />
 		</div>
 	{/if}
 
@@ -208,10 +208,10 @@
 														on:keydown={() => toggleMobileDescription(item.title)}
 													/>
 												{:else}
-													<div 
+													<div
 														class="web-item-container"
-														on:click={() => modalItem = item}
-														on:keydown={() => modalItem = item}
+														on:click={() => (modalItem = item)}
+														on:keydown={() => (modalItem = item)}
 													>
 														<div
 															class="description"
@@ -301,10 +301,10 @@
 	<div class="outro">
 		<h2>don't be shy...</h2>
 		<div class="icons">
-			<a sveltekit:prefetch href="https://www.linkedin.com/in/vivian-li-25b424183/"
+			<a sveltekit:prefetch href="https://www.linkedin.com/in/vivianwli/"
 				><Icon src={FiLinkedin} className="custom-icon media-icon" /></a
 			>
-			<a sveltekit:prefetch href="mailto: vwli@usc.edu"
+			<a sveltekit:prefetch href="mailto:vivianwli.design@gmail.com"
 				><Icon src={FiMail} className="custom-icon media-icon" /></a
 			>
 		</div>
@@ -552,7 +552,7 @@
 			gap: 0.5rem;
 		}
 		:global(.media-icon) {
-			font-size: 2.5rem !important;
+			font-size: 1.5rem !important;
 			color: var(--primary-color);
 			@media (hover: hover) {
 				&:hover {

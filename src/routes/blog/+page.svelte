@@ -4,7 +4,6 @@
 	// component imports
 	import PostCard from '$lib/components/PostCard.svelte';
 	import Tag from '$lib/components/Tag.svelte';
-	import EmailInput from '$lib/components/EmailInput.svelte';
 
 	// toast import
 	import { SvelteToast } from '@zerodevx/svelte-toast';
@@ -49,8 +48,8 @@
 <div class="content">
 	<!-- toast that only shows after user subscribes to the newsletter -->
 	<SvelteToast />
-	<h1>musings</h1>
-	<p>Ideas, experiments, and reflections. Also known as Oversharing Corner. Welcome!</p>
+	<h1>blog</h1>
+	<p>Ideas, experiments, and reflections. Welcome!</p>
 
 	<!-- tag filters -->
 	<div class="buttons">
@@ -102,10 +101,6 @@
 			{/each}
 		{/if}
 	</div>
-
-	<!-- subscribe :) -->
-	<p>Want reminders when I post? Feel free to subscribe:</p>
-	<EmailInput />
 </div>
 
 <style>
