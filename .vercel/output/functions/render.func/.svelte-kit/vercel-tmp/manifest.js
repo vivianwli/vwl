@@ -4,7 +4,7 @@ export const manifest = {
 	assets: new Set([".DS_Store","favicon.svg","thumbnails/bamboo.png","thumbnails/breakthrough.png","thumbnails/climate-tracker.jpg","thumbnails/covid-model.png","thumbnails/dickinson-cover.png","thumbnails/flying-by-thumbnail.png","thumbnails/fruit-blobs.png","thumbnails/gingerbread-5.jpg","thumbnails/haute-greenwashing-post.png","thumbnails/haute-greenwashing.png","thumbnails/mathy-protest.png","thumbnails/netlify.png","thumbnails/nyt-stem-writing.jpg","thumbnails/nyt-thumbnail.png","thumbnails/oat-milk.png","thumbnails/piquik.svg","thumbnails/pudding-thumbnail.png","thumbnails/reddit-logo.svg","thumbnails/svelte-workshop.png","thumbnails/teachers.jfif","thumbnails/technica.jpg","thumbnails/todos-thumbnail.png","thumbnails/ux-confidence.png","thumbnails/vwl-site.png"]),
 	mimeTypes: {".svg":"image/svg+xml",".png":"image/png",".jpg":"image/jpeg"},
 	_: {
-		entry: {"file":"_app/immutable/start-d0bb8657.js","imports":["_app/immutable/start-d0bb8657.js","_app/immutable/chunks/index-cf78bce8.js","_app/immutable/chunks/singletons-4a01f613.js","_app/immutable/chunks/index-69919d61.js","_app/immutable/chunks/preload-helper-41c905a7.js"],"stylesheets":[],"fonts":[]},
+		entry: {"file":"_app/immutable/start-b3ab7f7a.js","imports":["_app/immutable/start-b3ab7f7a.js","_app/immutable/chunks/index-cf78bce8.js","_app/immutable/chunks/singletons-4a01f613.js","_app/immutable/chunks/index-69919d61.js","_app/immutable/chunks/preload-helper-41c905a7.js"],"stylesheets":[],"fonts":[]},
 		nodes: [
 			() => import('../output/server/nodes/0.js'),
 			() => import('../output/server/nodes/1.js'),
