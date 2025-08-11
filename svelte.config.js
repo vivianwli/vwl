@@ -1,21 +1,20 @@
+import adapter from '@sveltejs/adapter-vercel';
+import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import { mdsvex } from 'mdsvex';
-import preprocess from 'svelte-preprocess';
-import vercel from '@sveltejs/adapter-vercel';
 
-/** @type {import('@sveltejs/kit').Config} */
 const config = {
-	extensions: ['.svelte', '.svx', '.md'],
-
-	kit: {
-		adapter: vercel()
-	},
-
+	extensions: ['.svelte', '.md'],
 	preprocess: [
-		preprocess({
-			scss: {}
-		}),
-		mdsvex({ extensions: ['.md', '.svx'] })
-	]
+		vitePreprocess(),
+		mdsvex({
+			extensions: ['.md']
+		})
+	],
+	kit: {
+		adapter: adapter({
+			runtime: 'nodejs22.x'
+		})
+	}
 };
 
 export default config;

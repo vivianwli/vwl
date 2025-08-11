@@ -1,62 +1,70 @@
-import { c as create_ssr_component, v as validate_component } from "../../../../chunks/index.js";
-import { P as PostHeader, B as BlogImage } from "../../../../chunks/BlogImage.js";
-import { B as BlogGallery } from "../../../../chunks/BlogGallery.js";
-const textiles1 = "/_app/immutable/assets/textiles-1-147fa4b8.png";
-const textiles2 = "/_app/immutable/assets/textiles-2-db525954.png";
-const textiles3 = "/_app/immutable/assets/textiles-3-865b91c1.png";
+import { c as create_ssr_component, v as validate_component } from '../../../../chunks/index.js';
+import { P as PostHeader, B as BlogImage } from '../../../../chunks/BlogImage.js';
+import { B as BlogGallery } from '../../../../chunks/BlogGallery.js';
+const textiles1 = '/_app/immutable/assets/textiles-1-147fa4b8.png';
+const textiles2 = '/_app/immutable/assets/textiles-2-db525954.png';
+const textiles3 = '/_app/immutable/assets/textiles-3-865b91c1.png';
 const metadata = {
-  "title": "An antidote to greenwashing",
-  "slug": "sustainable-textiles",
-  "publishDate": "DEC 3 2021",
-  "tags": [{ "name": "fashion" }, { "name": "sustainability" }],
-  "thumbnail": "haute-greenwashing-post.png",
-  "summary": "Any brand can say they're sustainable. By delving into the various textiles behind sustainable clothing, we strip the power from companies to decide whether a product is environmentally friendly."
+	title: 'An antidote to greenwashing',
+	slug: 'sustainable-textiles',
+	publishDate: 'DEC 3 2021',
+	tags: [{ name: 'fashion' }, { name: 'sustainability' }],
+	thumbnail: 'haute-greenwashing-post.png',
+	summary:
+		"Any brand can say they're sustainable. By delving into the various textiles behind sustainable clothing, we strip the power from companies to decide whether a product is environmentally friendly."
 };
 const { title, slug, publishDate, tags, thumbnail, summary } = metadata;
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `${validate_component(PostHeader, "PostHeader").$$render(
-    $$result,
-    {
-      title,
-      publishDate,
-      tags,
-      thumbnail,
-      slug,
-      summary
-    },
-    {},
-    {}
-  )}
-<p><em>This feature article was first published in Haute Magazine’s “On the Edge” issue. I have posted it to my website to maximize web readability, but please feel free to explore the original <a href="${"https://www.hauteusc.com/ontheedge"}" rel="${"nofollow"}">here</a>, complete with the visual design and photography. Haute is USC’s fashion, arts, and culture magazine.</em></p>
+	return `${validate_component(PostHeader, 'PostHeader').$$render(
+		$$result,
+		{
+			title,
+			publishDate,
+			tags,
+			thumbnail,
+			slug,
+			summary
+		},
+		{},
+		{}
+	)}
+<p><em>This feature article was first published in Haute Magazine’s “On the Edge” issue. I have posted it to my website to maximize web readability, but please feel free to explore the original <a href="${'https://www.hauteusc.com/ontheedge'}" rel="${'nofollow'}">here</a>, complete with the visual design and photography. Haute is USC’s fashion, arts, and culture magazine.</em></p>
 <p> </p>
 <h2>Understanding fabrics can help us fight greenwashing</h2>
 <p>Any brand can say they’re sustainable. It’s easy to bluff. In recent years, greenwashing — providing misleading claims about environmental impact — has grown prolifically to match skyrocketing consumer demand for sustainable products. It’s illegal, unethical, and it breaches the trust between consumers and brands. Greenwashing isn’t going anywhere anytime soon, but we as consumers can regain control of how dodgy, sketchy marketing scams affect us. Specifically, by delving into the various textiles behind sustainable clothing, we strip the power from companies to decide whether a product is environmentally friendly on our behalf.</p>
 <p>Fast fashion brands stand at the center of many consistent greenwashing scandals. As an industry responsible for 10% of global carbon emissions, the need for pushing back is clear. Megan McSherry, a sustainability educator and USC 2020 alumna, cites H&amp;M as a perfect example of greenwashing. “They have their conscious collection with green tags on the clothing,” she says. “But is the business as a whole sustainable? No. Is that conscious line sustainable? No, because they create millions of garments just for that small line every year.”</p>
 <p>With regard to educating Gen Z about tackling fast fashion as an individual consumer, McSherry is working at the forefront. Under the internet name ACTEEVISM, she creates content for over 100 thousand followers across TikTok, Instagram, and Youtube. She’s a firm believer that greenwashing persists because people aren’t educationally equipped to catch it. “It’s so easy to say that you’re doing something sustainable, because the general population doesn’t have enough knowledge about environmental science to know when they’re telling the truth,” McSherry says.</p>
-${validate_component(BlogGallery, "BlogGallery").$$render($$result, { columns: "2" }, {}, {
-    default: () => {
-      return `${validate_component(BlogImage, "BlogImage").$$render(
-        $$result,
-        {
-          className: "gallery-img",
-          src: textiles2,
-          caption: "Various garment production tools. Cover photo for the article in Haute's Fall 2021 issue. <i>(Photo credit: Quan Pham)</i>"
-        },
-        {},
-        {}
-      )}
-    ${validate_component(BlogImage, "BlogImage").$$render(
-        $$result,
-        {
-          className: "gallery-img",
-          src: textiles3,
-          caption: "Pin-holder, fabric squares, thread, safety pins, and measuring tape. <i>(Photo credit: Quan Pham)</i>"
-        },
-        {},
-        {}
-      )}`;
-    }
-  })}
+${validate_component(BlogGallery, 'BlogGallery').$$render(
+	$$result,
+	{ columns: '2' },
+	{},
+	{
+		default: () => {
+			return `${validate_component(BlogImage, 'BlogImage').$$render(
+				$$result,
+				{
+					className: 'gallery-img',
+					src: textiles2,
+					caption:
+						"Various garment production tools. Cover photo for the article in Haute's Fall 2021 issue. <i>(Photo credit: Quan Pham)</i>"
+				},
+				{},
+				{}
+			)}
+    ${validate_component(BlogImage, 'BlogImage').$$render(
+			$$result,
+			{
+				className: 'gallery-img',
+				src: textiles3,
+				caption:
+					'Pin-holder, fabric squares, thread, safety pins, and measuring tape. <i>(Photo credit: Quan Pham)</i>'
+			},
+			{},
+			{}
+		)}`;
+		}
+	}
+)}
 <p> </p>
 <h2>Textiles: good and bad</h2>
 <p>McSherry explains that textiles play a key role in the industry, both upfront during production and later on in its afterlife. “About 98% of textiles end up in a landfill,” McSherry says. “What is it going to do? Are the dyes going to impact the soil? Is it a petroleum-based product going into the landfill?” Her key questions prompt deeper thought about what happens to our clothing once it’s tossed out of sight.</p>
@@ -81,16 +89,16 @@ ${validate_component(BlogGallery, "BlogGallery").$$render($$result, { columns: "
 <p>Customers can register their trees and track their impact. On their blog, tentree details different tree species, planting sites, and community planters. Director of Product Commercialization Ludovic Duran notes that tentree is working on new initiatives to increase transparency with the tree-planting process. “Recently, we have gone into developing new technology to support those companies in tracking, mapping, and reporting what’s going on on the ground,” Duran says.</p>
 <p>Tentree prioritizes sustaining their planting projects long-term. Their non-profit partners educate and collaborate with locals to train them on how to maintain their nurseries and forests. “We were planting with a partner in Senegal to support local communities not just in reforesting and bringing biodiversity back, but also to support them in achieving independence from food sources,” Duran says.</p>
 <p>Since joining the Climate Neutral Certification Program last year, tentree has developed a life cycle assessment of the company’s total emissions. Duran clarifies that tentree accounts for their carbon footprint by using gold standard carbon offset. Their tree-planting initiative is an additional step that tentree takes to support their values. “It’s not just about limiting our impact or being aware of our impact,” Duran says. “We really want to bring a positive impact.”</p>
-${validate_component(BlogImage, "BlogImage").$$render(
-    $$result,
-    {
-      className: "gallery-img",
-      src: textiles1,
-      caption: "Measuring textile squares in a sewing workspace. <i>(Photo credit: Quan Pham)</i>"
-    },
-    {},
-    {}
-  )}
+${validate_component(BlogImage, 'BlogImage').$$render(
+	$$result,
+	{
+		className: 'gallery-img',
+		src: textiles1,
+		caption: 'Measuring textile squares in a sewing workspace. <i>(Photo credit: Quan Pham)</i>'
+	},
+	{},
+	{}
+)}
 <p> </p>
 <h2>Nuances in the broader picture of sustainable fashion</h2>
 <p>Sustainability extends beyond the numbers of how eco-friendly an item is. We as consumers also need to consider how brands treat their workers and their surrounding communities. With fast fashion, garment worker conditions are a particularly dire concern. “Fashion is one of the only industries that really can’t automate very much,” McSherry says. “Every single garment is sewn by somebody.”</p>
@@ -103,7 +111,4 @@ ${validate_component(BlogImage, "BlogImage").$$render(
 <p>We should also work actively to keep brands accountable. When we find lapses in transparency, we need to be vocal. Accounts like @remakeourworld on Instagram encourage us to find community in advocacy. They call out fast fashion brands for greenwashing and covering up claims of unethical labor. Anyone with a social media account can leave comments under brands’ Instagram pages, whether it be exposing inconsistencies or asking for cleaner practices. “That’s one of my favorite accessible ways to advocate for change,” McSherry says.</p>
 <p>Ultimately, enjoying fashion sustainably comes from an intentional paradigm to make the most out of the resources that we have available. As Troop summarizes, “if you feel a certain responsibility for what happens to your products after you use them, then I think you’re on the right track.”</p>`;
 });
-export {
-  Page as default,
-  metadata
-};
+export { Page as default, metadata };

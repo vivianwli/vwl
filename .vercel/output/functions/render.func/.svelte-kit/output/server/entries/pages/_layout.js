@@ -1,6 +1,4 @@
 const load = async ({ url }) => ({
-  key: url.pathname
+	key: url.pathname
 });
-export {
-  load
-};
+export { load };

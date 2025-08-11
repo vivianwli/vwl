@@ -1,1 +1,1457 @@
-import{S as Aa,i as Pa,s as Ca,w as g,a as n,k as m,q as p,x as w,c as l,l as u,m as d,r as f,h as t,n as He,y as $,b as s,J as i,f as v,t as y,z as k,B as Je}from"../../../../chunks/index-cf78bce8.js";import{P as Ia,B as P}from"../../../../chunks/BlogImage-f532aefd.js";import{B as Me}from"../../../../chunks/BlogGallery-87cb4976.js";const Wa=""+new URL("../../../../assets/pikquik-brainstorm-21586064.png",import.meta.url).href,La=""+new URL("../../../../assets/pikquik-interview-1-4014d4a9.png",import.meta.url).href,Ra=""+new URL("../../../../assets/pikquik-interview-2-b54ae325.png",import.meta.url).href,Na=""+new URL("../../../../assets/pikquik-interview-3-21a025b7.png",import.meta.url).href,Sa=""+new URL("../../../../assets/pikquik-ideate-69611df8.png",import.meta.url).href,Ua=""+new URL("../../../../assets/pikquik-synthesize-760d896c.png",import.meta.url).href,xa=""+new URL("../../../../assets/pikquik-proto-c8b49604.png",import.meta.url).href,Ta=""+new URL("../../../../assets/pikquik-proto-2-c1d95090.png",import.meta.url).href,za=""+new URL("../../../../assets/pikquik-proto-3-d58b56b3.png",import.meta.url).href,Ba=""+new URL("../../../../assets/pikquik-moodboard-9372d171.png",import.meta.url).href,Da=""+new URL("../../../../assets/pikquik-app-a-1-76fbabf1.png",import.meta.url).href,ja=""+new URL("../../../../assets/pikquik-app-a-2-1cb30300.png",import.meta.url).href,Fa=""+new URL("../../../../assets/pikquik-app-a-3-5502c69c.png",import.meta.url).href,Oa=""+new URL("../../../../assets/pikquik-app-a-4-cdefce1e.png",import.meta.url).href,Ga=""+new URL("../../../../assets/pikquik-app-b-1-37a829c6.png",import.meta.url).href,Ha=""+new URL("../../../../assets/pikquik-app-b-2-bfe66719.png",import.meta.url).href,Ma=""+new URL("../../../../assets/pikquik-app-b-3-339c7456.png",import.meta.url).href,Ja=""+new URL("../../../../assets/pikquik-app-b-4-28e3c2fc.png",import.meta.url).href,Va=""+new URL("../../../../assets/pikquik-app-c-1-0f568ccc.png",import.meta.url).href,Xa=""+new URL("../../../../assets/pikquik-app-c-2-71695024.png",import.meta.url).href,Ka=""+new URL("../../../../assets/pikquik-app-c-3-3e01f0f3.png",import.meta.url).href,Qa=""+new URL("../../../../assets/pikquik-app-c-4-6d7778ae.png",import.meta.url).href,Ya=""+new URL("../../../../assets/pikquik-graph-7b4540cd.png",import.meta.url).href,Za=""+new URL("../../../../assets/pikquik-team-02bd8958.png",import.meta.url).href;function ei(L){let c,b,h,_;return c=new P({props:{className:"gallery-img",src:La,caption:"An interview conducted with Tucker Gannon, a sophomore at USC."}}),h=new P({props:{className:"gallery-img",src:Ra,caption:"An interview conducted with Hanson Leung, a junior at USC."}}),{c(){g(c.$$.fragment),b=n(),g(h.$$.fragment)},l(r){w(c.$$.fragment,r),b=l(r),w(h.$$.fragment,r)},m(r,A){$(c,r,A),s(r,b,A),$(h,r,A),_=!0},p:Je,i(r){_||(v(c.$$.fragment,r),v(h.$$.fragment,r),_=!0)},o(r){y(c.$$.fragment,r),y(h.$$.fragment,r),_=!1},d(r){k(c,r),r&&t(b),k(h,r)}}}function ti(L){let c,b,h,_;return c=new P({props:{className:"gallery-img",src:Sa,caption:"Our idea board, centered around blue sticky note themes."}}),h=new P({props:{className:"gallery-img",src:Ua,caption:"Our thematically grouped ideas!"}}),{c(){g(c.$$.fragment),b=n(),g(h.$$.fragment)},l(r){w(c.$$.fragment,r),b=l(r),w(h.$$.fragment,r)},m(r,A){$(c,r,A),s(r,b,A),$(h,r,A),_=!0},p:Je,i(r){_||(v(c.$$.fragment,r),v(h.$$.fragment,r),_=!0)},o(r){y(c.$$.fragment,r),y(h.$$.fragment,r),_=!1},d(r){k(c,r),r&&t(b),k(h,r)}}}function oi(L){let c,b,h,_,r,A,E,C;return c=new P({props:{className:"gallery-img",src:Da,caption:"Prototype A: initial menu"}}),h=new P({props:{className:"gallery-img",src:ja,caption:"Prototype A: confirm order"}}),r=new P({props:{className:"gallery-img",src:Fa,caption:"Prototype A: pickup information"}}),E=new P({props:{className:"gallery-img",src:Oa,caption:"Prototype A: pickup ready!"}}),{c(){g(c.$$.fragment),b=n(),g(h.$$.fragment),_=n(),g(r.$$.fragment),A=n(),g(E.$$.fragment)},l(o){w(c.$$.fragment,o),b=l(o),w(h.$$.fragment,o),_=l(o),w(r.$$.fragment,o),A=l(o),w(E.$$.fragment,o)},m(o,q){$(c,o,q),s(o,b,q),$(h,o,q),s(o,_,q),$(r,o,q),s(o,A,q),$(E,o,q),C=!0},p:Je,i(o){C||(v(c.$$.fragment,o),v(h.$$.fragment,o),v(r.$$.fragment,o),v(E.$$.fragment,o),C=!0)},o(o){y(c.$$.fragment,o),y(h.$$.fragment,o),y(r.$$.fragment,o),y(E.$$.fragment,o),C=!1},d(o){k(c,o),o&&t(b),k(h,o),o&&t(_),k(r,o),o&&t(A),k(E,o)}}}function ai(L){let c,b,h,_,r,A,E,C;return c=new P({props:{className:"gallery-img",src:Ga,caption:"Prototype B: initial menu"}}),h=new P({props:{className:"gallery-img",src:Ha,caption:"Prototype B: view individual item"}}),r=new P({props:{className:"gallery-img",src:Ma,caption:"Prototype B: confirm order"}}),E=new P({props:{className:"gallery-img",src:Ja,caption:"Prototype B: picking ready!"}}),{c(){g(c.$$.fragment),b=n(),g(h.$$.fragment),_=n(),g(r.$$.fragment),A=n(),g(E.$$.fragment)},l(o){w(c.$$.fragment,o),b=l(o),w(h.$$.fragment,o),_=l(o),w(r.$$.fragment,o),A=l(o),w(E.$$.fragment,o)},m(o,q){$(c,o,q),s(o,b,q),$(h,o,q),s(o,_,q),$(r,o,q),s(o,A,q),$(E,o,q),C=!0},p:Je,i(o){C||(v(c.$$.fragment,o),v(h.$$.fragment,o),v(r.$$.fragment,o),v(E.$$.fragment,o),C=!0)},o(o){y(c.$$.fragment,o),y(h.$$.fragment,o),y(r.$$.fragment,o),y(E.$$.fragment,o),C=!1},d(o){k(c,o),o&&t(b),k(h,o),o&&t(_),k(r,o),o&&t(A),k(E,o)}}}function ii(L){let c,b,h,_,r,A,E,C;return c=new P({props:{className:"gallery-img",src:Va,caption:"Prototype B: initial menu"}}),h=new P({props:{className:"gallery-img",src:Xa,caption:"Prototype B: confirm order"}}),r=new P({props:{className:"gallery-img",src:Ka,caption:"Prototype B: pickup information"}}),E=new P({props:{className:"gallery-img",src:Qa,caption:"Prototype B: pickup ready!"}}),{c(){g(c.$$.fragment),b=n(),g(h.$$.fragment),_=n(),g(r.$$.fragment),A=n(),g(E.$$.fragment)},l(o){w(c.$$.fragment,o),b=l(o),w(h.$$.fragment,o),_=l(o),w(r.$$.fragment,o),A=l(o),w(E.$$.fragment,o)},m(o,q){$(c,o,q),s(o,b,q),$(h,o,q),s(o,_,q),$(r,o,q),s(o,A,q),$(E,o,q),C=!0},p:Je,i(o){C||(v(c.$$.fragment,o),v(h.$$.fragment,o),v(r.$$.fragment,o),v(E.$$.fragment,o),C=!0)},o(o){y(c.$$.fragment,o),y(h.$$.fragment,o),y(r.$$.fragment,o),y(E.$$.fragment,o),C=!1},d(o){k(c,o),o&&t(b),k(h,o),o&&t(_),k(r,o),o&&t(A),k(E,o)}}}function si(L){let c,b,h,_,r,A,E,C,o,q,Ve,F,Tt,O,zt,Xe,ee,Bt,Ke,te,Dt,Qe,G,Ye,oe,jt,Ze,S,ae,Ce,Ft,Ot,Gt,ie,Ie,Ht,Mt,et,se,Jt,tt,U,ot,H,at,re,Vt,it,ne,Xt,st,le,Kt,rt,x,nt,pe,Qt,lt,R,fe,We,Yt,Zt,eo,me,Le,to,oo,ao,ue,Re,io,so,pt,de,ro,ft,he,no,mt,ce,lo,ut,M,dt,J,ht,V,ct,ge,po,gt,T,wt,z,$t,we,fo,vt,$e,mo,yt,ve,uo,kt,X,bt,ye,ho,_t,W,Ne,co,go,Se,wo,$o,Ue,vo,yo,xe,ko,Et,B,bo,ke,_o,Eo,qt,D,At,be,qo,Pt,_e,Ao,Ct,K,It,I,Po,Te,Co,Io,ze,Wo,Lo,Be,Ro,No,De,So,Uo,Wt,Ee,xo,Lt,Q,Y,To,zo,Rt,qe,Bo,Nt,Z,St;return c=new Ia({props:{title:ni,publishDate:pi,tags:fi,slug:li,thumbnail:mi,summary:ui}}),G=new P({props:{className:"half-img",src:Wa,caption:"We came up with all sorts of ideas on FigJam, from the dining halls to porta potties to public transit."}}),U=new Me({props:{columns:"2",$$slots:{default:[ei]},$$scope:{ctx:L}}}),H=new P({props:{src:Na,caption:"An interview conducted with Justin Chang, class of 2021."}}),x=new Me({props:{columns:"2",$$slots:{default:[ti]},$$scope:{ctx:L}}}),M=new P({props:{src:Ta,caption:"A wooden mini-mockup of the food stand, with lockers facing the festival-goers."}}),J=new P({props:{src:xa,caption:"A blender render of the locker's two-sided functionality: one for festival-goers, and one for food workers."}}),V=new P({props:{src:Ba,caption:"Visual design inspiration: neon colors and bold shapes, like Gov Ball!"}}),T=new Me({props:{columns:"4",$$slots:{default:[oi]},$$scope:{ctx:L}}}),z=new Me({props:{columns:"4",$$slots:{default:[ai]},$$scope:{ctx:L}}}),X=new P({props:{className:"half-img",src:za,caption:"A full-size prototype of just one column of lockers."}}),D=new Me({props:{columns:"4",$$slots:{default:[ii]},$$scope:{ctx:L}}}),K=new P({props:{src:Ya,caption:"Auto-generated graphs from Google Forms."}}),Z=new P({props:{src:Za,caption:"My lovely team!"}}),{c(){g(c.$$.fragment),b=n(),h=m("p"),_=p("During Fall 2022, I took a class as a part of my major, The Practice of Design: Ideation to Innovation (ACAD 324). Our final project sought to determine a niche problem space, design a solution, and then evaluate that solution. We tackled the problem in teams of 5 or 6 students each, for about a month. Thanks so much to "),r=m("strong"),A=p("Iris, Jack, James, and Noy,"),E=p(" for being wonderful teammates, and to "),C=m("strong"),o=p("Professor Davina Wolter"),q=p(" for leading the class. This was definitely not a solo mission. I’m excited to discuss the process behind our final product, Pikquik, a physical stand and mobile app for efficient and fun festival food distribution."),Ve=n(),F=m("p"),Tt=p("Don’t want to read the whole thing? "),O=m("a"),zt=p("Check out the final documentation Figma here."),Xe=n(),ee=m("h2"),Bt=p("Step A: analyze and define"),Ke=n(),te=m("p"),Dt=p("Before we began, our team’s scope was restricted to the organization of physical space (still a very generous scope). We jammed on different interpretations of “physical spaces” to develop niche definitions to explore within. We briefly discussed each idea, voted on our favorites, and decided to focus our research on crowd safety at music festivals."),Qe=n(),g(G.$$.fragment),Ye=n(),oe=m("p"),jt=p("After settling within the festival experience scope, we developed our “how might we” statements and problem statement. These were centered around the juxtaposition between a festival’s purpose and its frequently unsafe crowds: that which brings a bunch of fun-loving, music-loving people together, yet potentially leads those same people to getting lost or phsyically crushed."),Ze=n(),S=m("ul"),ae=m("li"),Ce=m("strong"),Ft=p("How Might We…"),Ot=p(" address a problem we both uniquely understand and can apply a multifaceted mindset towards?"),Gt=n(),ie=m("li"),Ie=m("strong"),Ht=p("Problem Statement"),Mt=p(": Festivals should be delightful experiences, yet the spaces they occupy are often the opposite."),et=n(),se=m("p"),Jt=p("We also conducted a few interviews while developing these statements, which echoed the sentiment that festivals can be overwhelming and difficult to navigate. Huzzah! A physical space that could benefit from organization."),tt=n(),g(U.$$.fragment),ot=n(),g(H.$$.fragment),at=n(),re=m("h2"),Vt=p("Step B: ideate and select"),it=n(),ne=m("p"),Xt=p("After defining a problem space, we set to work with ideating potential solutions. We tried multiple different brainstorming methods: encouraging crazy ideas, making forced connections, and exploring “what if” scenarios."),st=n(),le=m("p"),Kt=p("During this time, we also pivoted to focus on the problem of parking at festivals. We chose this new area based on new interviews that highlighted its importants, and we still stuck to the previous theme of optimizing the “less fun” parts of a fast-paced, high-energy festival experience."),rt=n(),g(x.$$.fragment),nt=n(),pe=m("p"),Qt=p("Some hilarious ideas that came out were car vending machines, artist-themed parking areas, and even inflatable hamster balls to protect personal space. After grouping these ideas into central themes, we selected three potential solutions:"),lt=n(),R=m("ul"),fe=m("li"),We=m("strong"),Yt=p("Solution 1:"),Zt=p(" Remove humans from the equation. Expedite the leaving process by creating an automated valet system that retreives cars."),eo=n(),me=m("li"),Le=m("strong"),to=p("Solution 2:"),oo=p(" Improve the old. Redesign the structural and signage systems in current parking lots."),ao=n(),ue=m("li"),Re=m("strong"),io=p("Solution 3:"),so=p(" Make it part of the experience. Coordinate the parking structures with certain acts and performers."),pt=n(),de=m("h2"),ro=p("Step C: implementation and brand"),ft=n(),he=m("p"),no=p("Somehow, we pivoted again! Inspired by our previous goal to alleviate congestion and traffic when leaving a festival parking lot, we also heard quite a lot from interviewees about how difficult it is to buy food at a festival. Festival-goers have to leave the stage areas with their favorite performing artists just to stand in an egregiously long line for expensive food. This time cost is uniquely important because people have paid so much to be at an event like Coachella or Lollapalooza, and they deserve to make the most of their money. We wanted to make this process faster and more fun, so that festival-goers would not only have fun while ordering their food, but they’d also be able to return to the main attractions faster."),mt=n(),ce=m("p"),lo=p("Our new solution was an automated dispensary of fresh food, where users could order food from anywhere in the festival space using a mobile app, and then pick it up at a predetermined time from a locker-like area. This would control foot traffic in the vicinity of the food area and allow vendors to properly estimate demand throughout the duration of the event. Vendor workers would be able to make food on one side of the booth, and place the individual orders into lockers, where users could grab their food from the other side. Here are some of the prototypes we made, as well as our moodboard! Physical prototypes courtesy of Noy and Jack :)"),ut=n(),g(M.$$.fragment),dt=n(),g(J.$$.fragment),ht=n(),g(V.$$.fragment),ct=n(),ge=m("p"),po=p("Iris and I also designed our first wireframes for the food-ordering app. We came up with two visual prototypes to be evaluated:"),gt=n(),g(T.$$.fragment),wt=n(),g(z.$$.fragment),$t=n(),we=m("p"),fo=p("We chose to name the product “pikquik,” since eating at a festival is outdoors and kind of like a picnic, and we also wanted it to be “quick” and seamless. Hence, “pik-quik”!"),vt=n(),$e=m("h2"),mo=p("Step D: evaluation"),yt=n(),ve=m("p"),uo=p("During our evaluation process, we put our visual and physical prototypes by asking potential users (and our professor) for their opinions. For the physical prototype, we were encouraged to explore contact-less options, so that the user would not have to pull a door handle. Instead, they could tap a button from their phone app to activate a sliding door. We were also asked to create a full-size prototype, which we gladly did."),kt=n(),g(X.$$.fragment),bt=n(),ye=m("p"),ho=p("For the visual app, we brought elements of both prototypes together. Certain features that we decided to include in the final design included:"),_t=n(),W=m("ul"),Ne=m("li"),co=p("locational and time features, such as selection fields for pickup details, the map to indicate the pickup station, and the timer countdown"),go=n(),Se=m("li"),wo=p("a swiping passcode feature, which creates friction for users and ensures that their action is intentional, especially when they might be inebriated or distracted at a festival"),$o=n(),Ue=m("li"),vo=p("pictures to show the food items on the initial menu"),yo=n(),xe=m("li"),ko=p("an animation to match the sliding door function that is occuring in real life"),Et=n(),B=m("p"),bo=p("We also incorporated our moodboard into our visual design! These are just a few snapshots, but you can view the Figma with the "),ke=m("a"),_o=p("final documentation and mockups here"),Eo=p("."),qt=n(),g(D.$$.fragment),At=n(),be=m("p"),qo=p("If we had more time to work on this project, I would have loved to add many more of the logistical features that would make sense for this app, such as errors and warnings when users are not near the pickup zone, or if they fail the swiping passcode check, or if they need to communicate with the vendor. Moreover, I’d love to further explore the payment UI/UX for the app. Where would they see and modify this information? What would integrations with Paypal and Apple Pay look like? Should users load money into their digital wallet as part of a separate user flow?"),Pt=n(),_e=m("p"),Ao=p("As another part of our evaluation, we also sent out a survey to our target demographic (GenZ festival-goers). We asked directed questions to reaffirm the most frustrating parts of the festival experience."),Ct=n(),g(K.$$.fragment),It=n(),I=m("p"),Po=p("From this survey, we learned that "),Te=m("strong"),Co=p("92.3 percent"),Io=p(" of respondees viewed their concessions experience as at least moderately important, "),ze=m("strong"),Wo=p("all respondees"),Lo=p(" valued concessions speed, and "),Be=m("strong"),Ro=p("58.8 percent"),No=p(" of respondees found long lines to be their least favorite part of the festival experience. Moreover, it seemed like Pikquik could very well be the answer, as at least "),De=m("strong"),So=p("76.5 percent"),Uo=p(" of respondees would be moderately likely to purchase food at a festival through an app. Success!"),Wt=n(),Ee=m("h2"),xo=p("Final notes"),Lt=n(),Q=m("p"),Y=m("a"),To=p("FINAL DOCUMENTATION HERE!!!"),zo=p(" Please click and take a look, it’s awesome!"),Rt=n(),qe=m("p"),Bo=p("What a ride of a one-month project! My team was instrumental to bringing this idea to life, and we also learned so much about design research throughout the process. We’ve tabled it for now, but maybe you’ll see Pikquik someday in the future!"),Nt=n(),g(Z.$$.fragment),this.h()},l(e){w(c.$$.fragment,e),b=l(e),h=u(e,"P",{});var a=d(h);_=f(a,"During Fall 2022, I took a class as a part of my major, The Practice of Design: Ideation to Innovation (ACAD 324). Our final project sought to determine a niche problem space, design a solution, and then evaluate that solution. We tackled the problem in teams of 5 or 6 students each, for about a month. Thanks so much to "),r=u(a,"STRONG",{});var je=d(r);A=f(je,"Iris, Jack, James, and Noy,"),je.forEach(t),E=f(a," for being wonderful teammates, and to "),C=u(a,"STRONG",{});var Fe=d(C);o=f(Fe,"Professor Davina Wolter"),Fe.forEach(t),q=f(a," for leading the class. This was definitely not a solo mission. I’m excited to discuss the process behind our final product, Pikquik, a physical stand and mobile app for efficient and fun festival food distribution."),a.forEach(t),Ve=l(e),F=u(e,"P",{});var Ae=d(F);Tt=f(Ae,"Don’t want to read the whole thing? "),O=u(Ae,"A",{href:!0,rel:!0});var Oe=d(O);zt=f(Oe,"Check out the final documentation Figma here."),Oe.forEach(t),Ae.forEach(t),Xe=l(e),ee=u(e,"H2",{});var Ge=d(ee);Bt=f(Ge,"Step A: analyze and define"),Ge.forEach(t),Ke=l(e),te=u(e,"P",{});var Mo=d(te);Dt=f(Mo,"Before we began, our team’s scope was restricted to the organization of physical space (still a very generous scope). We jammed on different interpretations of “physical spaces” to develop niche definitions to explore within. We briefly discussed each idea, voted on our favorites, and decided to focus our research on crowd safety at music festivals."),Mo.forEach(t),Qe=l(e),w(G.$$.fragment,e),Ye=l(e),oe=u(e,"P",{});var Jo=d(oe);jt=f(Jo,"After settling within the festival experience scope, we developed our “how might we” statements and problem statement. These were centered around the juxtaposition between a festival’s purpose and its frequently unsafe crowds: that which brings a bunch of fun-loving, music-loving people together, yet potentially leads those same people to getting lost or phsyically crushed."),Jo.forEach(t),Ze=l(e),S=u(e,"UL",{});var Ut=d(S);ae=u(Ut,"LI",{});var Do=d(ae);Ce=u(Do,"STRONG",{});var Vo=d(Ce);Ft=f(Vo,"How Might We…"),Vo.forEach(t),Ot=f(Do," address a problem we both uniquely understand and can apply a multifaceted mindset towards?"),Do.forEach(t),Gt=l(Ut),ie=u(Ut,"LI",{});var jo=d(ie);Ie=u(jo,"STRONG",{});var Xo=d(Ie);Ht=f(Xo,"Problem Statement"),Xo.forEach(t),Mt=f(jo,": Festivals should be delightful experiences, yet the spaces they occupy are often the opposite."),jo.forEach(t),Ut.forEach(t),et=l(e),se=u(e,"P",{});var Ko=d(se);Jt=f(Ko,"We also conducted a few interviews while developing these statements, which echoed the sentiment that festivals can be overwhelming and difficult to navigate. Huzzah! A physical space that could benefit from organization."),Ko.forEach(t),tt=l(e),w(U.$$.fragment,e),ot=l(e),w(H.$$.fragment,e),at=l(e),re=u(e,"H2",{});var Qo=d(re);Vt=f(Qo,"Step B: ideate and select"),Qo.forEach(t),it=l(e),ne=u(e,"P",{});var Yo=d(ne);Xt=f(Yo,"After defining a problem space, we set to work with ideating potential solutions. We tried multiple different brainstorming methods: encouraging crazy ideas, making forced connections, and exploring “what if” scenarios."),Yo.forEach(t),st=l(e),le=u(e,"P",{});var Zo=d(le);Kt=f(Zo,"During this time, we also pivoted to focus on the problem of parking at festivals. We chose this new area based on new interviews that highlighted its importants, and we still stuck to the previous theme of optimizing the “less fun” parts of a fast-paced, high-energy festival experience."),Zo.forEach(t),rt=l(e),w(x.$$.fragment,e),nt=l(e),pe=u(e,"P",{});var ea=d(pe);Qt=f(ea,"Some hilarious ideas that came out were car vending machines, artist-themed parking areas, and even inflatable hamster balls to protect personal space. After grouping these ideas into central themes, we selected three potential solutions:"),ea.forEach(t),lt=l(e),R=u(e,"UL",{});var Pe=d(R);fe=u(Pe,"LI",{});var Fo=d(fe);We=u(Fo,"STRONG",{});var ta=d(We);Yt=f(ta,"Solution 1:"),ta.forEach(t),Zt=f(Fo," Remove humans from the equation. Expedite the leaving process by creating an automated valet system that retreives cars."),Fo.forEach(t),eo=l(Pe),me=u(Pe,"LI",{});var Oo=d(me);Le=u(Oo,"STRONG",{});var oa=d(Le);to=f(oa,"Solution 2:"),oa.forEach(t),oo=f(Oo," Improve the old. Redesign the structural and signage systems in current parking lots."),Oo.forEach(t),ao=l(Pe),ue=u(Pe,"LI",{});var Go=d(ue);Re=u(Go,"STRONG",{});var aa=d(Re);io=f(aa,"Solution 3:"),aa.forEach(t),so=f(Go," Make it part of the experience. Coordinate the parking structures with certain acts and performers."),Go.forEach(t),Pe.forEach(t),pt=l(e),de=u(e,"H2",{});var ia=d(de);ro=f(ia,"Step C: implementation and brand"),ia.forEach(t),ft=l(e),he=u(e,"P",{});var sa=d(he);no=f(sa,"Somehow, we pivoted again! Inspired by our previous goal to alleviate congestion and traffic when leaving a festival parking lot, we also heard quite a lot from interviewees about how difficult it is to buy food at a festival. Festival-goers have to leave the stage areas with their favorite performing artists just to stand in an egregiously long line for expensive food. This time cost is uniquely important because people have paid so much to be at an event like Coachella or Lollapalooza, and they deserve to make the most of their money. We wanted to make this process faster and more fun, so that festival-goers would not only have fun while ordering their food, but they’d also be able to return to the main attractions faster."),sa.forEach(t),mt=l(e),ce=u(e,"P",{});var ra=d(ce);lo=f(ra,"Our new solution was an automated dispensary of fresh food, where users could order food from anywhere in the festival space using a mobile app, and then pick it up at a predetermined time from a locker-like area. This would control foot traffic in the vicinity of the food area and allow vendors to properly estimate demand throughout the duration of the event. Vendor workers would be able to make food on one side of the booth, and place the individual orders into lockers, where users could grab their food from the other side. Here are some of the prototypes we made, as well as our moodboard! Physical prototypes courtesy of Noy and Jack :)"),ra.forEach(t),ut=l(e),w(M.$$.fragment,e),dt=l(e),w(J.$$.fragment,e),ht=l(e),w(V.$$.fragment,e),ct=l(e),ge=u(e,"P",{});var na=d(ge);po=f(na,"Iris and I also designed our first wireframes for the food-ordering app. We came up with two visual prototypes to be evaluated:"),na.forEach(t),gt=l(e),w(T.$$.fragment,e),wt=l(e),w(z.$$.fragment,e),$t=l(e),we=u(e,"P",{});var la=d(we);fo=f(la,"We chose to name the product “pikquik,” since eating at a festival is outdoors and kind of like a picnic, and we also wanted it to be “quick” and seamless. Hence, “pik-quik”!"),la.forEach(t),vt=l(e),$e=u(e,"H2",{});var pa=d($e);mo=f(pa,"Step D: evaluation"),pa.forEach(t),yt=l(e),ve=u(e,"P",{});var fa=d(ve);uo=f(fa,"During our evaluation process, we put our visual and physical prototypes by asking potential users (and our professor) for their opinions. For the physical prototype, we were encouraged to explore contact-less options, so that the user would not have to pull a door handle. Instead, they could tap a button from their phone app to activate a sliding door. We were also asked to create a full-size prototype, which we gladly did."),fa.forEach(t),kt=l(e),w(X.$$.fragment,e),bt=l(e),ye=u(e,"P",{});var ma=d(ye);ho=f(ma,"For the visual app, we brought elements of both prototypes together. Certain features that we decided to include in the final design included:"),ma.forEach(t),_t=l(e),W=u(e,"UL",{});var j=d(W);Ne=u(j,"LI",{});var ua=d(Ne);co=f(ua,"locational and time features, such as selection fields for pickup details, the map to indicate the pickup station, and the timer countdown"),ua.forEach(t),go=l(j),Se=u(j,"LI",{});var da=d(Se);wo=f(da,"a swiping passcode feature, which creates friction for users and ensures that their action is intentional, especially when they might be inebriated or distracted at a festival"),da.forEach(t),$o=l(j),Ue=u(j,"LI",{});var ha=d(Ue);vo=f(ha,"pictures to show the food items on the initial menu"),ha.forEach(t),yo=l(j),xe=u(j,"LI",{});var ca=d(xe);ko=f(ca,"an animation to match the sliding door function that is occuring in real life"),ca.forEach(t),j.forEach(t),Et=l(e),B=u(e,"P",{});var xt=d(B);bo=f(xt,"We also incorporated our moodboard into our visual design! These are just a few snapshots, but you can view the Figma with the "),ke=u(xt,"A",{href:!0});var ga=d(ke);_o=f(ga,"final documentation and mockups here"),ga.forEach(t),Eo=f(xt,"."),xt.forEach(t),qt=l(e),w(D.$$.fragment,e),At=l(e),be=u(e,"P",{});var wa=d(be);qo=f(wa,"If we had more time to work on this project, I would have loved to add many more of the logistical features that would make sense for this app, such as errors and warnings when users are not near the pickup zone, or if they fail the swiping passcode check, or if they need to communicate with the vendor. Moreover, I’d love to further explore the payment UI/UX for the app. Where would they see and modify this information? What would integrations with Paypal and Apple Pay look like? Should users load money into their digital wallet as part of a separate user flow?"),wa.forEach(t),Pt=l(e),_e=u(e,"P",{});var $a=d(_e);Ao=f($a,"As another part of our evaluation, we also sent out a survey to our target demographic (GenZ festival-goers). We asked directed questions to reaffirm the most frustrating parts of the festival experience."),$a.forEach(t),Ct=l(e),w(K.$$.fragment,e),It=l(e),I=u(e,"P",{});var N=d(I);Po=f(N,"From this survey, we learned that "),Te=u(N,"STRONG",{});var va=d(Te);Co=f(va,"92.3 percent"),va.forEach(t),Io=f(N," of respondees viewed their concessions experience as at least moderately important, "),ze=u(N,"STRONG",{});var ya=d(ze);Wo=f(ya,"all respondees"),ya.forEach(t),Lo=f(N," valued concessions speed, and "),Be=u(N,"STRONG",{});var ka=d(Be);Ro=f(ka,"58.8 percent"),ka.forEach(t),No=f(N," of respondees found long lines to be their least favorite part of the festival experience. Moreover, it seemed like Pikquik could very well be the answer, as at least "),De=u(N,"STRONG",{});var ba=d(De);So=f(ba,"76.5 percent"),ba.forEach(t),Uo=f(N," of respondees would be moderately likely to purchase food at a festival through an app. Success!"),N.forEach(t),Wt=l(e),Ee=u(e,"H2",{});var _a=d(Ee);xo=f(_a,"Final notes"),_a.forEach(t),Lt=l(e),Q=u(e,"P",{});var Ho=d(Q);Y=u(Ho,"A",{href:!0,rel:!0});var Ea=d(Y);To=f(Ea,"FINAL DOCUMENTATION HERE!!!"),Ea.forEach(t),zo=f(Ho," Please click and take a look, it’s awesome!"),Ho.forEach(t),Rt=l(e),qe=u(e,"P",{});var qa=d(qe);Bo=f(qa,"What a ride of a one-month project! My team was instrumental to bringing this idea to life, and we also learned so much about design research throughout the process. We’ve tabled it for now, but maybe you’ll see Pikquik someday in the future!"),qa.forEach(t),Nt=l(e),w(Z.$$.fragment,e),this.h()},h(){He(O,"href","https://www.figma.com/proto/soCqCiWy7kz8EsEVEjbmYx/ACAD-324%3A-Pikquik?page-id=0%3A1&type=design&node-id=1-79&viewport=1349%2C326%2C0.04&t=p19qoyQXBc0tKkCW-1&scaling=scale-down&starting-point-node-id=1%3A79&mode=design"),He(O,"rel","nofollow"),He(ke,"href","(https://www.figma.com/proto/soCqCiWy7kz8EsEVEjbmYx/ACAD-324%3A-Pikquik?page-id=0%3A1&type=design&node-id=1-79&viewport=1349%2C326%2C0.04&t=p19qoyQXBc0tKkCW-1&scaling=scale-down&starting-point-node-id=1%3A79&mode=design)"),He(Y,"href","https://www.figma.com/proto/soCqCiWy7kz8EsEVEjbmYx/ACAD-324%3A-Pikquik?page-id=0%3A1&type=design&node-id=1-79&viewport=1349%2C326%2C0.04&t=p19qoyQXBc0tKkCW-1&scaling=scale-down&starting-point-node-id=1%3A79&mode=design"),He(Y,"rel","nofollow")},m(e,a){$(c,e,a),s(e,b,a),s(e,h,a),i(h,_),i(h,r),i(r,A),i(h,E),i(h,C),i(C,o),i(h,q),s(e,Ve,a),s(e,F,a),i(F,Tt),i(F,O),i(O,zt),s(e,Xe,a),s(e,ee,a),i(ee,Bt),s(e,Ke,a),s(e,te,a),i(te,Dt),s(e,Qe,a),$(G,e,a),s(e,Ye,a),s(e,oe,a),i(oe,jt),s(e,Ze,a),s(e,S,a),i(S,ae),i(ae,Ce),i(Ce,Ft),i(ae,Ot),i(S,Gt),i(S,ie),i(ie,Ie),i(Ie,Ht),i(ie,Mt),s(e,et,a),s(e,se,a),i(se,Jt),s(e,tt,a),$(U,e,a),s(e,ot,a),$(H,e,a),s(e,at,a),s(e,re,a),i(re,Vt),s(e,it,a),s(e,ne,a),i(ne,Xt),s(e,st,a),s(e,le,a),i(le,Kt),s(e,rt,a),$(x,e,a),s(e,nt,a),s(e,pe,a),i(pe,Qt),s(e,lt,a),s(e,R,a),i(R,fe),i(fe,We),i(We,Yt),i(fe,Zt),i(R,eo),i(R,me),i(me,Le),i(Le,to),i(me,oo),i(R,ao),i(R,ue),i(ue,Re),i(Re,io),i(ue,so),s(e,pt,a),s(e,de,a),i(de,ro),s(e,ft,a),s(e,he,a),i(he,no),s(e,mt,a),s(e,ce,a),i(ce,lo),s(e,ut,a),$(M,e,a),s(e,dt,a),$(J,e,a),s(e,ht,a),$(V,e,a),s(e,ct,a),s(e,ge,a),i(ge,po),s(e,gt,a),$(T,e,a),s(e,wt,a),$(z,e,a),s(e,$t,a),s(e,we,a),i(we,fo),s(e,vt,a),s(e,$e,a),i($e,mo),s(e,yt,a),s(e,ve,a),i(ve,uo),s(e,kt,a),$(X,e,a),s(e,bt,a),s(e,ye,a),i(ye,ho),s(e,_t,a),s(e,W,a),i(W,Ne),i(Ne,co),i(W,go),i(W,Se),i(Se,wo),i(W,$o),i(W,Ue),i(Ue,vo),i(W,yo),i(W,xe),i(xe,ko),s(e,Et,a),s(e,B,a),i(B,bo),i(B,ke),i(ke,_o),i(B,Eo),s(e,qt,a),$(D,e,a),s(e,At,a),s(e,be,a),i(be,qo),s(e,Pt,a),s(e,_e,a),i(_e,Ao),s(e,Ct,a),$(K,e,a),s(e,It,a),s(e,I,a),i(I,Po),i(I,Te),i(Te,Co),i(I,Io),i(I,ze),i(ze,Wo),i(I,Lo),i(I,Be),i(Be,Ro),i(I,No),i(I,De),i(De,So),i(I,Uo),s(e,Wt,a),s(e,Ee,a),i(Ee,xo),s(e,Lt,a),s(e,Q,a),i(Q,Y),i(Y,To),i(Q,zo),s(e,Rt,a),s(e,qe,a),i(qe,Bo),s(e,Nt,a),$(Z,e,a),St=!0},p(e,[a]){const je={};a&1&&(je.$$scope={dirty:a,ctx:e}),U.$set(je);const Fe={};a&1&&(Fe.$$scope={dirty:a,ctx:e}),x.$set(Fe);const Ae={};a&1&&(Ae.$$scope={dirty:a,ctx:e}),T.$set(Ae);const Oe={};a&1&&(Oe.$$scope={dirty:a,ctx:e}),z.$set(Oe);const Ge={};a&1&&(Ge.$$scope={dirty:a,ctx:e}),D.$set(Ge)},i(e){St||(v(c.$$.fragment,e),v(G.$$.fragment,e),v(U.$$.fragment,e),v(H.$$.fragment,e),v(x.$$.fragment,e),v(M.$$.fragment,e),v(J.$$.fragment,e),v(V.$$.fragment,e),v(T.$$.fragment,e),v(z.$$.fragment,e),v(X.$$.fragment,e),v(D.$$.fragment,e),v(K.$$.fragment,e),v(Z.$$.fragment,e),St=!0)},o(e){y(c.$$.fragment,e),y(G.$$.fragment,e),y(U.$$.fragment,e),y(H.$$.fragment,e),y(x.$$.fragment,e),y(M.$$.fragment,e),y(J.$$.fragment,e),y(V.$$.fragment,e),y(T.$$.fragment,e),y(z.$$.fragment,e),y(X.$$.fragment,e),y(D.$$.fragment,e),y(K.$$.fragment,e),y(Z.$$.fragment,e),St=!1},d(e){k(c,e),e&&t(b),e&&t(h),e&&t(Ve),e&&t(F),e&&t(Xe),e&&t(ee),e&&t(Ke),e&&t(te),e&&t(Qe),k(G,e),e&&t(Ye),e&&t(oe),e&&t(Ze),e&&t(S),e&&t(et),e&&t(se),e&&t(tt),k(U,e),e&&t(ot),k(H,e),e&&t(at),e&&t(re),e&&t(it),e&&t(ne),e&&t(st),e&&t(le),e&&t(rt),k(x,e),e&&t(nt),e&&t(pe),e&&t(lt),e&&t(R),e&&t(pt),e&&t(de),e&&t(ft),e&&t(he),e&&t(mt),e&&t(ce),e&&t(ut),k(M,e),e&&t(dt),k(J,e),e&&t(ht),k(V,e),e&&t(ct),e&&t(ge),e&&t(gt),k(T,e),e&&t(wt),k(z,e),e&&t($t),e&&t(we),e&&t(vt),e&&t($e),e&&t(yt),e&&t(ve),e&&t(kt),k(X,e),e&&t(bt),e&&t(ye),e&&t(_t),e&&t(W),e&&t(Et),e&&t(B),e&&t(qt),k(D,e),e&&t(At),e&&t(be),e&&t(Pt),e&&t(_e),e&&t(Ct),k(K,e),e&&t(It),e&&t(I),e&&t(Wt),e&&t(Ee),e&&t(Lt),e&&t(Q),e&&t(Rt),e&&t(qe),e&&t(Nt),k(Z,e)}}}const ri={title:"Pikquik case study (ACAD 324 final project)",slug:"pikquik",publishDate:"OCT 1 2023",tags:[{name:"ui/ux"},{name:"design"}],thumbnail:"piquik.svg",summary:"A walkthrough of my team's final project for ACAD 324, Pikquik: a spunky UI/UX design for a festival food app."},{title:ni,slug:li,publishDate:pi,tags:fi,thumbnail:mi,summary:ui}=ri;class gi extends Aa{constructor(c){super(),Pa(this,c,null,si,Ca,{})}}export{gi as default,ri as metadata};
+import {
+	S as Aa,
+	i as Pa,
+	s as Ca,
+	w as g,
+	a as n,
+	k as m,
+	q as p,
+	x as w,
+	c as l,
+	l as u,
+	m as d,
+	r as f,
+	h as t,
+	n as He,
+	y as $,
+	b as s,
+	J as i,
+	f as v,
+	t as y,
+	z as k,
+	B as Je
+} from '../../../../chunks/index-cf78bce8.js';
+import { P as Ia, B as P } from '../../../../chunks/BlogImage-f532aefd.js';
+import { B as Me } from '../../../../chunks/BlogGallery-87cb4976.js';
+const Wa = '' + new URL('../../../../assets/pikquik-brainstorm-21586064.png', import.meta.url).href,
+	La = '' + new URL('../../../../assets/pikquik-interview-1-4014d4a9.png', import.meta.url).href,
+	Ra = '' + new URL('../../../../assets/pikquik-interview-2-b54ae325.png', import.meta.url).href,
+	Na = '' + new URL('../../../../assets/pikquik-interview-3-21a025b7.png', import.meta.url).href,
+	Sa = '' + new URL('../../../../assets/pikquik-ideate-69611df8.png', import.meta.url).href,
+	Ua = '' + new URL('../../../../assets/pikquik-synthesize-760d896c.png', import.meta.url).href,
+	xa = '' + new URL('../../../../assets/pikquik-proto-c8b49604.png', import.meta.url).href,
+	Ta = '' + new URL('../../../../assets/pikquik-proto-2-c1d95090.png', import.meta.url).href,
+	za = '' + new URL('../../../../assets/pikquik-proto-3-d58b56b3.png', import.meta.url).href,
+	Ba = '' + new URL('../../../../assets/pikquik-moodboard-9372d171.png', import.meta.url).href,
+	Da = '' + new URL('../../../../assets/pikquik-app-a-1-76fbabf1.png', import.meta.url).href,
+	ja = '' + new URL('../../../../assets/pikquik-app-a-2-1cb30300.png', import.meta.url).href,
+	Fa = '' + new URL('../../../../assets/pikquik-app-a-3-5502c69c.png', import.meta.url).href,
+	Oa = '' + new URL('../../../../assets/pikquik-app-a-4-cdefce1e.png', import.meta.url).href,
+	Ga = '' + new URL('../../../../assets/pikquik-app-b-1-37a829c6.png', import.meta.url).href,
+	Ha = '' + new URL('../../../../assets/pikquik-app-b-2-bfe66719.png', import.meta.url).href,
+	Ma = '' + new URL('../../../../assets/pikquik-app-b-3-339c7456.png', import.meta.url).href,
+	Ja = '' + new URL('../../../../assets/pikquik-app-b-4-28e3c2fc.png', import.meta.url).href,
+	Va = '' + new URL('../../../../assets/pikquik-app-c-1-0f568ccc.png', import.meta.url).href,
+	Xa = '' + new URL('../../../../assets/pikquik-app-c-2-71695024.png', import.meta.url).href,
+	Ka = '' + new URL('../../../../assets/pikquik-app-c-3-3e01f0f3.png', import.meta.url).href,
+	Qa = '' + new URL('../../../../assets/pikquik-app-c-4-6d7778ae.png', import.meta.url).href,
+	Ya = '' + new URL('../../../../assets/pikquik-graph-7b4540cd.png', import.meta.url).href,
+	Za = '' + new URL('../../../../assets/pikquik-team-02bd8958.png', import.meta.url).href;
+function ei(L) {
+	let c, b, h, _;
+	return (
+		(c = new P({
+			props: {
+				className: 'gallery-img',
+				src: La,
+				caption: 'An interview conducted with Tucker Gannon, a sophomore at USC.'
+			}
+		})),
+		(h = new P({
+			props: {
+				className: 'gallery-img',
+				src: Ra,
+				caption: 'An interview conducted with Hanson Leung, a junior at USC.'
+			}
+		})),
+		{
+			c() {
+				(g(c.$$.fragment), (b = n()), g(h.$$.fragment));
+			},
+			l(r) {
+				(w(c.$$.fragment, r), (b = l(r)), w(h.$$.fragment, r));
+			},
+			m(r, A) {
+				($(c, r, A), s(r, b, A), $(h, r, A), (_ = !0));
+			},
+			p: Je,
+			i(r) {
+				_ || (v(c.$$.fragment, r), v(h.$$.fragment, r), (_ = !0));
+			},
+			o(r) {
+				(y(c.$$.fragment, r), y(h.$$.fragment, r), (_ = !1));
+			},
+			d(r) {
+				(k(c, r), r && t(b), k(h, r));
+			}
+		}
+	);
+}
+function ti(L) {
+	let c, b, h, _;
+	return (
+		(c = new P({
+			props: {
+				className: 'gallery-img',
+				src: Sa,
+				caption: 'Our idea board, centered around blue sticky note themes.'
+			}
+		})),
+		(h = new P({
+			props: { className: 'gallery-img', src: Ua, caption: 'Our thematically grouped ideas!' }
+		})),
+		{
+			c() {
+				(g(c.$$.fragment), (b = n()), g(h.$$.fragment));
+			},
+			l(r) {
+				(w(c.$$.fragment, r), (b = l(r)), w(h.$$.fragment, r));
+			},
+			m(r, A) {
+				($(c, r, A), s(r, b, A), $(h, r, A), (_ = !0));
+			},
+			p: Je,
+			i(r) {
+				_ || (v(c.$$.fragment, r), v(h.$$.fragment, r), (_ = !0));
+			},
+			o(r) {
+				(y(c.$$.fragment, r), y(h.$$.fragment, r), (_ = !1));
+			},
+			d(r) {
+				(k(c, r), r && t(b), k(h, r));
+			}
+		}
+	);
+}
+function oi(L) {
+	let c, b, h, _, r, A, E, C;
+	return (
+		(c = new P({
+			props: { className: 'gallery-img', src: Da, caption: 'Prototype A: initial menu' }
+		})),
+		(h = new P({
+			props: { className: 'gallery-img', src: ja, caption: 'Prototype A: confirm order' }
+		})),
+		(r = new P({
+			props: { className: 'gallery-img', src: Fa, caption: 'Prototype A: pickup information' }
+		})),
+		(E = new P({
+			props: { className: 'gallery-img', src: Oa, caption: 'Prototype A: pickup ready!' }
+		})),
+		{
+			c() {
+				(g(c.$$.fragment),
+					(b = n()),
+					g(h.$$.fragment),
+					(_ = n()),
+					g(r.$$.fragment),
+					(A = n()),
+					g(E.$$.fragment));
+			},
+			l(o) {
+				(w(c.$$.fragment, o),
+					(b = l(o)),
+					w(h.$$.fragment, o),
+					(_ = l(o)),
+					w(r.$$.fragment, o),
+					(A = l(o)),
+					w(E.$$.fragment, o));
+			},
+			m(o, q) {
+				($(c, o, q),
+					s(o, b, q),
+					$(h, o, q),
+					s(o, _, q),
+					$(r, o, q),
+					s(o, A, q),
+					$(E, o, q),
+					(C = !0));
+			},
+			p: Je,
+			i(o) {
+				C ||
+					(v(c.$$.fragment, o),
+					v(h.$$.fragment, o),
+					v(r.$$.fragment, o),
+					v(E.$$.fragment, o),
+					(C = !0));
+			},
+			o(o) {
+				(y(c.$$.fragment, o),
+					y(h.$$.fragment, o),
+					y(r.$$.fragment, o),
+					y(E.$$.fragment, o),
+					(C = !1));
+			},
+			d(o) {
+				(k(c, o), o && t(b), k(h, o), o && t(_), k(r, o), o && t(A), k(E, o));
+			}
+		}
+	);
+}
+function ai(L) {
+	let c, b, h, _, r, A, E, C;
+	return (
+		(c = new P({
+			props: { className: 'gallery-img', src: Ga, caption: 'Prototype B: initial menu' }
+		})),
+		(h = new P({
+			props: { className: 'gallery-img', src: Ha, caption: 'Prototype B: view individual item' }
+		})),
+		(r = new P({
+			props: { className: 'gallery-img', src: Ma, caption: 'Prototype B: confirm order' }
+		})),
+		(E = new P({
+			props: { className: 'gallery-img', src: Ja, caption: 'Prototype B: picking ready!' }
+		})),
+		{
+			c() {
+				(g(c.$$.fragment),
+					(b = n()),
+					g(h.$$.fragment),
+					(_ = n()),
+					g(r.$$.fragment),
+					(A = n()),
+					g(E.$$.fragment));
+			},
+			l(o) {
+				(w(c.$$.fragment, o),
+					(b = l(o)),
+					w(h.$$.fragment, o),
+					(_ = l(o)),
+					w(r.$$.fragment, o),
+					(A = l(o)),
+					w(E.$$.fragment, o));
+			},
+			m(o, q) {
+				($(c, o, q),
+					s(o, b, q),
+					$(h, o, q),
+					s(o, _, q),
+					$(r, o, q),
+					s(o, A, q),
+					$(E, o, q),
+					(C = !0));
+			},
+			p: Je,
+			i(o) {
+				C ||
+					(v(c.$$.fragment, o),
+					v(h.$$.fragment, o),
+					v(r.$$.fragment, o),
+					v(E.$$.fragment, o),
+					(C = !0));
+			},
+			o(o) {
+				(y(c.$$.fragment, o),
+					y(h.$$.fragment, o),
+					y(r.$$.fragment, o),
+					y(E.$$.fragment, o),
+					(C = !1));
+			},
+			d(o) {
+				(k(c, o), o && t(b), k(h, o), o && t(_), k(r, o), o && t(A), k(E, o));
+			}
+		}
+	);
+}
+function ii(L) {
+	let c, b, h, _, r, A, E, C;
+	return (
+		(c = new P({
+			props: { className: 'gallery-img', src: Va, caption: 'Prototype B: initial menu' }
+		})),
+		(h = new P({
+			props: { className: 'gallery-img', src: Xa, caption: 'Prototype B: confirm order' }
+		})),
+		(r = new P({
+			props: { className: 'gallery-img', src: Ka, caption: 'Prototype B: pickup information' }
+		})),
+		(E = new P({
+			props: { className: 'gallery-img', src: Qa, caption: 'Prototype B: pickup ready!' }
+		})),
+		{
+			c() {
+				(g(c.$$.fragment),
+					(b = n()),
+					g(h.$$.fragment),
+					(_ = n()),
+					g(r.$$.fragment),
+					(A = n()),
+					g(E.$$.fragment));
+			},
+			l(o) {
+				(w(c.$$.fragment, o),
+					(b = l(o)),
+					w(h.$$.fragment, o),
+					(_ = l(o)),
+					w(r.$$.fragment, o),
+					(A = l(o)),
+					w(E.$$.fragment, o));
+			},
+			m(o, q) {
+				($(c, o, q),
+					s(o, b, q),
+					$(h, o, q),
+					s(o, _, q),
+					$(r, o, q),
+					s(o, A, q),
+					$(E, o, q),
+					(C = !0));
+			},
+			p: Je,
+			i(o) {
+				C ||
+					(v(c.$$.fragment, o),
+					v(h.$$.fragment, o),
+					v(r.$$.fragment, o),
+					v(E.$$.fragment, o),
+					(C = !0));
+			},
+			o(o) {
+				(y(c.$$.fragment, o),
+					y(h.$$.fragment, o),
+					y(r.$$.fragment, o),
+					y(E.$$.fragment, o),
+					(C = !1));
+			},
+			d(o) {
+				(k(c, o), o && t(b), k(h, o), o && t(_), k(r, o), o && t(A), k(E, o));
+			}
+		}
+	);
+}
+function si(L) {
+	let c,
+		b,
+		h,
+		_,
+		r,
+		A,
+		E,
+		C,
+		o,
+		q,
+		Ve,
+		F,
+		Tt,
+		O,
+		zt,
+		Xe,
+		ee,
+		Bt,
+		Ke,
+		te,
+		Dt,
+		Qe,
+		G,
+		Ye,
+		oe,
+		jt,
+		Ze,
+		S,
+		ae,
+		Ce,
+		Ft,
+		Ot,
+		Gt,
+		ie,
+		Ie,
+		Ht,
+		Mt,
+		et,
+		se,
+		Jt,
+		tt,
+		U,
+		ot,
+		H,
+		at,
+		re,
+		Vt,
+		it,
+		ne,
+		Xt,
+		st,
+		le,
+		Kt,
+		rt,
+		x,
+		nt,
+		pe,
+		Qt,
+		lt,
+		R,
+		fe,
+		We,
+		Yt,
+		Zt,
+		eo,
+		me,
+		Le,
+		to,
+		oo,
+		ao,
+		ue,
+		Re,
+		io,
+		so,
+		pt,
+		de,
+		ro,
+		ft,
+		he,
+		no,
+		mt,
+		ce,
+		lo,
+		ut,
+		M,
+		dt,
+		J,
+		ht,
+		V,
+		ct,
+		ge,
+		po,
+		gt,
+		T,
+		wt,
+		z,
+		$t,
+		we,
+		fo,
+		vt,
+		$e,
+		mo,
+		yt,
+		ve,
+		uo,
+		kt,
+		X,
+		bt,
+		ye,
+		ho,
+		_t,
+		W,
+		Ne,
+		co,
+		go,
+		Se,
+		wo,
+		$o,
+		Ue,
+		vo,
+		yo,
+		xe,
+		ko,
+		Et,
+		B,
+		bo,
+		ke,
+		_o,
+		Eo,
+		qt,
+		D,
+		At,
+		be,
+		qo,
+		Pt,
+		_e,
+		Ao,
+		Ct,
+		K,
+		It,
+		I,
+		Po,
+		Te,
+		Co,
+		Io,
+		ze,
+		Wo,
+		Lo,
+		Be,
+		Ro,
+		No,
+		De,
+		So,
+		Uo,
+		Wt,
+		Ee,
+		xo,
+		Lt,
+		Q,
+		Y,
+		To,
+		zo,
+		Rt,
+		qe,
+		Bo,
+		Nt,
+		Z,
+		St;
+	return (
+		(c = new Ia({
+			props: { title: ni, publishDate: pi, tags: fi, slug: li, thumbnail: mi, summary: ui }
+		})),
+		(G = new P({
+			props: {
+				className: 'half-img',
+				src: Wa,
+				caption:
+					'We came up with all sorts of ideas on FigJam, from the dining halls to porta potties to public transit.'
+			}
+		})),
+		(U = new Me({ props: { columns: '2', $$slots: { default: [ei] }, $$scope: { ctx: L } } })),
+		(H = new P({
+			props: { src: Na, caption: 'An interview conducted with Justin Chang, class of 2021.' }
+		})),
+		(x = new Me({ props: { columns: '2', $$slots: { default: [ti] }, $$scope: { ctx: L } } })),
+		(M = new P({
+			props: {
+				src: Ta,
+				caption: 'A wooden mini-mockup of the food stand, with lockers facing the festival-goers.'
+			}
+		})),
+		(J = new P({
+			props: {
+				src: xa,
+				caption:
+					"A blender render of the locker's two-sided functionality: one for festival-goers, and one for food workers."
+			}
+		})),
+		(V = new P({
+			props: {
+				src: Ba,
+				caption: 'Visual design inspiration: neon colors and bold shapes, like Gov Ball!'
+			}
+		})),
+		(T = new Me({ props: { columns: '4', $$slots: { default: [oi] }, $$scope: { ctx: L } } })),
+		(z = new Me({ props: { columns: '4', $$slots: { default: [ai] }, $$scope: { ctx: L } } })),
+		(X = new P({
+			props: {
+				className: 'half-img',
+				src: za,
+				caption: 'A full-size prototype of just one column of lockers.'
+			}
+		})),
+		(D = new Me({ props: { columns: '4', $$slots: { default: [ii] }, $$scope: { ctx: L } } })),
+		(K = new P({ props: { src: Ya, caption: 'Auto-generated graphs from Google Forms.' } })),
+		(Z = new P({ props: { src: Za, caption: 'My lovely team!' } })),
+		{
+			c() {
+				(g(c.$$.fragment),
+					(b = n()),
+					(h = m('p')),
+					(_ = p(
+						'During Fall 2022, I took a class as a part of my major, The Practice of Design: Ideation to Innovation (ACAD 324). Our final project sought to determine a niche problem space, design a solution, and then evaluate that solution. We tackled the problem in teams of 5 or 6 students each, for about a month. Thanks so much to '
+					)),
+					(r = m('strong')),
+					(A = p('Iris, Jack, James, and Noy,')),
+					(E = p(' for being wonderful teammates, and to ')),
+					(C = m('strong')),
+					(o = p('Professor Davina Wolter')),
+					(q = p(
+						' for leading the class. This was definitely not a solo mission. I’m excited to discuss the process behind our final product, Pikquik, a physical stand and mobile app for efficient and fun festival food distribution.'
+					)),
+					(Ve = n()),
+					(F = m('p')),
+					(Tt = p('Don’t want to read the whole thing? ')),
+					(O = m('a')),
+					(zt = p('Check out the final documentation Figma here.')),
+					(Xe = n()),
+					(ee = m('h2')),
+					(Bt = p('Step A: analyze and define')),
+					(Ke = n()),
+					(te = m('p')),
+					(Dt = p(
+						'Before we began, our team’s scope was restricted to the organization of physical space (still a very generous scope). We jammed on different interpretations of “physical spaces” to develop niche definitions to explore within. We briefly discussed each idea, voted on our favorites, and decided to focus our research on crowd safety at music festivals.'
+					)),
+					(Qe = n()),
+					g(G.$$.fragment),
+					(Ye = n()),
+					(oe = m('p')),
+					(jt = p(
+						'After settling within the festival experience scope, we developed our “how might we” statements and problem statement. These were centered around the juxtaposition between a festival’s purpose and its frequently unsafe crowds: that which brings a bunch of fun-loving, music-loving people together, yet potentially leads those same people to getting lost or phsyically crushed.'
+					)),
+					(Ze = n()),
+					(S = m('ul')),
+					(ae = m('li')),
+					(Ce = m('strong')),
+					(Ft = p('How Might We…')),
+					(Ot = p(
+						' address a problem we both uniquely understand and can apply a multifaceted mindset towards?'
+					)),
+					(Gt = n()),
+					(ie = m('li')),
+					(Ie = m('strong')),
+					(Ht = p('Problem Statement')),
+					(Mt = p(
+						': Festivals should be delightful experiences, yet the spaces they occupy are often the opposite.'
+					)),
+					(et = n()),
+					(se = m('p')),
+					(Jt = p(
+						'We also conducted a few interviews while developing these statements, which echoed the sentiment that festivals can be overwhelming and difficult to navigate. Huzzah! A physical space that could benefit from organization.'
+					)),
+					(tt = n()),
+					g(U.$$.fragment),
+					(ot = n()),
+					g(H.$$.fragment),
+					(at = n()),
+					(re = m('h2')),
+					(Vt = p('Step B: ideate and select')),
+					(it = n()),
+					(ne = m('p')),
+					(Xt = p(
+						'After defining a problem space, we set to work with ideating potential solutions. We tried multiple different brainstorming methods: encouraging crazy ideas, making forced connections, and exploring “what if” scenarios.'
+					)),
+					(st = n()),
+					(le = m('p')),
+					(Kt = p(
+						'During this time, we also pivoted to focus on the problem of parking at festivals. We chose this new area based on new interviews that highlighted its importants, and we still stuck to the previous theme of optimizing the “less fun” parts of a fast-paced, high-energy festival experience.'
+					)),
+					(rt = n()),
+					g(x.$$.fragment),
+					(nt = n()),
+					(pe = m('p')),
+					(Qt = p(
+						'Some hilarious ideas that came out were car vending machines, artist-themed parking areas, and even inflatable hamster balls to protect personal space. After grouping these ideas into central themes, we selected three potential solutions:'
+					)),
+					(lt = n()),
+					(R = m('ul')),
+					(fe = m('li')),
+					(We = m('strong')),
+					(Yt = p('Solution 1:')),
+					(Zt = p(
+						' Remove humans from the equation. Expedite the leaving process by creating an automated valet system that retreives cars.'
+					)),
+					(eo = n()),
+					(me = m('li')),
+					(Le = m('strong')),
+					(to = p('Solution 2:')),
+					(oo = p(
+						' Improve the old. Redesign the structural and signage systems in current parking lots.'
+					)),
+					(ao = n()),
+					(ue = m('li')),
+					(Re = m('strong')),
+					(io = p('Solution 3:')),
+					(so = p(
+						' Make it part of the experience. Coordinate the parking structures with certain acts and performers.'
+					)),
+					(pt = n()),
+					(de = m('h2')),
+					(ro = p('Step C: implementation and brand')),
+					(ft = n()),
+					(he = m('p')),
+					(no = p(
+						'Somehow, we pivoted again! Inspired by our previous goal to alleviate congestion and traffic when leaving a festival parking lot, we also heard quite a lot from interviewees about how difficult it is to buy food at a festival. Festival-goers have to leave the stage areas with their favorite performing artists just to stand in an egregiously long line for expensive food. This time cost is uniquely important because people have paid so much to be at an event like Coachella or Lollapalooza, and they deserve to make the most of their money. We wanted to make this process faster and more fun, so that festival-goers would not only have fun while ordering their food, but they’d also be able to return to the main attractions faster.'
+					)),
+					(mt = n()),
+					(ce = m('p')),
+					(lo = p(
+						'Our new solution was an automated dispensary of fresh food, where users could order food from anywhere in the festival space using a mobile app, and then pick it up at a predetermined time from a locker-like area. This would control foot traffic in the vicinity of the food area and allow vendors to properly estimate demand throughout the duration of the event. Vendor workers would be able to make food on one side of the booth, and place the individual orders into lockers, where users could grab their food from the other side. Here are some of the prototypes we made, as well as our moodboard! Physical prototypes courtesy of Noy and Jack :)'
+					)),
+					(ut = n()),
+					g(M.$$.fragment),
+					(dt = n()),
+					g(J.$$.fragment),
+					(ht = n()),
+					g(V.$$.fragment),
+					(ct = n()),
+					(ge = m('p')),
+					(po = p(
+						'Iris and I also designed our first wireframes for the food-ordering app. We came up with two visual prototypes to be evaluated:'
+					)),
+					(gt = n()),
+					g(T.$$.fragment),
+					(wt = n()),
+					g(z.$$.fragment),
+					($t = n()),
+					(we = m('p')),
+					(fo = p(
+						'We chose to name the product “pikquik,” since eating at a festival is outdoors and kind of like a picnic, and we also wanted it to be “quick” and seamless. Hence, “pik-quik”!'
+					)),
+					(vt = n()),
+					($e = m('h2')),
+					(mo = p('Step D: evaluation')),
+					(yt = n()),
+					(ve = m('p')),
+					(uo = p(
+						'During our evaluation process, we put our visual and physical prototypes by asking potential users (and our professor) for their opinions. For the physical prototype, we were encouraged to explore contact-less options, so that the user would not have to pull a door handle. Instead, they could tap a button from their phone app to activate a sliding door. We were also asked to create a full-size prototype, which we gladly did.'
+					)),
+					(kt = n()),
+					g(X.$$.fragment),
+					(bt = n()),
+					(ye = m('p')),
+					(ho = p(
+						'For the visual app, we brought elements of both prototypes together. Certain features that we decided to include in the final design included:'
+					)),
+					(_t = n()),
+					(W = m('ul')),
+					(Ne = m('li')),
+					(co = p(
+						'locational and time features, such as selection fields for pickup details, the map to indicate the pickup station, and the timer countdown'
+					)),
+					(go = n()),
+					(Se = m('li')),
+					(wo = p(
+						'a swiping passcode feature, which creates friction for users and ensures that their action is intentional, especially when they might be inebriated or distracted at a festival'
+					)),
+					($o = n()),
+					(Ue = m('li')),
+					(vo = p('pictures to show the food items on the initial menu')),
+					(yo = n()),
+					(xe = m('li')),
+					(ko = p('an animation to match the sliding door function that is occuring in real life')),
+					(Et = n()),
+					(B = m('p')),
+					(bo = p(
+						'We also incorporated our moodboard into our visual design! These are just a few snapshots, but you can view the Figma with the '
+					)),
+					(ke = m('a')),
+					(_o = p('final documentation and mockups here')),
+					(Eo = p('.')),
+					(qt = n()),
+					g(D.$$.fragment),
+					(At = n()),
+					(be = m('p')),
+					(qo = p(
+						'If we had more time to work on this project, I would have loved to add many more of the logistical features that would make sense for this app, such as errors and warnings when users are not near the pickup zone, or if they fail the swiping passcode check, or if they need to communicate with the vendor. Moreover, I’d love to further explore the payment UI/UX for the app. Where would they see and modify this information? What would integrations with Paypal and Apple Pay look like? Should users load money into their digital wallet as part of a separate user flow?'
+					)),
+					(Pt = n()),
+					(_e = m('p')),
+					(Ao = p(
+						'As another part of our evaluation, we also sent out a survey to our target demographic (GenZ festival-goers). We asked directed questions to reaffirm the most frustrating parts of the festival experience.'
+					)),
+					(Ct = n()),
+					g(K.$$.fragment),
+					(It = n()),
+					(I = m('p')),
+					(Po = p('From this survey, we learned that ')),
+					(Te = m('strong')),
+					(Co = p('92.3 percent')),
+					(Io = p(
+						' of respondees viewed their concessions experience as at least moderately important, '
+					)),
+					(ze = m('strong')),
+					(Wo = p('all respondees')),
+					(Lo = p(' valued concessions speed, and ')),
+					(Be = m('strong')),
+					(Ro = p('58.8 percent')),
+					(No = p(
+						' of respondees found long lines to be their least favorite part of the festival experience. Moreover, it seemed like Pikquik could very well be the answer, as at least '
+					)),
+					(De = m('strong')),
+					(So = p('76.5 percent')),
+					(Uo = p(
+						' of respondees would be moderately likely to purchase food at a festival through an app. Success!'
+					)),
+					(Wt = n()),
+					(Ee = m('h2')),
+					(xo = p('Final notes')),
+					(Lt = n()),
+					(Q = m('p')),
+					(Y = m('a')),
+					(To = p('FINAL DOCUMENTATION HERE!!!')),
+					(zo = p(' Please click and take a look, it’s awesome!')),
+					(Rt = n()),
+					(qe = m('p')),
+					(Bo = p(
+						'What a ride of a one-month project! My team was instrumental to bringing this idea to life, and we also learned so much about design research throughout the process. We’ve tabled it for now, but maybe you’ll see Pikquik someday in the future!'
+					)),
+					(Nt = n()),
+					g(Z.$$.fragment),
+					this.h());
+			},
+			l(e) {
+				(w(c.$$.fragment, e), (b = l(e)), (h = u(e, 'P', {})));
+				var a = d(h);
+				((_ = f(
+					a,
+					'During Fall 2022, I took a class as a part of my major, The Practice of Design: Ideation to Innovation (ACAD 324). Our final project sought to determine a niche problem space, design a solution, and then evaluate that solution. We tackled the problem in teams of 5 or 6 students each, for about a month. Thanks so much to '
+				)),
+					(r = u(a, 'STRONG', {})));
+				var je = d(r);
+				((A = f(je, 'Iris, Jack, James, and Noy,')),
+					je.forEach(t),
+					(E = f(a, ' for being wonderful teammates, and to ')),
+					(C = u(a, 'STRONG', {})));
+				var Fe = d(C);
+				((o = f(Fe, 'Professor Davina Wolter')),
+					Fe.forEach(t),
+					(q = f(
+						a,
+						' for leading the class. This was definitely not a solo mission. I’m excited to discuss the process behind our final product, Pikquik, a physical stand and mobile app for efficient and fun festival food distribution.'
+					)),
+					a.forEach(t),
+					(Ve = l(e)),
+					(F = u(e, 'P', {})));
+				var Ae = d(F);
+				((Tt = f(Ae, 'Don’t want to read the whole thing? ')),
+					(O = u(Ae, 'A', { href: !0, rel: !0 })));
+				var Oe = d(O);
+				((zt = f(Oe, 'Check out the final documentation Figma here.')),
+					Oe.forEach(t),
+					Ae.forEach(t),
+					(Xe = l(e)),
+					(ee = u(e, 'H2', {})));
+				var Ge = d(ee);
+				((Bt = f(Ge, 'Step A: analyze and define')),
+					Ge.forEach(t),
+					(Ke = l(e)),
+					(te = u(e, 'P', {})));
+				var Mo = d(te);
+				((Dt = f(
+					Mo,
+					'Before we began, our team’s scope was restricted to the organization of physical space (still a very generous scope). We jammed on different interpretations of “physical spaces” to develop niche definitions to explore within. We briefly discussed each idea, voted on our favorites, and decided to focus our research on crowd safety at music festivals.'
+				)),
+					Mo.forEach(t),
+					(Qe = l(e)),
+					w(G.$$.fragment, e),
+					(Ye = l(e)),
+					(oe = u(e, 'P', {})));
+				var Jo = d(oe);
+				((jt = f(
+					Jo,
+					'After settling within the festival experience scope, we developed our “how might we” statements and problem statement. These were centered around the juxtaposition between a festival’s purpose and its frequently unsafe crowds: that which brings a bunch of fun-loving, music-loving people together, yet potentially leads those same people to getting lost or phsyically crushed.'
+				)),
+					Jo.forEach(t),
+					(Ze = l(e)),
+					(S = u(e, 'UL', {})));
+				var Ut = d(S);
+				ae = u(Ut, 'LI', {});
+				var Do = d(ae);
+				Ce = u(Do, 'STRONG', {});
+				var Vo = d(Ce);
+				((Ft = f(Vo, 'How Might We…')),
+					Vo.forEach(t),
+					(Ot = f(
+						Do,
+						' address a problem we both uniquely understand and can apply a multifaceted mindset towards?'
+					)),
+					Do.forEach(t),
+					(Gt = l(Ut)),
+					(ie = u(Ut, 'LI', {})));
+				var jo = d(ie);
+				Ie = u(jo, 'STRONG', {});
+				var Xo = d(Ie);
+				((Ht = f(Xo, 'Problem Statement')),
+					Xo.forEach(t),
+					(Mt = f(
+						jo,
+						': Festivals should be delightful experiences, yet the spaces they occupy are often the opposite.'
+					)),
+					jo.forEach(t),
+					Ut.forEach(t),
+					(et = l(e)),
+					(se = u(e, 'P', {})));
+				var Ko = d(se);
+				((Jt = f(
+					Ko,
+					'We also conducted a few interviews while developing these statements, which echoed the sentiment that festivals can be overwhelming and difficult to navigate. Huzzah! A physical space that could benefit from organization.'
+				)),
+					Ko.forEach(t),
+					(tt = l(e)),
+					w(U.$$.fragment, e),
+					(ot = l(e)),
+					w(H.$$.fragment, e),
+					(at = l(e)),
+					(re = u(e, 'H2', {})));
+				var Qo = d(re);
+				((Vt = f(Qo, 'Step B: ideate and select')),
+					Qo.forEach(t),
+					(it = l(e)),
+					(ne = u(e, 'P', {})));
+				var Yo = d(ne);
+				((Xt = f(
+					Yo,
+					'After defining a problem space, we set to work with ideating potential solutions. We tried multiple different brainstorming methods: encouraging crazy ideas, making forced connections, and exploring “what if” scenarios.'
+				)),
+					Yo.forEach(t),
+					(st = l(e)),
+					(le = u(e, 'P', {})));
+				var Zo = d(le);
+				((Kt = f(
+					Zo,
+					'During this time, we also pivoted to focus on the problem of parking at festivals. We chose this new area based on new interviews that highlighted its importants, and we still stuck to the previous theme of optimizing the “less fun” parts of a fast-paced, high-energy festival experience.'
+				)),
+					Zo.forEach(t),
+					(rt = l(e)),
+					w(x.$$.fragment, e),
+					(nt = l(e)),
+					(pe = u(e, 'P', {})));
+				var ea = d(pe);
+				((Qt = f(
+					ea,
+					'Some hilarious ideas that came out were car vending machines, artist-themed parking areas, and even inflatable hamster balls to protect personal space. After grouping these ideas into central themes, we selected three potential solutions:'
+				)),
+					ea.forEach(t),
+					(lt = l(e)),
+					(R = u(e, 'UL', {})));
+				var Pe = d(R);
+				fe = u(Pe, 'LI', {});
+				var Fo = d(fe);
+				We = u(Fo, 'STRONG', {});
+				var ta = d(We);
+				((Yt = f(ta, 'Solution 1:')),
+					ta.forEach(t),
+					(Zt = f(
+						Fo,
+						' Remove humans from the equation. Expedite the leaving process by creating an automated valet system that retreives cars.'
+					)),
+					Fo.forEach(t),
+					(eo = l(Pe)),
+					(me = u(Pe, 'LI', {})));
+				var Oo = d(me);
+				Le = u(Oo, 'STRONG', {});
+				var oa = d(Le);
+				((to = f(oa, 'Solution 2:')),
+					oa.forEach(t),
+					(oo = f(
+						Oo,
+						' Improve the old. Redesign the structural and signage systems in current parking lots.'
+					)),
+					Oo.forEach(t),
+					(ao = l(Pe)),
+					(ue = u(Pe, 'LI', {})));
+				var Go = d(ue);
+				Re = u(Go, 'STRONG', {});
+				var aa = d(Re);
+				((io = f(aa, 'Solution 3:')),
+					aa.forEach(t),
+					(so = f(
+						Go,
+						' Make it part of the experience. Coordinate the parking structures with certain acts and performers.'
+					)),
+					Go.forEach(t),
+					Pe.forEach(t),
+					(pt = l(e)),
+					(de = u(e, 'H2', {})));
+				var ia = d(de);
+				((ro = f(ia, 'Step C: implementation and brand')),
+					ia.forEach(t),
+					(ft = l(e)),
+					(he = u(e, 'P', {})));
+				var sa = d(he);
+				((no = f(
+					sa,
+					'Somehow, we pivoted again! Inspired by our previous goal to alleviate congestion and traffic when leaving a festival parking lot, we also heard quite a lot from interviewees about how difficult it is to buy food at a festival. Festival-goers have to leave the stage areas with their favorite performing artists just to stand in an egregiously long line for expensive food. This time cost is uniquely important because people have paid so much to be at an event like Coachella or Lollapalooza, and they deserve to make the most of their money. We wanted to make this process faster and more fun, so that festival-goers would not only have fun while ordering their food, but they’d also be able to return to the main attractions faster.'
+				)),
+					sa.forEach(t),
+					(mt = l(e)),
+					(ce = u(e, 'P', {})));
+				var ra = d(ce);
+				((lo = f(
+					ra,
+					'Our new solution was an automated dispensary of fresh food, where users could order food from anywhere in the festival space using a mobile app, and then pick it up at a predetermined time from a locker-like area. This would control foot traffic in the vicinity of the food area and allow vendors to properly estimate demand throughout the duration of the event. Vendor workers would be able to make food on one side of the booth, and place the individual orders into lockers, where users could grab their food from the other side. Here are some of the prototypes we made, as well as our moodboard! Physical prototypes courtesy of Noy and Jack :)'
+				)),
+					ra.forEach(t),
+					(ut = l(e)),
+					w(M.$$.fragment, e),
+					(dt = l(e)),
+					w(J.$$.fragment, e),
+					(ht = l(e)),
+					w(V.$$.fragment, e),
+					(ct = l(e)),
+					(ge = u(e, 'P', {})));
+				var na = d(ge);
+				((po = f(
+					na,
+					'Iris and I also designed our first wireframes for the food-ordering app. We came up with two visual prototypes to be evaluated:'
+				)),
+					na.forEach(t),
+					(gt = l(e)),
+					w(T.$$.fragment, e),
+					(wt = l(e)),
+					w(z.$$.fragment, e),
+					($t = l(e)),
+					(we = u(e, 'P', {})));
+				var la = d(we);
+				((fo = f(
+					la,
+					'We chose to name the product “pikquik,” since eating at a festival is outdoors and kind of like a picnic, and we also wanted it to be “quick” and seamless. Hence, “pik-quik”!'
+				)),
+					la.forEach(t),
+					(vt = l(e)),
+					($e = u(e, 'H2', {})));
+				var pa = d($e);
+				((mo = f(pa, 'Step D: evaluation')), pa.forEach(t), (yt = l(e)), (ve = u(e, 'P', {})));
+				var fa = d(ve);
+				((uo = f(
+					fa,
+					'During our evaluation process, we put our visual and physical prototypes by asking potential users (and our professor) for their opinions. For the physical prototype, we were encouraged to explore contact-less options, so that the user would not have to pull a door handle. Instead, they could tap a button from their phone app to activate a sliding door. We were also asked to create a full-size prototype, which we gladly did.'
+				)),
+					fa.forEach(t),
+					(kt = l(e)),
+					w(X.$$.fragment, e),
+					(bt = l(e)),
+					(ye = u(e, 'P', {})));
+				var ma = d(ye);
+				((ho = f(
+					ma,
+					'For the visual app, we brought elements of both prototypes together. Certain features that we decided to include in the final design included:'
+				)),
+					ma.forEach(t),
+					(_t = l(e)),
+					(W = u(e, 'UL', {})));
+				var j = d(W);
+				Ne = u(j, 'LI', {});
+				var ua = d(Ne);
+				((co = f(
+					ua,
+					'locational and time features, such as selection fields for pickup details, the map to indicate the pickup station, and the timer countdown'
+				)),
+					ua.forEach(t),
+					(go = l(j)),
+					(Se = u(j, 'LI', {})));
+				var da = d(Se);
+				((wo = f(
+					da,
+					'a swiping passcode feature, which creates friction for users and ensures that their action is intentional, especially when they might be inebriated or distracted at a festival'
+				)),
+					da.forEach(t),
+					($o = l(j)),
+					(Ue = u(j, 'LI', {})));
+				var ha = d(Ue);
+				((vo = f(ha, 'pictures to show the food items on the initial menu')),
+					ha.forEach(t),
+					(yo = l(j)),
+					(xe = u(j, 'LI', {})));
+				var ca = d(xe);
+				((ko = f(
+					ca,
+					'an animation to match the sliding door function that is occuring in real life'
+				)),
+					ca.forEach(t),
+					j.forEach(t),
+					(Et = l(e)),
+					(B = u(e, 'P', {})));
+				var xt = d(B);
+				((bo = f(
+					xt,
+					'We also incorporated our moodboard into our visual design! These are just a few snapshots, but you can view the Figma with the '
+				)),
+					(ke = u(xt, 'A', { href: !0 })));
+				var ga = d(ke);
+				((_o = f(ga, 'final documentation and mockups here')),
+					ga.forEach(t),
+					(Eo = f(xt, '.')),
+					xt.forEach(t),
+					(qt = l(e)),
+					w(D.$$.fragment, e),
+					(At = l(e)),
+					(be = u(e, 'P', {})));
+				var wa = d(be);
+				((qo = f(
+					wa,
+					'If we had more time to work on this project, I would have loved to add many more of the logistical features that would make sense for this app, such as errors and warnings when users are not near the pickup zone, or if they fail the swiping passcode check, or if they need to communicate with the vendor. Moreover, I’d love to further explore the payment UI/UX for the app. Where would they see and modify this information? What would integrations with Paypal and Apple Pay look like? Should users load money into their digital wallet as part of a separate user flow?'
+				)),
+					wa.forEach(t),
+					(Pt = l(e)),
+					(_e = u(e, 'P', {})));
+				var $a = d(_e);
+				((Ao = f(
+					$a,
+					'As another part of our evaluation, we also sent out a survey to our target demographic (GenZ festival-goers). We asked directed questions to reaffirm the most frustrating parts of the festival experience.'
+				)),
+					$a.forEach(t),
+					(Ct = l(e)),
+					w(K.$$.fragment, e),
+					(It = l(e)),
+					(I = u(e, 'P', {})));
+				var N = d(I);
+				((Po = f(N, 'From this survey, we learned that ')), (Te = u(N, 'STRONG', {})));
+				var va = d(Te);
+				((Co = f(va, '92.3 percent')),
+					va.forEach(t),
+					(Io = f(
+						N,
+						' of respondees viewed their concessions experience as at least moderately important, '
+					)),
+					(ze = u(N, 'STRONG', {})));
+				var ya = d(ze);
+				((Wo = f(ya, 'all respondees')),
+					ya.forEach(t),
+					(Lo = f(N, ' valued concessions speed, and ')),
+					(Be = u(N, 'STRONG', {})));
+				var ka = d(Be);
+				((Ro = f(ka, '58.8 percent')),
+					ka.forEach(t),
+					(No = f(
+						N,
+						' of respondees found long lines to be their least favorite part of the festival experience. Moreover, it seemed like Pikquik could very well be the answer, as at least '
+					)),
+					(De = u(N, 'STRONG', {})));
+				var ba = d(De);
+				((So = f(ba, '76.5 percent')),
+					ba.forEach(t),
+					(Uo = f(
+						N,
+						' of respondees would be moderately likely to purchase food at a festival through an app. Success!'
+					)),
+					N.forEach(t),
+					(Wt = l(e)),
+					(Ee = u(e, 'H2', {})));
+				var _a = d(Ee);
+				((xo = f(_a, 'Final notes')), _a.forEach(t), (Lt = l(e)), (Q = u(e, 'P', {})));
+				var Ho = d(Q);
+				Y = u(Ho, 'A', { href: !0, rel: !0 });
+				var Ea = d(Y);
+				((To = f(Ea, 'FINAL DOCUMENTATION HERE!!!')),
+					Ea.forEach(t),
+					(zo = f(Ho, ' Please click and take a look, it’s awesome!')),
+					Ho.forEach(t),
+					(Rt = l(e)),
+					(qe = u(e, 'P', {})));
+				var qa = d(qe);
+				((Bo = f(
+					qa,
+					'What a ride of a one-month project! My team was instrumental to bringing this idea to life, and we also learned so much about design research throughout the process. We’ve tabled it for now, but maybe you’ll see Pikquik someday in the future!'
+				)),
+					qa.forEach(t),
+					(Nt = l(e)),
+					w(Z.$$.fragment, e),
+					this.h());
+			},
+			h() {
+				(He(
+					O,
+					'href',
+					'https://www.figma.com/proto/soCqCiWy7kz8EsEVEjbmYx/ACAD-324%3A-Pikquik?page-id=0%3A1&type=design&node-id=1-79&viewport=1349%2C326%2C0.04&t=p19qoyQXBc0tKkCW-1&scaling=scale-down&starting-point-node-id=1%3A79&mode=design'
+				),
+					He(O, 'rel', 'nofollow'),
+					He(
+						ke,
+						'href',
+						'(https://www.figma.com/proto/soCqCiWy7kz8EsEVEjbmYx/ACAD-324%3A-Pikquik?page-id=0%3A1&type=design&node-id=1-79&viewport=1349%2C326%2C0.04&t=p19qoyQXBc0tKkCW-1&scaling=scale-down&starting-point-node-id=1%3A79&mode=design)'
+					),
+					He(
+						Y,
+						'href',
+						'https://www.figma.com/proto/soCqCiWy7kz8EsEVEjbmYx/ACAD-324%3A-Pikquik?page-id=0%3A1&type=design&node-id=1-79&viewport=1349%2C326%2C0.04&t=p19qoyQXBc0tKkCW-1&scaling=scale-down&starting-point-node-id=1%3A79&mode=design'
+					),
+					He(Y, 'rel', 'nofollow'));
+			},
+			m(e, a) {
+				($(c, e, a),
+					s(e, b, a),
+					s(e, h, a),
+					i(h, _),
+					i(h, r),
+					i(r, A),
+					i(h, E),
+					i(h, C),
+					i(C, o),
+					i(h, q),
+					s(e, Ve, a),
+					s(e, F, a),
+					i(F, Tt),
+					i(F, O),
+					i(O, zt),
+					s(e, Xe, a),
+					s(e, ee, a),
+					i(ee, Bt),
+					s(e, Ke, a),
+					s(e, te, a),
+					i(te, Dt),
+					s(e, Qe, a),
+					$(G, e, a),
+					s(e, Ye, a),
+					s(e, oe, a),
+					i(oe, jt),
+					s(e, Ze, a),
+					s(e, S, a),
+					i(S, ae),
+					i(ae, Ce),
+					i(Ce, Ft),
+					i(ae, Ot),
+					i(S, Gt),
+					i(S, ie),
+					i(ie, Ie),
+					i(Ie, Ht),
+					i(ie, Mt),
+					s(e, et, a),
+					s(e, se, a),
+					i(se, Jt),
+					s(e, tt, a),
+					$(U, e, a),
+					s(e, ot, a),
+					$(H, e, a),
+					s(e, at, a),
+					s(e, re, a),
+					i(re, Vt),
+					s(e, it, a),
+					s(e, ne, a),
+					i(ne, Xt),
+					s(e, st, a),
+					s(e, le, a),
+					i(le, Kt),
+					s(e, rt, a),
+					$(x, e, a),
+					s(e, nt, a),
+					s(e, pe, a),
+					i(pe, Qt),
+					s(e, lt, a),
+					s(e, R, a),
+					i(R, fe),
+					i(fe, We),
+					i(We, Yt),
+					i(fe, Zt),
+					i(R, eo),
+					i(R, me),
+					i(me, Le),
+					i(Le, to),
+					i(me, oo),
+					i(R, ao),
+					i(R, ue),
+					i(ue, Re),
+					i(Re, io),
+					i(ue, so),
+					s(e, pt, a),
+					s(e, de, a),
+					i(de, ro),
+					s(e, ft, a),
+					s(e, he, a),
+					i(he, no),
+					s(e, mt, a),
+					s(e, ce, a),
+					i(ce, lo),
+					s(e, ut, a),
+					$(M, e, a),
+					s(e, dt, a),
+					$(J, e, a),
+					s(e, ht, a),
+					$(V, e, a),
+					s(e, ct, a),
+					s(e, ge, a),
+					i(ge, po),
+					s(e, gt, a),
+					$(T, e, a),
+					s(e, wt, a),
+					$(z, e, a),
+					s(e, $t, a),
+					s(e, we, a),
+					i(we, fo),
+					s(e, vt, a),
+					s(e, $e, a),
+					i($e, mo),
+					s(e, yt, a),
+					s(e, ve, a),
+					i(ve, uo),
+					s(e, kt, a),
+					$(X, e, a),
+					s(e, bt, a),
+					s(e, ye, a),
+					i(ye, ho),
+					s(e, _t, a),
+					s(e, W, a),
+					i(W, Ne),
+					i(Ne, co),
+					i(W, go),
+					i(W, Se),
+					i(Se, wo),
+					i(W, $o),
+					i(W, Ue),
+					i(Ue, vo),
+					i(W, yo),
+					i(W, xe),
+					i(xe, ko),
+					s(e, Et, a),
+					s(e, B, a),
+					i(B, bo),
+					i(B, ke),
+					i(ke, _o),
+					i(B, Eo),
+					s(e, qt, a),
+					$(D, e, a),
+					s(e, At, a),
+					s(e, be, a),
+					i(be, qo),
+					s(e, Pt, a),
+					s(e, _e, a),
+					i(_e, Ao),
+					s(e, Ct, a),
+					$(K, e, a),
+					s(e, It, a),
+					s(e, I, a),
+					i(I, Po),
+					i(I, Te),
+					i(Te, Co),
+					i(I, Io),
+					i(I, ze),
+					i(ze, Wo),
+					i(I, Lo),
+					i(I, Be),
+					i(Be, Ro),
+					i(I, No),
+					i(I, De),
+					i(De, So),
+					i(I, Uo),
+					s(e, Wt, a),
+					s(e, Ee, a),
+					i(Ee, xo),
+					s(e, Lt, a),
+					s(e, Q, a),
+					i(Q, Y),
+					i(Y, To),
+					i(Q, zo),
+					s(e, Rt, a),
+					s(e, qe, a),
+					i(qe, Bo),
+					s(e, Nt, a),
+					$(Z, e, a),
+					(St = !0));
+			},
+			p(e, [a]) {
+				const je = {};
+				(a & 1 && (je.$$scope = { dirty: a, ctx: e }), U.$set(je));
+				const Fe = {};
+				(a & 1 && (Fe.$$scope = { dirty: a, ctx: e }), x.$set(Fe));
+				const Ae = {};
+				(a & 1 && (Ae.$$scope = { dirty: a, ctx: e }), T.$set(Ae));
+				const Oe = {};
+				(a & 1 && (Oe.$$scope = { dirty: a, ctx: e }), z.$set(Oe));
+				const Ge = {};
+				(a & 1 && (Ge.$$scope = { dirty: a, ctx: e }), D.$set(Ge));
+			},
+			i(e) {
+				St ||
+					(v(c.$$.fragment, e),
+					v(G.$$.fragment, e),
+					v(U.$$.fragment, e),
+					v(H.$$.fragment, e),
+					v(x.$$.fragment, e),
+					v(M.$$.fragment, e),
+					v(J.$$.fragment, e),
+					v(V.$$.fragment, e),
+					v(T.$$.fragment, e),
+					v(z.$$.fragment, e),
+					v(X.$$.fragment, e),
+					v(D.$$.fragment, e),
+					v(K.$$.fragment, e),
+					v(Z.$$.fragment, e),
+					(St = !0));
+			},
+			o(e) {
+				(y(c.$$.fragment, e),
+					y(G.$$.fragment, e),
+					y(U.$$.fragment, e),
+					y(H.$$.fragment, e),
+					y(x.$$.fragment, e),
+					y(M.$$.fragment, e),
+					y(J.$$.fragment, e),
+					y(V.$$.fragment, e),
+					y(T.$$.fragment, e),
+					y(z.$$.fragment, e),
+					y(X.$$.fragment, e),
+					y(D.$$.fragment, e),
+					y(K.$$.fragment, e),
+					y(Z.$$.fragment, e),
+					(St = !1));
+			},
+			d(e) {
+				(k(c, e),
+					e && t(b),
+					e && t(h),
+					e && t(Ve),
+					e && t(F),
+					e && t(Xe),
+					e && t(ee),
+					e && t(Ke),
+					e && t(te),
+					e && t(Qe),
+					k(G, e),
+					e && t(Ye),
+					e && t(oe),
+					e && t(Ze),
+					e && t(S),
+					e && t(et),
+					e && t(se),
+					e && t(tt),
+					k(U, e),
+					e && t(ot),
+					k(H, e),
+					e && t(at),
+					e && t(re),
+					e && t(it),
+					e && t(ne),
+					e && t(st),
+					e && t(le),
+					e && t(rt),
+					k(x, e),
+					e && t(nt),
+					e && t(pe),
+					e && t(lt),
+					e && t(R),
+					e && t(pt),
+					e && t(de),
+					e && t(ft),
+					e && t(he),
+					e && t(mt),
+					e && t(ce),
+					e && t(ut),
+					k(M, e),
+					e && t(dt),
+					k(J, e),
+					e && t(ht),
+					k(V, e),
+					e && t(ct),
+					e && t(ge),
+					e && t(gt),
+					k(T, e),
+					e && t(wt),
+					k(z, e),
+					e && t($t),
+					e && t(we),
+					e && t(vt),
+					e && t($e),
+					e && t(yt),
+					e && t(ve),
+					e && t(kt),
+					k(X, e),
+					e && t(bt),
+					e && t(ye),
+					e && t(_t),
+					e && t(W),
+					e && t(Et),
+					e && t(B),
+					e && t(qt),
+					k(D, e),
+					e && t(At),
+					e && t(be),
+					e && t(Pt),
+					e && t(_e),
+					e && t(Ct),
+					k(K, e),
+					e && t(It),
+					e && t(I),
+					e && t(Wt),
+					e && t(Ee),
+					e && t(Lt),
+					e && t(Q),
+					e && t(Rt),
+					e && t(qe),
+					e && t(Nt),
+					k(Z, e));
+			}
+		}
+	);
+}
+const ri = {
+		title: 'Pikquik case study (ACAD 324 final project)',
+		slug: 'pikquik',
+		publishDate: 'OCT 1 2023',
+		tags: [{ name: 'ui/ux' }, { name: 'design' }],
+		thumbnail: 'piquik.svg',
+		summary:
+			"A walkthrough of my team's final project for ACAD 324, Pikquik: a spunky UI/UX design for a festival food app."
+	},
+	{ title: ni, slug: li, publishDate: pi, tags: fi, thumbnail: mi, summary: ui } = ri;
+class gi extends Aa {
+	constructor(c) {
+		(super(), Pa(this, c, null, si, Ca, {}));
+	}
+}
+export { gi as default, ri as metadata };
