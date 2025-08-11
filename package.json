@@ -35,6 +35,7 @@
 	"type": "module",
 	"dependencies": {
 		"16": "^0.0.2",
+		"@sveltejs/kit": "^1.0.1",
 		"@sveltejs/adapter-vercel": "^1.0.0-next.77",
 		"feather-icons": "^4.28.0",
 		"svelte-feather": "github:novacbn/svelte-feather#0.1.0",
