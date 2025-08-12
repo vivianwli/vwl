@@ -249,6 +249,11 @@
 		/* giving enough standalone slide space (so it looks good with scroll-snapping!) */
 		padding-top: 5vh;
 
+		@media screen and (max-width: 50rem) {
+			margin-top: 0;
+			padding-top: 0;
+		}
+
 		.text-right {
 			margin-left: 0;
 		}
